@@ -1,0 +1,81 @@
+# Project information
+site_name: 'The Engine Process'
+site_description: 'We are making a game engine and documenting the process'
+site_author: 'Caleb, Chaojie, Jacob, Jared, Yidi'
+site_url: 'https://the-engine-process.github.io/The-Docs/'
+
+# Repository
+repo_name: 'The-Engine-Process'
+repo_url: 'https://github.com/The-Engine-Process'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
+
+# Configuration
+theme:
+  name: 'material'
+  include_sidebar: false
+  feature:
+    tabs: true
+  palette:
+    primary: 'white'
+    accent: 'cyan'
+  font:
+    text: 'Merriweather'
+    code: 'Source Code Pro'
+  # favicon: assets/images/favicon.png
+  logo:
+    icon: "memory"
+
+# Navigation
+nav:
+  - Home: index.md
+  - Gallery: gallery.md
+  - Blogs:
+    - Week 1: blogs/week-1.md
+    - Week 2: blogs/week-2.md
+    - Week 3: blogs/week-3.md
+  - Interviews:
+    - Interview 1: interviews/interview-1.md
+    - Interview 2: interviews/interview-2.md
+    - Interview 3: interviews/interview-3.md
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/The-Engine-Process'
+
+# Google Analytics
+#google_analytics:
+#  - 'UA-XXXXXXXX-X'
+#  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - meta
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra 
+extra_css:
+  - 'extra.css'
+
