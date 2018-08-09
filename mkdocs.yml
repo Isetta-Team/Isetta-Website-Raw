@@ -18,7 +18,7 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: 'white'
+    primary: 'light blue'
     accent: 'cyan'
   font:
     text: 'Merriweather'
