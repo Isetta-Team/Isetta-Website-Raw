@@ -6,15 +6,15 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
 
 **Producer**
 - [Jared Ettinger](https://jettingerworks.com/)
-    ![alt text]("Jared Headshot")
+    ![team-headshot]("Jared Headshot")
 
 **Programmers**
 - [Caleb Biasco](https://calebbiasco.com/)
-    ![alt text]("Caleb Headshot")
+    ![team-headshot]("Caleb Headshot")
 - [Jacob Wilson](http://jacwilso.com/)
-    ![alt text](images/team/Jacob.JPG "Jacob Headshot")
+    ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")
     Jacob has a background in physics from Colorado School of Mines, and has specific interest in game tool development and software prototyping.
 - [Chaojie Zhu](http://zcj.io/)
-    ![alt text]("Chaojie Headshot")
+    ![team-headshot]("Chaojie Headshot")
 - [Yidi Zhu](http://yidizhu.com/)
-    ![alt text]("Yidi Headshot")
+    ![team-headshot]("Yidi Headshot")
