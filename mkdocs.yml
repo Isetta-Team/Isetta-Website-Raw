@@ -6,10 +6,21 @@ site_url: 'https://the-engine-process.github.io/The-Docs/'
 
 # Repository
 repo_name: 'The-Engine-Process'
-repo_url: 'https://github.com/The-Engine-Process'
+repo_url: 'https://github.com/The-Engine-Process/The-Docs'
 
-# Copyright
-copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
+# Navigation
+nav:
+  - Home: index.md
+  - Gallery: gallery.md
+  - Team: team.md
+  - Blogs:
+    - Week 1: blogs/week-1.md
+    - Week 2: blogs/week-2.md
+    - Week 3: blogs/week-3.md
+  - Interviews:
+    - Interview 1: interviews/interview-1.md
+    - Interview 2: interviews/interview-2.md
+    - Interview 3: interviews/interview-3.md
 
 # Configuration
 theme:
@@ -26,19 +37,6 @@ theme:
   # favicon: assets/images/favicon.png
   logo:
     icon: "memory"
-
-# Navigation
-nav:
-  - Home: index.md
-  - Gallery: gallery.md
-  - Blogs:
-    - Week 1: blogs/week-1.md
-    - Week 2: blogs/week-2.md
-    - Week 3: blogs/week-3.md
-  - Interviews:
-    - Interview 1: interviews/interview-1.md
-    - Interview 2: interviews/interview-2.md
-    - Interview 3: interviews/interview-3.md
 
 # Customization
 extra:
@@ -75,7 +73,16 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# Copyright
+copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
+
 # Extra 
 extra_css:
   - 'extra.css'
 
+extra:
+  disqus: 'isetta-engine'
+
+google_analytics:
+  - 'UA-124729724-1'
+  - auto
