@@ -9,12 +9,17 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
     ![team-headshot]("Jared Headshot")
 
 **Programmers**
-- [Caleb Biasco](https://calebbiasco.com/)
+
+- [Caleb Biasco](https://calebbiasco.com/)  
     ![team-headshot]("Caleb Headshot")
-- [Jacob Wilson](http://jacwilso.com/)
-    ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")
+
+- [Jacob Wilson](http://jacwilso.com/)  
+    ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")  
     Jacob has a background in physics from Colorado School of Mines, and has specific interest in game tool development and software prototyping.
-- [Chaojie Zhu](http://zcj.io/)
-    ![team-headshot]("Chaojie Headshot")
-- [Yidi Zhu](http://yidizhu.com/)
+
+- [Chaojie Zhu](http://zcj.io/)  
+    ![team-headshot](images/team/Chaojie.jpg "Chaojie Headshot")  
+    Chaojie has a background in software engineering from Shanghai Jiao Tong University, and has specific interests in game AI, self driving vehicles and software engineering.
+
+- [Yidi Zhu](http://yidizhu.com/)  
     ![team-headshot]("Yidi Headshot")
