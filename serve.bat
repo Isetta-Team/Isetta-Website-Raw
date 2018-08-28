@@ -1,2 +1,2 @@
-START mkdocs serve -n 1
+START mkdocs serve
 START "chrome.exe" "http://127.0.0.1:8000"
