@@ -1,9 +1,10 @@
-title: Title override
-description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
-path: docs
+title: Markdown gallery
+description: This pages shows some advanced usages of markdown
+path: tree/master/docs
 source: gallery.md
 
-# This pages shows all possible usages
+# Gallery
+This pages shows some advanced usages of markdown
 
 ## Extension - Admonition
 
