@@ -1,12 +1,12 @@
 # Project information
-site_name: 'The Engine Process'
+site_name: 'Isetta Engine'
 site_description: 'We are making a game engine and documenting the process'
 site_author: 'Caleb, Chaojie, Jacob, Jared, Yidi'
 site_url: 'https://the-engine-process.github.io/The-Docs/'
 
 # Repository
-repo_name: 'The-Engine-Process'
-repo_url: 'https://github.com/The-Engine-Process/The-Docs'
+repo_name: 'Isetta Engine'
+repo_url: 'https://github.com/The-Engine-Process/The-Raw-Docs'
 
 # Navigation
 nav:
