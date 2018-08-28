@@ -1,6 +1,6 @@
 title: Markdown gallery
 description: This pages shows some advanced usages of markdown
-path: tree/master/docs
+path: edit/master/docs
 source: gallery.md
 
 # Gallery
