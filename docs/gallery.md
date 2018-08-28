@@ -1,5 +1,6 @@
 title: Title override
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
+path: docs
 source: gallery.md
 
 # This pages shows all possible usages
