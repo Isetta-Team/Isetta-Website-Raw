@@ -14,8 +14,8 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
     ![team-headshot]("Caleb Headshot")
 
 - [Jacob Wilson](http://jacwilso.com/)  
-    ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")  
-    Jacob has a background in physics from Colorado School of Mines, and has specific interest in game tool development and software prototyping.
+    ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")
+    Jacob is always taking things apart to understand how they work and sometimes they are able to go back together. His background in physics helps him understand math and mechanics, and he is interested in tool development to help others see the light.
 
 - [Chaojie Zhu](http://zcj.io/)  
     ![team-headshot](images/team/Chaojie.jpg "Chaojie Headshot")  
