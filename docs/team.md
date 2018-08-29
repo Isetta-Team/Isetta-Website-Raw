@@ -22,5 +22,5 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
     Chaojie has a background in software engineering from Shanghai Jiao Tong University, and has specific interests in game AI, self driving vehicles and software engineering.
 
 - [Yidi Zhu](http://yidizhu.com/)  
-    ![team-headshot](images/team.yidi.jpg "Yidi Headshot")
+    ![team-headshot](images/team/yidi.jpg "Yidi Headshot")
     Yidi is a gameplay programmer / designer who escaped from the building construction management field. He loves making meaningful and joyful interactive experiences.
