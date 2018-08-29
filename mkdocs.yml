@@ -6,7 +6,8 @@ site_url: 'https://the-engine-process.github.io/The-Docs/'
 
 # Repository
 repo_name: 'Isetta Engine'
-repo_url: 'https://github.com/The-Engine-Process'
+repo_url: 'https://github.com/The-Engine-Process/The-Docs'
+edit_uri: ''
 
 # Navigation
 nav:
