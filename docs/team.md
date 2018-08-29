@@ -11,7 +11,9 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
 **Programmers**
 
 - [Caleb Biasco](https://calebbiasco.com/)  
-    ![team-headshot]("Caleb Headshot")
+    ![team-headshot](images/team/Caleb.png  "Caleb Headshot")  
+		Caleb started game programming in the Video Game Development Club at the University of Minnesota, and hasn't stopped since!  
+		Seriously. The madman is making a game engine now, someone stop him.
 
 - [Jacob Wilson](http://jacwilso.com/)  
     ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")  
