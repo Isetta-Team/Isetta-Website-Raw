@@ -6,7 +6,8 @@ The team behind Isetta Engine. They are graduate students studying at Carnegie M
 
 **Producer**
 - [Jared Ettinger](https://jettingerworks.com/)
-    ![team-headshot]("Jared Headshot")
+    ![team-headshot] (images/team/Jared.jpg "Jared Headshot")
+    Jared is a creative writer and producer from New York. He is excited about the intersection of art and technology, particularly in video games and animation. He hopes to further his production skills by keeping the rest of the team steady on this wild ride. 
 
 **Programmers**
 
