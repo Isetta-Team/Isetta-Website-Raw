@@ -16,13 +16,13 @@ nav:
   - Team: team.md
   - Blogs:
     - Week 0: blogs/week-0.md
-    - Week 1: blogs/week-1.md
-    - Week 2: blogs/week-2.md
-    - Week 3: blogs/week-3.md
+    #- Week 1: blogs/week-1.md
+    #- Week 2: blogs/week-2.md
+    #- Week 3: blogs/week-3.md
   - Interviews:
     - Interview 1: interviews/interview-1.md
-    - Interview 2: interviews/interview-2.md
-    - Interview 3: interviews/interview-3.md
+    #- Interview 2: interviews/interview-2.md
+    #- Interview 3: interviews/interview-3.md
 
 # Configuration
 theme:
@@ -46,11 +46,6 @@ extra:
     - type: 'github'
       link: 'https://github.com/The-Engine-Process'
 
-# Google Analytics
-#google_analytics:
-#  - 'UA-XXXXXXXX-X'
-#  - 'auto'
-
 # Extensions
 markdown_extensions:
   - admonition
@@ -59,6 +54,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - meta
+  - footnotes
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
