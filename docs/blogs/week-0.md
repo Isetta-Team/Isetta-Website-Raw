@@ -115,7 +115,7 @@ Creating an engine can be a daunting task, especially considering there is no cl
 
 
 
-*   [CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc):
+*   [CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc): Mike Acton discusses why data-oriented design is a much more appropriate view of programs than object-oriented design is, and why dealing with the reality of specific hardware and very low-level, platform-oriented optimization is more true than theoretical abstractions. Over the course of the presentation, Acton discusses three big lies of how code has been designed and what action programmers should take to rectify those lies.
 
 
 ## Coming Soon/Next Week
