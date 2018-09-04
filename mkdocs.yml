@@ -12,7 +12,6 @@ edit_uri: ''
 # Navigation
 nav:
   - Home: index.md
-  - Gallery: gallery.md
   - Team: team.md
   - Blogs:
     - Week 0: blogs/week-0.md
