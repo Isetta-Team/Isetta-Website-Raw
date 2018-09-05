@@ -77,9 +77,6 @@ copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
 extra_css:
   - 'extra.css'
 
-extra_javascript:
-  - 'extra.js'
-
 extra:
   disqus: 'isetta-engine'
 
