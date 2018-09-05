@@ -9,6 +9,16 @@ img[alt="team-headshot"]{
 
 /*#region MailChimp */
 
+#mc_embed_signup form {
+	padding: 0 !important;
+	margin-top: 40px;
+}
+
+#mc_embed_signup form h2 {
+	font-size: 25px;
+	font-weight: 300;
+}
+
 #mc_embed_signup form .mc-field-group input {
 	font-size: 1em;
 }
@@ -21,11 +31,12 @@ img[alt="team-headshot"]{
 	background-color: #03a9f4;
 	font-size: 1em;
 	width: 38.2%;
-	height: 2em;
+	height: 2.5em;
 }
 
 #mc_embed_signup form #mc-embedded-subscribe:hover {
 	background-color: #00b8dc;
 }
+
 
 /*#endregion*/
