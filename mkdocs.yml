@@ -2,11 +2,11 @@
 site_name: 'Isetta Engine'
 site_description: 'We are making a game engine and documenting the process'
 site_author: 'Caleb, Chaojie, Jacob, Jared, Yidi'
-site_url: 'https://the-engine-process.github.io/The-Docs/'
+site_url: 'https://isetta.io/'
 
 # Repository
 repo_name: 'Isetta Engine'
-repo_url: 'https://github.com/The-Engine-Process/The-Engine'
+repo_url: 'https://github.com/Isetta-Team/Isetta-Engine'
 edit_uri: ''
 
 # Navigation
@@ -43,7 +43,7 @@ theme:
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/The-Engine-Process'
+      link: 'https://github.com/Isetta-Team'
 
 # Extensions
 markdown_extensions:
@@ -71,7 +71,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 # Copyright
-copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
+copyright: 'Copyright &copy; 2019 Isetta Team'
 
 # Extra 
 extra_css:

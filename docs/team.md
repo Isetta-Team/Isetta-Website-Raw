@@ -2,7 +2,7 @@ disqus:
 
 # Team
 
-The team behind Isetta Engine. They are graduate students studying at Carnegie Mellon's Entertainment Technology Center with graduation date of May 2019.
+This is the team behind Isetta Engine. They are graduate students studying at Carnegie Mellon's Entertainment Technology Center, all anticipating to graduate in May 2019 with Master of Entertainment Technology degrees.
 
 **Producer**
 
