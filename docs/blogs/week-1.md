@@ -30,14 +30,14 @@ The final deadline is November 26, when we'll enter the feature lock phase. Duri
 ![Engine Architecture](../images/engine_architecture/finals.png "Final Architecture (11/26)")
 
 
-# Development
+## Development
 
 Based on our progress at the end of the first full week, we can what our team's four programmers accomplish would take 3-4 weeks for a single developer. It can be found on the [github repo](https://github.com/Isetta-Team/Isetta-Engine/tree/week-1) tagged with week-1.
 
 ![Engine Architecture](../images/engine_architecture/week1.png "Week 1 Progress Architecture")
 
 
-## Version Control
+### Version Control
 
 We chose Github as our version control platform as we are open sourcing the game engine and hosting a website with all the documents along with the engine.
 
@@ -46,7 +46,7 @@ We also established a workflow to help us collaborate effectively. We decided to
 ![Workflow Diagram](../images/blogs/workflow_diagram.png "Workflow Diagram")
 
 
-## Rendering
+### Rendering
 
 From our research, we narrowed our candidate libraries down to two: one is [Ogre](https://www.ogre3d.org/) and the other one is [Horde3D](http://horde3d.org/). Ogre is a powerful and flexible 3D graphics engine. It has a long history and is well known in the game industry for a while. In _Game Engine Architecture_, Jason Gregory described it as a well-architected, easy-to-learn and easy-to-use 3D rendering engine. Horde3D, relatively, is a younger 3D rendering engine, which just released its first stable release last year (2017). 
 
@@ -75,9 +75,9 @@ In the first week, we made a simple wrapper around the Horde3D as a proof-of-con
 ![Horde3D Test](../images/blogs/horde3d_Isetta_test.png "Horde3D Test Render")
 
 
-## Audio
+### Audio
 
-With the requirements listed in our [architecture blog](engine-architecture.md/#audio) (a library which allows us to allocate the used memory ourselves and is widely used in the game industry) we started our research and found two strong candidates: OpenAL Soft and FMOD.
+With the requirements listed in our [architecture blog](engine-architecture.md#audio) (a library which allows us to allocate the used memory ourselves and is widely used in the game industry) we started our research and found two strong candidates: OpenAL Soft and FMOD.
 
 OpenAL caught our eyes first because it seemed related to OpenGL (it's not, but they do have other things in common), and we found an open source implementation of the standard named [OpenAL Soft](https://github.com/kcat/openal-soft). On the other hand, we had heard of FMOD because Unity uses it on several platforms, and we think it's a good candidate purely from the [huge list of games](https://www.fmod.com/games) (with some hit titles) that use it.
 
@@ -85,12 +85,12 @@ We chose to give OpenAL Soft a try first because it's open source, while FMOD is
 
 Then we decided to experiment with FMOD. It turns out that FMOD's low-level API is surprisingly easy to integrate and use, and has a [comprehensive documentation](https://www.fmod.com/resources/documentation-api). We were able to get the library integrated and play our first audio clip in 2 hours, with the help of some Getting Started tutorials [^4]. We think that, for novice engine programmers, these kind of tutorials are invaluable. They are a great way to introduce you to a new field and get you up and running quickly. Also, thanks to the FMOD documentation, we easily found the way to control its memory usage with [`Memory_Initialize()`](https://www.fmod.com/resources/documentation-api?page=content/generated/FMOD_Memory_Initialize.html#/). FMOD also provides a [tutorial](https://www.fmod.com/resources/documentation-api?page=content/generated/overview/memorysaving.html#/) on managing its memory!
 
-After stitching the FMOD API into our project, we continued using it to create a minimal audio engine. It takes care of loading sound files, managing loaded sound assets (with the help of [string-id](engine-architecture.md/#core)), playing sound, managing a sound's play mode, managing a sound's lifetime with pause/continue/stop, and prevent memory leaks. You can take a look at the source code: [`Audio.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.h), [`Audio.cpp`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.cpp)
+After stitching the FMOD API into our project, we continued using it to create a minimal audio engine. It takes care of loading sound files, managing loaded sound assets (with the help of [string-id](engine-architecture.md#core)), playing sound, managing a sound's play mode, managing a sound's lifetime with pause/continue/stop, and prevent memory leaks. You can take a look at the source code: [`Audio.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.h), [`Audio.cpp`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.cpp)
 
 [^4]: We referred to two tutorials by Cody Claborn when integrating FMOD API. [Setting Up Xcode and Visual Studio for FMOD Development](https://codyclaborn.me/tutorials/setting-up-xcode-and-visual-studio-for-fmod-development/) and [Making a Basic FMOD Audio Engine in C++](https://codyclaborn.me/tutorials/making-a-basic-fmod-audio-engine-in-c/)
 
 
-## Networking
+### Networking
 
 Our original plan for running low-level networking sockets was to use [Valve's GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets) because of the feature set it lists, which we hoped is extensive enough for us to avoid pitfalls in network programming. Other options were either too flimsy or too low-level, and since none of us have game networking experience, we want the most straightforward option possible.
 
@@ -103,7 +103,7 @@ Recently, we found another heavily featured networking library named [yojimbo](h
 We've yet to determine the fate of networking in our engine, so you'll likely hear more on that progress from us next time.
 
 
-## Profiler
+### Profiler
 
 For the profiler, we imported [Brofiler](http://brofiler.com/), a C++ game profiler developed by Vadim Slyusarev. We picked Brofiler because is it is a lightweight and made specifically for games (not software in general) and has an easy-to-read UI. The library is open-source and relatively easy to integrate, although it's a bit outdated and requires some rework for our project. To help keep followers of our work from reworking the profiler with their own engine, we created a fork of the original Brofiler repo with the necessary changes to get it running. It can be found [here](https://github.com/Isetta-Team/brofiler) and will likely make integration in your engine easier!
 
@@ -112,15 +112,15 @@ The Brofiler tool has also been used on the game _Skyforge_ and has been integra
 ![Brofiler](../images/blogs/brofiler.png "Brofiler")
 
 
-# Coming Soon/Next Week
+## Coming Soon/Next Week
 
 We enjoyed this round of blogging! If you have comments about how you think we could improve as well as if we said anything wrong, we would be very grateful to hear about them in the **comments** section below. On Saturday, September 8, 2018, 3pm Eastern time, we will be live-streaming an interview with Casey Muratori on his channel [HandmadeHero](https://www.twitch.tv/handmade_hero) on Twitch. We will be posting an edited transcription of the interview at a later time in case you missed it.
 
 We'll be checking in again with another progress update soon so stay tuned, and subscribe to our mailing list to get notified!
 
-# [Resources](../resources.md)
+## [Resources](../resources.md)
 
-The resource page has been updated. Week
+The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
