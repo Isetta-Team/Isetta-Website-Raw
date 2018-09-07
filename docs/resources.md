@@ -48,7 +48,7 @@ Useful articles/resources we used during the development of Isetta
 
 *   [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
 *   [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
-*   [FMOD Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
+*   [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
 *   The Game Engine Architecture's chapter 13 on Audio
 
 
@@ -57,7 +57,6 @@ Useful articles/resources we used during the development of Isetta
 
 
 *   [Cpp memory management](https://www.programiz.com/cpp-programming/memory-management)
-*   [What's wrong with the new keyword](https://stackoverflow.com/questions/4716994/whats-wrong-with-the-new-keyword-in-c)
 *   [new and delete operators in C++](https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/)
 
 
