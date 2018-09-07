@@ -26,43 +26,33 @@ Useful articles/resources we used during the development of Isetta
 
 ## Serialization / Reflection
 
-
-
-*   [C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
+* [C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
 
 
 ## Hashing
 
-
-
-*   [StringID library on Github](https://github.com/TheAllenChou/string-id)
-*   [Practical Hash IDs](http://cowboyprogramming.com/2007/01/04/practical-hash-ids/)
-*   [Minial perfect hashing for game assets](https://metricpanda.com/rival-fortress-update-24-minimal-perfect-hash-for-game-assets)
-*   [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
-*   [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
+* [StringID library on Github](https://github.com/TheAllenChou/string-id)
+* [Practical Hash IDs](http://cowboyprogramming.com/2007/01/04/practical-hash-ids/)
+* [Minial perfect hashing for game assets](https://metricpanda.com/rival-fortress-update-24-minimal-perfect-hash-for-game-assets)
+* [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
+* [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
 
 
 ## Sound
 
-
-
-*   [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
-*   [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
-*   [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
-*   The Game Engine Architecture's chapter 13 on Audio
+* [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
+* [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
+* [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
+* The Game Engine Architecture's chapter 13 on Audio
 
 
 ## Memory
-
-
 
 *   [Cpp memory management](https://www.programiz.com/cpp-programming/memory-management)
 *   [new and delete operators in C++](https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/)
 
 
 ## Misc.
-
-
 
 *   [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
 *   [unordered_map cppreference](https://en.cppreference.com/w/cpp/container/unordered_map)

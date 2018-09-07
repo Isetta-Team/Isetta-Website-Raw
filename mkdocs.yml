@@ -13,6 +13,7 @@ edit_uri: ''
 nav:
   - Home: index.md
   - Team: team.md
+  - Resources: resources.md
   - Blogs:
     - '[Week 0] Preparation': blogs/week-0.md
     - '[Week 1] The Building Blocks': blogs/week-1.md
