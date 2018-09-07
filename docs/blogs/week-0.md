@@ -50,7 +50,7 @@ The Isetta Engine will support the most primitive form of networked multiplayer 
 
 While planning, and before we knew too much about game engines, we had a basic idea of what a game engine would consist of. The image below displays the second/third iteration of what the Isetta engine would look like. We were initially naive thinking we may be able to do both networking as well as physics, however quickly came to grips that would balloon the scope too much. The audio and graphics were and are still planned to be imported from external libraries, and more of the discussion of what is imported and why will be included in a future blog. This diagram of the engine will soon be replaced with more in-depth explanations.
 
-![alt_text](../images/blogs/pitch-architecture.png "Engine Architecture During Pitch")
+![alt_text](../images/blogs/pitch_architecture.png "Engine Architecture During Pitch")
 
 
 As for our choice of the twin-stick shooter genre, we came to the decision after lengthy consideration of the components required to build other game types as well as how that genre would utilize multiplayer. Twin-stick shooters can effectively have little to no physics, which is different from collisions (this will be explained in [week 1 blog](week-1.md)). Likewise, the information passed between networked sessions is relatively minimal and not too strict on latency. What's more, a twin-stick shooter specializes in simplistic gameplay that doesn't need a world editor or too much design. 
