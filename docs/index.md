@@ -19,7 +19,7 @@ This project will span from August to December of 2018 and all of our progress a
 	<form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    <div id="mc_embed_signup_scroll">
 			<h2>Subscribe to our mailing list</h2>
-			<p>We publish blogs weekly and interview content once edited, and will only send emails once a week annoucing when they are released.</p>
+			<p style="margin-bottom: -22px;">We publish blogs weekly and interview content once edited, and will only send emails once a week annoucing when they are released.</p>
 			<br><br>
 			<div class="mc-field-group">
 				<label for="mce-EMAIL"> </label>
