@@ -22,7 +22,7 @@ As of writing this, we've learned that creating content that will satisfy both i
 During the course of this project **(08/26 - 12/16, 2018**), a blog post will be published every time we hit a milestone (core systems, game loop & rendering, networking, etc), and an interview will be published every 1-2 weeks. The interview schedule depends on our progress on the engine itself, as each interview's topic will be themed around our current work.
 
 
-## Prerequisites
+### Prerequisites
 
 Although we will cover some basic features of engine development, it will profoundly help if you have experience in C++ programming and developing software, especially games, as our project won't provide step-by-step instructions on how to do everything. For a list of resources on how to gain related knowledge, please go to the [Readings](#Readings) section. 
 
