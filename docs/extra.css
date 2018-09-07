@@ -6,6 +6,13 @@ img[alt="team-headshot"]{
 
 /*#endregion*/
 
+/*#region Headers */
+
+h1, h2, h3, h4 {
+	font-weight: 500 !important;
+}
+
+/*#endregion*/
 
 /*#region MailChimp */
 

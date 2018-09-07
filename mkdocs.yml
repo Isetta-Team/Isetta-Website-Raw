@@ -33,7 +33,7 @@ theme:
     primary: 'light blue'
     accent: 'cyan'
   font:
-    text: 'Merriweather'
+    text: 'Lato'
     code: 'Source Code Pro'
   # favicon: assets/images/favicon.png
   logo:
@@ -73,7 +73,7 @@ markdown_extensions:
 # Copyright
 copyright: 'Copyright &copy; 2019 Isetta Team'
 
-# Extra 
+# Extra
 extra_css:
   - 'extra.css'
 
