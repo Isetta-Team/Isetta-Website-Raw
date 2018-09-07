@@ -6,6 +6,7 @@ The reason we think more work needs to be done in this field is that too many ga
 
 Although the project is aimed at helping novice developers, this is not to be used as a sole source of learning engine development. Being new engine developers ourselves, we can't guarantee the way we develop the engine will be correct, which is why interviews will help the project remain grounded. This means others who are learning can use what we've done as a guide and not necessarily the ground truth. The blogs won't be a walkthrough/tutorial/step-by-step instructions on how to develop an engine. We are learning as we go and think our journey is what can be valuable to you. 
 
+### About the Project
 
 This project is being done as a student-pitched project at the [Entertainment Technology Center](https://www.etc.cmu.edu/) (ETC). The ETC is an interdisciplinary Master's degree program at Carnegie Mellon University where students' main focus is working on small teams on a project each semester during a 3-month time period. Throughout the semester, a team's work will be presented to faculty and peers with feedback and critique being presented to help aid in the project development. Our particular project idea has gone through multiple iterations to do the following:
 
@@ -53,17 +54,25 @@ While planning, and before we knew too much about game engines, we had a basic i
 ![alt_text](../images/blogs/pitch_architecture.png "Engine Architecture During Pitch")
 
 
+### Genre
+
 As for our choice of the twin-stick shooter genre, we came to the decision after lengthy consideration of the components required to build other game types as well as how that genre would utilize multiplayer. Twin-stick shooters can effectively have little to no physics, which is different from collisions (this will be explained in [week 1 blog](week-1.md)). Likewise, the information passed between networked sessions is relatively minimal and not too strict on latency. What's more, a twin-stick shooter specializes in simplistic gameplay that doesn't need a world editor or too much design. 
 
 In a Skype meeting, [Walt Destler](https://waltdestler.com/) explained to us that each game -and more particularly, each genre- requires vastly different netcode solutions. This is also one of the reasons why we prefer netcode over physics, as it can greatly narrow down the genre options. For example, multiplayer shooters, specifically PvP shooters, require small amounts of information to be passed (i.e. bullet and player locations) from server to client with relatively low latency. PvP shooters can also feature client-side prediction [^0] as well as the additional requirement of lobby/matchmaking with usually more than 2 players. On the other hand, genres like turn-based strategy require large amounts of information to be passed (all units, decisions, resources, etc.) to all users without too much concern for latency or prediction.
 
+### Building with an Example Game
+
 The other piece of advice we frequently heard from professionals and our faculty alike was the benefit of developing a game in conjunction with the engine. Doing so, they explained, allows you to prove and demonstrate your engine works as expected. The game can also test features to show immediate edge cases of the engine. 
 
-Another nicety of developing an engine is that it can stop feature creep; when you keep expanding certain features that won't be utilized in the final product. What the game built from this engine _won't_ be is something original or necessarily fun. However, that's not to say a fun, original game couldn't be created from this engine. The idea of our sample game is to intentionally be derivative so features of a basic twin-stick shooter will be already included in the engine, rather than only specific features on our niche experience.
+Another nicety of developing an engine is that feature creep can be prevented when you keep expanding certain features that won't be utilized in the final product. What the game built from this engine _won't_ be is something original or necessarily fun. However, that's not to say a fun, original game couldn't be created from this engine. The idea of our sample game is to intentionally be derivative so features of a basic twin-stick shooter will be already included in the engine, rather than only specific features on our niche experience.
+
+### The Example Game
 
 As stated, the game we are making is a simple twin-stick shooter, reminiscent of a game you would create when first learning game development. It is a simpler derivative of the _[Call of Duty Black Ops: Dead Ops Arcade mode](https://www.youtube.com/watch?time_continue=166&v=LSnAmsJGTwY)_, though without much of the polished and juicy gameplay _Call of Duty_ is known for. We have already developed a version of our game in Unreal, and we'll be replicating and using it to compare the functionality to our game engine. We will be able to create scenarios in the Unreal version of the game to then replicate in the Isetta Engine version of the game. Having a version of the game already built stops us from having to be concerned with the logic or design of the actual game, so we can focus on the engine doing exactly what the game currently does. It also allows us to pull the assets from the Unreal version of the game directly to the Isetta Engine without having to worry about a bad asset. In other words, if it worked in Unreal, it should work in Isetta because this is our minimal viable product (MVP).
 
 <iframe width="100%" height="500px" src="https://www.youtube.com/embed/j7kMT83ViXo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### The Engine's Components
 
 Since this project is already a large undertaking and restricted to such a short time, it simply isn't possible for us to write the code for every part of the engine. If you look at an industry engineer position, you'll see no single person writes code for the entire engine because teams are usually tens to hundreds of people. However, what everyone on the team needs to know how to do is integrate and use libraries created by others. Below is our engine plan broken down into seven oversimplified components: 
 
@@ -72,10 +81,10 @@ Since this project is already a large undertaking and restricted to such a short
 1.  **Core Systems**: The code underneath everything else which will be more familiar to software developers
 1.  **Graphics, Audio, and Input**
 1.  **Engine Tools,** which will help debugging and profiling the game
-1.  **Resource Management**- how files are processed prior to the game running
-1.  **Gameplay Foundations**- how the engine connects to game logic
-1.  **Collisions**- the system for collidables but not handling actual physics calculations
-1.  **Networking,** which will be layered throughout the engine to enable multiplayer. 
+1.  **Resource Management**: How files are processed prior to the game running
+1.  **Gameplay Foundations**: How the engine connects to game logic
+1.  **Collisions**: The system for collidables but not handling actual physics calculations
+1.  **Networking**, which will be layered throughout the engine to enable multiplayer. 
 
 Of these components, number 1 will have a smattering of imported libraries to assist with problems that we believe wouldn't benefit us or the engine if writing them; 2 will be purely imported libraries because graphics alone could engulf a full 3 months (especially for 3D and animation); and 3 will use an existing profiler because our simplified version of a profiler may end up being unusable due to the lack of UI design. All other systems, though, will be implemented from scratch in the Isetta Engine, and possibly by you if you follow our journey.
 
