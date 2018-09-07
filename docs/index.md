@@ -1,10 +1,15 @@
 # Welcome to Isetta Engine
 
-We are demystifying game engine development process.
+Our aim is to demystify the game engine development process.
 
 ## Mission Statement
 
-The Isetta Engine is a student-driven project about demystifying game engine development and providing a roadmap and relevant knowledge for novice developers. To do so, our team will make a game engine by ourselves starting from a collection of base frameworks, and document the process, pitfalls, and advice for our audience with weekly blogs. Besides that, we will conduct interviews with experienced professionals to augment our novice perspective. We believe the novice perspective from our blogs and expert perspective from the interviews will nicely come together and form a complete document to help people get started. This project will span from August to December and all of our progress and code will be accessible via the [git repo](https://github.com/The-Engine-Process/The-Engine).
+Game engine development is a very wide field in the industry, but also a very inaccessible one. Budding engineers are advised to just jump into development to learn, and it's for this reason that the Isetta Engine project came to be.
+
+Our team is building a game engine specialized for the twin-stick shooter genre, but every step of the way we will be documenting our process through a dedicated blog. Readers can hear from us personally and get an in-depth look at our journey to create the engine.
+In addition, we will supplement our content through regular interviews with industry professionals who have built their own engines before.
+
+This project will span from August to December of 2018 and all of our progress and code will be accessible via the [git repo](https://github.com/Isetta-Team/Isetta-Engine).
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -12,6 +17,8 @@ The Isetta Engine is a student-driven project about demystifying game engine dev
 	<form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    <div id="mc_embed_signup_scroll">
 			<h2>Subscribe to our mailing list</h2>
+			We publish blog and interview content weekly, and hope to reach out to any developers interested in game engine development to ask some questions about their thoughts.
+			<br><br>
 			<div class="mc-field-group">
 				<label for="mce-EMAIL"> </label>
 				<input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
