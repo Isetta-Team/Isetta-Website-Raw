@@ -19,9 +19,13 @@ nav:
     #- Week 2: blogs/week-2.md
     #- Week 3: blogs/week-3.md
   - Interviews:
-    - Interview 1: interviews/interview-1.md
-    #- Interview 2: interviews/interview-2.md
-    #- Interview 3: interviews/interview-3.md
+    - Adam Serdar: 
+      - Interview: interviews/AdamSerdar-interview.md
+      - Video Story: interviews/AdamSerdar-video.md
+    - Coming Soon: interviews/coming-soon.md
+    #- Person:
+    # - Interview: interviews/person-interview.md
+    # - Video: interviews/person-video.md
 
 # Configuration
 theme:
