@@ -173,7 +173,7 @@ As a very necessary step in the game engine usage process, we need some form of 
 
 We will obviously need to have some form of build system in our engine, but we're also interested in using asset caching or other optimizations to make the builds run a bit faster.
 
-![Engine Architecture](../images/engine_architecture/build_resourcemanagement.png "Build Resource Management")
+![Engine Architecture](../images/engine_architecture/build_resource_management.png "Build Resource Management")
 
 [^8]: A level scene graph is the scene graph corresponding to a level, similar to a level configuration file. It will contain the information (transformation, behavior, whether it is static, etc.) about the starting game objects.
 
