@@ -186,7 +186,7 @@ The use of all game engines, in the end, is to be used to make games, so a build
 
 ## [Resources](../resources.md)
 
-The resource page has been updated.
+The [resource page](../resources.md) has been updated, too!
 
 
 <!-- GD2md-html version 1.0β11 -->
