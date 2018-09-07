@@ -14,7 +14,7 @@ nav:
   - Home: index.md
   - Team: team.md
   - Blogs:
-    - 'Week 0 - Preparation': blogs/week-0.md
+    - '[Week 0] Preparation': blogs/week-0.md
     #- Week 1: blogs/week-1.md
     #- Week 2: blogs/week-2.md
     #- Week 3: blogs/week-3.md
