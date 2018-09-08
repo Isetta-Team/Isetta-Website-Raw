@@ -160,7 +160,7 @@ Since we only need a subsection of a collision system's features for our test ga
 
 *   **Static/Dynamic game objects:**  "Static" objects would have several possible qualities, including fixed transform, fixed lighting, and even memory-allocation static. These options allow the engine to better optimize and structure its data, and so we hope to have a couple of them to better service the game development end of the engine.
 *   **Event/messaging system:** Messaging systems allow objects to communicate with one another dynamically during the game. This is a feature that could be developed by an engine user, but having it within the engine itself can yield more benefits à la performance and breadth of effect. Ours will likely be rudimentary, but allowing objects to communicate outside of user code seems almost like a necessity in a tool like a game engine.
-*   **AI Pathfinding:** Most games have computer-driven enemies that the player faces, and for any game involving character movement, you typically need some pathfinding algorithms so that the characters aren't too easy to defeat or frustrating to work with. A baseline of A* will be needed if we have any collisions in the level that could obstruct enemy movement.**
+*   **AI Pathfinding:** Most games have computer-driven enemies that the player faces, and for any game involving character movement, you typically need some pathfinding algorithms so that the characters aren't too easy to defeat or frustrating to work with. A baseline of A* will be needed if we have any collisions in the level that could obstruct enemy movement.
 
 ![Engine Architecture](../images/engine_architecture/gameplay.png "Gameplay")
 
