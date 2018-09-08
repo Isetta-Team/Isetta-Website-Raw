@@ -20,7 +20,7 @@ As of writing this, we've learned that creating content that will satisfy both i
 
 ### Schedule
 
-During the course of this project **(08/26 - 12/16, 2018**), a blog post will be published every time we hit a milestone (core systems, game loop & rendering, networking, etc), and an interview will be published every 1-2 weeks. The interview schedule depends on our progress on the engine itself, as each interview's topic will be themed around our current work.
+During the course of this project **(08/26 - 12/16, 2018**), a blog post will be published every week to share our thoughts and process, and an interview will be published every 1-2 weeks. The interview schedule depends on our progress on the engine itself, as each interview's topic will be themed around our current work.
 
 
 ### Prerequisites
