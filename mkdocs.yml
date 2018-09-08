@@ -2,26 +2,32 @@
 site_name: 'Isetta Engine'
 site_description: 'We are making a game engine and documenting the process'
 site_author: 'Caleb, Chaojie, Jacob, Jared, Yidi'
-site_url: 'https://the-engine-process.github.io/The-Docs/'
+site_url: 'https://isetta.io/'
 
 # Repository
 repo_name: 'Isetta Engine'
-repo_url: 'https://github.com/The-Engine-Process/The-Docs'
+repo_url: 'https://github.com/Isetta-Team/Isetta-Engine'
 edit_uri: ''
 
 # Navigation
 nav:
   - Home: index.md
   - Team: team.md
+  - Resources: resources.md
   - Blogs:
-    - Week 0: blogs/week-0.md
-    #- Week 1: blogs/week-1.md
+    - '[Week 0] Preparation': blogs/week-0.md
+    - '[Week 1] The Building Blocks': blogs/week-1.md
+    - 'Engine Architecture': blogs/engine-architecture.md
     #- Week 2: blogs/week-2.md
     #- Week 3: blogs/week-3.md
   - Interviews:
-    - Interview 1: interviews/interview-1.md
-    #- Interview 2: interviews/interview-2.md
-    #- Interview 3: interviews/interview-3.md
+    - Adam Serdar: 
+      - Interview: interviews/AdamSerdar-interview.md
+      - Video Story: interviews/AdamSerdar-video.md
+    - Coming Soon: interviews/coming-soon.md
+    #- Person:
+    # - Interview: interviews/person-interview.md
+    # - Video: interviews/person-video.md
 
 # Configuration
 theme:
@@ -33,7 +39,7 @@ theme:
     primary: 'light blue'
     accent: 'cyan'
   font:
-    text: 'Merriweather'
+    text: 'Lato'
     code: 'Source Code Pro'
   # favicon: assets/images/favicon.png
   logo:
@@ -43,7 +49,7 @@ theme:
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/The-Engine-Process'
+      link: 'https://github.com/Isetta-Team'
 
 # Extensions
 markdown_extensions:
@@ -71,9 +77,9 @@ markdown_extensions:
   - pymdownx.tilde
 
 # Copyright
-copyright: 'Copyright &copy; 2018 - 19 The Engine Process Team'
+copyright: 'Copyright &copy; 2019 Isetta Team'
 
-# Extra 
+# Extra
 extra_css:
   - 'extra.css'
 
