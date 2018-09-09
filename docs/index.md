@@ -2,6 +2,38 @@
 
 Our aim is to demystify the game engine development process.
 
+<div class="vc_row element-row row vc_custom_1478727859541">
+	<div class="wpb_column vc_column_container vc_col-sm-12">
+		<div class="wpb_wrapper">
+			<div class="fw-section hb-fw-599b22a654ae9 without-border no-overlay light-style" style="background-color:#d6f2ff;
+ 	background-image:url(https://www.litmos.com/wp-content/uploads/2017/04/learning-automation-lms-training.jpg);
+ 	background-size:cover;
+ 	padding-top:20px;
+ 	padding-bottom:40px;
+	border-radius: 4px;">
+				<div class="row fw-content-wrap" style="padding-bottom:10px;">
+					<div class="col-12 nbm">
+						<div style="text-align: center; font-size: 28px;
+ 	line-height: 52px;">
+							<span style="color:rgba(0,0,0,0.54);">Interview with Adam Serdar!</span>
+						</div>
+					</div>
+				</div>
+				<div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/_bnZYotTQRA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				<div class="row fw-content-wrap">
+					<div class="col-12 nbm">
+						<div style="text-align: center; font-size: 18px; line-height: 22px; padding: 30px 5px 0px 5px;">
+							<span style="color:rgba(0,0,0,0.54);">See what else Adam has to say about game engines in his full <a href="interviews/AdamSerdar-interview">interview</a>.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 ## Mission Statement
 
 Game engine development is a very wide field in the industry, but also a very inaccessible one. Budding engineers are advised to just jump into development to learn, and it's for this reason that the Isetta Engine project came to be.
