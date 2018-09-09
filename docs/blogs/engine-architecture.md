@@ -160,7 +160,7 @@ Since we only need a subsection of a collision system's features for our test ga
 
 *   **Static/Dynamic game objects:**  "Static" objects would have several possible qualities, including fixed transform, fixed lighting, and even memory-allocation static. These options allow the engine to better optimize and structure its data, and so we hope to have a couple of them to better service the game development end of the engine.
 *   **Event/messaging system:** Messaging systems allow objects to communicate with one another dynamically during the game. This is a feature that could be developed by an engine user, but having it within the engine itself can yield more benefits à la performance and breadth of effect. Ours will likely be rudimentary, but allowing objects to communicate outside of user code seems almost like a necessity in a tool like a game engine.
-*   **AI Pathfinding:** Most games have computer-driven enemies that the player faces, and for any game involving character movement, you typically need some pathfinding algorithms so that the characters aren't too easy to defeat or frustrating to work with. A baseline of A* will be needed if we have any collisions in the level that could obstruct enemy movement.**
+*   **AI Pathfinding:** Most games have computer-driven enemies that the player faces, and for any game involving character movement, you typically need some pathfinding algorithms so that the characters aren't too easy to defeat or frustrating to work with. A baseline of A* will be needed if we have any collisions in the level that could obstruct enemy movement.
 
 ![Engine Architecture](../images/engine_architecture/gameplay.png "Gameplay")
 
@@ -173,7 +173,7 @@ As a very necessary step in the game engine usage process, we need some form of 
 
 We will obviously need to have some form of build system in our engine, but we're also interested in using asset caching or other optimizations to make the builds run a bit faster.
 
-![Engine Architecture](../images/engine_architecture/build_resourcemanagement.png "Build Resource Management")
+![Engine Architecture](../images/engine_architecture/build_resource_management.png "Build Resource Management")
 
 [^8]: A level scene graph is the scene graph corresponding to a level, similar to a level configuration file. It will contain the information (transformation, behavior, whether it is static, etc.) about the starting game objects.
 
@@ -186,7 +186,7 @@ The use of all game engines, in the end, is to be used to make games, so a build
 
 ## [Resources](../resources.md)
 
-The resource page has been updated.
+The [resource page](../resources.md) has been updated, too!
 
 
 <!-- GD2md-html version 1.0β11 -->

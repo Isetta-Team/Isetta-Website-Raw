@@ -20,7 +20,7 @@ As of writing this, we've learned that creating content that will satisfy both i
 
 ### Schedule
 
-During the course of this project **(08/26 - 12/16, 2018**), a blog post will be published every time we hit a milestone (core systems, game loop & rendering, networking, etc), and an interview will be published every 1-2 weeks. The interview schedule depends on our progress on the engine itself, as each interview's topic will be themed around our current work.
+During the course of this project **(08/26 - 12/16, 2018**), a blog post will be published every week to share our thoughts and process, and an interview will be published every 1-2 weeks. The interview schedule depends on our progress on the engine itself, as each interview's topic will be themed around our current work.
 
 
 ### Prerequisites
@@ -70,7 +70,9 @@ Another nicety of developing an engine is that feature creep can be prevented wh
 
 As stated, the game we are making is a simple twin-stick shooter, reminiscent of a game you would create when first learning game development. It is a simpler derivative of the _[Call of Duty Black Ops: Dead Ops Arcade mode](https://www.youtube.com/watch?time_continue=166&v=LSnAmsJGTwY)_, though without much of the polished and juicy gameplay _Call of Duty_ is known for. We have already developed a version of our game in Unreal, and we'll be replicating and using it to compare the functionality to our game engine. We will be able to create scenarios in the Unreal version of the game to then replicate in the Isetta Engine version of the game. Having a version of the game already built stops us from having to be concerned with the logic or design of the actual game, so we can focus on the engine doing exactly what the game currently does. It also allows us to pull the assets from the Unreal version of the game directly to the Isetta Engine without having to worry about a bad asset. In other words, if it worked in Unreal, it should work in Isetta because this is our minimal viable product (MVP).
 
-<iframe width="100%" height="500px" src="https://www.youtube.com/embed/j7kMT83ViXo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="video-wrapper">
+	<iframe src="https://www.youtube.com/embed/j7kMT83ViXo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ### The Engine's Components
 
