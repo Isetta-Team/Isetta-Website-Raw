@@ -1,5 +1,6 @@
 # Welcome to Isetta Engine
 
+We are a student project from Carnegie Mellon's Entertainment Technology Center.  
 Our aim is to demystify the game engine development process.
 
 <div class="vc_row element-row row vc_custom_1478727859541">
