@@ -5,11 +5,8 @@
 Useful articles/resources we used during the development of Isetta
 
 
-## Serialization / Reflection
-* [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
 
-
-## Hashing
+## String Hashing
 * [A StringID Library on Github](https://github.com/TheAllenChou/string-id)
 * [Practical Hash IDs](http://cowboyprogramming.com/2007/01/04/practical-hash-ids/)
 * [Minial perfect hashing for game assets](https://metricpanda.com/rival-fortress-update-24-minimal-perfect-hash-for-game-assets)
@@ -34,6 +31,13 @@ Useful articles/resources we used during the development of Isetta
 * [How does delete[] “know” the size of the operand array?](https://stackoverflow.com/questions/197675/how-does-delete-know-the-size-of-the-operand-array)
 * [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017)
 * [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools)
+* [ISO C++ FAQ on Memory Management](https://isocpp.org/wiki/faq/freestore-mgmt)
+
+## Networking
+* [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
+## Serialization / Reflection
+* [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
+
 
 ## Misc.
 * [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
