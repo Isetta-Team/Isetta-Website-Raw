@@ -1,6 +1,6 @@
 # Schedule
 
-// TODO Paragraph about purpose
+All of our content is worked on and submitted on a regular basis. Below is our set times for each type of post. Updates will be sent out through our MailChimp list, so we recommend subscribing to that if you want to be the first to hear about all our progress. 
 
 | What?        | Updated When? |
 | ------------ | -------------: |

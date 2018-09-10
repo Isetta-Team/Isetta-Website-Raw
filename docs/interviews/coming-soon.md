@@ -1,5 +1,7 @@
 # Interview with Casey Muratori
 
-At 3pm EST on Saturday, September 8th, we will be interviewing Casey Muratori of [Handmade Hero](https://handmadehero.org/) about developing a game engine as a solo developer and topics related to his series.
+On Saturday, September 8th, we interviewed Casey Muratori of [Handmade Hero](https://handmadehero.org/) about developing a game engine as a solo developer and topics related to his series.
 
-You will be able to watch the interview *live* at [https://twitch.tv/handmade_hero](https://twitch.tv/handmade_hero), and we will publish an edited transcription to our website shortly afterward.
+You can watch a recording of the interview on [Casey's YouTube](https://www.youtube.com/watch?v=9-h6TPkQ6ko&t=10s), and we are currently at work on a more concise edited version to post on our site. 
+
+Our next planned interview is with Tommy Refenes, engine developer for [Super Meat Boy](https://supermeatboy.com/). You can expect to hear more about that later this month.  
