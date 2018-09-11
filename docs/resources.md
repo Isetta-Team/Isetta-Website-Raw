@@ -4,10 +4,33 @@
 
 Useful articles/resources we used during the development of Isetta
 
+## Builds
+* [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 
-## Serialization / Reflection
-* [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
 
+## Config File (Engine Config)
+* [Create A Simple Configuration Parser](https://www.dreamincode.net/forums/topic/183191-create-a-simple-configuration-file-parser/)
+* [Implementing a CVAR System](https://stackoverflow.com/questions/5187449/implementing-a-cvar-system)
+* [C++11/14 How to parse a simple config file](https://www.walletfox.com/course/parseconfigfile.php)
+* [A Small Class to Read INI File](https://www.codeproject.com/Articles/10809/A-Small-Class-to-Read-INI-File)
+* CryEngine
+    * [Using Console and Config Files](http://docs.cryengine.com/display/SDKDOC4/Using+Console+and+Config+Files)
+    * [ICVar Documentation](http://docs.cryengine.com/display/CPPAPI/ICVar)
+* Lumberyard
+    * [Console Variable Tutorial](https://docs.aws.amazon.com/lumberyard/latest/userguide/system-cvar-tutorial.html)
+    * [ISystem.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CryCommon/ISystem.h)
+    * [IConsole.h](https://github.com/aws/lumberyard/blob/master/dev/Code/CryEngine/CryCommon/IConsole.h)
+    * [XConsole.h](https://github.com/aws/lumberyard/blob/0b34452ef270f6b27896858dc7899c9796efb124/dev/Code/CryEngine/CrySystem/XConsole.h)
+    * [XConsole.cpp](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsole.cpp)
+    * [XConsoleVariable.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.h)
+    * [XConsoleVariable.cpp](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.cpp)
+    * [EntityCVars.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.h)
+    * [EntityCBars.cpp](https://github.com/aws/lumberyard/blob/master/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.cpp)
+    * [ICfgFile.h](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/ICfgFile.h)
+    * [CfgFile.h](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.h)
+    * [CfgFile.cpp](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.cpp)
+* Unreal
+    * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
 ## Hashing
 * [A StringID Library on Github](https://github.com/TheAllenChou/string-id)
@@ -15,14 +38,6 @@ Useful articles/resources we used during the development of Isetta
 * [Minial perfect hashing for game assets](https://metricpanda.com/rival-fortress-update-24-minimal-perfect-hash-for-game-assets)
 * [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
 * [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
-
-
-## Sound
-* [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
-* [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
-* [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
-* The Game Engine Architecture's chapter 13 on Audio
-
 
 
 ## Memory
@@ -35,12 +50,30 @@ Useful articles/resources we used during the development of Isetta
 * [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017)
 * [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools)
 
+
+## Serialization / Reflection
+* [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
+
+
+## Sound
+* [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
+* [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
+* [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
+* The Game Engine Architecture's chapter 13 on Audio
+
+
+## Visual Studio
+* [Common Macros for Build Commands](https://msdn.microsoft.com/en-us/library/c02as0cs.aspx)
+
+
 ## Misc.
 * [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
 * [unordered_map cppreference](https://en.cppreference.com/w/cpp/container/unordered_map)
 * [Data Structures in Games](http://enemyhideout.com/2016/05/games-101-data-structures-in-games/)
 * The Game Engine Architecture's chapter 5.3 on containers
-* [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 * [IN-HOUSE ENGINE DEVELOPMENT: PROCESS TIPS](https://johanneskuhlmann.de/blog/in-house-engine-development-process-tips/)
 * [IN-HOUSE ENGINE DEVELOPMENT: TECHNICAL TIPS](https://johanneskuhlmann.de/blog/in-house-engine-development-technical-tips/)
 * [When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
+* [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
+* [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
+* [Fast C++ Logging Library](https://github.com/gabime/spdlog)
