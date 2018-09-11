@@ -27,7 +27,7 @@ Useful articles/resources we used during the development of Isetta
 	* *Game Engine Architecture*: Section 3.2.5.1 Alignment and Packing
 	* [Gamesutra - Writing a Game Engine from Scratch Part2: Memory](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php): Also covers modern CPU memory access patterns.
 	* [Are we out of memory?](http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory/)
-	* **TODO** [Gallery of Processor Cache Effects](http://igoro.com/archive/gallery-of-processor-cache-effects/)
+	* [Gallery of Processor Cache Effects](http://igoro.com/archive/gallery-of-processor-cache-effects/)
 * Implementation
 	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html)
 	* [new and delete operators in C++](https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/)
