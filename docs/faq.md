@@ -8,6 +8,9 @@ The Isetta Engine is meant to provide an in-depth look at engine creation for ne
 ## What platforms are you targeting?
 Our plan is to keep the release to PC. Because of our tight 3-month deadline, we do not think a multiplatform release would be within scope. 
 
+## What language are you using and why?
+We are using purely C++ for the engine, and possibly python/lua as the scripting language. And the main reason why we chose C++ is that it's the 3A game industry standard language.
+
 ## Are you building everything from scratch?
 Not everything. Some parts of the engine we will be building from scratch and others we will be importing from 3rd parties. You can see our [architecture](blogs/engine-architecture.md) for a full overview. 
 
