@@ -41,17 +41,17 @@ Useful articles/resources we used during the development of Isetta
 
 ## Memory
 * Introduction
-	* *Game Engine Architecture*: Section 3.2.5.1 Alignment and Packing
-	* *Game Engine Architecture*: Section 5.2 Memory Management
+	* *Game Engine Architecture* - Section 3.2.5.1: Alignment and Packing
+	* *Game Engine Architecture* - Section 5.2: Memory Management
 	* [Gamesutra - Writing a Game Engine from Scratch Part2: Memory](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php): Also covers modern CPU memory access patterns.
 	* [Are we out of memory?](http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory/)
 
 * Implementation
 	* [Randy Gaul's Game Programming Blog - Memory Management](http://www.randygaul.net/2014/07/30/memory-management/): "Anything that has a very clear and non-variable lifespan should be able to be allocated on a stack."
-	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html)
-	* [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools)
-	* [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017)
-	* [Memory Patterns in Visual Studio](https://stackoverflow.com/questions/127386/in-visual-studio-c-what-are-the-memory-allocation-representations)
+	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html): A step by step guide on implementing some allocators.
+	* [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools): Some discussion on placement `new`, `new`, and `delete`, and what you should know if you are going to manage object's lifetime on your own.
+	* [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017): The memory windows is very important when debugging memory allocators. You can see the memory layout byte by byte.
+	* [Memory Patterns in Visual Studio](https://stackoverflow.com/questions/127386/in-visual-studio-c-what-are-the-memory-allocation-representations): Another utility for debugging memory allocator. Visual Studio uses certain patterns to mark the state of memory chunks.
 	* [C++ Casting, or: "Oh No, They Broke Malloc!"](https://embeddedartistry.com/blog/2017/2/28/c-casting-or-oh-no-we-broke-malloc): On different types of casts (`static_cast`, `reinterpret_cast`, `const_cast`, `dynamic_cast`, C-style casts) in C++ and when you should use them. `reinterpret_cast` is especially important as we will need to cast `uintptr_t` to actual pointers a lot.
 	* [When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 	* [ISO C++ FAQ on Memory Management](https://isocpp.org/wiki/faq/freestore-mgmt)
@@ -69,7 +69,7 @@ Useful articles/resources we used during the development of Isetta
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
 * [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
 * [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
-* The Game Engine Architecture's chapter 13 on Audio
+* *Game Engine Architecture* - Chapter 13: Audio
 
 
 ## String Hashing
