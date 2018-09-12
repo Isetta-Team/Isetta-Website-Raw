@@ -24,44 +24,42 @@ Useful articles/resources we used during the development of Isetta
     * [ICVar Documentation](http://docs.cryengine.com/display/CPPAPI/ICVar)
 * Lumberyard
     * [Console Variable Tutorial](https://docs.aws.amazon.com/lumberyard/latest/userguide/system-cvar-tutorial.html)
-    * [ISystem.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CryCommon/ISystem.h)
-    * [IConsole.h](https://github.com/aws/lumberyard/blob/master/dev/Code/CryEngine/CryCommon/IConsole.h)
-    * [XConsole.h](https://github.com/aws/lumberyard/blob/0b34452ef270f6b27896858dc7899c9796efb124/dev/Code/CryEngine/CrySystem/XConsole.h)
-    * [XConsole.cpp](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsole.cpp)
-    * [XConsoleVariable.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.h)
-    * [XConsoleVariable.cpp](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.cpp)
-    * [EntityCVars.h](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.h)
-    * [EntityCBars.cpp](https://github.com/aws/lumberyard/blob/master/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.cpp)
-    * [ICfgFile.h](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/ICfgFile.h)
-    * [CfgFile.h](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.h)
-    * [CfgFile.cpp](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.cpp)
+    * [`ISystem.h`](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CryCommon/ISystem.h)
+    , [`IConsole.h`](https://github.com/aws/lumberyard/blob/master/dev/Code/CryEngine/CryCommon/IConsole.h)
+    , [`XConsole.h`](https://github.com/aws/lumberyard/blob/0b34452ef270f6b27896858dc7899c9796efb124/dev/Code/CryEngine/CrySystem/XConsole.h)
+    , [`XConsole.cpp`](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsole.cpp)
+    , [`XConsoleVariable.h`](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.h)
+    , [`XConsoleVariable.cpp`](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Code/CryEngine/CrySystem/XConsoleVariable.cpp)
+    , [`EntityCVars.h`](https://github.com/aws/lumberyard/blob/e881f3023cc1840650eb7b133e605881d1d4330d/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.h)
+    , [`EntityCBars.cpp`](https://github.com/aws/lumberyard/blob/master/dev/Gems/CryLegacy/Code/Source/CryEntitySystem/EntityCVars.cpp)
+    , [`ICfgFile.h`](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/ICfgFile.h)
+    , [`CfgFile.h`](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.h)
+    , [`CfgFile.cpp`](https://github.com/aws/lumberyard/blob/master/dev/Code/Tools/RC/ResourceCompiler/CfgFile.cpp)
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
 
 ## Memory
 * Introduction
-	* *Game Engine Architecture*: Section 3.2.5.1 Alignment and Packing
+	* *Game Engine Architecture* - Section 3.2.5.1: Alignment and Packing
+	* *Game Engine Architecture* - Section 5.2: Memory Management
 	* [Gamesutra - Writing a Game Engine from Scratch Part2: Memory](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php): Also covers modern CPU memory access patterns.
 	* [Are we out of memory?](http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory/)
 
 * Implementation
 	* [Randy Gaul's Game Programming Blog - Memory Management](http://www.randygaul.net/2014/07/30/memory-management/): "Anything that has a very clear and non-variable lifespan should be able to be allocated on a stack."
-	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html)
-	* [new and delete operators in C++](https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/)
-	* [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017)
-	* [Memory Patterns in Visual Studio](https://stackoverflow.com/questions/127386/in-visual-studio-c-what-are-the-memory-allocation-representations)
+	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html): A step by step guide on implementing some allocators.
+	* [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools): Some discussion on placement `new`, `new`, and `delete`, and what you should know if you are going to manage object's lifetime on your own.
+	* [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017): The memory windows is very important when debugging memory allocators. You can see the memory layout byte by byte.
+	* [Memory Patterns in Visual Studio](https://stackoverflow.com/questions/127386/in-visual-studio-c-what-are-the-memory-allocation-representations): Another utility for debugging memory allocator. Visual Studio uses certain patterns to mark the state of memory chunks.
 	* [C++ Casting, or: "Oh No, They Broke Malloc!"](https://embeddedartistry.com/blog/2017/2/28/c-casting-or-oh-no-we-broke-malloc): On different types of casts (`static_cast`, `reinterpret_cast`, `const_cast`, `dynamic_cast`, C-style casts) in C++ and when you should use them. `reinterpret_cast` is especially important as we will need to cast `uintptr_t` to actual pointers a lot.
-	* [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools)
+	* [When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 	* [ISO C++ FAQ on Memory Management](https://isocpp.org/wiki/faq/freestore-mgmt)
 	* [How does delete[] “know” the size of the operand array?](https://stackoverflow.com/questions/197675/how-does-delete-know-the-size-of-the-operand-array)
 
 
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
-## Serialization / Reflection
-* [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
-
 
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
@@ -71,7 +69,7 @@ Useful articles/resources we used during the development of Isetta
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
 * [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
 * [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
-* The Game Engine Architecture's chapter 13 on Audio
+* *Game Engine Architecture* - Chapter 13: Audio
 
 
 ## String Hashing
@@ -91,9 +89,9 @@ Useful articles/resources we used during the development of Isetta
 * [unordered_map cppreference](https://en.cppreference.com/w/cpp/container/unordered_map)
 * [Data Structures in Games](http://enemyhideout.com/2016/05/games-101-data-structures-in-games/)
 * The Game Engine Architecture's chapter 5.3 on containers
-* [IN-HOUSE ENGINE DEVELOPMENT: PROCESS TIPS](https://johanneskuhlmann.de/blog/in-house-engine-development-process-tips/)
-* [IN-HOUSE ENGINE DEVELOPMENT: TECHNICAL TIPS](https://johanneskuhlmann.de/blog/in-house-engine-development-technical-tips/)
-* [When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
+* [In-house Engine Development: Process Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-process-tips/)
+* [In-house Engine Development: Technical Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-technical-tips/)
+
 * [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
