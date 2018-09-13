@@ -66,3 +66,12 @@ h1, h2, h3, h4 {
 	border: 0;
   }
 /*#endregion*/
+
+
+article .md-typeset__table {
+	width: 100% !important;
+}
+
+article .md-typeset__table table th, article .md-typeset__table table td{
+	font-size: 1.6rem;
+}
