@@ -12,12 +12,12 @@
 
 ## Byte-Sized Updates
 
-
-
 *   [Memory](#memory): Implemented memory allocation utilities, stack allocator, and pool allocator
 *   [Graphics](#graphics): Wrapped Horde3D as `RenderModule` and GLFW as `WindowModule` and improved inter-module communication model
 *   [Engine Config](#engine-config): Wrote a config file parser, storing values in console variables to be accessed by other systems and eventually an in-game console.
 *   [Networking](#networking): Determined to move forward with [yojimbo](https://github.com/networkprotocol/yojimbo) and will be expanding our control of the network in the coming week.
+
+Here is the updated architecture diagram with our progress. The code can be found on the [GitHub repo](https://github.com/Isetta-Team/Isetta-Engine/tree/week-2) tagged with week-2.
 
 ![Engine Architecture](../images/engine_architecture/week2.png "Week 2 Progress Architecture")
 
