@@ -23,6 +23,11 @@ nav:
     - '[Week 2] Ramping Up': blogs/week-2.md
     #- Week 3: blogs/week-3.md
   - Interviews:
+    - Summarized Advice:
+      - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
+      - Jason Gregory: interviews/JasonGregory-advice.md
+      - Oliver Franzke: interviews/OliverFranzke-advice.md
+      - Walt Destler: interviews/WaltDestler-advice.md
     - Adam Serdar: 
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
