@@ -1,24 +1,5 @@
-<!----- Conversion time: 2.537 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* GD2md-html version 1.0β11
-* Fri Sep 14 2018 13:53:24 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/open?id=1w7CVlk81A8mlQgwnjJ-V60Uf6HVzf6wX4piLZkTfo-Q
------>
-
-# [Week 2] Ramping Up
+# Ramping Up
 **Notice**: Since we were still finding our way with the post for week 1, we published without documenting our full process. We will do better in future weeks about this by more strictly pairing our blogs with our repo tagged code. This is the changelist for week 1:
-
-
 
 *   Added section about [Byte Size Summary](week-1.md#byte-size-summary)
 *   Added paragraph about our API design
@@ -284,4 +265,29 @@ We would appreciate any feedback you may have about our content or what we are d
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
 
-<!-- GD2md-html version 1.0β11 -->
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup" style="margin-top: -20px">
+	<form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	    <div id="mc_embed_signup_scroll">
+			<h3>Subscribe to our mailing list</h3>
+			<p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
+			<br><br>
+			<div class="mc-field-group">
+				<label for="mce-EMAIL"> </label>
+				<input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>
+		    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+		    	<input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
+		    </div>
+		    <div class="clear" id="submit-button">
+		    	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+		    </div>
+	    </div>
+	</form>
+</div>
+<!--End mc_embed_signup-->

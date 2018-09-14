@@ -1,9 +1,8 @@
-## Oliver Franzke
-
 _Oliver is a senior programmer at Double Fine Productions, where he has worked on many of their remastered classics like _Grim Fandango Remastered _and _Day of the Tentacle Remastered. _He lead the engineering helm of the new IP _Broken Age _as the lead programmer, where he extended all across its engine's development._
 
 We approached Oliver because of his presence as an engineer in the indie side of the industry, where he has spoken frequently about his experience and work as not only a programmer but also a leader. Seeing him in the documentary _Double Fine Adventure!_ gave us a good understanding of some of his work prior to having our conversation. We did a Skype video call with him.
 
+### Advice (_not_ verbatim):
 
 *   High-level vs Low-level
     *   Both are very important. The ratio between the two probably varies project to project, especially when you work from scratch. With _Broken Age_, the programmers needed to consider the high level concepts first before we got to the low level implementations.
