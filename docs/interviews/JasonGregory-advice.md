@@ -1,4 +1,4 @@
-_Jason is a USC lecturer on game and game engine development and author of the ubiquitous _Game Engine Architecture_ book. He is also a lead programmer at Naughty Dog, where he has worked on the _Uncharted_ series and _The Last of Us_, and he is currently working on _The Last of Us Part II.
+_Jason is a USC lecturer on game and game engine development and author of the ubiquitous _Game Engine Architecture_ book. He is also a lead programmer at Naughty Dog, where he has worked on the_ Uncharted _series and_ The Last of Us,_ and he is currently working on_ The Last of Us Part II.
 
 We approached Jason because of his experience with not only game engine development but also in teaching game engine development at the University of Southern California. His years spent in the industry also provides a good standpoint to discuss the iterations game engine development has gone through. We did a Skype audio call with him.
 

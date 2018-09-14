@@ -1,4 +1,4 @@
-_Amit is maintaining a super helpful website called [Red Blob Games](https://www.redblobgames.com/), where he explains math and computer science topics in an accessible and playful way. Rob Shillingsburg earned his Ph.D. from Princeton University and was an early employee of Google. He later co-founded Wild Shadow Studios, maker of 2012 IGF finalist [Realm of the Mad God](http://realmofthemadgod.com/)._
+_Amit is maintaining a super helpful website called [Red Blob Games](https://www.redblobgames.com/), where he explains math and computer science topics in an accessible and playful way. Rob Shillingsburg earned his Ph.D. from Princeton University and was an early employee of Google. He later co-founded Wild Shadow Studios, maker of 2012 IGF finalist_ [Realm of the Mad God](http://realmofthemadgod.com/).
 
 We approached Amit because he has extensive experience in producing excellent blog posts on game dev related topics (again, they are really great!). We were able to meet up during GDC 2018 and Rob joined the meeting, too.
 
