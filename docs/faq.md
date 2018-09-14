@@ -15,9 +15,10 @@ We are using purely C++ for the engine, and possibly python/lua as the scripting
 Not everything. Some parts of the engine we will be building from scratch and others we will be importing from 3rd parties. You can see our [architecture](blogs/engine-architecture.md) for a full overview. 
 
 ## Are you going to build an abstraction layer on top of the low level APIs?
+Yes, that's what the modules are for.
 
 ## What does the Horde3D engine provide?
-Horde3D is only a rendering engine.
+Horde3D is what we will be using for our rendering engine.
 
 ## Will this be paid for or free or open source?
 Open source all the way! We want as many others to benefit from our experience as possible. 
