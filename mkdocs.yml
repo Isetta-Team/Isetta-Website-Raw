@@ -20,7 +20,7 @@ nav:
     - '[Week 0] Preparation': blogs/week-0.md
     - '[Week 1] The Building Blocks': blogs/week-1.md
     - 'Engine Architecture': blogs/engine-architecture.md
-    #- Week 2: blogs/week-2.md
+    - '[Week 2] Ramping Up': blogs/week-2.md
     #- Week 3: blogs/week-3.md
   - Interviews:
     - Adam Serdar: 
