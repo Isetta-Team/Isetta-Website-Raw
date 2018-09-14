@@ -30,3 +30,6 @@ Nope, definitely not. We don't expect others to use this engine to develop any g
 
 ## Is there a single aspect of engine development that you will be focusing on? 
 Our goal is to show everything required to build a game engine, so our plan is to keep all of it simple and rudimentary rather than emphasize one particular part. 
+
+## How is this different from other series like Handmade Hero or reading *Game Engine Architecture*
+During our interview with Casey, he talked about how good engine programming should be approached like a boundary value problem with the shooting method, with the sides of the boundary being (1) high-level architecture and (2) the real-world, actual solution. So to build the right engine for your needs, you need to improve a bit upon the architecture, then improve a bit on your actual solution, ad infinitum. We're not collaborating with Casey, or other resources, beyond interviewing and reading, but we think this analogy explains the relationship of their work with ours: the professionals are taking their experience as game engine programmers and working down (trying to reach new engine programmers), and we're building our first engine and are working up (trying to take new engine programmers along with us).
