@@ -1,16 +1,17 @@
-Byte-Sized Summary
-General setup: Talk about our development using GitHub, linter, API design, and unit testing -- hint: we are relying on standards established by others.
-[Roadmap](#roadmap): Roadmap of the engine’s development for the next 3 months, broken into thirds, each with systems we will building during it.
-[Version Control](#version-control): Set up Github repo and decided on workflow.
-[Rendering](#rendering): Chose Horde3D over Ogre and made a demo of it
-[Module Manager](#module-manager): Made all initialization and deinitialization private and made the module manager a friend class of all modules
-[Audio](#audio): Chose FMOD over OpenAL Soft, integrated it into our engine, and made a wrapper on it
-[Networking](#networking): Built the GameNetworkingSockets library and successfully ran a sample test
-[Profiler](#profiler): Selected Brofiler as the profiler and forked the repo in preparation of needed changes.
-[Debug Logging](#debug-logging): Programmed a logger to output to VS output window and log files as well as masking messages for channel and verbosity.
-[Error-Handling](#error-handling): Using Microsoft afx headers for assertions temporarily and using standard exceptions.
-
 # The Building Blocks
+
+### Byte-Sized Summary
+* General setup: Talk about our development using GitHub, linter, API design, and unit testing -- hint: we are relying on standards established by others.
+* [Roadmap](#roadmap): Roadmap of the engine’s development for the next 3 months, broken into thirds, each with systems we will building during it.
+* [Version Control](#version-control): Set up Github repo and decided on workflow.
+* [Rendering](#rendering): Chose Horde3D over Ogre and made a demo of it
+* [Module Manager](#module-manager): Made all initialization and deinitialization private and made the module manager a friend class of all modules
+* [Audio](#audio): Chose FMOD over OpenAL Soft, integrated it into our engine, and made a wrapper on it
+* [Networking](#networking): Built the GameNetworkingSockets library and successfully ran a sample test
+* [Profiler](#profiler): Selected Brofiler as the profiler and forked the repo in preparation of needed changes.
+* [Debug Logging](#debug-logging): Programmed a logger to output to VS output window and log files as well as masking messages for channel and verbosity.
+* [Error-Handling](#error-handling): Using Microsoft afx headers for assertions temporarily and using standard exceptions.
+
 
 It's hard to believe we technically started less than two weeks ago! During the summer, we pored over planning what the project would include, approximating how much we could accomplish in 3 months and preparing ourselves by reading relative materials. This week we started making decisions on our engine (we have a [separate blog](engine-architecture.md) on this!) and actual development. Before full-on diving into programming, we set up three systems not directly related to our engine but can ease our development process.
 
