@@ -5,9 +5,9 @@ This past week, we developed the initial design of our engine architecture. The 
 
 ![Engine Architecture](../images/engine_architecture/base.png "Initial Engine Architecture")
 
-[^1]: A DLL is a dynamic-linked library which is Microsoft shared library concept which can be transported around easier than a project and contains information about the compiled project.
+[^1]: A **DLL** is a dynamic-linked library which is Microsoft shared library concept which can be transported around easier than a project and contains information about the compiled project.
 
-[^2]: A wrapper is a class that "wraps" around another class to hide/change/add functionality. This is usually done when using other people's libraries to ensure only your features are available.
+[^2]: A **wrapper** is a class that "wraps" around another class to hide/change/add functionality. This is usually done when using other people's libraries to ensure only your features are available.
 
 ## Architecture Layers
 
@@ -103,7 +103,7 @@ For our engine, since we will be focusing on the twin-stick genre, this requires
 
 ## Audio
 
-Sound plays a big role in almost every immersive experience. Every engine on the market probably includes an audio engine [^4]. By talking to industry professionals, we learned that studios usually don't build their own audio system from scratch. Instead, they tend to bring in audio middlewares (to get an overview of frequently used audio tools in the industry, see the [post](https://www.somatone.com/demystifying-audio-middleware/) from Somatone Interactive). Therefore, to line up with industry standard and make our workload realistic, we decided to bring in a third party audio library.
+Sound plays a big role in almost every immersive experience. Every engine on the market probably includes an audio engine, and it's also good advice that sound in games should get as much attention as other systems and be included in the iteration process to match their huge influence on the final gameplay experience. By talking to industry professionals, we learned that studios usually don't build their own audio system from scratch. Instead, they tend to bring in audio middlewares (to get an overview of frequently used audio tools in the industry, see the [post](https://www.somatone.com/demystifying-audio-middleware/) from Somatone Interactive). Therefore, to line up with industry standard and make our workload realistic, we decided to bring in a third party audio library.
 
 We started by looking at the requirements of our game - to recap, our engine is going to be used to support a minimal networked twin-stick shooter. For this game, we will need t to:
 
@@ -122,8 +122,6 @@ That's all from the game side. Having an audio engine that supports this feedbac
 *   The 3rd party library should allow us to do memory management for it
 *   The 3rd party library ideally should be widely used in the game industry
 
-[^4]: It's also good advice that sound in games should get as much attention as other systems and be included in the iteration process, to match their huge influence on the final gameplay experience.
-
 
 ## Collisions
 
@@ -134,16 +132,16 @@ A collision system is not equivalent to a physics system, physics includes much 
 
 
 *   Primitive colliders: spheres, cubes, and capsules
-*   Raycasting (not volume-casting[^5])
+*   Raycasting (not volume-casting[^4])
 *   A solver to stop objects from passing through others
 
-Since we only need a subsection of a collision system's features for our test game as well as in general for twin-stick shooters, we decided to build that functionality ourselves. This is dependent on that the time remaining not to include something like the industry standard PhysX[^6]. There is a benefit in developing our own in keeping things simple as well as getting familiar with some of the standard math questions that junior developers are asked when interviewing for a position.
+Since we only need a subsection of a collision system's features for our test game as well as in general for twin-stick shooters, we decided to build that functionality ourselves. This is dependent on that the time remaining not to include something like the industry standard PhysX[^5]. There is a benefit in developing our own in keeping things simple as well as getting familiar with some of the standard math questions that junior developers are asked when interviewing for a position.
 
 ![Engine Architecture](../images/engine_architecture/collisions.png "Collisions")
 
-[^5]: Also known as volume ray casting, is when a volume's path is traced along a line/curve to test collisions with other objects.
+[^4]: Also known as volume ray casting, **volume-casting** is when a volume's path is traced along a line/curve to test collisions with other objects.
 
-[^6]: [PhysX](https://www.geforce.com/hardware/technology/physx) is NVIDIA's real-time physics engine used by most commercially available game engines such as Unity, Unreal, and Lumberyard.
+[^5]: [PhysX](https://www.geforce.com/hardware/technology/physx) is NVIDIA's real-time physics engine used by most commercially available game engines such as Unity, Unreal, and Lumberyard.
 
 
 ## Gameplay
@@ -152,7 +150,7 @@ Since we only need a subsection of a collision system's features for our test ga
 
 *   **Game loop:** The game loop is the assembly line of a game. A simple version would be checking which key you have pressed on the keyboard, moving an object on the screen depending on the key, rendering it a certain color depending on the key, then repeating. The real hard part of this process is keeping your pieces independent: if your animations can influence your physics, which do you update first? How can you make them _not_ be dependent on one another?
 
-    We already know we want to make a variable-render fixed-update loop[^7] as most modern engines do, but we're anticipating difficulty in organizing our system updates.
+    We already know we want to make a variable-render fixed-update loop[^6] as most modern engines do, but we're anticipating difficulty in organizing our system updates.
 
 *   **Scripting:** Scripting is a more accessible version of coding. Instead of having to rebuild your engine for your code to change, you can simply pick an updated script file and you're good! This can even be done with games themselves—that's what modding essentially is.
 
@@ -164,18 +162,18 @@ Since we only need a subsection of a collision system's features for our test ga
 
 ![Engine Architecture](../images/engine_architecture/gameplay.png "Gameplay")
 
-[^7]: Variable-render refers to the fact that rendering will be updated as fast as the CPU/GPU can allow, not being slowed by a frame rate. All other modules will then be updated with a fixed timestep since some of them dependent on the timestep and can become non-deterministic with a variable timestep.
+[^6]: **Variable-render** refers to the fact that rendering will be updated as fast as the CPU/GPU can allow, not being slowed by a frame rate. All other modules will then be updated with a fixed timestep since some of them dependent on the timestep and can become non-deterministic with a variable timestep.
 
 
 ## Build Resource Management
 
-As a very necessary step in the game engine usage process, we need some form of build system at the end of our pipeline for the engine. Assets and the level scene graphs[^8] will need to be processed for the built executable, and if the build process takes a long time, then caching those processed assets could help speed up the process as well.
+As a very necessary step in the game engine usage process, we need some form of build system at the end of our pipeline for the engine. Assets and the level scene graphs[^7] will need to be processed for the built executable, and if the build process takes a long time, then caching those processed assets could help speed up the process as well.
 
 We will obviously need to have some form of build system in our engine, but we're also interested in using asset caching or other optimizations to make the builds run a bit faster.
 
 ![Engine Architecture](../images/engine_architecture/build_resource_management.png "Build Resource Management")
 
-[^8]: A level scene graph is the scene graph corresponding to a level, similar to a level configuration file. It will contain the information (transformation, behavior, whether it is static, etc.) about the starting game objects.
+[^7]: A **level scene graph** is the scene graph corresponding to a level, similar to a level configuration file. It will contain the information (transformation, behavior, whether it is static, etc.) about the starting game objects.
 
 
 ## Build
