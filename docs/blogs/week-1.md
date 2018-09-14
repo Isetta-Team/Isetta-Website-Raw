@@ -48,7 +48,7 @@ The final deadline is November 26, when we'll enter the feature lock phase. Duri
 
 ## Development
 
-Based on our progress at the end of the first full week, we can what our team's four programmers accomplish would take 3-4 weeks for a single developer. It can be found on the [github repo](https://github.com/Isetta-Team/Isetta-Engine/tree/week-1) tagged with week-1.
+This architecture diagram shows the components we have completed, in-progress, and (hopefully never on here) failed. You can assume this to be what 3-4 man-weeks working full-time would look like, which could vary based on your skill. The code can be found on the [GitHub repo](https://github.com/Isetta-Team/Isetta-Engine/tree/week-1) tagged with week-1.
 
 ![Engine Architecture](../images/engine_architecture/week1.png "Week 1 Progress Architecture")
 
