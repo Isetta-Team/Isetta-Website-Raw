@@ -54,12 +54,6 @@ theme:
   logo:
     icon: "memory"
 
-# Customization
-extra:
-  social:
-    - type: 'github'
-      link: 'https://github.com/Isetta-Team'
-
 # Extensions
 markdown_extensions:
   - admonition
@@ -94,6 +88,13 @@ extra_css:
 
 extra:
   disqus: 'isetta-engine'
+  social:
+    - type: envelope
+      link: mailto:isetta.engine@gmail.com
+    - type: twitter
+      link: https://twitter.com/IsettaEngine
+    - type: github
+      link: https://github.com/Isetta-Team
 
 google_analytics:
   - 'UA-124729724-1'
