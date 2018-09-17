@@ -1,3 +1,5 @@
+# Preparation
+
 ## Introduction
 
 The Isetta Engine is a student-driven project about demystifying game engine development and providing a roadmap and relevant knowledge for novice developers. To do so, [our team](../team.md) will make a game engine by ourselves starting from a collection of base frameworks, and document the process, pitfalls, and advice for our audience with periodic blogs. Besides that, we will conduct interviews with experienced professionals to augment our novice perspective. We believe the novice perspective from our blogs and expert perspective from the interviews will nicely come together and form a complete document to help people get started. 
