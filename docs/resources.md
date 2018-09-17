@@ -95,3 +95,10 @@ Useful articles/resources we used during the development of Isetta
 * [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
+
+## Misc. C++
+* [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
+* [Cppreference - Array Initialization](https://en.cppreference.com/w/c/language/array_initialization)
+* [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
+* [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
+questions/46874055/why-is-inline-required-on-static-inline-variables)
