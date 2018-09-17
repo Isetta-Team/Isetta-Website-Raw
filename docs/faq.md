@@ -31,3 +31,6 @@ Nope, definitely not. We don't expect others to use this engine to develop any g
 
 ## Is there a single aspect of engine development that you will be focusing on? 
 Our goal is to show everything required to build a game engine, so our plan is to keep all of it simple and rudimentary rather than emphasize one particular part. 
+
+## Why "Isetta"?
+In our engine name brainstorming process, one idea we kept coming back to was the "Urkel Engine", based off Steve Urkel, the loveable loser from Family Matters. We thought his catchphrase "Did I do that?" matched our pratfalls that would likely happen throughout the semester. Unfortunately, nobody outside our team liked the name. We then remembered that on the show, Urkel had a tiny rickety car called an Isetta, the image of which was perfect for our engine.
