@@ -1,9 +1,11 @@
-# Why Game Engine Development is Worth Learning
+<h1>Why Game Engine Development is Worth Learning</h1> 
 
-[headshot][../images/interviews/casey-muratori.jpg "Casey Muratori"]
+![headshot](../images/interviews/casey-muratori.jpg "Casey Muratori")
 
-_Casey Muratori is the lead programmer on [1935](https://molly1935.com), an upcoming interactive story engine project, and the host of [Handmade Hero](https://handmadehero.org), an instructional series for game engine programmers.  His past projects include [The Witness](http://the-witness.net/), the [Bink 2 video codec](http://www.radgametools.com/bnkmain.htm), and the [Granny Character Animation System](http://www.radgametools.com/granny.html)._
+_**Casey Muratori** is the lead programmer on [1935](https://molly1935.com), an upcoming interactive story engine project, and the host of [Handmade Hero](https://handmadehero.org), an instructional series for game engine programmers.  His past projects include [The Witness](http://the-witness.net/), the [Bink 2 video codec](http://www.radgametools.com/bnkmain.htm), and the [Granny Character Animation System](http://www.radgametools.com/granny.html)._
 
+
+(The following is the edited transcription of a conversation we had with Casey Muratori.)
 
 ## The Shortage of Engine Programmers
 
@@ -35,13 +37,7 @@ There are two fundamental problems in game engine development that I think set i
 
 I think one of the biggest challenges for an early game engine programmer is making the leap from input-output thinking to this amorphous system. It's very confusing how that happens at first, because even though you're not necessarily aware of it, everything you've ever done prior to that looks a lot more like this input-output phrasing. One of the really good things that you can do at first is to try to figure out the "core loop" of a game engine; the golden differentiator of a simulation. In a flight simulator or a game, they look like this real-time loop where I have a set of entities (each with their own states) and I go through a simulation to change those states. That's a certain process. I then go through a way of presenting those things, and then I return to the beginning. 
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Edited-Transcription0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Edited-Transcription0.png "image_tooltip")
-
+![Game Engine Core Loop](../images/interviews/core-loop.png "Core Loop of a Game Engine")
 
 Just getting yourself comfortable with that and the fact that everything you build has to build out of that is just the first big step. It's not input-output anymore. It doesn't look like a web program; it doesn't look like the neural network; it doesn't look like a parser; doesn't look like a server; doesn't look at any of these things. It looks like that—a "core loop". 
 
