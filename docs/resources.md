@@ -38,6 +38,9 @@ Useful articles/resources we used during the development of Isetta
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
+## Engine Loop
+* [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
+* [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
 
 ## Memory
 * Introduction
