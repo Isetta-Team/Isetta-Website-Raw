@@ -41,8 +41,8 @@ Useful articles/resources we used during the development of Isetta
 
 ## Memory
 * Introduction
-	* *Game Engine Architecture* - Section 3.2.5.1: Alignment and Packing
-	* *Game Engine Architecture* - Section 5.2: Memory Management
+	* *Game Engine Architecture 2nd edition* - Section 3.2.5.1: Alignment and Packing
+	* *Game Engine Architecture 2nd edition* - Section 5.2: Memory Management
 	* [Gamesutra - Writing a Game Engine from Scratch Part2: Memory](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php): Also covers modern CPU memory access patterns.
 	* [Are we out of memory?](http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory/)
 
@@ -50,6 +50,7 @@ Useful articles/resources we used during the development of Isetta
 	* [Randy Gaul's Game Programming Blog - Memory Management](http://www.randygaul.net/2014/07/30/memory-management/): "Anything that has a very clear and non-variable lifespan should be able to be allocated on a stack."
 	* [IBM - Building your own memory manager for C/C++ projects](https://www.ibm.com/developerworks/aix/tutorials/au-memorymanager/index.html): A step by step guide on implementing some allocators.
 	* [ISO C++ FAQ: Is there a way to force new to allocate memory from a specific memory area?](https://isocpp.org/wiki/faq/dtors#memory-pools): Some discussion on placement `new`, `new`, and `delete`, and what you should know if you are going to manage object's lifetime on your own.
+    * [GitHub - Memory Allocators Example](https://github.com/mtrebi/memory-allocators)
 	* [Use the Memory Windows in the Visual Studio Debugger](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2017): The memory windows is very important when debugging memory allocators. You can see the memory layout byte by byte.
 	* [Memory Patterns in Visual Studio](https://stackoverflow.com/questions/127386/in-visual-studio-c-what-are-the-memory-allocation-representations): Another utility for debugging memory allocator. Visual Studio uses certain patterns to mark the state of memory chunks.
 	* [C++ Casting, or: "Oh No, They Broke Malloc!"](https://embeddedartistry.com/blog/2017/2/28/c-casting-or-oh-no-we-broke-malloc): On different types of casts (`static_cast`, `reinterpret_cast`, `const_cast`, `dynamic_cast`, C-style casts) in C++ and when you should use them. `reinterpret_cast` is especially important as we will need to cast `uintptr_t` to actual pointers a lot.
@@ -60,6 +61,8 @@ Useful articles/resources we used during the development of Isetta
 
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
+* [Multiplayer Game Programming](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
+    * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
 
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
@@ -101,3 +104,11 @@ Useful articles/resources we used during the development of Isetta
 * [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
+* [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
+
+## Misc. C++
+* [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
+* [Cppreference - Array Initialization](https://en.cppreference.com/w/c/language/array_initialization)
+* [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
+* [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
+questions/46874055/why-is-inline-required-on-static-inline-variables)
