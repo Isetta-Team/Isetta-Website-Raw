@@ -138,7 +138,7 @@ class ObjectHandle {
 };
 ```
 
-The usage of an object handle resembles that of a raw pointer - you access members through operator `->` and dereference it through operator `*`. When you call those pointers, the object handle is responsible for finding the corresponding `HandleEntry` in the static array and cast its `void* ptr` to `T*`. 
+The usage of an object handle resembles that of a raw pointer - you access members through the operator `->` and dereference it through the operator `*`. When you call those pointers, the object handle is responsible for finding the corresponding `HandleEntry` in the static array and cast its `void* ptr` to `T*`. 
 
 The best part is, when we move objects around in memory, all we need to do is to change the value of `ptr` in the corresponding `HandleEntry` to point to the destination address. The end user doesn't need to do anything - they can just use the object handle as if nothing happened!
 
