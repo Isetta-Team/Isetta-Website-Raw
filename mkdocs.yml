@@ -21,7 +21,8 @@ nav:
     - '[Week 1] The Building Blocks': blogs/week-1.md
     - 'Engine Architecture': blogs/engine-architecture.md
     - '[Week 2] Ramping Up': blogs/week-2.md
-    #- Week 3: blogs/week-3.md
+    - '[Week 3] "Completing" the Core': blogs/week-3.md
+    #- Week #: blogs/week-#.md
   - Interviews:
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
@@ -32,6 +33,8 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Casey Muratori:
+      - Interview: interviews/CaseyMuratori-interview.md
+      - Video Story: interviews/CaseyMuratori-video.md
       - Video Interview: interviews/CaseyMuratori-hmh-video.md
     - Coming Soon: interviews/coming-soon.md
     #- Person:
