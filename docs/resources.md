@@ -69,7 +69,13 @@ Useful articles/resources we used during the development of Isetta
 
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
-
+* [A practical guide to C++ Serialization (use Boost)](http://www.ocoudert.com/blog/2011/07/09/a-practical-guide-to-c-serialization/)
+* [Serialization and Unserialization (ISO C++)](https://isocpp.org/wiki/faq/serialization)
+* [Boost Serialization (Requirements and Other Solutions)](https://www.boost.org/doc/libs/1_36_0/libs/serialization/doc/index.html)
+* [C++ Meta-Serialization](https://eliasdaler.github.io/meta-stuff/)
+* [s11n - Serialization Library](http://www.s11n.net/)
+* [Eternity - Serialization Library](https://sourceforge.net/projects/eternity-it/)
+* [Cereal - Serialization Library](https://github.com/USCiLab/cereal)
 
 ## Sound
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
