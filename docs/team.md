@@ -16,8 +16,8 @@ Jared is a creative writer and producer from New York. He is excited about the i
 
 ## [Caleb Biasco](https://calebbiasco.com/)  
 ![team-headshot](images/team/Caleb.png  "Caleb Headshot")  
-Caleb started game programming in the Video Game Development Club at the University of Minnesota, and hasn't stopped since!  
-	Seriously. The madman is making a game engine now, someone stop him.
+Caleb started programming games in the Video Game Development Club at the University of Minnesota, and hasn't stopped since!  
+Seriously. The madman is making a game engine now, someone stop him.
 
 ## [Jacob Wilson](http://jacwilso.com/)  
 ![team-headshot](images/team/Jacob.JPG  "Jacob Wilson")  
