@@ -13,6 +13,8 @@ edit_uri: ''
 nav:
   - Home: index.md
   - Team: team.md
+  - Blogs: blogs/week-0.md
+  - Interviews: interviews/AdamSerdar-interview.md
   - Schedule: schedule.md
   - Resources: resources.md
   - FAQ: faq.md
