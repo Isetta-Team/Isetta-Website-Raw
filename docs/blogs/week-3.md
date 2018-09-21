@@ -36,7 +36,7 @@ Serialization was originally marked as "Try to Make", and as we were about to st
 
 After the last few weeks of looking at the box labeled `STL Wrapper`, we aren't sure what we were thinking. We are just going to continue using the STL[^845] library without obstructing it anymore. We have created our own alias file to shorten some names of the types, such as `uint8_t` to `U8`, though we wouldn't go as far as labeling this as a wrapper.
 
-[^845]: **STL **stands for standard library which is the C++ library containing most of the needed data structures. It is know to not be best for performance, however will save us time not implementing them.
+[^845]: **STL** stands for standard library which is the C++ library containing most of the needed data structures. It is know to not be best for performance, however will save us time not implementing them.
 
 
 ### Data Structures
@@ -46,13 +46,9 @@ As part of the network programming, we realized we would be encountering several
 
 ## Input Module
 
-As we mentioned in [last week's blog post](https://isetta.io/blogs/week-2/), we are using GLFW[^548] to receive and notify input events. Unlike other modules which are completely hidden from the game developer by scene entity data, the input module is one that not only processes low-level operations, like receiving inputs, but also directly interacts with them. The developers should be able to know when an input is triggered as well as run custom code to react to that event. This requires us to design a simple, friendly but versatile interfaces for game developers to use.
+As we mentioned in [last week's blog post](https://isetta.io/blogs/week-2/), we are using GLFW[^8987] to receive and notify input events. Unlike other modules which are completely hidden from the game developer by scene entity data, the input module is one that not only processes low-level operations, like receiving inputs, but also directly interacts with them. The developers should be able to know when an input is triggered as well as run custom code to react to that event. This requires us to design a simple, friendly but versatile interfaces for game developers to use.
 
-
-```
-[^548]: **GLFW** is a library utility for creating windows and receiving input from the window.
-```
-
+[^8987]: **GLFW** is a library utility for creating windows and receiving input from the window.
 
 We divided the whole input system into two parts: an `InputModule` class to do the low-level operations, and an `Input` class to provide an interface for the game developers. For each input signal (like mouse buttons and keyboard keys), we found that providing multiple ways for the game developer to use is necessary and approachable. Unity provides polling methods like `GetKeyDown` so that the game developer can check if a key is pressed down on `Update`. In addition to that, Unreal provides callback binding, where game developers can bind a custom callback and call it when the button event is triggered.
 
@@ -123,9 +119,6 @@ Defragmentation works by removing "holes" of free memory between objects. This i
 In our system, the  `HandleEntry` is what holds the pointer to actual objects. It is structured like so:
 
 ``` cpp
-
-
-```
 class HandleEntry {
     U32 uniqueID;
     void* ptr;
@@ -133,15 +126,9 @@ class HandleEntry {
 };
 ```
 
-
-```
-
 We are keeping a static fixed-size array of `HandleEntry`s. Every time we need to create a new dynamic object, we search through the array and find the first available `HandleEntry`, construct the object, and set the three variables of that entry, where 'ptr' is the pointer to the actual object. This routine returns the `ObjectHandle` (finally!) to our newly created object, which keeps track of the index to our assigned `HandleEntry` and the `uniqueID`. `ObjectHandle` is defined like this:
 
 ``` cpp
-
-
-```
 template <typename T>
 class ObjectHandle {
     T* operator->() const;
@@ -151,9 +138,6 @@ class ObjectHandle {
 };
 ```
 
-
-```
-
 The usage of an object handle resembles that of a raw pointer - you access members through operator `->` and dereference it through operator `*`. When you call those pointers, the object handle is responsible for finding the corresponding `HandleEntry` in the static array and cast its `void* ptr` to `T*`. 
 
 The best part is, when we move objects around in memory, all we need to do is to change the value of `ptr` in the corresponding `HandleEntry` to point to the destination address. The end user doesn't need to do anything - they can just use the object handle as if nothing happened!
@@ -161,32 +145,20 @@ The best part is, when we move objects around in memory, all we need to do is to
 Our implementation of object handle requires minimal changes from the game developers. The typical dynamic allocation routine will change from this:
 
 ``` cpp
-
-
-```
 auto ptr = new MyObj();
 ptr->SomeMember();
 ptr->someVariable = newValue;
 delete ptr;
 ```
 
-
-```
-
 to this:
 
 ``` cpp
-
-
-```
 auto handle = OurNewUtility<MyObj>();
 handle->SomeMember(); // same as the good ol' days 
 // maybe defragmentation happens here, but we don't need to care!
 handle->someVariable = newValue; // also the same!
 OurDeleteUtility(handle);
-```
-
-
 ```
 
 The reason we keep track of `uniqueID`s is that they can help us prevent the _stale pointer_ problem and _double deletion_ problem. 
@@ -221,9 +193,6 @@ What is currently implemented with the filesystem is async file read/write, sync
 
 The filesystem is complete for now, though more could still be done. A cancel operation could be implemented because the naive one commented out causes memory leaks (not implemented because we can't foresee an immediate use). An easier task would be a synchronous write call, however we don't see a use case where you would want to stall your update for a write. Another more advanced extension would be extending the filesystem for a different platform, like OSX or Linux, because this is a small step in porting the engine.
 
- \
-
-
 
 ## Networking
 
@@ -233,8 +202,7 @@ Now that we've gotten into some actual network programming, we should probably i
 
 The game networking layers is a modified version of the OSI Model[^784].
 
-[^784]: **OSI **stands for Open System Interconnection and is a standard for networking layers. 
-
+[^784]: **OSI** stands for Open System Interconnection and is a standard for networking layers. 
 
 
 *   The _physical layer_ is quite literally physical: The wires and radio waves used to physically transfer information across a network.
@@ -245,7 +213,7 @@ The game networking layers is a modified version of the OSI Model[^784].
 
 [^483920]: A **packet** is formatted data that is sent over a network. Virtual objects are serialized and broken into these small chunks before being sent, and different protocols expect different formats for packets.
 
-[^909281]: The **client-server** **model** in networking has one central server that all other machines (the "clients") connect to. This server is typically the authority on all important and possibly conflicting information.
+[^909281]: The **client-server model** in networking has one central server that all other machines (the "clients") connect to. This server is typically the authority on all important and possibly conflicting information.
 
 [^909282]: The **peer-to-peer model** in networking connects every machine to one another, which requires more bandwidth per client and more complex data authority handling but avoids needing a dedicated server. Peer-to-peer is generally harder to implement than client-server.
 
@@ -281,7 +249,7 @@ The Networking module that we created has two sides: client and server. The clie
 
 Once we established our basic wrapper overtop of the yojimbo library, we set off to homebrew our own network test. This should have been fairly straightforward like a mirror of the yojimbo client-server test, but for some reason, it just wasn't working! Over the course of several days, one of our developers dug deeper and deeper into the yojimbo codebase to find the solution. This was a blessing and a curse. yojimbo is over 10,000 lines of unfamiliar code, and learning it could make the engine's networking component much more effective. But networked code can be intimidating to debug—even on a single, localhost[^535362] machine because of the physical and link layers.
 
-[^535362]: A **localhost **address in networking is specifically address 127.0.0.1. Packets that are sent here are not technically sent anywhere, they're just sent up to the next layer for processing.
+[^535362]: A **localhost** address in networking is specifically address 127.0.0.1. Packets that are sent here are not technically sent anywhere, they're just sent up to the next layer for processing.
 
 The journey came to an end when he mangled our wrapping code beyond recognition. He managed to disable a default parameter in the construction for the `Address` class, which contains both a IPv4 value and a port. As it turns out, yojimbo's `Address` objects can be instantiated with some default port value so long as an IP address is given! And if the other networked machine happens to be using a custom port, then the packets get lost at the transport layer. Once that was corrected, everything worked! And our developer went on his way to cleaning up the mess he made…
 
@@ -294,9 +262,11 @@ We didn't stop there. We wanted it to at least _look_ more like a game, so our o
 
 At this point, it's looking like we're going down the networked game engine route, and we're mentally prepared for that. yojimbo has been a great shortcut regarding the link through transport layers, and now we have our real big obstacles to tackle now: state synchronization and a more comprehensive system of messages that could be used somewhat generically.
 
+## [Resources](../resources.md)
 
-<!-- GD2md-html version 1.0β11 -->
+The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+<br>
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
