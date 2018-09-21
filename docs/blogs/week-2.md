@@ -266,6 +266,7 @@ We would appreciate any feedback you may have about our content or what we are d
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+<br>
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
