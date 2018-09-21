@@ -61,6 +61,8 @@ Useful articles/resources we used during the development of Isetta
 
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
+* [Multiplayer Game Programming](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
+    * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
 
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
@@ -96,6 +98,7 @@ Useful articles/resources we used during the development of Isetta
 * [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
+* [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
 
 ## Misc. C++
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
