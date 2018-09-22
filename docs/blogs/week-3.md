@@ -73,7 +73,7 @@ After some discussion, we all agreed to apply the second solution. The first sol
 
 As mentioned by Casey during our [interview](../interviews/CaseyMuratori-interview.md), a game engine is not like common software that always wait for user input, process it and then do the output. It's more like a self-contained loop that simulates the game every frame and reacts simultaneously to the user inputs. The engine loop is the core loop used in the engine to take charge of any submodules and update them in the rate they prefer.
 
-When working with the engine loop, we needed to decide both how fast the loop should run and in what rate all the submodules should update. After reading several articles (especially the one from_ [Game Programming Patterns](http://gameprogrammingpatterns.com/game-loop.html)_), we found that there are three major ways to update the game:
+When working with the engine loop, we needed to decide both how fast the loop should run and in what rate all the submodules should update. After reading several articles (especially the one from [_Game Programming Patterns_](http://gameprogrammingpatterns.com/game-loop.html)), we found that there are three major ways to update the game:
 
 
 
@@ -131,7 +131,7 @@ We are keeping a static fixed-size array of `HandleEntry`s. Every time we need t
 ``` cpp
 template <typename T>
 class ObjectHandle {
-    T* operator->() const;
+    T* operator->();
     T& operator*();
     U32 uniqueID;
     U32 index;
@@ -198,7 +198,7 @@ The filesystem is complete for now, though more could still be done. A cancel op
 
 Now that we've gotten into some actual network programming, we should probably introduce some of the concepts that we're building on top of. Much of what we've learned about network programming comes from[ Multiplayer Game Programming](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309) by Joshua Glazer and Sanjay Madhav particularly, and a good reference/example that you could use to learn networking independently from a game engine is [bshokati's C++ networking project](https://www.codeproject.com/Articles/412511/Simple-client-server-network-using-Cplusplus-and-W). Just like game engines, computer networking is built on layers, and the typical order (from bottom up) of those layers in game networking works like this: _physical layer, link layer, network layer, transport layer, _and _application layer_. Each layer has a duty, but they can follow those duties in different ways, and the different implementations of a layer is called a _protocol_.
 
-[Networking Layers](#../images/blogs/networking_layers Networking Layers)
+![Networking Layers](../images/blogs/networking_layers.png "Networking Layers")
 
 The game networking layers is a modified version of the OSI Model[^784].
 
