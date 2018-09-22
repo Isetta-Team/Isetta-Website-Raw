@@ -1,6 +1,6 @@
-# The Definition and Beginning of a Game Engine
+<h1>The Definition and Beginning of a Game Engine</h1>
 
-![Adam Serdar](../images/interviews/adam-serdar.jpg "Adam Serdar Headshot")
+![headshot](../images/interviews/adam-serdar.jpg "Adam Serdar")
 
 _**Adam Serdar** is a Senior Game Engineer at Schell Games where he works on projects that need server technology, graphic effects, or frame rate optimization._
 

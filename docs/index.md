@@ -16,17 +16,17 @@ Our aim is to demystify the game engine development process.
 					<div class="col-12 nbm">
 						<div style="text-align: center; font-size: 28px;
  	line-height: 52px;">
-							<span style="color:rgba(0,0,0,0.54);">Interview with Adam Serdar!</span>
+							<span style="color:rgba(0,0,0,0.54);">Interview with Casey Muratori!</span>
 						</div>
 					</div>
 				</div>
 				<div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
-					<iframe width="1280" height="720" src="https://www.youtube.com/embed/_bnZYotTQRA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<div class="row fw-content-wrap">
 					<div class="col-12 nbm">
 						<div style="text-align: center; font-size: 18px; line-height: 22px; padding: 30px 5px 0px 5px;">
-							<span style="color:rgba(0,0,0,0.54);">See what else Adam has to say about game engines in his full <a href="interviews/AdamSerdar-interview">interview</a>.</span>
+							<span style="color:rgba(0,0,0,0.54);">See what else Casey has to say about game engine programming in his full <a href="interviews/CaseyMuratori-interview">interview</a>.</span>
 						</div>
 					</div>
 				</div>

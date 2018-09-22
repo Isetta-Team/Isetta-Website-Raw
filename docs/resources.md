@@ -38,6 +38,9 @@ Useful articles/resources we used during the development of Isetta
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
+## Engine Loop
+* [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
+* [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
 
 ## Memory
 * Introduction
@@ -61,10 +64,18 @@ Useful articles/resources we used during the development of Isetta
 
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
+* [Multiplayer Game Programming](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
+    * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
 
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
-
+* [A practical guide to C++ Serialization (use Boost)](http://www.ocoudert.com/blog/2011/07/09/a-practical-guide-to-c-serialization/)
+* [Serialization and Unserialization (ISO C++)](https://isocpp.org/wiki/faq/serialization)
+* [Boost Serialization (Requirements and Other Solutions)](https://www.boost.org/doc/libs/1_36_0/libs/serialization/doc/index.html)
+* [C++ Meta-Serialization](https://eliasdaler.github.io/meta-stuff/)
+* [s11n - Serialization Library](http://www.s11n.net/)
+* [Eternity - Serialization Library](https://sourceforge.net/projects/eternity-it/)
+* [Cereal - Serialization Library](https://github.com/USCiLab/cereal)
 
 ## Sound
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
@@ -96,6 +107,7 @@ Useful articles/resources we used during the development of Isetta
 * [Deriving objects from stings](https://stackoverflow.com/questions/582331/is-there-a-way-to-instantiate-objects-from-a-string-holding-their-class-name)
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
+* [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
 
 ## Misc. C++
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)

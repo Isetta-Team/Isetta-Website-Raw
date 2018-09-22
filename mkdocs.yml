@@ -13,15 +13,19 @@ edit_uri: ''
 nav:
   - Home: index.md
   - Team: team.md
+  - Blogs: blogs/week-0.md
+  - Interviews: interviews/AdamSerdar-interview.md
   - Schedule: schedule.md
   - Resources: resources.md
+  - Glossary: glossary.md
   - FAQ: faq.md
   - Blogs:
     - '[Week 0] Preparation': blogs/week-0.md
     - '[Week 1] The Building Blocks': blogs/week-1.md
     - 'Engine Architecture': blogs/engine-architecture.md
     - '[Week 2] Ramping Up': blogs/week-2.md
-    #- Week 3: blogs/week-3.md
+    - '[Week 3] "Completing" the Core': blogs/week-3.md
+    #- Week #: blogs/week-#.md
   - Interviews:
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
@@ -32,6 +36,8 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Casey Muratori:
+      - Interview: interviews/CaseyMuratori-interview.md
+      - Video Story: interviews/CaseyMuratori-video.md
       - Video Interview: interviews/CaseyMuratori-hmh-video.md
     - Coming Soon: interviews/coming-soon.md
     #- Person:

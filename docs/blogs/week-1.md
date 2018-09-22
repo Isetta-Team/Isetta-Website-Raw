@@ -185,6 +185,8 @@ We'll be checking in again with another progress update soon so stay tuned, and 
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+<br>
+
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup" style="margin-top: -20px">

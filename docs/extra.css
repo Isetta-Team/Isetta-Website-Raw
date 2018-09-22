@@ -1,7 +1,13 @@
 /*#region TEAM */
 
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 img[alt="team-headshot"]{
-    width: 250px;
+	width: 250px;
 }
 
 /*#endregion*/
