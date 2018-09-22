@@ -106,7 +106,9 @@ We are still discussing if we should introduce defragmentation[^2] into our engi
 
 ## Graphics
 
-Last week, we proved that Horde3D can satisfy our needs by making a simple demo. This week, we moved on to making a wrapper that would integrate it into our engine architecture and make it more accessible for our users. At the same time, we found that GLFW (the dependency brought in by Horde3D) can also handle input events, including those from game controllers, so we also started wrapping that into our game engine.
+Last week, we proved that Horde3D can satisfy our needs by making a simple demo. This week, we moved on to making a wrapper that would integrate it into our engine architecture and make it more accessible for our users. At the same time, we found that GLFW[^548] (the dependency brought in by Horde3D) can also handle input events, including those from game controllers, so we also started wrapping that into our game engine.
+
+[^548]: **GLFW** is a library utility for creating windows and receiving input from the window.
 
 In the original design of our modules, we assumed that each module should be self-contained and have no dependency on other modules. Thus, the constructor should be completely empty and the `StartUp()` function should take no external parameters. However, GLFW disproves this assumption.
 
@@ -264,6 +266,7 @@ We would appreciate any feedback you may have about our content or what we are d
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+<br>
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
