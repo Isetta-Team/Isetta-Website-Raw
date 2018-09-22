@@ -41,8 +41,8 @@ Useful articles/resources we used during the development of Isetta
 
 ## Memory
 * Introduction
-	* *Game Engine Architecture 2nd edition* - Section 3.2.5.1: Alignment and Packing
-	* *Game Engine Architecture 2nd edition* - Section 5.2: Memory Management
+	* *Game Engine Architecture 2nd edition* - Chapter 3.2.5.1: Alignment and Packing
+	* *Game Engine Architecture 2nd edition* - Chapter 5.2: Memory Management
 	* [Gamesutra - Writing a Game Engine from Scratch Part2: Memory](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php): Also covers modern CPU memory access patterns.
 	* [Are we out of memory?](http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory/)
 
@@ -70,7 +70,7 @@ Useful articles/resources we used during the development of Isetta
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
 * [Demystifying Audio Middleware](https://www.somatone.com/demystifying-audio-middleware/)
 * [FMOD API Overview](https://www.fmod.com/resources/documentation-api?page=content/generated/common/lowlevel_introduction.html#configuration)
-* *Game Engine Architecture* - Chapter 13: Audio
+* *Game Engine Architecture 2nd edition* - Chapter 13: Audio
 
 
 ## String Hashing
@@ -89,7 +89,7 @@ Useful articles/resources we used during the development of Isetta
 * [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
 * [unordered_map cppreference](https://en.cppreference.com/w/cpp/container/unordered_map)
 * [Data Structures in Games](http://enemyhideout.com/2016/05/games-101-data-structures-in-games/)
-* The Game Engine Architecture's chapter 5.3 on containers
+* *Game Engine Architecture 2nd edition* - Chapter 5.3: Containers
 * [In-house Engine Development: Process Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-process-tips/)
 * [In-house Engine Development: Technical Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-technical-tips/)
 
@@ -103,3 +103,4 @@ Useful articles/resources we used during the development of Isetta
 * [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
 * [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
 questions/46874055/why-is-inline-required-on-static-inline-variables)
+* [StackOverflow - How are C++11 lambdas represented and passed?](https://stackoverflow.com/questions/16921247/how-are-c11-lambdas-represented-and-passed)
