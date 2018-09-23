@@ -26,7 +26,7 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Level Scene Graph**- the scene graph corresponding to a level, similar to a level configuration file. It will contain the information (transformation, behavior, whether it is static, etc.) about the starting game objects. [↩](https://isetta.io/blogs/engine-architecture/#fnref:7)
 
-**Persistent Game Data**- Jason Gregory refers to this as "LSR" data, Load-and-Stay-Resident, as seen in _Game Engine Architecture_section 15.4.2 [↩](https://isetta.io/blogs/week-2/#fnref:1)
+**Persistent Game Data**- Jason Gregory refers to this as "LSR" data, Load-and-Stay-Resident, as seen in _Game Engine Architecture_section 15.4.2_ [↩](https://isetta.io/blogs/week-2/#fnref:1)
 
 **Defragmentation**- Fragmentation is when a lot of memory allocations or files take up noncontinuous chunks of space, leaving awkward bubbles that can't be used by anyone. So **defragmentation** is the process of reordering those objects so that we can clear up a cleaner, bigger stretch of free space or memory. [↩](https://isetta.io/blogs/week-2/#fnref:2)
 
