@@ -4,9 +4,9 @@ All of our content is worked on and submitted on a regular basis. Below is our s
 
 | What?        | Updated When? |
 | ------------ | -------------: |
-| Weekly Blogs | Posted on Fri. (4PM EST.) |
-| Github Tags  | Posted on Wed. (11:59:59PM EST.) |
-| Interviews   | Done weekly. Posted when edited (2~3 weeks after) |
+| [Weekly Blogs](blogs/week-0.md) | Posted on Fri. (4PM EST.) |
+| [Github Tags](https://github.com/Isetta-Team/Isetta-Engine/releases)  | Posted on Wed. (11:59:59PM EST.) |
+| [Interviews](interviews/CaseyMuratori-interview.md)   | Done weekly. Posted when edited (2~3 weeks after) |
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
