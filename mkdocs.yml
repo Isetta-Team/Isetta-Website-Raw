@@ -27,11 +27,6 @@ nav:
     - '[Week 3] "Completing" the Core': blogs/week-3.md
     #- Week #: blogs/week-#.md
   - Interviews:
-    - Summarized Advice:
-      - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
-      - Jason Gregory: interviews/JasonGregory-advice.md
-      - Oliver Franzke: interviews/OliverFranzke-advice.md
-      - Walt Destler: interviews/WaltDestler-advice.md
     - Adam Serdar: 
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
@@ -39,6 +34,11 @@ nav:
       - Interview: interviews/CaseyMuratori-interview.md
       - Video Story: interviews/CaseyMuratori-video.md
       - Video Interview: interviews/CaseyMuratori-hmh-video.md
+    - Summarized Advice:
+      - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
+      - Jason Gregory: interviews/JasonGregory-advice.md
+      - Oliver Franzke: interviews/OliverFranzke-advice.md
+      - Walt Destler: interviews/WaltDestler-advice.md
     - Coming Soon: interviews/coming-soon.md
     #- Person:
     # - Interview: interviews/person-interview.md

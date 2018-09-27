@@ -42,6 +42,27 @@ Useful articles/resources we used during the development of Isetta
 * [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
 * [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
 
+## Filesystem
+* [Windows with C++ - The Evolution of Threads and IO in Windows](https://msdn.microsoft.com/en-us/magazine/jj883951.aspx)
+* StackOverflow
+    * [Understanding Multithread Reading C++11](https://stackoverflow.com/questions/29028137/how-to-multithread-reading-a-file-in-c11)
+    * [Async Write C++ without Windows](https://stackoverflow.com/questions/21126950/asynchronously-writing-to-a-file-in-c-unix)
+    * [Streambuf - What is it?](https://stackoverflow.com/questions/8116541/what-exactly-is-streambuf-how-do-i-use-it)
+    * [ReadFile Example](https://stackoverflow.com/questions/30914346/read-lines-from-file-async-using-winapi-readfile)
+    * [WriteFile with IO Completion Ports](https://stackoverflow.com/questions/9451557/writefile-with-io-completion-port-issue)
+    * [WriteFile Example](https://stackoverflow.com/questions/9174947/writefile-function-c)
+    * [IO Completion Port with ReadFile Example](https://stackoverflow.com/questions/9683441/iocp-and-readfileex-usage)
+* Microsoft Docs
+    * [ReadFile](https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-readfile)
+    * [WriteFile](https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-writefile)
+    * [Async Read | ReadFileEx](https://docs.microsoft.com/en-us/windows/desktop/api/fileapi/nf-fileapi-readfileex)
+    * [IO Completion Ports](https://docs.microsoft.com/en-us/windows/desktop/fileio/i-o-completion-ports)
+    * [PostQueuedCompletionStatu](https://docs.microsoft.com/en-us/windows/desktop/fileio/postqueuedcompletionstatus)
+    * [CreateThread](https://docs.microsoft.com/en-us/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)
+    * [End of File Example](https://docs.microsoft.com/en-us/windows/desktop/fileio/testing-for-the-end-of-a-file)
+* [Multithreading Performance](https://msdn.microsoft.com/en-us/library/ms810437.aspx)
+* [Understanding Async IO Operations](https://softwareengineering.stackexchange.com/questions/322387/using-asynchronous-calls-for-heavy-io-operation-how-to-prevent-crushing-the-cpu)
+
 ## Memory
 * **Introduction**
 	* *Game Engine Architecture 2nd edition* - Chapter 3.2.5.1: Alignment and Packing
