@@ -29,7 +29,7 @@ For latest schedule, see our [schedule](../schedule.md) page.
 
 ### Prerequisites
 
-Although we will cover some basic features of engine development, it will profoundly help if you have experience in C++ programming and developing software, especially games, as our project won't provide step-by-step instructions on how to do everything. For a list of resources on how to gain related knowledge, please go to the [Readings](#Readings) section. 
+Although we will cover some basic features of engine development, it will profoundly help if you have experience in C++ programming and developing software, especially games, as our project won't provide step-by-step instructions on how to do everything. For a list of resources on how to gain related knowledge, please go to the [Readings](#Readings) section. Additional resources will be posted on our [resource page](../resources.md).
 
 Another prerequisite is passion for learning game engine development. As you are still reading this, we assume you are as excited about this as we are. This will be a bumpy ride, but you will have us on your side.
 
@@ -97,7 +97,7 @@ Of these components, number 1 will have a smattering of imported libraries to as
 
 ## Readings
 
-Creating an engine can be a daunting task, especially considering there is no clear starting point. When we started the project, we looked to others to see how we could be guided, but we were greeted with massive textbooks that were both daunting and dense. As fearful as we were, we read a few of these books and blogs in order to have a better grasp of developing an engine in such a short period. We strongly recommend you read some of these books, or at least the chapters listed, because it will give you a better understanding of the language we use as well as what we are trying to accomplish. Our goal for these blogs is to be able to explain what we are doing and why are doing it. However, we won't be covering the "how" because it takes time to develop content that is teachable. This is by no means an end-all list of engine books and resources; it is only what we used/think could be most useful.
+Creating an engine can be a daunting task, especially considering there is no clear starting point. When we started the project, we looked to others to see how we could be guided, but we were greeted with massive textbooks that were both daunting and dense. As fearful as we were, we read a few of these books and blogs in order to have a better grasp of developing an engine in such a short period. We strongly recommend you read some of these books, or at least the chapters listed, because it will give you a better understanding of the language we use as well as what we are trying to accomplish. Our goal for these blogs is to be able to explain what we are doing and why are doing it. However, we won't be covering the "how" because it takes time to develop content that is teachable. This is by no means an end-all list of engine books and resources; it is only what we used/think could be most useful. Additional resources may be found [here](../resources.md).
 
 
 ### Books
