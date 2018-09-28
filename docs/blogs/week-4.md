@@ -8,9 +8,14 @@ The biggest road bump  this past week was going back through the code and adding
 
 ![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
 
-<div class="video-wrapper">
-    <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=LT3XdIKP_08?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+<br><br>
+
+Check out these sick shots.
+
+
+<p display="block" align="center">
+<iframe display="block" text-align="center" width="560" height="315" src="https://www.youtube.com/embed/LT3XdIKP_08?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
 
 ## Memory
 
