@@ -36,8 +36,8 @@ As you can see, this linear technique kinda works, but is inefficient and defini
 
 
 1.  Step 2 is O(logn)
-    1.  Step 2.1 is O(logn)
-    1.  Step 2.2 is O(logn)
+    1.  Step 2.a is O(logn)
+    1.  Step 2.b is O(logn)
 1.  Step 3 is O(logn) plus time for moving memory
 
 There are many O(logn)s going on, when what we want is O(1). And space-wise, the `addressIndexMap` is also incurring 16 bytes of memory overhead for each object.
