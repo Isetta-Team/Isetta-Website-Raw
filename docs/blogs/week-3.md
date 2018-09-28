@@ -260,6 +260,11 @@ We didn't stop there. We wanted it to at least _look_ more like a game, so our o
 
 At this point, it's looking like we're going down the networked game engine route, and we're mentally prepared for that. yojimbo has been a great shortcut regarding the link through transport layers, and now we have our real big obstacles to tackle now: state synchronization and a more comprehensive system of messages that could be used somewhat generically.
 
+## Coming Soon
+Released today was Casey Muratori's, developer of Handmade Hero, [interview](../interviews/CaseyMuratori-interview.md). We are working on editing the interview Tommy Refenes of Team Meat for next week.
+
+We would appreciate any feedback or questions you may have about our content or what we are doing in the comments.
+
 ## [Resources](../resources.md)
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!

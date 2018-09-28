@@ -260,7 +260,7 @@ Therefore, we've adopted the [GitFlow](https://www.atlassian.com/git/tutorials/c
 
 This past Saturday, September 8, 2018, we interviewed Casey Muratori of Handmade Hero. There was a lot of great information about engine development, and we will be posting a concise, edited version soon. Right now, though, you can check out the full [video](../interviews/CaseyMuratori-hmh-video.md).
 
-We would appreciate any feedback you may have about our content or what we are doing in the comments. Also if you have any questions
+We would appreciate any feedback or questions you may have about our content or what we are doing in the comments.
 
 ## Resources
 
