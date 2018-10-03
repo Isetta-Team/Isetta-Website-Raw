@@ -1,7 +1,8 @@
 # The Engine Sandwich: Made with Super Meat 
 
 ![headshot](../images/interviews/tommy-refenes.jpg "Tommy Refenes")
-BIO
+
+_**Tommy Refenes**  is the co-founder of Team Meat and the lead programmer on the upcoming_ Super Meat Boy Forever, _the next entry in the classic platformer_ Super Meat Boy _series. He previously released the award-winning_ Super Meat Boy _and appeared in_ Indie Game: The Movie._
 
 ## Compartmentalizing is Key
 
