@@ -38,6 +38,7 @@ Useful articles/resources we used during the development of Isetta
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
+
 ## Data Structures
 * [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
 * [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
@@ -45,12 +46,15 @@ Useful articles/resources we used during the development of Isetta
 * [Data Structures in Games](http://enemyhideout.com/2016/05/games-101-data-structures-in-games/)
 * *Game Engine Architecture 2nd edition* - Chapter 5.3: Containers
 
+
 ## ECS
 * [Nomad Game Engine: Part 2 — ECS](https://medium.com/@savas/nomad-game-engine-part-2-ecs-9132829188e5)
+
 
 ## Engine Loop
 * [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
 * [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
+
 
 ## Filesystem
 * [Windows with C++ - The Evolution of Threads and IO in Windows](https://msdn.microsoft.com/en-us/magazine/jj883951.aspx)
@@ -72,6 +76,7 @@ Useful articles/resources we used during the development of Isetta
     * [End of File Example](https://docs.microsoft.com/en-us/windows/desktop/fileio/testing-for-the-end-of-a-file)
 * [Multithreading Performance](https://msdn.microsoft.com/en-us/library/ms810437.aspx)
 * [Understanding Async IO Operations](https://softwareengineering.stackexchange.com/questions/322387/using-asynchronous-calls-for-heavy-io-operation-how-to-prevent-crushing-the-cpu)
+
 
 ## Memory
 * **Introduction**
@@ -98,6 +103,7 @@ Useful articles/resources we used during the development of Isetta
 * [*Multiplayer Game Programming*](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
     * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
 
+
 ## Serialization / Reflection
 * [A C++ 11 Reflection and Serialization library on Github](https://github.com/simonask/reflect)
 * [A practical guide to C++ Serialization (use Boost)](http://www.ocoudert.com/blog/2011/07/09/a-practical-guide-to-c-serialization/)
@@ -107,6 +113,7 @@ Useful articles/resources we used during the development of Isetta
 * [s11n - Serialization Library](http://www.s11n.net/)
 * [Eternity - Serialization Library](https://sourceforge.net/projects/eternity-it/)
 * [Cereal - Serialization Library](https://github.com/USCiLab/cereal)
+
 
 ## Sound
 * [Unreal Audio System Overview](https://docs.unrealengine.com/en-US/Engine/Audio/Overview)
@@ -126,6 +133,7 @@ Useful articles/resources we used during the development of Isetta
 ## Visual Studio
 * [Common Macros for Build Commands](https://msdn.microsoft.com/en-us/library/c02as0cs.aspx)
 
+
 ## Misc.
 * [In-house Engine Development: Process Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-process-tips/)
 * [In-house Engine Development: Technical Tips](https://johanneskuhlmann.de/blog/in-house-engine-development-technical-tips/)
@@ -134,6 +142,7 @@ Useful articles/resources we used during the development of Isetta
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
 * [Stanford CS101 - Bits and Bytes](https://web.stanford.edu/class/cs101/bits-bytes.html)
+
 
 ## Misc. C++
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
