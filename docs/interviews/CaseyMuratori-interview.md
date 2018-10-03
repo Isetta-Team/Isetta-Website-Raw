@@ -2,7 +2,7 @@
 
 ![headshot](../images/interviews/casey-muratori.jpg "Casey Muratori")
 
-_**Casey Muratori** is the lead programmer on [1935](https://molly1935.com), an upcoming interactive story engine project, and the host of [Handmade Hero](https://handmadehero.org), an instructional series for game engine programmers.  His past projects include [The Witness](http://the-witness.net/), the [Bink 2 video codec](http://www.radgametools.com/bnkmain.htm), and the [Granny Character Animation System](http://www.radgametools.com/granny.html)._
+_**Casey Muratori** is the lead programmer on_ [1935](https://molly1935.com), _an upcoming interactive story engine project, and the host of_ [Handmade Hero](https://handmadehero.org), _an instructional series for game engine programmers.  His past projects include_ [The Witness](http://the-witness.net/), _the_ [Bink 2 video codec](http://www.radgametools.com/bnkmain.htm), _and the_ [Granny Character Animation System](http://www.radgametools.com/granny.html).
 
 
 (The following is the edited transcription of a [conversation we had with Casey Muratori](CaseyMuratori-hmh-video.md).)
