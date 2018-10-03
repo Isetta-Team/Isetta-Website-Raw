@@ -1,4 +1,4 @@
-# Commenting it All
+# Buried in Comments
 
 ## Byte-Sized Updates
 
@@ -8,9 +8,14 @@ The biggest road bump  this past week was going back through the code and adding
 
 ![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
 
-<div class="video-wrapper">
-    <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=LT3XdIKP_08?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+<br><br>
+
+Check out these sick shots.
+
+
+<p display="block" align="center">
+<iframe display="block" text-align="center" width="560" height="315" src="https://www.youtube.com/embed/LT3XdIKP_08?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
 
 ## Memory
 
@@ -36,8 +41,8 @@ As you can see, this linear technique kinda works, but is inefficient and defini
 
 
 1.  Step 2 is O(logn)
-    1.  Step 2.1 is O(logn)
-    1.  Step 2.2 is O(logn)
+    1.  Step 2.a is O(logn)
+    1.  Step 2.b is O(logn)
 1.  Step 3 is O(logn) plus time for moving memory
 
 There are many O(logn)s going on, when what we want is O(1). And space-wise, the `addressIndexMap` is also incurring 16 bytes of memory overhead for each object.
