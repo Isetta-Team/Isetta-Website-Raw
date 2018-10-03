@@ -2,7 +2,7 @@
 
 ![headshot](../images/interviews/tommy-refenes.jpg "Tommy Refenes")
 
-**Tommy Refenes** is the programmer for the million-selling and award-winning _Super Meat Boy_ series and the lead programmer on the upcoming _Super Meat Boy Forever_. He also appeared in _Indie Game: The Movie_.
+_**Tommy Refenes** is the programmer for the million-selling and award-winning_ [Super Meat Boy](https://store.steampowered.com/app/40800/Super_Meat_Boy/)  _and the lead programmer on the upcoming_ [Super Meat Boy Forever](http://supermeatboy.com/). _He also appeared in_ Indie Game: The Movie.
 
 ## Compartmentalizing is Key
 
