@@ -2,7 +2,7 @@
 
 ![headshot](../images/interviews/tommy-refenes.jpg "Tommy Refenes")
 
-_**Tommy Refenes**  is the co-founder of Team Meat and the lead programmer on the upcoming_ Super Meat Boy Forever, _the next entry in the classic platformer_ Super Meat Boy _series. He previously released the award-winning_ Super Meat Boy _and appeared in_ Indie Game: The Movie._
+**Tommy Refenes** is the programmer for the million-selling and award-winning _Super Meat Boy_ series and the lead programmer on the upcoming _Super Meat Boy Forever_. He also appeared in _Indie Game: The Movie_.
 
 ## Compartmentalizing is Key
 
@@ -14,7 +14,7 @@ Regarding my first attempt at a game engine, I experimented with making a game e
 
 The biggest point of confusion when I was starting out was actually learning how to properly abstract and compartmentalize and implant, because when you're at the beginning of making an engine, **where the hell do you start?** That's a huge challenge; even getting something simple like a triangle drawing on the screen takes 100 lines of OpenGL[^3] code or 200 lines of DirectX[^4] code. From that point, even when you have a triangle on-screen, where do you go from there? I think learning that I needed to compartmentalize,having: my asset loader, my game, my controller code, my audio code, having all those things... I think that was the biggest point of confusion for me. Being able to compartmentalize those systems actually allowed me to have that starting point.
 
-[^3]: **OpenGL **is short for Open Graphics Library - a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.
+[^3]: **OpenGL** is short for Open Graphics Library - a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.
 
 [^4]: Microsoft **DirectX** is a collection of application programming interfaces (APIs) for handling tasks related to multimedia, especially game programming, on Microsoft platforms, like Windows and Xbox. It serves similar purposes as OpenGL.
 
@@ -54,7 +54,7 @@ One of the big 3rd party libraries I used was Box2D[^3125]. When I looked at the
 
 [^3125]: **Box2D** is an open source C++ engine for simulating rigid bodies in 2D. Box2D is developed by Erin Catto and has the zlib license.
 
-[^3126]: Physics engine for games usually consists of two parts: collision detection and collision resolution, and **solver **refers to the resolution part. Collision detection detects what objects collide with each other first, and then the solver determines their correct physical response, like position, rotation, velocity, etc.
+[^3126]: Physics engine for games usually consists of two parts: collision detection and collision resolution, and **solver** refers to the resolution part. Collision detection detects what objects collide with each other first, and then the solver determines their correct physical response, like position, rotation, velocity, etc.
 
 I think the biggest part of game development is the asset pipeline. With Flash, a lot of the asset pipeline is just taken care of. In addition to Box2D, there are some other third party libraries I use. I integrated FMOD[^743] for audio, because I originally made my own audio engine for the first _Meat Boy_ but didn't want to do that again moving forward. I also used Bink[^519] by [Rad Game Tools](http://www.radgametools.com/default.htm), because cutscenes were getting a little too crazy. _Forever's_ black-and-white intro cutscene is rendered as vector, but everything else is actually movies now because it was just easier for me to edit the movies and add effects than it was to put them in Flash. That made life way easier. The way Bink just plays videos makes things so easy, because all I have to do is integrate a few things and then movies run on every platform. Overall, it's a much better use of my time and money. 
 
@@ -65,20 +65,20 @@ I think the biggest part of game development is the asset pipeline. With Flash, 
 
 ## Customizing toward Flash
 
-The way my engine is structured, there is only one concept of Flash and that is the SWF file loader. Everything else goes to a higher concept of animation and instance, so while I have support for Flash, I also built-in support for Spine and .obj files. The engine doesn't care; for instance, some of the things in _Super_ _Meat Boy_ and _Forever_ I know are going to be Flash animations because that's where all of our assets are. For_ Meat Boy_'s character animations, I have a `CharacterAnimation_Flash` class that is part of character animation, but the Flash would have special little things. This lets me use the best parts of different file types and the engine is able to render them regardless. That way it's not pigeon-holed or anything, it's just a thing that the engine supports. This versatility gives me a lot of options for future projects. Down the road, if I want to make a 3D _Meat Boy_, I can just make a _3D Meat Boy _with the engine. Or if we were going to do hand-drawn pixel art, which Flash is terrible for, I can do that. 
+The way my engine is structured, there is only one concept of Flash and that is the SWF file loader. Everything else goes to a higher concept of animation and instance, so while I have support for Flash, I also built-in support for Spine and .obj files. The engine doesn't care; for instance, some of the things in _Super_ _Meat Boy_ and _Forever_ I know are going to be Flash animations because that's where all of our assets are. For_ Meat Boy_'s character animations, I have a `CharacterAnimation_Flash` class that is part of character animation, but the Flash would have special little things. This lets me use the best parts of different file types and the engine is able to render them regardless. That way it's not pigeon-holed or anything, it's just a thing that the engine supports. This versatility gives me a lot of options for future projects. Down the road, if I want to make a 3D _Meat Boy_, I can just make a _3D Meat Boy_ with the engine. Or if we were going to do hand-drawn pixel art, which Flash is terrible for, I can do that. 
 
 
 ## Tools for Your Teammates
 
-My philosophy is whatever program my artists or designers are comfortable working in, I'm going to try to make it so that they can continue their work with that program. I know that on my own, I am not_ _going to make something that is better than what they're used to. 
+My philosophy is whatever program my artists or designers are comfortable working in, I'm going to try to make it so that they can continue their work with that program. I know that on my own, I am not going to make something that is better than what they're used to. 
 
 If you think of this with regards to programming, I'm very used to C++, and people always ask me if I'm going to use [Jonathan Blow](https://twitter.com/Jonathan_Blow)'s JAI[^654]. And I tell them no, because I'm comfortable with C++. I'm not looking to change it, I don't think C++ really needs to be better because I've worked around the limitations of it for so long that at this point they're not limitations anymore. 
 
-[^654]: **JAI **is a language being developed by Jonathan Blow and his at Thekla to address some of the issues game developers have with the current industry standard, C++.
+[^654]: **JAI** is a language being developed by Jonathan Blow and his at Thekla to address some of the issues game developers have with the current industry standard, C++.
 
 When making _Super Meat Boy_, [Edmund](https://twitter.com/edmundmcmillen)[^4] was the most comfortable with Flash, just like I was, since we both started out on Newgrounds[^5] and everything. It's what he drew in and animated in. So instead of making something new or trying to shoehorn him into some other process, I took the burden on myself. I made a tool that would let us export all the images, timelines and animations from Flash. The tool arranged all the assets on the stage, and then moved and sorted them so they were packed into the smallest texture possible. Finally,  it would export texture coordinates and go through the timeline, which would be used by my custom animation index and PNG files that run all of _Super_ _Meat Boy_. And that made it easy for Edmund to just work the way he needed to work. 
 
-[^4]: Edmund McMillen worked on _Super Meat Boy_ together with Tommy as an artist and designer. He is also famous for making _The Binding of Isaac _and its remake.
+[^4]: Edmund McMillen worked on _Super Meat Boy_ together with Tommy as an artist and designer. He is also famous for making _The Binding of Isaac_ and its remake.
 
 [^5]: Newgrounds is an American online entertainment and social media website and company. The site hosts user-generated content such as games, movies, audio, and artwork in four respective site "portals".
 
@@ -93,9 +93,9 @@ This goes back to making it easy for the people you are working with. For exampl
 
 A lot of _Forever_ is vector graphics, but a lot of it is still rasterized[^234] images that are read and compressed into the SWFs. The only weird challenge that came with switching over to vector from raster graphics is the fact that graphics cards are made to render polygons, and they're actually pretty garbage at rendering textures. That's why you have games that look like the new _Spider-Man_ that runs at a steady framerate, but a game that has a bunch of particle effects that are 2D and has high-resolution art can run like garbage. It's has to do with the fill rate, and the way you get around the fill rate of the hardware is by carefully choosing which pixels to render. You really can't do that with full-screen PNGs because you have to encode alpha and optimize to make it actually look right. That kind of optimization is not as trivial as doing a backface cull[^789], where if I was rendering a character model, I would only render half of it because you don't see the other side.
 
-[^234]: A **rasterized **image is one which is represented as a grid of pixels with RGBA color.
+[^234]: A **rasterized** image is one which is represented as a grid of pixels with RGBA color.
 
-[^444]: **Fill rate **refers to the number of pixels a video card can read/write to the screen per second.
+[^444]: **Fill rate** refers to the number of pixels a video card can read/write to the screen per second.
 
 [^789]: **Backface culling** is the technique of performing visibility checks on a mesh to not render the back face (face not facing the camera).
 
@@ -103,7 +103,7 @@ With the vector stuff, I actually needed to render a little differently. This me
 
 [^99]: **Stencil buffer** is an additional depth buffer to the depth and color buffers.
 
-[^32]: **Depth culling **is the process of deciding which elements to render based on the distance from the camera and if it is being hidden by another element.
+[^32]: **Depth culling** is the process of deciding which elements to render based on the distance from the camera and if it is being hidden by another element.
 
 
 ## Stealth Loading in Super Meat Boy
@@ -112,18 +112,18 @@ _Super Meat Boy_ and _Forever_ levels consists of palette and level information,
 
 [^21]: **Run-length encoding** is a form of lossless data compression where data is stored as a single data value and count, for [more](https://en.wikipedia.org/wiki/Run-length_encoding).
 
-[^888]: **The Forest **is the first chapter of _Super Meat Boy_.
+[^888]: **The Forest** is the first chapter of _Super Meat Boy_.
 
 In _Super_ _Meat Boy,_ when you would go into the chapter, it would start playing a little cutscene where we'd introduce the chapter, and at the same time it would start loading in the pallete on a different thread. During all of this the game would pause, but you wouldn't notice it because at the end of the cutscenes it has the black and white screen that says "The Forest" that goes "dun dun dunnnn!"[^432] Even if you skip the cutscene during that time, it's continuing to load the palette. Because the palettes aren't very big anyway, it's only about four seconds so that jingle gives the game enough time to load everything I have. That's then cached so when you're in the level the only thing it is loading new is new level data which is anywhere between 5 KB and 50 KB. Even the craziest levels are only about 100 KB. The textures were already loaded from the palette, then the game would continue from there. I utilized a lot with the presentation of the game to actually background load assets such as palettes. I think the boss battle cutscenes loaded either during the chapter intro or when you were on the overworld map getting ready to hit the button to go into the boss level. Again, the loads were small because the bosses were just a couple assets, and the levels and palette were already loaded. So for the Lil' Slugger[^871] fight, all that is loaded is Lil' Slugger's animations, which are just him walking. The reason everything seems to load so fast is because all the heavy lifting is done when the player doesn't notice it.
 
 [^432]: For reference of what Tommy is talking about, here is a [clip](https://youtu.be/4_Iq2RPDQ-M?t=1m48s).
 
-[^871]: **Lil' Slugger **is the first boss in the _Super Meat Boy_ game.
+[^871]: **Lil' Slugger** is the first boss in the _Super Meat Boy_ game.
 
 
 ## "Garbage Physics"
 
-The garbage physics came about all from iteration[^154]. For_ Forever,_ I wanted to keep the exact same feel of Meat Boy with the new game, so a lot of the physics are exactly the same. The player doesn't have control over the direction, so physics from _Super Meat Boy_ like air friction for when you're turning around in the air, the amount of time when you're going in one direction and then  switch to another direction, those don't exist in _Forever_ because you don't have any control over direction. But how his jump works and the new mechanics, like his punch and dive, were also developed from what I call "garbage physics." There's different obstacles, like fans, that had to be adjusted for this game, which also required iteration. Nothing in the game is physically accurate to real physics, not a single thing. All of Meat Boy's weird controls are done in-game, not in-engine. 
+The garbage physics came about all from iteration[^154]. For_ Forever,_ I wanted to keep the exact same feel of Meat Boy with the new game, so a lot of the physics are exactly the same. The player doesn't have control over the direction, so physics from _Super Meat Boy_ like air friction for when you're turning around in the air, the amount of time when you're going in one direction and then  switch to another direction, those don't exist in _Forever_ because you don't have any control over direction. But how his jump works and the new mechanics, like his punch and dive, were also developed from what I call "garbage physics." There's different obstacles, like fans, that had to be adjusted for this game, which also required iteration. Nothing in the game is physically accurate to real physics, not a single thing. All of Meat Boy's weird controls are done in-game, not in-engine.
 
 [^154]: Tommy talked more about the creation of the Meat Boy physics in an interview with [Casey Muratori](https://twitter.com/cmuratori?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) at [HandmadeCon 2015](https://www.youtube.com/watch?v=QVpSIdWE0do&t=1s&index=2&list=PLEMXAbCVnmY6HE0bxUHeLLP5QbBE2zhJi).
 
