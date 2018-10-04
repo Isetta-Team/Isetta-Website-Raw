@@ -12,10 +12,9 @@ edit_uri: ''
 # Navigation
 nav:
   - Home: index.md
+  - About: about.md
   - Team: team.md
   - Schedule: schedule.md
-  - Blogs: blogs/week-0.md
-  - Interviews: interviews/AdamSerdar-interview.md
   - Resources: resources.md
   - Glossary: glossary.md
   - FAQ: faq.md
@@ -97,7 +96,7 @@ extra_css:
   - 'extra.css'
 
 extra:
-  disqus: 'isetta-engine'
+  # disqus: 'isetta-engine'
   social:
     - type: envelope
       link: mailto:isetta.engine@gmail.com
