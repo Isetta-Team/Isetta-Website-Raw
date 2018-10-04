@@ -14,6 +14,7 @@
 
 ![Engine Architecture](../images/engine_architecture/week3.png "Week 3 Progress Architecture")
 
+
 The engine systems are progressing smoothly (almost too smoothly...), but at this point, we are close to completing our Core systems. However, as expected, the architecture we planned at the beginning wasn't perfect and is changing:
 
 

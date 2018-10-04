@@ -94,6 +94,8 @@ copyright: 'Copyright &copy; 2019 Isetta Team'
 # Extra
 extra_css:
   - 'extra.css'
+extra_javascript:
+  - 'extra.js'
 
 extra:
   # disqus: 'isetta-engine'
