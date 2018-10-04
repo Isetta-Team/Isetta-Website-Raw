@@ -21,7 +21,6 @@ Here is the updated architecture diagram with our progress. The code can be foun
 
 ![Engine Architecture](../images/engine_architecture/week2.png "Week 2 Progress Architecture")
 
-
 ## Memory
 
 As mentioned in many sources (like [Mike Acton's talk](https://www.youtube.com/watch?v=rX0ItVEVjHc), this [table of latency numbers](https://gist.github.com/jboner/2841832), and this [blog](https://www.gamasutra.com/blogs/MichaelKissner/20151104/258271/Writing_a_Game_Engine_from_Scratch__Part_2_Memory.php)), good memory management and memory access patterns are the reason why modern games can run so fast with such stunning visuals and complex systems. Thus, we decided to tame this beast early.

@@ -8,7 +8,6 @@ The biggest road bump  this past week was going back through the code and adding
 
 ![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
 
-<br><br>
 
 Check out these sick shots.
 
