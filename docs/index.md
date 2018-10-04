@@ -21,7 +21,7 @@ Our aim is to demystify the game engine development process for ourselves and ot
 </div> -->
 
 ## Isetta timeline
-
+**Caution**: This timeline is a work in progress, so the natural solution was to have TODO's to mark missing pieces.
 <div class="timeline-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=12j4m_J7G6--z7E-7PyRyMvzOGKcbm8D3WpyqMLuGdt4&font=Lustria-Lato&lang=en&initial_zoom=5&height=650&start_at_end=true&ga_property_id=UA-124729724-1' width='100%' height='650' style="margin: auto" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 </div>
