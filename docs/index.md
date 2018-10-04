@@ -8,14 +8,6 @@ Our aim is to demystify the game engine development process for ourselves and ot
 - We are documenting our whole process and recording all our discussions and decisions (even the bad ones) in weekly blogs starting from [Week 0](blogs/week-0/).
 - We are interviewing industry professionals to help learn what we don't know don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/TommyRefenes-interview/).
 
-## Where are we now?
-- The latest changes for week # are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-4).
-- This past weeks blog, title [Buried in Comments](blogs/week-4/), talks about how we spent nearly a week to comment our code then invalidate them from code iteration.
-- We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
-- For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
-
-![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
-
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div> -->
@@ -25,6 +17,14 @@ Our aim is to demystify the game engine development process for ourselves and ot
 <div class="timeline-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=12j4m_J7G6--z7E-7PyRyMvzOGKcbm8D3WpyqMLuGdt4&font=Lustria-Lato&lang=en&initial_zoom=5&height=650&start_at_end=true&ga_property_id=UA-124729724-1' width='100%' height='650' style="margin: auto" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 </div>
+
+## Where are we now?
+- The latest changes for week # are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-4).
+- This past weeks blog, title [Buried in Comments](blogs/week-4/), talks about how we spent nearly a week to comment our code then invalidate them from code iteration.
+- We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
+- For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
+
+![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
