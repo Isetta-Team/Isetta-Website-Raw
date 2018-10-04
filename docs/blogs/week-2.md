@@ -31,11 +31,11 @@ Let's look at the problems we are trying to solve:
 
 *   **Speed:**`malloc`, `free`, `new`, and `delete` are actually pretty slow operations. Because they need to call into the Operating System to get the memory they requested, they involve the switch between user mode and kernel mode. 
 
-    Also, the memory returned by standard memory allocation functions may not satisfy our **alignment** requirement. Improperly aligned memory can severely affect the speed when using objects stored there, because some modern CPUs can only read properly aligned data. For example, if our processor can only read 4-byte aligned memory, and we have a `uint32` (size 4 byte) stored at memory address 0x2, the processor will have to read both 0x0 and 0x4. Then it will have to combine them to return the `uint32` value you want. While if the value is stored at a properly aligned address, the processor only needs to read one line.
+    Also, the memory returned by standard memory allocation functions may not satisfy our **alignment** requirement. Improperly aligned memory can severely affect the speed when using objects stored there, because some modern CPUs can only read properly aligned data. For example, if our processor can only read 4-byte aligned memory, and we have a `uint32` (of size 4 byte) stored at memory address `0x2`, the processor will have to read both `0x0` and `0x4`. Then it will have to combine them to return the `uint32` value you want. While if the value is stored at a properly aligned address, the processor only needs to read one line.
 
     ![Memory Access](../images/blogs/memory_access.png "Memory Access")
 
-    By preventing frequent `malloc` and `free` calls, we can increase our program's speed significantly.
+    By preventing frequent `malloc` and `free` calls and aligning memory, we can increase our program's speed significantly.
 
 *   **Memory fragmentation:** When we are doing dynamic memory allocations / de-allocations, we may leave small free memory gaps between used memory. In situations where the sum of those small gaps are big enough to satisfy a new memory allocation request, we cannot find a contiguous memory chunk for the new request. This situation is depicted in the following image.
 
