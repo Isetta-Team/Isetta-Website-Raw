@@ -25,6 +25,7 @@ nav:
     - '[Week 2] Ramping Up': blogs/week-2.md
     - '[Week 3] "Completing" the Core': blogs/week-3.md
     - '[Week 4] Buried in Comments': blogs/week-4.md
+    - '[Week 5] Back in Business': blogs/week-5.md
     #- Week #: blogs/week-#.md
   - Interviews:
     - Adam Serdar: 
@@ -37,6 +38,7 @@ nav:
     - Tommy Refenes:
       - Interview: interviews/TommyRefenes-interview.md
       - Video Story: interviews/TommyRefenes-video.md
+    - Amandine Coget: interviews/AmandineCoget-interview.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md

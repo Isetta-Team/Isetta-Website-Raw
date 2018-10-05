@@ -38,6 +38,14 @@ Useful articles/resources we used during the development of Isetta
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
+## Data-Oriented vs Object-Oriented
+* [Entity Component Systems &
+Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Academy%20-%20ECS-DoD.pdf)
+* [CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc)
+* [CppCon 2015: Vittorio Romeo “Implementation of a component-based entity system in modern C++”](https://www.youtube.com/watch?v=NTWSeQtHZ9M)
+* [Dice Introduction to Data-Oriented Design](https://www.dice.se/wp-content/uploads/2014/12/Introduction_to_Data-Oriented_Design.pdf)
+* [Stingray's Practical Examples in Data Oriented Design](http://bitsquid.blogspot.com/2010/05/practical-examples-in-data-oriented.html)
+* [Data-Oriented Demo: SOA, composition Jonathan Blow](https://www.youtube.com/watch?v=ZHqFrNyLlpA)
 
 ## Data Structures
 * [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
@@ -45,6 +53,7 @@ Useful articles/resources we used during the development of Isetta
 * [unordered_map cppreference](https://en.cppreference.com/w/cpp/container/unordered_map)
 * [Data Structures in Games](http://enemyhideout.com/2016/05/games-101-data-structures-in-games/)
 * *Game Engine Architecture 2nd edition* - Chapter 5.3: Containers
+* [Why inheritance is viewed poorly](https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents/260354#260354)
 
 
 ## ECS
@@ -77,6 +86,12 @@ Useful articles/resources we used during the development of Isetta
 * [Multithreading Performance](https://msdn.microsoft.com/en-us/library/ms810437.aspx)
 * [Understanding Async IO Operations](https://softwareengineering.stackexchange.com/questions/322387/using-asynchronous-calls-for-heavy-io-operation-how-to-prevent-crushing-the-cpu)
 
+## GUI
+* [Retained Mode Versus Immediate Mode](https://docs.microsoft.com/en-us/windows/desktop/learnwin32/retained-mode-versus-immediate-mode)
+* [Dear ImGui](https://github.com/ocornut/imgui)
+* [ImGui in 3D](https://github.com/ocornut/imgui/issues/1627)
+* [IMGUI for GameDev tools](https://gist.github.com/bkaradzic/853fd21a15542e0ec96f7268150f1b62)
+* [Why Qt and not IMGUI](https://deplinenoise.wordpress.com/2017/03/05/why-qt-and-not-imgui/)
 
 ## Memory
 * **Introduction**
@@ -151,3 +166,4 @@ Useful articles/resources we used during the development of Isetta
 * [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
 questions/46874055/why-is-inline-required-on-static-inline-variables)
 * [StackOverflow - How are C++11 lambdas represented and passed?](https://stackoverflow.com/questions/16921247/how-are-c11-lambdas-represented-and-passed)
+* [Variadic Templates](https://en.cppreference.com/w/cpp/language/parameter_pack)

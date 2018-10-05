@@ -65,7 +65,7 @@ We recently received a [pull request](https://github.com/Isetta-Team/Isetta-Engi
 
 ## Coming Soon
 
-Sometime this next week we will publish our interview with Team Meat's Tommy Refenes. He was able to give us great advice on creating portable architecture as well as how to best work with others as an engine developer.
+Sometime this next week we will publish our interview with Team Meat's [Tommy Refenes](../interviews/TommyRefenes-interview.md). He was able to give us great advice on creating portable architecture as well as how to best work with others as an engine developer.
 
 We would appreciate any feedback or questions you may have about our content or what we are doing in the comments.
 
