@@ -54,21 +54,47 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Core Render Loop**- the loop where the rendering function is called. The way the rendering occurs/is called varies from engine to engine, but is usually performed at the end of the main game loop. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:9)
 
-**Unreal's Blueprint Visual Scripting System**- the node-based scripting in the Unreal Engine used for gameplay scripting.
+**Unreal's Blueprint Visual Scripting System**- the node-based scripting in the Unreal Engine used for gameplay scripting. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:11)
 
-**Job Control**- the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:666)
+**Job Control**- the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:666)
 
-**Cross Product**- the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:301)
+**Cross Product**- the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:301)
 
-**Depth Peeling**- a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:988)
+**Depth Peeling**- a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:988)
 
-**Unified Modeling Language (UML)**- used to visually represent a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation". [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:399)
+**Unified Modeling Language (UML)**- used to visually represent a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation".[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:399)
 
-**Build Engineer**- the engineer in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:500)
+**Build Engineer**- the engineer in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:500)
 
-**CMake**- a cross-platform, open-source application for managing the build process of software in a compiler-independent way. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:400)
+**CMake**- a cross-platform, open-source application for managing the build process of software in a compiler-independent way.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:400)
 
-**Ninja**- a small build system that is designed to run builds as fast as possible. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:401)
+**Ninja**- a small build system that is designed to run builds as fast as possible.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:401)
+
+**OpenGL**- short for Open Graphics Library - a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:3)
+
+**SWF**-  short for Small Web Format, is an Adobe Flash file format used for multimedia, vector graphics and ActionScript. SWF files can contain animations or applets of varying degrees of interactivity and function.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:6)
+
+**Spine**- a 2D skeletal animation software for video games by Esoteric Software. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:8)
+
+**Box2D**- an open source C++ engine for simulating rigid bodies in 2D. Box2D is developed by Erin Catto and has the zlib license. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:3125) 
+
+**FMOD**- a a cross platform audio engine and authoring tool used throughout the game industry. It was used by over 2,000 games in the last 15 years.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:743)
+
+**BINK**- the defacto video codec for games created by Rad Tools.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:519)
+
+**JAI**- a language being developed by Jonathan Blow and his team at Thekla to address some of the issues game developers have with the current industry standard, C++. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:654)
+
+**FLA**- the file format for projects created by Adobe Animate, and can contain graphics, video, text, audio, and more. They are often saved as SWF files to be used on the web. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:38927)
+
+**Fill Rate**-  the number of pixels a video card can read/write to the screen per second. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:444)
+
+**Backface Culling**- the technique of performing visibility checks on a mesh to not render the back face (face not facing the camera). [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:789)
+
+**Stencil Buffer**- an additional depth buffer to the depth and color buffers. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:99)
+
+**Depth Culling**- the process of deciding which elements to render based on the distance from the camera and if it is being hidden by another element. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:32)
+
+**Run-length Encoding**-  a form of lossless data compression where data is stored as a single data value and count. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:21)
 
 **Free list**- a memory management data structure that uses a linked list which points to successive free regions of memory that can be utilized for allocation individually.[↩](https://isetta.io/blogs/week-4/#fn:24920)
 
@@ -91,4 +117,3 @@ Also, please add any terms we haven't touched on that you think of!
 **Ring buffer**- (or [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)) is a FIFO data structure which is broadly used for transmitting data between asynchronous processes. See more:  [↩](https://isetta.io/blogs/week-3/#fnref:8383)
 
 **Localhost**- an address in networking specifically, 127.0.0.1. Packets that are sent here are not technically sent anywhere, they're just sent up to the next layer for processing. [↩](https://isetta.io/blogs/week-3/#fnref:535362)
-
