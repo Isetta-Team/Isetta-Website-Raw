@@ -98,6 +98,7 @@ Useful articles/resources we used during the development of Isetta
 	* [How does delete[] “know” the size of the operand array?](https://stackoverflow.com/questions/197675/how-does-delete-know-the-size-of-the-operand-array)
 
 
+
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
 * [*Multiplayer Game Programming*](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
@@ -148,6 +149,8 @@ Useful articles/resources we used during the development of Isetta
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
 * [Cppreference - Array Initialization](https://en.cppreference.com/w/c/language/array_initialization)
 * [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
+* [Cppreference - Parameter pack](https://en.cppreference.com/w/cpp/language/parameter_pack)
 * [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
 questions/46874055/why-is-inline-required-on-static-inline-variables)
 * [StackOverflow - How are C++11 lambdas represented and passed?](https://stackoverflow.com/questions/16921247/how-are-c11-lambdas-represented-and-passed)
+* [Eli Bendersky's Blog - Variadic templates in C++](https://eli.thegreenplace.net/2014/variadic-templates-in-c/)

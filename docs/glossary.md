@@ -1,4 +1,4 @@
-## Glossary of All Footnote Terms
+# Glossary of All Footnote Terms
 
 <!--
 Whenever you are going to footnote something, look in here and copy over the definition so we can keep it consistent throughout the blogs/interviews. 
