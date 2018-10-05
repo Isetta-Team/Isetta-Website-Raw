@@ -1,8 +1,6 @@
-# Upcoming Interviews
+## Coming Soon
 
-We've held an interview with Tommy Refenes of [Super Meat Boy](https://supermeatboy.com/), and we're currently working on the transcription. Expect it to be posted within the coming weeks!
-
-We are also currently in talks with other game engine programmers about interviews, and we will update this page when we've got interviews scheduled.
+We will be publishing our interview in the coming weeks with Amandine. Subscribe to our mailing list to be alerted when its published!
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
