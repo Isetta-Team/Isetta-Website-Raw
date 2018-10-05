@@ -14,8 +14,7 @@ Conversion notes:
 * Fri Oct 05 2018 15:12:58 GMT-0700 (PDT)
 * Source doc: https://docs.google.com/open?id=1WeXeOeEGnqhZZofcapgrY388ZXS3gYpYk8YdlLUepLs
 ----->
-
-
+# Back in Business!
 
 ## Byte-Sized Updates
 
@@ -118,8 +117,6 @@ Essentially, this means we're going to have objects very similar to Unity's Game
 
 
 ## GUI
-
-
 ### Why do we need GUI?
 
 GUI, or Graphical User Interface, is one way a player is able to interact with the game and also allows the developer to display important information to the player. As mentioned in the [week 3 blog](week-3.md#gui), Horde3D isn't packaged directly with a user interface. However, our sample game needs some basic UI features. We had assumed any rendering library wouldn't be complete without a programmable GUI, which was our naive assumption from looking at [Ogre3D](https://www.ogre3d.org/) as the tentpole.
@@ -134,7 +131,7 @@ The gameplay needs are fairly basic: _static text_ for "Health" and "Score", _dy
 
 While thinking of the UI flow of the game, we did a quick mock-up of what the menu may look like. The menu would probably require a title and (as mentioned) buttons, as well as some way of choosing single player or multiplayer. For multiplayer, if you are a host, there would need to be feedback to alert you of the number of clients in your lobby as well as an additional button to start the game (the host holds all the authority in our game, because they will be acting as the server the clients communicate with). If connecting to a host, the most basic solution would be to have an _input field_ for the host's IP address (a more complicated one would be to have a list of lobbies to connect to, which we may try doing with local addresses).
 
-![menu-flow](../images/blogs/week-5/UI_game_menu.PNG "Sample Game Menu")
+![menu-flow](../images/blogs/week-5/UI_game_menu_example.PNG "Sample Game Menu")
 
 "But why stop here?", we thought. What we have listed is only ~5 GUI features and most engines have way more than that. If we are already taking cues from Unity, why not have the full functionality of their [GUI system](https://docs.unity3d.com/Manual/GUIScriptingGuide.html), especially because we have found some of their features very handy in making games? Plus, a "real" game engine would have much more than this to accommodate their developers, we don't want to just do the bare minimum.
 
@@ -207,9 +204,10 @@ Loading rendering resources like meshes and animations is a time-consuming part 
 
 Horde3D supports `.scene.xml` file to specify a scene node with mesh, material and its shader. A simple example of it is like this:
 
-```
+``` xml
 <Model name="sphere" geometry="models/sphere/sphere.geo">
-    <Mesh name="Sphere01" material="models/sphere/stones.material.xml" batchStart="0" batchCount="2880" vertRStart="0" vertREnd="587" />
+    <Mesh name="Sphere01" material="models/sphere/stones.material.xml" 
+    batchStart="0" batchCount="2880" vertRStart="0" vertREnd="587" />
 </Model>
 
 ```
@@ -221,11 +219,12 @@ As you can see, this file has nested containers and has multiple resources. This
 As a user, we have to manually check if there are any unloaded resources remaining in a while loop. The way to achieve that is to do a query by `h3dQueryUnloadedResource`. After we dug deeper into this function, we found out the internal implementation of this function wasn't ideal. 
 
 ```cpp
-
-ResHandle ResourceManager::queryUnloadedResource( int index ) const {
+ResHandle ResourceManager::queryUnloadedResource(int index) const {
   int j = 0;
     for( uint32 i = 0; i < _resources.size(); ++i ) {
-      if( _resources[i] != 0x0 && !_resources[i]->_loaded && !_resources[i]->_noQuery ) {   
+      if( _resources[i] != 0x0 
+          && !_resources[i]->_loaded 
+          && !_resources[i]->_noQuery ) {   
         if( j == index ) return _resources[i]->_handle;
         else ++j;
       }
@@ -330,11 +329,6 @@ Here is what it looks like after freeing p1:
 ![Free List: Free p1](../images/blogs/week-5/freelist_4_free_p1.png "Free List: Free p1")
 
 The freeing process is more interesting as here we mine out the `AllocHeader` buried before and use it to determine the size of the object to free. Here is what happened behind the scenes:
-
-Steps:
-
-
-
 1.  Starting from `p1`'s memory address, find the `AllocHeader` we buried before it
 1.  As we know the size now, create a new `Node` with that size and add it to the linked list (remember the linked list is always sorted by memory address)
 1.  Try to merge with the next and last `Node`. In this case, the new node is head and not adjacent to the next node, so we can't merge
@@ -442,7 +436,7 @@ We also made some other minor changes to the memory manager, and they are:
 Enough with our additions and patches. Now let's switch to one of our memory manager users and see what they have to say about our latest changes!
 
 
-### > RingBuffer gets Homegrown
+> **RingBuffer gets Homegrown**
 
 > One of our anticipated tasks after fleshing out the memory module was to go through the rest of our systems and update their memory allocation to use our own memory allocators. The best place for us to start was, of course, our data structures!
 
