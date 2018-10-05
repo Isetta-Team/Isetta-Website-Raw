@@ -27,13 +27,11 @@ What I have not seen change is the number of engine programmers. The last three 
 
 There are two fundamental problems in game engine development that I think set it apart from a lot of other types of development. The first one is that it is not a stateable problem in any way. Half of everything that programming does in the past or today looks a lot like stdin /stdout [^1]. You can phrase it as "here are the set of inputs, and here are the set of outputs that come out of it." So most of the things that programmers are used to thinking about are "I'm working on deep learning[^2]. Here's a set of input images and a set of output tuned neural net parameters. How do I make the best translation between these two things?" Or, "I'm a natural language processing person, here's all the corpus[^3] I want in and here are the noun tags I want out, or the sentence tags I want."
 
-[^1]: stdin and stdout are the functions that handle program input/output in the standard library of the C programming language
+[^1]: **stdin** and **stdout** are the functions that handle program input/output in the standard library of the C programming language
 
-[^2]: Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example. Deep learning is a key technology behind driverless cars, enabling them to recognize a stop sign or to distinguish a pedestrian from a lamppost.
+[^2]: **Deep learning** is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example. Deep learning is a key technology behind driverless cars, enabling them to recognize a stop sign or to distinguish a pedestrian from a lamppost.
 
 [^3]: In linguistics, a corpus or text corpus is a large and structured set of texts.
-
-[^4]: During natural language processing, words are tagged to their specific "word classes" like nouns, verbs, and adjectives.
 
 I think one of the biggest challenges for an early game engine programmer is making the leap from input-output thinking to this amorphous system. It's very confusing how that happens at first, because even though you're not necessarily aware of it, everything you've ever done prior to that looks a lot more like this input-output phrasing. One of the really good things that you can do at first is to try to figure out the "core loop" of a game engine; the golden differentiator of a simulation. In a flight simulator or a game, they look like this real-time loop where I have a set of entities (each with their own states) and I go through a simulation to change those states. That's a certain process. I then go through a way of presenting those things, and then I return to the beginning. 
 
@@ -55,11 +53,11 @@ One of the biggest mistakes I think even experienced game programmers will make 
 
 There's this thing called boundary value problems[^987] in mathematics, and there are different ways of solving them. There's the shooting method: I start here, I see where I end up. There's also the method of solving backward, where I look from the endpoint and try to see what I could do differently. Building up a skill set of how you work on code that allows you to work from either side of the problem ends up being really valuable. Like I said, you usually want to start with an isolated solution and loft it up into the architecture. But then, when you get to a certain level of that lofting you want to think from the other side down. You want to determine what a good API for this should look like, what are some things you maybe didn't think about while implementing it. And things that you should maybe change, that wouldn't break the algorithm, but that would let it work better with this integration. 
 
-[^987]: A boundary value problem in mathematics is a problem whose solution that satisfies boundary conditions that act as constraints for the solution. More can be learned on [its Wikipedia page](https://en.wikipedia.org/wiki/Boundary_value_problem).
+[^987]: A **boundary value problem** in mathematics is a problem whose solution that satisfies boundary conditions that act as constraints for the solution. More can be learned on [its Wikipedia page](https://en.wikipedia.org/wiki/Boundary_value_problem).
 
 **You almost want a ping-pong development process where you start at the solution, work backward a little, go to the architecture side, work forwards a little, and come back. The best programmers at doing this sort of thing are able to make it fit really nicely at the end, so both sides can be happy.** I'd like to give a shout out to [Allen Webster](https://twitter.com/allenwebster4th)[^5] for that, he works at [RAD Game Tools](http://www.radgametools.com) now. I've talked about those two things separately before, and he pointed out that I need to connect them.
 
-[^5]: Allen is an entrepreneur and engineer interested in working on the tools that drive digital creation. He is currently working on "4coder", a programming environment targeted at the problems of real-world high-end C/C++ problems, under the Handmade Network.
+[^5]: **Allen** is an entrepreneur and engineer interested in working on the tools that drive digital creation. He is currently working on "4coder", a programming environment targeted at the problems of real-world high-end C/C++ problems, under the Handmade Network.
 
 
 ## Competence, Coding Style, and Working in Teams
@@ -69,7 +67,7 @@ There's this thing called boundary value problems[^987] in mathematics, and ther
 
 Part of developing a good programming style has very little to do with things that people normally focus on, which are minor things like "Did I overload operator=[^777] to prevent a copy". They focus on all of these rules that they never even tested. They ignore the most important thing which, in my opinion, is how easy is it to read your own code later and know exactly what it does. This is also why I tend to not comment code until it's "done done," because I find that the comments end up being out of date and counterproductive. Since the comments are describing the thing that was before the latest one, it's actually worse than having a no-comment. 
 
-[^777]: Overloading an operator replaces the functionality of that operator for a given class. For example, you could overload the assignment operator + on a list object to instead add the given other object to said list object.
+[^777]: **Overloading** an operator replaces the functionality of that operator for a given class. For example, you could overload the assignment operator + on a list object to instead add the given other object to said list object.
 
 So that's I think what keeps Handmade Hero so flexible and easy for me: To not have to worry when I come back to it on a weekend to start doing a stream. I know part of being a competent programmer is writing code in a way that doesn't require me to keep it all in my head. I can easily go look at the function names and I just know what they do. 
 
@@ -84,7 +82,7 @@ In a similar way, working with different peoples' coding styles is probably one 
 
 In the industry, we talk about having a programming language, but we really don't have one that we use. What we have when we talk about a programming language is the building blocks for the actual language that we will use. It should probably be called a "programming alphabet" or "programming phonemes" if we're honest. Because what happens in a game engine is that first you take the language that you have, like C++, and you build your own "language" on top of it. This will be a sort of functional language of core things that everyone will use. It'll be used to talk about things like how the memory is managed and how to implement the render pipeline and how do we pass things back and forth, what is the job control[^666] story, and so on.
 
-[^666]: Job control is the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures.
+[^666]: **Job control** is the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures.
 
 Those specifics form a secondary language. It's a very recursive process. You could think of it as making lots of languages on top of each other. Some programming languages and projects are so poorly thought through that they end up with languages on top of languages on top of languages. If you think of each programmer as having their own ideal language they would like to see, that's the substrate that's right on top of the regular language that they all had to conform to. They're all fluent in that, presumably their own one. So when you bring two programmers together you essentially have a problem where they need to write a book together but one speaks French and the other speaks Spanish. They have to figure out how to come together to write the book, which would have to be in a Latin style typography but not actually in either of their languages. 
 
@@ -101,7 +99,7 @@ There is no question in my mind that there is a loss of speed, efficacy and qual
 
 While working on _[The Witness](http://the-witness.net/)_, I took a pretty massive productivity hit working in that codebase compared to my own. There's nothing you can do about that. I did build some of my own language in there. I put some of my own tools in there over time so that I can be effective, but it was on an on-demand basis. There's an entire article I wrote about a time when I had a bug, which only came up because I made a wrong assumption about the math library. And that's the reason that I and Jon Blow are both able to write certain types of code quickly - because we both make assumptions about what our math libraries do. If we couldn't make those, we'd literally have to read the code for cross-product[^301] or something, every time, to figure out whether it was right-handed or left-handed. The process would be much slower and there'd be way more bugs.
 
-[^301]: Cross product is the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed.
+[^301]: **Cross-product** is the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed.
 
 It's really hard to overstate just how important that is. I think a lot of people don't necessarily realize it, because when you program your first engine, you're usually not a very mature programmer. If you've never written an engine alone after you've had a lot of experience and are more self-confident in your skills, you may not realize how fast you actually are when everything is done the way you expect, because you've only ever done it at Valve or something where everything works maybe a little bit differently than how you would want it to. And so it's a very important thing to be aware of. 
 
@@ -129,9 +127,9 @@ For example, one thing we did over the past three weeks was we made the renderer
 
 Those are exactly what I wanted people to see in Handmade Hero. So if I lost the whole thing, I almost would say I would start a different project. If I was going into Handmade Hero with the knowledge of how everything worked out, it would totally ruin the entire point of the series. Watching me type in code I already know how to do isn't worthless, but that's what a blog or GitHub repo is for. On Handmade Hero, it was critical that I not have a solution in mind when I started. 
 
-[^635]: A DLL is a dynamic-linked library which is Microsoft shared library concept which can be transported around easier than a project and contains information about the compiled project. 
+[^635]: A **DLL** is a dynamic-linked library which is Microsoft shared library concept which can be transported around easier than a project and contains information about the compiled project. 
 
-[^988]: Depth peeling is a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths.
+[^988]: **Depth peeling** is a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths.
 
 
 ## Reusing Past Subsystems
@@ -140,14 +138,14 @@ Utilizing code from past projects is not something I'm an expert on. I'm only 42
 
 So on this project, I felt like I was ready to do that for the first time. Whether it succeeds or not, I'm not sure. But what I will say is I took an approach that was slightly different from approaches I had taken before. I documented the whole development process. I have a notes file, and every time there is a question about what I'm going to do in the codebase, I document exactly _why_ I thought there was a question. I discuss the solutions that I've tried.  Finally, I explain why I ended up selecting the solution I did out of the ones that I tried. So there is literally, for the first time on any product that I've ever done, a 100% complete documentation of why every last thing works the way it does. Before this project, I never sat down and committed to thinking all these things through, because a lot of times to do a platform layer you just do it. 
 
-[^593]: _[1935](https://molly1935.com/)_ is an upcoming game from the MollyRocket team, which includes Casey.
+[^593]: _**[1935](https://molly1935.com/)**_ is an upcoming game from the MollyRocket team, which includes Casey.
 
 
 ### Justifying Brought-In Systems
 
 Even for myself — who advocates a very limber style of programming where I don't think you do a lot of upfront design — even I want to spend more time recording and justifying decisions. I don't do them from the top down like a UML diagram[^399] disaster situation or anything like that, but I do feel that a higher level of rigor is necessary. What I try to do in this situation is sort of play the devil's advocate; as if I was more than one programmer. I try to come at it from different angles. Can I justify it from a speed perspective? An ease-of-use perspective? A compatibility perspective? So we'll see if it works.  Ask me in ten years!
 
-[^399]: UML is the Unified Modeling Language, whose purpose is visually representing a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation".
+[^399]: **UML** is the Unified Modeling Language, whose purpose is visually representing a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation".
 
 
 ## Builds: Keep 'em Simple
@@ -156,8 +154,8 @@ In our current weird programming culture, there's a term called "build engineer"
 
 On Handmade Hero, we showed how to do this on the first day. You don't need anything more complicated than that and I would encourage you to start there. Eventually, somewhere down the line, there are some arguments to be made for doing some of the slightly more complicated things, like a continuous integration server when you have multiple platforms. This is just so that not everyone has to have every devkit to make sure they don't break the build.  Otherwise, a single-line build is the build you want. It shouldn't be more complicated than that. 
 
-[^500]: A build engineer is in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.
+[^500]: A **build engineer** is in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.
 
-[^400]: CMake is a cross-platform, open-source application for managing the build process of software in a compiler-independent way.
+[^400]: **CMake** is a cross-platform, open-source application for managing the build process of software in a compiler-independent way.
 
-[^401]: Ninja is a small build system that is designed to run builds as fast as possible.
+[^401]: **Ninja** is a small build system that is designed to run builds as fast as possible.
