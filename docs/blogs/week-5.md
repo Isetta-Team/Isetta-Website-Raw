@@ -125,7 +125,7 @@ So with that, let's look at the demo to see what we need:
 
 ![UI-game](../images/blogs/week-5/UI_game_needs.PNG "GUI Gameplay UI")
 
-The gameplay needs are fairly basic: _static text_ for "Health" and "Score", _dynamic text_ for the score value, and a _filled rectangle _to display the health bar. However, we realized that the gameplay demo isn't a complete picture of what the game needs (especially in the case of multiplayer). The actual game flow is depicted below, with needs of a menu to select single player or multiplayer and, at the very least, to be able to select whether the game client will be hosting or which host to connect to. These type of decisions require something like a _button_ for selection.
+The gameplay needs are fairly basic: _static text_ for "Health" and "Score", _dynamic text_ for the score value, and a _filled rectangle_ to display the health bar. However, we realized that the gameplay demo isn't a complete picture of what the game needs (especially in the case of multiplayer). The actual game flow is depicted below, with needs of a menu to select single player or multiplayer and, at the very least, to be able to select whether the game client will be hosting or which host to connect to. These type of decisions require something like a _button_ for selection.
 
 ![game-flow](../images/blogs/week-5/game_flow.PNG "Sample Game Flow")
 
@@ -135,7 +135,7 @@ While thinking of the UI flow of the game, we did a quick mock-up of what the me
 
 "But why stop here?", we thought. What we have listed is only ~5 GUI features and most engines have way more than that. If we are already taking cues from Unity, why not have the full functionality of their [GUI system](https://docs.unity3d.com/Manual/GUIScriptingGuide.html), especially because we have found some of their features very handy in making games? Plus, a "real" game engine would have much more than this to accommodate their developers, we don't want to just do the bare minimum.
 
-> (And although doing slightly more than the bare minimum is a good idea, we quickly realized this was a very poor mindset to have).
+> And although doing slightly more than the bare minimum is a good idea, we quickly realized this was a very poor mindset to have.
 
 
 ### So Many GUI Options
@@ -193,9 +193,9 @@ In our [week 1 blog](https://isetta.io/blogs/week-1/#rendering), we mentioned th
 
 As mentioned before, as a part of graphics, we wanted to draw 2D overlays as in-game UI. However, Horde3D itself is such a "pure" rendering library that it isn't packaged with a UI utility. An extension can draw some UI, but because of the reasons listed above, we had to introduce one more third-party library. Stitching another library is not an easy task. We later found ImGui doesn't have its own texture loader, so we sought help from Horde3D since it can read an image from the disk as a texture. However, to our surprise, the texture decoding is hidden inside its `TextureResource` class instead of extracting it as a texture decoding[^8383] utility for reuse, since it is not supposed to be used by external users. Luckily, we later found `h3dMapResStream`, so that we can let Horde3D load and decode the texture for us and map the pixel stream[^838383] out later.
 
-[^8383] Typically, textures are stored in compressed formats like .png, to read the pixels from the image file, we need to decode the texture from compressed to pixels.
+[^8383]: Typically, textures are stored in compressed formats like .png, to read the pixels from the image file, we need to decode the texture from compressed to pixels.
 
-[^838383] A **pixel stream** is a stream of pixel data, typically as four floating point numbers or integers representing red, green, blue, and opacity/alpha.
+[^838383]: A **pixel stream** is a stream of pixel data, typically as four floating point numbers or integers representing red, green, blue, and opacity/alpha.
 
 
 ### Loading Nested Resources
