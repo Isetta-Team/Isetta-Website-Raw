@@ -54,18 +54,41 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Core Render Loop**- the loop where the rendering function is called. The way the rendering occurs/is called varies from engine to engine, but is usually performed at the end of the main game loop. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:9)
 
-**Unreal's Blueprint Visual Scripting System**- the node-based scripting in the Unreal Engine used for gameplay scripting. 
+**Unreal's Blueprint Visual Scripting System**- the node-based scripting in the Unreal Engine used for gameplay scripting.
 
-**Job Control**- the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures.
+**Job Control**- the control of multiple tasks on a computer system that may be "in-flight" at the same time. It requires proper allocation of resources and locked access to prevent deadlocks and failures. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:666)
 
-**Cross Product**- the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed.
+**Cross Product**- the 3D math operation where the input is two vectors and the output is one vector that's perpendicular to both input vectors. However, the direction of the output vector depends on whether the space is defined as left handed or right handed. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:301)
 
-**Depth Peeling**- a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths.
+**Depth Peeling**- a method of order-independent transparency when rendering 3D geometry. It determines what should be drawn on top by rendering multiple passes of a scene and comparing depths. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:988)
 
-**Unified Modeling Language (UML)**- used to visually represent a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation".
+**Unified Modeling Language (UML)**- used to visually represent a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation". [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:399)
 
-**Build Engineer**- the engineer in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.
+**Build Engineer**- the engineer in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:500)
 
-**CMake**- a cross-platform, open-source application for managing the build process of software in a compiler-independent way.
+**CMake**- a cross-platform, open-source application for managing the build process of software in a compiler-independent way. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:400)
 
-**Ninja**- a small build system that is designed to run builds as fast as possible.
+**Ninja**- a small build system that is designed to run builds as fast as possible. [↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:401)
+
+**Free list**- a memory management data structure that uses a linked list which points to successive free regions of memory that can be utilized for allocation individually.[↩](https://isetta.io/blogs/week-4/#fn:24920)
+
+**STL**- standard library which is the C++ library containing most of the needed data structures. It is known to not be best for performance, however, will save us time not implementing them. [↩](https://isetta.io/blogs/week-3/#fnref:845)
+
+**GLFW**- a library utility for creating windows and receiving input from the window. [↩](https://isetta.io/blogs/week-3/#fnref:8987)
+
+**std::function**- a container for lambda functions, see cppreference. We have renamed std::function to Action in our aliases for simpler calling. [↩](https://isetta.io/blogs/week-3/#fnref:875)
+
+**OSI**- Open System Interconnection and is a standard for networking layers. [↩](https://isetta.io/blogs/week-3/#fnref:784)
+
+**Packet**- formatted data that is sent over a network. Virtual objects are serialized and broken into these small chunks before being sent, and different protocols expect different formats for packets. [↩](https://isetta.io/blogs/week-3/#fnref:483920)
+
+**Client-server model**- in networking where there is one central server that all other machines (the "clients") connect to. This server is typically the authority on all important and possibly conflicting information. [↩](https://isetta.io/blogs/week-3/#fnref:909281)
+
+**Peer-to-peer model**- in networking is where every machine to one another, which requires more bandwidth per client and more complex data authority handling but avoids needing a dedicated server. Peer-to-peer is generally harder to implement than client-server. [↩](https://isetta.io/blogs/week-3/#fnref:909282)
+
+**Handshake** in networking is an automated negotiation process for creating a connection between two machines, typically a client and a server. The process requires the machines to exchange special packets before the connection can be established. [↩](https://isetta.io/blogs/week-3/#fnref:909283)
+
+**Ring buffer**- (or [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)) is a FIFO data structure which is broadly used for transmitting data between asynchronous processes. See more:  [↩](https://isetta.io/blogs/week-3/#fnref:8383)
+
+**Localhost**- an address in networking specifically, 127.0.0.1. Packets that are sent here are not technically sent anywhere, they're just sent up to the next layer for processing. [↩](https://isetta.io/blogs/week-3/#fnref:535362)
+
