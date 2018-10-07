@@ -24,7 +24,7 @@ Our aim is to demystify the game engine development process for ourselves and ot
 - We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](../images/engine_architecture/week4.png "Week 4 Progress Architecture")
+![Engine Architecture](../images/engine_architecture/week5.png "Week 5 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
