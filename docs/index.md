@@ -20,7 +20,7 @@ Our aim is to demystify the game engine development process for ourselves and ot
 
 ## Where are we now?
 - The latest changes for week # are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-4).
-- This past weeks blog, title [Buried in Comments](blogs/week-4/), talks about how we spent nearly a week to comment our code then invalidate them from code iteration.
+- This week, our blog was [Back in Business!](blogs/week-5/) In it we discuss some decisions we made about ImGUI and networking.
 - We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
