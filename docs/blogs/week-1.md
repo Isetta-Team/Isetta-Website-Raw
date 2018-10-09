@@ -185,6 +185,8 @@ We'll be checking in again with another progress update soon so stay tuned, and 
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+_Originally published September 7, 2018._
+
 <br>
 
 <!-- Begin MailChimp Signup Form -->
