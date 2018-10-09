@@ -93,6 +93,8 @@ I think you're starting to see a lot of cross-pollination between Unreal and Uni
 
 The funny thing is we are looking into possibly taking at least some of the rendering tech of Unreal and putting it into Unity. Then people tell us, "this isn't a Unity game, it looks like Unreal!" And we'll say, "yes, that's exactly what we're going for!" We'll see if that really pans out, though. There's a couple interesting rendering systems that they've got that the scriptable render pipeline might make it very feasible to automate the process. But, who knows, that's future-seeing.
 
+_Interview conducted May 15, 2018._
+
 [^0]: MonoBehaviour is the base class within Unity that all components which attach to GameObjects must derive from, it has methods for start, update, and destroy. 
 
 [^1]: ScriptableObjects are scripts which cannot be attached to GameObjects but still store (serialize) user data.

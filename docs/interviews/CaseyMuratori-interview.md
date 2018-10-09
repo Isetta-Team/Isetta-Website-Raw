@@ -154,6 +154,8 @@ In our current weird programming culture, there's a term called "build engineer"
 
 On Handmade Hero, we showed how to do this on the first day. You don't need anything more complicated than that and I would encourage you to start there. Eventually, somewhere down the line, there are some arguments to be made for doing some of the slightly more complicated things, like a continuous integration server when you have multiple platforms. This is just so that not everyone has to have every devkit to make sure they don't break the build.  Otherwise, a single-line build is the build you want. It shouldn't be more complicated than that. 
 
+_Interview conducted September 8, 2018._
+
 [^500]: A **build engineer** is in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.
 
 [^400]: **CMake** is a cross-platform, open-source application for managing the build process of software in a compiler-independent way.
