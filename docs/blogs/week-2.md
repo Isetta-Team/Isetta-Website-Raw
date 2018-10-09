@@ -265,6 +265,8 @@ We would appreciate any feedback or questions you may have about our content or 
 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
+_Originally published September 14, 2018._ 
+
 <br>
 
 <!-- Begin MailChimp Signup Form -->

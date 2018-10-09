@@ -456,6 +456,8 @@ Last week we had a great conversation with [Alice Ching](../interviews/AliceChin
 
 From development we are acquiring a lot of great resources from where we learned certain topics, and as much as we try to synthesize things in our blogs you may be interested in the originals, which is why we have a page full of links for you to browse.
 
+_Originally Published October 5, 2018._
+
 
 <!-- GD2md-html version 1.0β13 -->
 
