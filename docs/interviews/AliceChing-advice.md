@@ -1,30 +1,28 @@
-## Coming Soon
+_Alice is currently working as a lead developer on Wattam at Funomena, where she helps her teammates stretch the capabilities of Unity. She has experienced large and small company environments, working at companies like Visceral Games, Sanzaru, and Google. Some of her past projects include Sly Cooper: Thieves in Time at Sanzaru Games and Godfather II at Visceral Games._
 
-We will be publishing our interview in the coming weeks with Amandine. Subscribe to our mailing list to be alerted when its published!
+Advice (_not_ verbatim):
 
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" style="margin-top: -20px">
-    <form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <h3>Subscribe to our mailing list</h3>
-            <p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
-            <br><br>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL"> </label>
-                <input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-            </div>
-            <div class="clear" id="submit-button">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-        </div>
-    </form>
-</div>
-<!--End mc_embed_signup-->
+
+
+*   Engines will differ depending on the genre, but more can be shared than it seems.
+    *   Visceral Games had two forks[^1] from the Godfather Engine, one for _Dead Space_ (a survival horror game), and one for _Godfather II_ (an open-world game). Each team modified their fork based on their needs.
+    *   Other technologies can typically still be shared across different game genres, like tools and optimizations.
+    *   Determining which technologies to merge and share across projects becomes an important subject, and much of the responsibility for this is on the technical leads.
+*   Code reviews are time-consuming, but important for many different parts of a project.
+    *   Some studios like EA use code reviews before every submission to ensure the quality of the code is up to snuff.
+    *   At Funomena, the Wattam team is using them as a way to sanity check[^2] our code.
+    *   Code reviews most significantly help with proper commenting, readability, reduction of bad habits, and clearing up misunderstandings in complex functions and systems.
+    *   Breaking all of your changes into tiny submissions helps make the code review process easier for the team.
+*   It's okay not to know everything, and it will actually be common on a game engine team.
+    *   At large companies, you will typically only communicate with your immediate peers, so it's hard to know about the problems that other teams are facing.
+    *   If you are only familiar with certain pieces of the engine that you've been working 
+    *   on, that prevents you from reworking and over-optimizing your code.
+    *   Working on a game engine team, you also learn to let go of refactoring any "bad" code unless it's legitimately broken.
+    *   You learn to let go of refactoring "bad" code unless it is actually broken.
+*   Bring QA in, especially if you're working on more than 3 systems
+    *   If you have data-driven pipelines, debugging and ensuring correct patches is even more difficult because you can't tell from the code that something else in the engine depends on particular parameters.
+    *   Having developers test parts of the game that they don't work on can help you gain perspective on the bigger picture and wrap your head around such a complex system.
+
+[^1]: A **project fork **is a when developers take a copy of source code from one software package and develop on it independent from the original.
+
+[^2]: A **sanity check** is a basic test to quickly evaluate whether a result can possibly be true or correct.
