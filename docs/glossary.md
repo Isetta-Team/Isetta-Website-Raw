@@ -118,21 +118,7 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Localhost**- an address in networking specifically, 127.0.0.1. Packets that are sent here are not technically sent anywhere, they're just sent up to the next layer for processing. [↩](https://isetta.io/blogs/week-3/#fnref:535362)
 
-**Deterministic behaviour**- a process whose resulting state is determined by the initial state and inputs. It is heavily reliant on having a fixed-time so each step is performing the same amount of "work". [↩](https://isetta.io/blogs/week-5/#fnref:877)
-
-**Data locality**- essentially accessing data in as nearby of code as possible to utilize caches most effectively. Robert Nystrom covers it really well in this chapter from Game Programming Patterns. [↩](https://isetta.io/blogs/week-5/#fnref:32402)
-
-**Branching**- when the processor needs to evaluate something in order to determine what code to run next. It tends to be very wasteful of processing time because of the typical instruction pipeline on a computer. [↩](https://isetta.io/blogs/week-5/#fnref:74893)
-
-**Window handle**- a GLFW construct can be passed to objects and functions to allow them to hook into a particular window from the operating system. [↩](https://isetta.io/blogs/week-5/#fnref:321)
-
-**Messaging buffer**- a queue of messages that are buffered prior to being sent. Sending can be expensive and complicated, so buffering messages eases the messaging process. [↩](https://isetta.io/blogs/week-5/#fnref:832988)
-
 **Packet queue**- a queue of packets, which are small chunks of an original, bigger message. These are sent out in-batch because of packet size limitations over internet networks. [↩](https://isetta.io/blogs/week-5/#fnref:34902)
-
-**Two-Level Segregate Fit** (TLSF)- a memory allocation scheme meant for use in video games because of its fast and efficient memory usage. [↩](https://isetta.io/blogs/week-5/#fnref:837294)
-
-**Regression testing**- the process of testing changes in software to make sure functionality is not broken when updating the software. [↩](https://isetta.io/blogs/week-5/#fnref:3902832)
 
 **Deterministic Behaviour**-  a process whose resulting state is determined by the initial state and inputs. It is heavily reliant on having a fixed-time so each step is performing the same amount of "work". [↩](https://isetta.io/blogs/week-5/#fnref:877)
 
