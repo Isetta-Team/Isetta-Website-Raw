@@ -140,6 +140,8 @@ Besides the Isetta Engine development, the first interview with Adam Serdar, a S
 
 [^0]: John Carmack: _"I am now allowing the client to guess at the results of the users movement until the authoritative response from the server comes through. This is a biiiig architectural change. The client now needs to know about solidity of objects, friction, gravity, etc. I am sad to see the elegant client-as-terminal setup go away, but I am practical above idealistic."_ For more, see: [Gaffer on games: What Every Programmer Needs To Know About Game Networking](https://gafferongames.com/post/what_every_programmer_needs_to_know_about_game_networking/)
 
+_Originally published September 5, 2018._
+
 <br>
 
 <!-- Begin MailChimp Signup Form -->
