@@ -133,3 +133,21 @@ Also, please add any terms we haven't touched on that you think of!
 **Two-Level Segregate Fit** (TLSF)- a memory allocation scheme meant for use in video games because of its fast and efficient memory usage. [↩](https://isetta.io/blogs/week-5/#fnref:837294)
 
 **Regression testing**- the process of testing changes in software to make sure functionality is not broken when updating the software. [↩](https://isetta.io/blogs/week-5/#fnref:3902832)
+
+**Deterministic Behaviour**-  a process whose resulting state is determined by the initial state and inputs. It is heavily reliant on having a fixed-time so each step is performing the same amount of "work". [↩](https://isetta.io/blogs/week-5/#fnref:877)
+
+**Data locality**- essentially accessing data in as nearby of code as possible to utilize caches most effectively. Robert Nystrom covers it really well in this chapter from [Game Programming Patterns](http://gameprogrammingpatterns.com/data-locality.html). [↩] (https://isetta.io/blogs/week-5/#fnref:32402) 
+
+**Branching**- hen the processor needs to evaluate something in order to determine what code to run next. It tends to be very wasteful of processing time because of the typical [instruction pipeline](https://en.wikipedia.org/wiki/Instruction_pipelining) on a computer.
+
+**Window handle**- a GLFW construct can be passed to objects and functions to allow them to hook into a particular window from the operating system. [↩] (https://isetta.io/blogs/week-5/#fnref:321)
+
+**Pixel Stream**-  a stream of pixel data, typically as four floating point numbers or integers representing red, green, blue, and opacity/alpha. [↩] (https://isetta.io/blogs/week-5/#fnref:838383)
+
+**Messaging buffer**- a stream of pixel data, typically as four floating point numbers or integers representing red, green, blue, and opacity/alpha. [↩] (https://isetta.io/blogs/week-5/#fnref:838383)
+
+**Packet queue**- a queue of packets, which are small chunks of an original, bigger message. These are sent out in-batch because of packet size limitations over internet networks. [↩] (https://isetta.io/blogs/week-5/#fnref:34902)
+
+**Two-Level Segregate Fit (TLSF)**-  a memory allocation scheme meant for use in video games because of its fast and efficient memory usage.  [↩] (https://isetta.io/blogs/week-5/#fnref:837294) 
+
+**Regression Testing**- the process of testing changes in software to make sure functionality is not broken when updating the software. [↩] (https://isetta.io/blogs/week-5/#fnref:3902832) 
