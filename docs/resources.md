@@ -173,6 +173,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Cppreference - Array Initialization](https://en.cppreference.com/w/c/language/array_initialization)
 * [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
 * [Cppreference - Parameter pack](https://en.cppreference.com/w/cpp/language/parameter_pack)
+* [Cppreference - Constraints and concepts](https://en.cppreference.com/w/cpp/language/constraints)
 * [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
 questions/46874055/why-is-inline-required-on-static-inline-variables)
 * [StackOverflow - How are C++11 lambdas represented and passed?](https://stackoverflow.com/questions/16921247/how-are-c11-lambdas-represented-and-passed)
