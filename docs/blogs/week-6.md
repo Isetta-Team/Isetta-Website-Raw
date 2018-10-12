@@ -218,7 +218,7 @@ Matrices are extremely helpful when representing transformations in 3D space, es
 
 Matrices also pack some other information in it, like world position of the object and its three basis vectors. Our implementation is following _column-vector_ convention (explained [down below](#the-conventions-to-respect)). So the world position of a transform is easily accessible by extracting the first three elements of its fourth column, and the first three elements of the first three columns are the local direction x, y, and z vectors respectively. The three direction vectors happen to be pointing to the left, forward, and up from the direction of the object (we are using a right-handed coordinate system, again, see explanation [below](#the-conventions-to-respect)). Once you normalize the vectors, you can get the unit basis vectors, which are super useful when doing gameplay programming! This information can be visualized as below:
 
-![Matrix information](../images/blogs/week-6/matrix_information.png "Matrix information")
+![Matrix information](../images/blogs/week-6/matrix_information.PNG "Matrix information")
 
 *Matrix for an object at world origin with no rotation and uniform scale of 1*
 
