@@ -19,12 +19,18 @@ Conversion notes:
 
 # I Think It's Playable
 
+## Byte-Sized Updates
+[Debug Drawing](#debug-drawing): Implemented our entire visual debug drawing system, which has already revealed a mistake!
+[Level (Scene Graph)](#level-scene-graph): Designed the scene graph architecture as Level-Entity-Component, and created a reflection system for loading user-defined levels.
+[Transform](#transform): Began development on our transform hierarchy, and implemented some gameplay features with it like a flyby camera.
+[DLL](#dll): The engine was built into a DLL (well, sort of), and we were able to run the engine in another project.
+
 
 ## Debug Drawing
 
 Debug drawing is the visual equivalent to a print statement, and it is a good immediate check on whether a system you've programmed "looks" right. It is much easier to debug something through drawing than it is through text output; in fact, it even helped us discover a problem with our assets! (We'll cover this in a bit)
 
-What we want is some primitive types: lines, rays, planes, cubes, and spheres. We initially looked into Horde3D's capabilities for drawing these primitives, but we thought it made no sense to import models for these simple drawings—how would we even render a line _model_?! As in the past weeks, Horde3D's lightweightedness gave us no immediate way of doing this. The Horde forums offered solutions for generating procedural geometry and using OpenGL[^101] with Qt[^97]:, but they each had their own flaws, either using legacy functionality or bringing in libraries that mostly replicate our existing libraries. What we really wanted was to be able to write raw OpenGL code.
+What we want is some primitive types: lines, rays, planes, cubes, and spheres. We initially looked into Horde3D's capabilities for drawing these primitives, but we thought it made no sense to import models for these simple drawings—how would we even render a line _model_?! As in the past weeks, Horde3D's lightweightedness gave us no immediate way of doing this. The Horde forums offered solutions for generating procedural geometry and using OpenGL[^101] with Qt[^97], but they each had their own flaws, either using legacy functionality or bringing in libraries that mostly replicate our existing libraries. What we really wanted was to be able to write raw OpenGL code.
 
 [^101]: **OpenGL** is an open source graphics library for rendering 2D and 3D vector graphics.
 
@@ -76,7 +82,7 @@ The drawings were now being placed at the right position (well, it was fairly ha
 
 The rendering of the debug objects was nearing completion, but when the `RenderModule` reintroduced the "pushing man" animated model back to our scene, it gave us some pause. The camera had been put out at `Z=600` and the man at `Z=-100` just so that the man was properly rendered on the screen. Our initial thought was the model had an offset pivot[^587], so we imported him into Maya to check, but the pivot seemed okay. Luckily, we were smart enough to import him into Unity and compared him with a cube— and turns out, he was _massive_! Pulling in an experienced artist to help us shrink the model without breaking the rig and animation, we were eventually able to export him at an appropriate scale (closer to the size of a unit cube and not a skyscraper). This also re-exposed us to our asset pipeline that requires the models to be pre-processed by Horde into .geo[^4533] models, which we expedited with a batch script. We brought the "normal"-sized man back into the scene and compared him to the other sized model we had originally:
 
-![Pushing Man](../images/blogs/week-6/giant_guy.png)
+![Pushing Man](../images/blogs/week-6/giant_guy.PNG)
 
 The one on the left is actually the giant, because he was pushed out to `Z=-600`, the camera is at `Z=2`, and the new model at `Z=0`. The fact that the left model is visible at that distance depicts how large it really was. And so, our debug drawing was already proving to be valuable, as that problem could have taken much longer to solve if we didn't have something to immediately compare our model with.
 
