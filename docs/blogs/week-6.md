@@ -75,7 +75,7 @@ The drawings were now being placed at the right position (well, it was fairly ha
 
 The rendering of the debug objects was nearing completion, but when the `RenderModule` reintroduced the "pushing man" animated model back to our scene, it gave us some pause. The camera had been put out at `Z=600` and the man at `Z=-100` just so that the man was properly rendered on the screen. Our initial thought was the model had an offset pivot[^587], so we imported him into Maya to check, but the pivot seemed okay. Luckily, we were smart enough to import him into Unity and compared him with a cube— and turns out, he was _massive_! Pulling in an experienced artist to help us shrink the model without breaking the rig and animation, we were eventually able to export him at an appropriate scale (closer to the size of a unit cube and not a skyscraper). This also re-exposed us to our asset pipeline that requires the models to be pre-processed by Horde into .geo[^4533] models, which we expedited with a batch script. We brought the "normal"-sized man back into the scene and compared him to the other sized model we had originally:
 
-![Pushing Man](../images/blogs/week-6/giant_pushing_man.PNG)
+![Pushing Man](../images/blogs/week-6/giant_guy.png)
 
 The one on the left is actually the giant, because he was pushed out to `Z=-600`, the camera is at `Z=2`, and the new model at `Z=0`. The fact that the left model is visible at that distance depicts how large it really was. And so, our debug drawing was already proving to be valuable, as that problem could have taken much longer to solve if we didn't have something to immediately compare our model with.
 
@@ -87,7 +87,7 @@ For convenience, we also implemented a grid, point, axis and gimble (3-orthogona
 
 ![Pushing Man](../images/blogs/week-6/dynamic_plane_ray.PNG)
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3PzfXCegCDzAPMPRht" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/3PzfXCegCDzAPMPRht">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/3PzfXCegCDzAPMPRht" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/3PzfXCegCDzAPMPRht"></a></p>
 
 Although this wrapped up nicely, getting debug drawing to work was taxing because debugging the drawing code wasn't easy (no pun intended). There was always an uncertainty of whether the object wasn't being rendered because of a Horde snafu or because it was 100 light years behind the camera. We relied on checking the error messages from OpenGL and making incremental steps so that the source of a problem was quick to suss out. As part of this development, we fleshed out the `Matrix4` and `Vector4` classes more, as well as added C++ `union`[^2354]s to them which caused issues when binding multiple elements to an array (turns out, you must wrap them in a struct within the union).
 
@@ -175,7 +175,8 @@ The good news is, now in C++17, we can use the built-in RTTI and `constexpr if` 
 template <typename T, typename... Args>
 T* Entity::AddComponent(bool isActive, Args&&... args) {
   if constexpr (!std::is_base_of<class Component, T>::value) {
-    throw std::logic_error("%s is not a derived class from Component class", typeid(T).name);
+    throw std::logic_error("%s is not a derived class from Component class", 
+      typeid(T).name);
   } else {
     ...
   }
@@ -300,7 +301,7 @@ For now, we decided to let the `Transform` class have it. This might be a wrong 
 
 We implemented a fly camera control with our component and transform system, for both demoing and testing (and of course it's super buggy!). Here is what we got (**the gif is motion-sick prone, watch with caution**)!
 
-<div style="width:100%;height:0;padding-bottom:79%;position:relative;"><iframe src="https://giphy.com/embed/x4c08LvgMo25dWoBGS" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/x4c08LvgMo25dWoBGS">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:79%;position:relative;"><iframe src="https://giphy.com/embed/x4c08LvgMo25dWoBGS" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/x4c08LvgMo25dWoBGS"></a></p>
 
 That's all from `Transform` this week. We will spend the next week debugging and adding to it when we discover missing features.
 
