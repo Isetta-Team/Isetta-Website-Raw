@@ -18,6 +18,14 @@ Conversion notes:
 
 
 ## I Think It's Playable
+<!--
+## Byte-Sized Updates
+* [Debug Drawing](#debug-drawing):
+* [Level (Scene Graph)](#level-scene-graph):
+* [Transform](#transform);
+* [DLL](#dll): The engine was built into a DLL (well-sorta), we were able to run the engine in another project.
+-->
+
 
 ## Debug Drawing
 
