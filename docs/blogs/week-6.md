@@ -20,10 +20,10 @@ Conversion notes:
 # I Think It's Playable
 
 ## Byte-Sized Updates
-[Debug Drawing](#debug-drawing): Implemented our entire visual debug drawing system, which has already revealed a mistake!
-[Level (Scene Graph)](#level-scene-graph): Designed the scene graph architecture as Level-Entity-Component, and created a reflection system for loading user-defined levels.
-[Transform](#transform): Began development on our transform hierarchy, and implemented some gameplay features with it like a flyby camera.
-[DLL](#dll): The engine was built into a DLL (well, sort of), and we were able to run the engine in another project.
+* [Debug Drawing](#debug-drawing): Implemented our entire visual debug drawing system, which has already revealed a mistake!
+* [Level (Scene Graph)](#level-scene-graph): Designed the scene graph architecture as Level-Entity-Component, and created a reflection system for loading user-defined levels.
+* [Transform](#transform): Began development on our transform hierarchy, and implemented some gameplay features with it like a flyby camera.
+* [DLL](#dll): The engine was built into a DLL (well, sort of), and we were able to run the engine in another project.
 
 
 ## Debug Drawing
