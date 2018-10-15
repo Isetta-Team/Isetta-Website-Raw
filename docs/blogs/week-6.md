@@ -25,6 +25,7 @@ Conversion notes:
 * [Transform](#transform): Began development on our transform hierarchy, and implemented some gameplay features with it like a flyby camera.
 * [DLL](#dll): The engine was built into a DLL (well, sort of), and we were able to run the engine in another project.
 
+![Engine Architecture](../images/engine_architecture/week6.png "Week 6 Progress Architecture")
 
 ## Debug Drawing
 
