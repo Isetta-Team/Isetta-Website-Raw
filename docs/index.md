@@ -20,12 +20,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 5 are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-5).
-- This week, our blog was [Back in Business!](blogs/week-5/) In it we discuss some decisions we made about ImGUI and networking.
+- The latest changes for week 5 are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-6).
+- This week, our blog was ["I Think it's Playable"](blogs/week-6/) In it we discuss the game we got up and running in our engine!
 - We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](../images/engine_architecture/week5.png "Week 5 Progress Architecture")
+![Engine Architecture](../images/engine_architecture/week6.png "Week 6 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
