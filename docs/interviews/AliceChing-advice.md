@@ -1,8 +1,11 @@
 _Alice is currently working as a lead developer on Wattam at Funomena, where she helps her teammates stretch the capabilities of Unity. She has experienced large and small company environments, working at companies like Visceral Games, Sanzaru, and Google. Some of her past projects include Sly Cooper: Thieves in Time at Sanzaru Games and Godfather II at Visceral Games._
 
+## Fostering Usability
+<div class="video-wrapper">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/_d67ol_na7s?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
 Advice (_not_ verbatim):
-
-
 
 *   Engines will differ depending on the genre, but more can be shared than it seems.
     *   Visceral Games had two forks[^1] from the Godfather Engine, one for _Dead Space_ (a survival horror game), and one for _Godfather II_ (an open-world game). Each team modified their fork based on their needs.

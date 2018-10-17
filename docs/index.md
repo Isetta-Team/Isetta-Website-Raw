@@ -1,12 +1,13 @@
 # Welcome to Isetta Engine
 
-We are a student project from Carnegie Mellon's Entertainment Technology Center.  
-Our aim is to demystify the game engine development process for ourselves and other novice engine developers.
+We're building a game engine in 3 months. Is that crazy? Maybe a little (maybe a lot) but there's no way to learn like being pushed straight in the deep end.
+
+We are a student project from Carnegie Mellon's Entertainment Technology Center.  The aim of the project is to help demystify the game engine development process for ourselves and any other novice developers who have interest in engine development but like us were too intimidated of where to start.
 
 ## New here?
 - We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
 - We are documenting our whole process and recording all our discussions and decisions (even the bad ones) in weekly blogs starting from [Week 0](blogs/week-0/).
-- We are interviewing industry professionals to help learn what we don't know don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/TommyRefenes-interview/).
+- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/TommyRefenes-interview/).
 
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

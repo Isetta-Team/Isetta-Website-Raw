@@ -145,6 +145,14 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
 * [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
 
+## Transforms
+* *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
+* *Mathematics for 3D Game Programming and Computer Graphics 3rd edition* - Chapter 2-4
+* [Godot Engine - Using transforms](http://docs.godotengine.org/en/3.0/tutorials/3d/using_transforms.html)
+* [Unity API - transform](https://docs.unity3d.com/ScriptReference/Transform.html)
+* [Unreal’s FTransform class](https://api.unrealengine.com/INT/API/Runtime/Core/Math/FTransform/index.html)
+* [YouTube - Gimbal Lock Explained](https://youtu.be/zc8b2Jo7mno)
+
 
 ## Visual Studio
 * [Common Macros for Build Commands](https://msdn.microsoft.com/en-us/library/c02as0cs.aspx)
@@ -165,8 +173,10 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Cppreference - Array Initialization](https://en.cppreference.com/w/c/language/array_initialization)
 * [Cppreference - Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
 * [Cppreference - Parameter pack](https://en.cppreference.com/w/cpp/language/parameter_pack)
+* [Cppreference - Constraints and concepts](https://en.cppreference.com/w/cpp/language/constraints)
 * [StackOverflow - Why is `inline` required on static inline variables?](https://stackoverflow.com/
 questions/46874055/why-is-inline-required-on-static-inline-variables)
 * [StackOverflow - How are C++11 lambdas represented and passed?](https://stackoverflow.com/questions/16921247/how-are-c11-lambdas-represented-and-passed)
 * [Variadic Templates](https://en.cppreference.com/w/cpp/language/parameter_pack)
 * [Eli Bendersky's Blog - Variadic templates in C++](https://eli.thegreenplace.net/2014/variadic-templates-in-c/)
+* [Bartek's coding blog - Factory With Self-Registering Types](https://www.bfilipek.com/2018/02/factory-selfregister.html#templates): We referenced this article we designing our level auto registration system.

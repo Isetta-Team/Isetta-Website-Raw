@@ -70,6 +70,10 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Ninja**- a small build system that is designed to run builds as fast as possible.[↩](https://isetta.io/interviews/CaseyMuratori-interview/#fnref:401)
 
+**Engine abstraction**- the part of the engine code which depends on the hardware/software platform that the engine runs on and will be different on each platform. For example, the code that talks to the operating system on macOS will be different from that on Windows. Engine developers usually tackle this problem by having an abstraction layer on top of operating system code. So the code above that layer still looks the same when you swap out the underlying operating system. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:2)
+
+**Platform-dependent**- code refers to application code that is dependent on one operating system, and typically won't run on multiple. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:301)
+
 **OpenGL**- short for Open Graphics Library - a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:3)
 
 **SWF**-  short for Small Web Format, is an Adobe Flash file format used for multimedia, vector graphics and ActionScript. SWF files can contain animations or applets of varying degrees of interactivity and function.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:6)
@@ -79,6 +83,8 @@ Also, please add any terms we haven't touched on that you think of!
 **Box2D**- an open source C++ engine for simulating rigid bodies in 2D. Box2D is developed by Erin Catto and has the zlib license. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:3125) 
 
 **FMOD**- a a cross platform audio engine and authoring tool used throughout the game industry. It was used by over 2,000 games in the last 15 years.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:743)
+
+**Physics Solver**- a physics engine for games usually consists of two parts: collision detection and collision resolution, and solver refers to the resolution part. Collision detection detects what objects collide with each other first, and then the solver determines their correct physical response, like position, rotation, velocity, etc. [↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:3126)
 
 **BINK**- the defacto video codec for games created by Rad Tools.[↩](https://isetta.io/interviews/TommyRefenes-interview/#fnref:519)
 
