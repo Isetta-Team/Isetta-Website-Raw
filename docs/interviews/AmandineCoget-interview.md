@@ -113,33 +113,4 @@ When it comes to developers abusing that exposed data, that's where the problem 
 
 For a project like the Isetta Engine, aiming at showing what game engine development is like, it's very good to put the engine together from existing code. Because that's also true in the professional world: you very rarely get to make features from scratch. It's all plumbing.
 
-
-<!-- GD2md-html version 1.0β13 -->
-
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" style="margin-top: -20px">
-    <form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <h3>Subscribe to our mailing list</h3>
-            <p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
-            <br><br>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL"> </label>
-                <input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-            </div>
-            <div class="clear" id="submit-button">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-        </div>
-    </form>
-</div>
-<!--End mc_embed_signup-->
+_Interview conducted September 27. 2018._
