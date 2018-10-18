@@ -1,6 +1,6 @@
 ## Coming Soon
 
-We will be publishing our interview with Amandine very soon! Subscribe to our mailing list to be alerted when its published!
+We will be publishing our interview with Raymond in the coming weeks. Subscribe to our mailing list to be alerted when its published!
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
