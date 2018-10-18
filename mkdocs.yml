@@ -39,10 +39,12 @@ nav:
     - Tommy Refenes:
       - Interview: interviews/TommyRefenes-interview.md
       - Video Story: interviews/TommyRefenes-video.md
-    - Amandine Coget: interviews/AmandineCoget-interview.md
+    - Amandine Coget:
+      - Interview: interviews/AmandineCoget-interview.md
+      - Video Story: interviews/AmandineCoget-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
     - Aras Pranckevicius: interviews/ArasPranckevicius-interview.md
-    - Raymond Graham: interview/RaymondGraham-interview.md
+    - Raymond Graham: interviews/RaymondGraham-interview.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md

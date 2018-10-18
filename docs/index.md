@@ -1,6 +1,6 @@
 # Welcome to Isetta Engine
 
-We're building a game engine in 3 months. Is that crazy? Maybe a little (maybe a lot) but there's no way to learn like being pushed straight in the deep end.
+We're building a game engine in 3 months. Is that crazy? We've been told so. But there's no way to learn like being pushed straight into the deep end!
 
 We are a student project from Carnegie Mellon's Entertainment Technology Center.  The aim of the project is to help demystify the game engine development process for ourselves and any other novice developers who have interest in engine development but like us were too intimidated of where to start.
 
@@ -20,9 +20,9 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 5 are available on github [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-6).
-- This week, our blog was ["I Think it's Playable"](blogs/week-6/) In it we discuss the game we got up and running in our engine!
-- We recently interviewed with Tommy Refenes of Team Meat! See what he has to say about compartmentalizing your engine in [The Engine Sandwich](interviews/TommyRefenes-interview/).
+- The latest changes for week 7 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-7).
+- This week, our blog was ["I Think it's Playable"](blogs/week-6/). In it, we discuss the game we got up and running in our engine!
+- We recently interviewed with Amandine Coget, an independent game engine consultant! See what he has to say about the real work that goes into building an engine in [It's All Plumbing](interviews/AmandineCoget-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
 ![Engine Architecture](../images/engine_architecture/week6.png "Week 6 Progress Architecture")
