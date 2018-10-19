@@ -166,7 +166,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [String Interning - Useful Properties & Github Repo](https://alexpolt.github.io/intern.html)
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
 * [Stanford CS101 - Bits and Bytes](https://web.stanford.edu/class/cs101/bits-bytes.html)
-
+* [Microsoft Docs - Walkthrough: Create and use your own Dynamic Link Library (C++)](https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=vs-2017)
 
 ## Misc. C++
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
