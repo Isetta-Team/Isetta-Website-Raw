@@ -71,23 +71,19 @@ We don't have a solution that we are confident in picking yet, and there is prob
 No matter how we decide to do the collision callbacks or walk through the tree, the collision-intersection tests still need to occur. Here is our first test by looping over all the colliders in a vector:
 
 <div class="video-wrapper">
-
 <video playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/box-collision.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-
 </div>
 
 You'll probably notice the colliders remain red even after the colliders are no longer intersecting. This is because, at the time, there was no way to determine whether the colliders had exited yet; that required knowing they had collided before and were colliding the last frame. The solution to this is to have a collision pair set, where the IDs of the colliders (just the index in the vector at this point) are hashed into a set. It is important the hash ignores the order, since a collision of entity A with entity B is identical to a collision of entity B with entity A, so we can avoid doubling our collision checks. With a simple unordered set of pairs and the intersection test for most (excluding box-capsule), you'll get a result like this:
 
 <div class="video-wrapper">
-
 <video playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/collisions-test.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-
 </div>
 
 There is still obviously a lot to do with the collision system such as testing raycasts and fixing the box-capsule intersections. More to come next week!
@@ -331,7 +327,7 @@ So clean! This also gives us the added benefit of knowing our message types for 
 
 #### Static Initialization 2.0
 
-We're not done quite yet! (I can hear you groaning from here) There's still one more undesirable quality to our RPC message creation system. Remember "static initialization" solution from before? Well, that technique hardly helps since the game developer is still required to initialize the static variables _somewhere_, and forgetting to do so can lead to a rabbit hole of debugging.
+We're not done quite with the networking yet—hang in there! There's still one more undesirable quality to our RPC message creation system. Remember the "static initialization" solution from before? Well, that technique hardly helps since the game developer is still required to initialize the static variables _somewhere_, and forgetting to do so can lead to a rabbit hole of debugging.
 
 Fortunately for us, we've already used an ever better system elsewhere in our code. In [LevelManager.h](https://github.com/Isetta-Team/Isetta-Engine/blob/7cbc43d4b3df5cea830ceacc3c58724685aa5ab7/Isetta/IsettaEngine/Scene/LevelManager.h), we define a static boolean variable whose initialization is also in the header file but is guarded by being a template function! So we don't have to worry about a multiple-definition error but we can also hide away the registration process from the game developer. You can read more about this technique in the section [Template Black Magic!](https://isetta.io/blogs/week-6/#template-black-magic) of our Week 6 blog.
 
@@ -341,14 +337,12 @@ Fortunately for us, we've already used an ever better system elsewhere in our co
 As a nice bow to wrap around this whole week of intense networking development, we also took all of our networking code out of the engine loop (where it was hard-coded) and put it into [NetworkLevel.cpp](https://github.com/Isetta-Team/Isetta-Engine/blob/44a5c12abc6e03b6a3f6cc22540bc2a831634ad9/Isetta/IsettaEngine/Custom/NetworkLevel.cpp). In doing this, we were able to test a complete separation between the engine's networking logic and the game's, and guess what? It works! Check out that spawning and despawning synced up!
 
 <div class="video-wrapper">
-
 <video playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/network_spawning.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-*Don't mind the weird animation speed-up. That's a bug for another time.*
-
 </div>
+*This trippy zombie dance experience brought to you by the devs being too lazy to space out the spawns.*
 
 That's it for this week! It might seem like a lot, but really we only worked through the fundamentals of a good networking system. In the next week or two, we will be introducing networked transforms into our system, which will let us have legitimate multiplayer going in our games!
 
@@ -417,12 +411,10 @@ Second, we downloaded some assets from [Mixamo](https://www.mixamo.com/) and mad
 *   The units used by different software could be different. For example, in Maya, 1 unit is 1 centimeter by default, and in our engine, 1 unit is 1 meter. If we don't change the scale before exporting, the models will be huge in our engine. This can be fixed by changing the default scale in Maya, or by manually setting the object's scale in the game. If you don't, you may get a _giant_ soldier, like we did:
 
 <div class="video-wrapper">
-
 <video playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/scale_problem_giant_soldier.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-
 </div>
 
 By the way, if you pass some code to DLL-imported function to find resources, it will try to find the resources relative to the game project, not the project where the DLL is from. This is pretty obvious, but took us a while to make it clear.
@@ -449,9 +441,7 @@ We also found out some missing features during the making of this game:
 Finally, we got the game working! Yay!
 
 <div class="video-wrapper">
-
 <iframe src="https://www.youtube.com/embed/Th-JUNuTtZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 </div>
 
 

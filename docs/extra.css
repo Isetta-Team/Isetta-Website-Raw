@@ -31,9 +31,20 @@ img[alt="team-headshot"]{
 	width: 250px;
 }
 
-img + em {
+img + p>em {
+	margin-top: -.75em;
 	display: block;
 	text-align: center;
+}
+
+div + p>em {
+	margin-top: -.75em;
+	display: block;
+	text-align: center;
+}
+
+video {
+	max-width: 100%;
 }
 /*#endregion*/
 
