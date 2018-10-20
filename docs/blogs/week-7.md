@@ -38,7 +38,7 @@ The actual intersection tests are on the `CollisionsModule` because an intersect
 
 Back to the `CollisionsModule`, again at the time of writing we are taking a naive approach to collision testing, which is to have an array of `Collider`s check against all other colliders in the array, and that ends up as an `O(n^2)` approach. We have a slight speedup by only checking dynamic entities against the static and other dynamic entities, but this speedup is probably negligible when compared to using a proper data structure for holding colliders, like a dynamic bounding volume tree (DBVT, see chapter 6 of the above book for details). The DBVT is a balanced tree that holds some primitive type, either axis-aligned bounding boxes or bounding spheres, that encompasses all elements held in the tree. As the tree is constructed, the parents expand to encompass its children and only the leaves are actual elements inserted into the tree. The typical balancing heuristic[^3829] is based on increasing the surface area of the parent as little as possible. It can also be based on volume. An example BVT is constructed below. 
 
-![Dynamic Bounding Volume Tree](../images/blogs/week-7/bvtree.PNG "Example Dynamic Bounding Volume Tree")
+![Dynamic Bounding Volume Tree](../../images/blogs/week-7/bvtree.PNG "Example Dynamic Bounding Volume Tree")
 
 [^3829]: A **heuristic** is a technique for solving a problem more quickly, often utilized in optimization problems for computer science.
 
