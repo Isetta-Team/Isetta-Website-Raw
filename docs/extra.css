@@ -31,6 +31,10 @@ img[alt="team-headshot"]{
 	width: 250px;
 }
 
+img + em {
+	display: block;
+	text-align: center;
+}
 /*#endregion*/
 
 /*#region Headers */
