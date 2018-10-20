@@ -1,22 +1,3 @@
-<!----- Conversion time: 2.822 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* GD2md-html version 1.0β13
-* Fri Oct 12 2018 15:26:02 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/open?id=16EBhDw19I0YVhw-B5VSHMtznLFcDy_rKFYWb9yHubRY
------>
-
-
-
 # I Think It's Playable
 
 ## Byte-Sized Updates
