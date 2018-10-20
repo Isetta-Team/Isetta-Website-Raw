@@ -38,7 +38,8 @@ The actual intersection tests are on the `CollisionsModule` because an intersect
 
 Back to the `CollisionsModule`, again at the time of writing we are taking a naive approach to collision testing, which is to have an array of `Collider`s check against all other colliders in the array, and that ends up as an `O(n^2)` approach. We have a slight speedup by only checking dynamic entities against the static and other dynamic entities, but this speedup is probably negligible when compared to using a proper data structure for holding colliders, like a dynamic bounding volume tree (DBVT, see chapter 6 of the above book for details). The DBVT is a balanced tree that holds some primitive type, either axis-aligned bounding boxes or bounding spheres, that encompasses all elements held in the tree. As the tree is constructed, the parents expand to encompass its children and only the leaves are actual elements inserted into the tree. The typical balancing heuristic[^3829] is based on increasing the surface area of the parent as little as possible. It can also be based on volume. An example BVT is constructed below. 
 
-![Dynamic Bounding Volume Tree](../../images/blogs/week-7/bvtree.PNG "Example Dynamic Bounding Volume Tree")
+![OpenGL Triangle](../images/blogs/week-6/OpenGL_Triangle.PNG)
+![Dynamic Bounding Volume Tree](../images/blogs/week-7/bvtree.PNG "Example Dynamic Bounding Volume Tree")
 
 [^3829]: A **heuristic** is a technique for solving a problem more quickly, often utilized in optimization problems for computer science.
 
@@ -71,14 +72,14 @@ We don't have a solution that we are confident in picking yet, and there is prob
 No matter how we decide to do the collision callbacks or walk through the tree, the collision-intersection tests still need to occur. Here is our first test by looping over all the colliders in a vector:
 
 
-<video width="800" height="450" playsinline autoplay muted loop>
+<video width="800" height="450" controls playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/box-collision.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
 You'll probably notice the colliders remain red even after the colliders are no longer intersecting. This is because, at the time, there was no way to determine whether the colliders had exited yet; that required knowing they had collided before and were colliding the last frame. The solution to this is to have a collision pair set, where the IDs of the colliders (just the index in the vector at this point) are hashed into a set. It is important the hash ignores the order, since a collision of entity A with entity B is identical to a collision of entity B with entity A, so we can avoid doubling our collision checks. With a simple unordered set of pairs and the intersection test for most (excluding box-capsule), you'll get a result like this:
 
-<video width="800" height="450" playsinline autoplay muted loop>
+<video width="800" height="450" controls playsinline autoplay muted loop>
   <source src="../../images/blogs/week-7/collisions-test.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
