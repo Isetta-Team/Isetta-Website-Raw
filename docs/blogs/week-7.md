@@ -344,7 +344,10 @@ Fortunately for us, we've already used an ever better system elsewhere in our co
 
 As a nice bow to wrap around this whole week of intense networking development, we also took all of our networking code out of the engine loop (where it was hard-coded) and put it into [NetworkLevel.cpp](https://github.com/Isetta-Team/Isetta-Engine/blob/44a5c12abc6e03b6a3f6cc22540bc2a831634ad9/Isetta/IsettaEngine/Custom/NetworkLevel.cpp). In doing this, we were able to test a complete separation between the engine's networking logic and the game's, and guess what? It works! Check out that spawning and despawning synced up!
 
-![Network Spawning Test](../images/blogs/week-7/network_spawning.gif "Network Spawning Test")
+<video width="800" height="450" controls playsinline autoplay muted loop>
+  <source src="../../images/blogs/week-7/network_spawning.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
 *Don't mind the weird animation speed-up. That's a bug for another time.*
 
 That's it for this week! It might seem like a lot, but really we only worked through the fundamentals of a good networking system. In the next week or two, we will be introducing networked transforms into our system, which will let us have legitimate multiplayer going in our games!
