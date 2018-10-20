@@ -337,14 +337,14 @@ So clean! This also gives us the added benefit of knowing our message types for 
 
 We're not done quite yet! (I can hear you groaning from here) There's still one more undesirable quality to our RPC message creation system. Remember "static initialization" solution from before? Well, that technique hardly helps since the game developer is still required to initialize the static variables _somewhere_, and forgetting to do so can lead to a rabbit hole of debugging.
 
-Fortunately for us, we've already used an ever better system elsewhere in our code. In `[LevelManager.h](https://github.com/Isetta-Team/Isetta-Engine/blob/7cbc43d4b3df5cea830ceacc3c58724685aa5ab7/Isetta/IsettaEngine/Scene/LevelManager.h)`, we define a static boolean variable whose initialization is also in the header file but is guarded by being a template function! So we don't have to worry about a multiple-definition error but we can also hide away the registration process from the game developer. You can read more about this technique in the section [Template Black Magic!](https://isetta.io/blogs/week-6/#template-black-magic) of our Week 6 blog.
+Fortunately for us, we've already used an ever better system elsewhere in our code. In [LevelManager.h](https://github.com/Isetta-Team/Isetta-Engine/blob/7cbc43d4b3df5cea830ceacc3c58724685aa5ab7/Isetta/IsettaEngine/Scene/LevelManager.h), we define a static boolean variable whose initialization is also in the header file but is guarded by being a template function! So we don't have to worry about a multiple-definition error but we can also hide away the registration process from the game developer. You can read more about this technique in the section [Template Black Magic!](https://isetta.io/blogs/week-6/#template-black-magic) of our Week 6 blog.
 
 
 ### Making a Level
 
-As a nice bow to wrap around this whole week of intense networking development, we also took all of our networking code out of the engine loop (where it was hard-coded) and put it into `[NetworkLevel.cpp](https://github.com/Isetta-Team/Isetta-Engine/blob/44a5c12abc6e03b6a3f6cc22540bc2a831634ad9/Isetta/IsettaEngine/Custom/NetworkLevel.cpp)`. In doing this, we were able to test a complete separation between the engine's networking logic and the game's, and guess what? It works! See us spawning and despawning 
+As a nice bow to wrap around this whole week of intense networking development, we also took all of our networking code out of the engine loop (where it was hard-coded) and put it into [NetworkLevel.cpp](https://github.com/Isetta-Team/Isetta-Engine/blob/44a5c12abc6e03b6a3f6cc22540bc2a831634ad9/Isetta/IsettaEngine/Custom/NetworkLevel.cpp). In doing this, we were able to test a complete separation between the engine's networking logic and the game's, and guess what? It works! Check out that spawning and despawning synced up!
 
-![Network Level](../images/blogs/week-7/network_spawning.gif "Network Spawning Test")
+![Network Spawning Test](../images/blogs/week-7/network_spawning.gif "Network Spawning Test")
 *Don't mind the weird animation speed-up. That's a bug for another time.*
 
 That's it for this week! It might seem like a lot, but really we only worked through the fundamentals of a good networking system. In the next week or two, we will be introducing networked transforms into our system, which will let us have legitimate multiplayer going in our games!
