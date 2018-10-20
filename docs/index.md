@@ -21,11 +21,11 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 
 ## Where are we now?
 - The latest changes for week 7 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-7).
-- This week, our blog was ["I Think it's Playable"](blogs/week-6/). In it, we discuss the game we got up and running in our engine!
+- This week, our blog was ["A Real Game Engine"](blogs/week-7/). In it, we discuss the game we got up and running in our engine, as well as a lot of other new developments (like network messages!).
 - We recently interviewed with Amandine Coget, an independent game engine consultant! See what he has to say about the real work that goes into building an engine in [It's All Plumbing](interviews/AmandineCoget-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](../images/engine_architecture/week6.png "Week 6 Progress Architecture")
+![Engine Architecture](../images/engine_architecture/week7.png "Week 7 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
