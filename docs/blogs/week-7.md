@@ -501,14 +501,14 @@ There, no memory errors!
 
 ### "Camera" vs. "CameraComponent"
 
-Regarding our engine's naming conventions, the Isetta Team is usually pretty lax. But for our components, we decided to turn it up a notch and argue over which is better: "Camera" or "CameraComponent." It remained an unresolved debate because one of our programmers was out at an interview over a couple days, but when he came back, we decided on a compromise. The component should include the word "Component" when the name of the component itself is only one word (e.g. "CameraComponent"), and it should not include "Component" when it already contains more than one word ("e.g. NetworkIdentity").
+Regarding our engine's naming conventions, the Isetta Team is usually pretty lax. But for our components, we decided to turn it up a notch and argue over which is better: "Camera" or "CameraComponent." It remained an unresolved debate because one of our programmers was out at an interview over a couple days, but when he came back, we decided on a compromise. The component should include the word "Component" when the name of the component itself is only one word (e.g. "CameraComponent"), and it should not include "Component" when it already contains more than one word (e.g. "NetworkIdentity").
 
 
 ## Coming Soon
 
 Go check out our interview with [Amandine Coget](../interviews/AmandineCoget-interview.md), where we talk about the Frostbite engine, developing good usability, and the pros and cons of different UI models.
 
-We also interviewed [Raymond Graham](../interviews/RaymondGraham-interview.md) this week, so expect his interview along with [Martin Middleton's](../interviews/MartinMiddleton-interview.md) and [Aras Pranckevicius's](../interviews/ArasPranckevicius-interview.md) in the coming weeks.
+We also interviewed [Raymond Graham](../interviews/RaymondGraham-interview.md) ([@wadarass](https://twitter.com/wadarass)) this week, so expect his interview along with [Martin Middleton's](../interviews/MartinMiddleton-interview.md) and [Aras Pranckevicius's](../interviews/ArasPranckevicius-interview.md) ([@aras_p](https://twitter.com/aras_p)) in the coming weeks.
 
 
 ## [Resources](../resources.md)
@@ -516,4 +516,37 @@ We also interviewed [Raymond Graham](../interviews/RaymondGraham-interview.md) t
 From development we are acquiring a lot of great resources from where we learned certain topics, and as much as we try to synthesize things in our blogs you may be interested in the originals, which is why we have a page full of links for you to browse.
 
 
+_Originally Published October 19, 2018._
+
+
 <!-- GD2md-html version 1.0β13 -->
+
+
+<br>
+
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup" style="margin-top: -20px">
+    <form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <h3>Subscribe to our mailing list</h3>
+            <p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
+            <br><br>
+            <div class="mc-field-group">
+                <label for="mce-EMAIL"> </label>
+                <input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
+            </div>
+            <div class="clear" id="submit-button">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
