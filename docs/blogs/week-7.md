@@ -71,11 +71,17 @@ We don't have a solution that we are confident in picking yet, and there is prob
 No matter how we decide to do the collision callbacks or walk through the tree, the collision-intersection tests still need to occur. Here is our first test by looping over all the colliders in a vector:
 
 
-![Box-Box Collision](../images/blogs/week-7/box-collision.gif "Box-Box Collision")
+<video width="800" height="450" playsinline autoplay muted loop>
+  <source src="../../images/blogs/week-7/box-collision.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
 
 You'll probably notice the colliders remain red even after the colliders are no longer intersecting. This is because, at the time, there was no way to determine whether the colliders had exited yet; that required knowing they had collided before and were colliding the last frame. The solution to this is to have a collision pair set, where the IDs of the colliders (just the index in the vector at this point) are hashed into a set. It is important the hash ignores the order, since a collision of entity A with entity B is identical to a collision of entity B with entity A, so we can avoid doubling our collision checks. With a simple unordered set of pairs and the intersection test for most (excluding box-capsule), you'll get a result like this:
 
-![Collisions Test](../images/blogs/week-7/collisions-test.gif "Collisions Test")
+<video width="800" height="450" playsinline autoplay muted loop>
+  <source src="../../images/blogs/week-7/collisions-test.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
 
 There is still obviously a lot to do with the collision system such as testing raycasts and fixing the box-capsule intersections. More to come next week!
 
