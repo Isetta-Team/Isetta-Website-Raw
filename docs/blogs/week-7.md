@@ -85,7 +85,7 @@ The final option would be to have a `Collisions` component which holds a list of
 
 We don't have a solution that we are confident in picking yet, and there is probably a better solution out there that might be a combination of these. Next week will talk about what we actually selected and why. 
 
-No matter how we decide to do the collision callbacks or walk through the tree, the collision-intersection tests still need to occur. Here is our first test by looping over all the colliders in a vector: \
+No matter how we decide to do the collision callbacks or walk through the tree, the collision-intersection tests still need to occur. Here is our first test by looping over all the colliders in a vector:
 
 
 ![Box-Box Collision](../images/blogs/week-7/box-collision.gif "Box-Box Collision")
@@ -281,24 +281,24 @@ This expands to something like this:
 
 ``` cpp
 
-#define serialize_int(stream, value, min, max)                              \
-  do {                                                                      \
-    yojimbo_assert(min < max);                                              \
-    int32_t int32_value = 0;                                                \
-    if (Stream::IsWriting) {                                                \
-      yojimbo_assert(int64_t(value) >= int64_t(min));                       \
-      yojimbo_assert(int64_t(value) <= int64_t(max));                       \
-      int32_value = (int32_t)value;                                         \
-    }                                                                       \
-    if (!stream->SerializeInteger(int32_value, min, max)) {                 \
-      return false;                                                         \
-    }                                                                       \
-    if (Stream::IsReading) {                                                \
-      value = int32_value;                                                  \
-      if (int64_t(value) < int64_t(min) || int64_t(value) > int64_t(max)) { \
-        return false;                                                       \
-      }                                                                     \
-    }                                                                       \
+#define serialize_int(stream, value, min, max)   \
+  do {                                                   \
+    yojimbo_assert(min < max);                           \
+    int32_t int32_value = 0;                             \
+    if (Stream::IsWriting) {                             \
+      yojimbo_assert(int64_t(value) >= int64_t(min));    \
+      yojimbo_assert(int64_t(value) <= int64_t(max));    \
+      int32_value = (int32_t)value;                      \
+    }                                                    \
+    if (!stream->SerializeInteger(int32_value, min, max)) {   \
+      return false;                                      \
+    }                                                    \
+    if (Stream::IsReading) {                             \
+      value = int32_value;                               \
+      if (int64_t(value) < int64_t(min) || int64_t(value) > int64_t(max)) {  \
+        return false;                                    \
+      }                                                  \
+    }                                                    \
   } while (0)
 
 ```
@@ -323,9 +323,9 @@ Specifically, inside of [Entity.h](https://github.com/Isetta-Team/Isetta-Engine/
 Now, if you've watched any of Mike Acton's talks, you'll probably have a critical eye of templates. And we acknowledge that they do drive up compile time and wreck iteration speed, but in such a short notice, they can be a nice step around a lot of code that could be much harder to maintain. And because we're using it, we can get rid of our gross string tag method and do a very simple type check:
 
 ``` cpp
-template <typename T> \
-int NetworkManager::GetMessageTypeId() { \
-  return typeMap[std::type_index(typeid(T))]; \
+template <typename T>
+int NetworkManager::GetMessageTypeId() {
+  return typeMap[std::type_index(typeid(T))];
 }
 
 ```
@@ -465,22 +465,21 @@ When we were working on the networking system this week, we attached `NetworkIde
 
 // … node = a custom data structure containing a size and a pointer to the next node
 
-  intptr_t rawAddress = reinterpret_cast<intptr_t>(node); \
-  rawAddress += headerSize;  // leave size for header \
-  intptr_t misAlignment = rawAddress & (alignment - 1); \
-  uint64_t adjustment = alignment - misAlignment; \
-  intptr_t alignedAddress = rawAddress + adjustment; \
- \
-  size_t occupiedSize = headerSize + adjustment + size; \
-  intptr_t headerAddress = alignedAddress - headerSize; \
- \
-  if (node->size >= occupiedSize + nodeSize) { \
-    // enough space to put a node here \
-    auto* header = new (reinterpret_cast<void*>(headerAddress)) \
-        AllocHeader(occupiedSize, adjustment); \
- \
-    InsertNodeAt(node, new (reinterpret_cast<void*>(alignedAddress + size)) \
-                           Node(node->size - occupiedSize)); \
+  intptr_t rawAddress = reinterpret_cast<intptr_t>(node);
+  rawAddress += headerSize;  // leave size for header
+  intptr_t misAlignment = rawAddress & (alignment - 1);
+  uint64_t adjustment = alignment - misAlignment;
+  intptr_t alignedAddress = rawAddress + adjustment;
+
+  size_t occupiedSize = headerSize + adjustment + size;
+  intptr_t headerAddress = alignedAddress - headerSize;
+
+  if (node->size >= occupiedSize + nodeSize) {
+    // enough space to put a node here
+    auto* header = new (reinterpret_cast<void*>(headerAddress))
+        AllocHeader(occupiedSize, adjustment);
+
+    InsertNodeAt(node, new (reinterpret_cast<void*>(alignedAddress + size)) Node(node->size - occupiedSize));
   } else // ...
 
 ```
@@ -491,13 +490,13 @@ The problem in this code stems from one spot: Where `auto* header` is allocated 
 But when is `headerAddress` only 8 bytes away from `node`, especially when our default alignment is 16 bytes? The answer lies in where we started. If `node` happens to be misaligned, then the first block of code is _not_ actually aligning our next address, it only puts it 8 bytes after our address because it's "aligning"! To fix this, we can increase our adjustment so that it always "rounds up", so to speak. This can be done in a short math expression:
 
 ``` cpp
-  uint64_t adjustment = alignment - misAlignment; \
-  adjustment += ((~alignment & adjustment) << 1); \
+  uint64_t adjustment = alignment - misAlignment;
+  adjustment += ((~alignment & adjustment) << 1);
   intptr_t alignedAddress = rawAddress + adjustment;
 
 ```
 
-	There, no memory errors!
+There, no memory errors!
 
 
 ### "Camera" vs. "CameraComponent"
