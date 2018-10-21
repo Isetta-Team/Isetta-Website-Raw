@@ -452,6 +452,8 @@ Finally, we got the game working! Yay!
 
 After making our transform and GUI system, we spent 20 minutes hacking together a "programmer UI" in-game editor that's capable of displaying entity hierarchy, transform information, component list, gizmo drawing, and has a "reset transform" button. Being able to see the list of entities and their information made it so much easier for us to debug the game and engine.
 
+![Editor](../images/blogs/week-7/editor.png "Editor")
+*Our simple in-game inspector*
 
 ### `FreeListAllocator` Alignment
 
