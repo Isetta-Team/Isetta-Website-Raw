@@ -143,3 +143,69 @@ Also, please add any terms we haven't touched on that you think of!
 **Two-Level Segregate Fit (TLSF)**-  a memory allocation scheme meant for use in video games because of its fast and efficient memory usage.  [↩] (https://isetta.io/blogs/week-5/#fnref:837294) 
 
 **Regression Testing**- the process of testing changes in software to make sure functionality is not broken when updating the software. [↩] (https://isetta.io/blogs/week-5/#fnref:3902832) 
+
+**Qt**-  a framework for creating retained GUI applications. [↩] (https://isetta.io/blogs/week-6/#fnref:97) 
+
+**Viewport**- the "window" which the camera will render content to the screen, it is specified with an (x,y) offset from the top-left in OpenGL and a width and height. [↩] (https://isetta.io/blogs/week-6/#fnref:70) 
+
+**Vertex arrays and buffers**- hold the vertex information such as vertex positions, normals, color, etc and are stored within the OpenGL state. [↩] (https://isetta.io/blogs/week-6/#fnref:12)
+
+**Element Buffers**- hold additional information regarding the vertices, specifically what index the pertinent information is located within the vertex array. [↩] (https://isetta.io/blogs/week-6/#fnref:39)
+
+**Culling**- the early rejection of objects being passed through the render pipeline, because they don't contribute to the final image. [↩] (https://isetta.io/blogs/week-6/#fnref:49)
+
+**Model-view Matrix**- the matrix which transforms a position in local space to world space, then to camera space. [↩] (https://isetta.io/blogs/week-6/#fnref:440)
+
+**Transpose**- when the entries on the diagonals are flipped about the center diagonal.[↩] (https://isetta.io/blogs/week-6/#fnref:1123)
+
+**Vertex Shader**-  a graphics program that alters information associated to the vertices, it is one of the first stages in the graphics pipeline. [↩] (https://isetta.io/blogs/week-6/#fnref:9098)
+
+**Homogenous Coordinates**- differentiate points from vectors by expanding the traditional Vector3 to a Vector4 and placing a 0 in the 4th element for vectors and 1 in the 4th element for points. [↩] (https://isetta.io/blogs/week-6/#fnref:932)
+
+**Frustum**- the portion of the world which is viewable by a camera. It is typically shaped like a pyramid with near and far planes clipping the volume. What is rendered is the volume between the 2 planes. [↩] (https://isetta.io/blogs/week-6/#fnref:324)
+
+**Pivot**-  the local position of the model which is the zero position. When transforming the model in the world space, all changes are relative to this point. An offset pivot is when the pivot is placed in a position that isn't about the model, for example offset in X=100 from the model. [↩] (https://isetta.io/blogs/week-6/#fnref:587)
+
+**.geo files**- Horde3D's processed file for model and animations, optimized for more efficient rendering. The file is processed through the Horde3DUtil library and done prior to runtime. [↩] (https://isetta.io/blogs/week-6/#fnref:4533)
+
+**Union**- a special class type in C++ that can hold only one of its non-static data members at a time. Similar to a struct, you can declare multiple variables in a union, but only one is available at the same time. Another distinction is that the size of a struct is the sum of all of its members, but the size of a union is the size of the biggest member. The way the author understands it is that union gives you different ways to interpret the same memory values. [↩] (https://isetta.io/blogs/week-6/#fnref:2354)
+
+**Object Composition**- in Object Oriented Programming, this is a way to combine simple objects or data types into more complex ones. The Component pattern in Game Programming Patterns book describes this in detail. [↩] (https://isetta.io/blogs/week-6/#fnref:90865)
+
+**Runtime type information (RTTI)**- a language feature that exposes information about an object's data type at runtime. For example, if you want to get the type name of some object as string, you would need RTTI. [↩] (https://isetta.io/blogs/week-6/#fnref:215)
+
+**Macros**-  a way of automatically substituting text for some other during the compiling process. In C++, they are defined as #define TEXT_IN_CODE TEXT_TO_COPY OVER. For example, if you define #define SPEED 5 and write mySpeed = SPEED, SPEED will be substituted by 5 during compile time and the compiler will actually see mySpeed = 5. [↩] (https://isetta.io/blogs/week-6/#fnref:1238)
+
+**Oracle**- a computer technology corporation headquartered in Redwood Shores, California, who acquired Java from Sun Microsystems and is now maintaining it. [↩] (https://isetta.io/blogs/week-6/#fnref:85213)
+
+**Test Harnesses**- a test framework which can ensure the progression of the software. In the Isetta Engine case, they will act as sample levels to demo features of the engine and as versioning happens to ensure old features aren't broken on accident.[↩] (https://isetta.io/blogs/week-6/#fnref:675)
+
+**Heuristic**- a technique for solving a problem more quickly, often utilized in optimization problems for computer science. [↩] (https://isetta.io/blogs/week-7/#fnref:3829)
+
+**Object Factory**- a programming pattern where you decouple object creation and destruction with the actual usage of the object. An object factory typically creates objects based on passed parameters, which you would then receive and use. [↩] (https://isetta.io/blogs/week-7/#fnref:28392)
+
+**Typecasting**- also known as type conversion, this is a method of changing one data type to another. It helps ensure that variables are processed correctly by functions, but can also be dangerous with the way they handle the conversion. [↩] (https://isetta.io/blogs/week-7/#fnref:352252)
+
+**Boilerplate Code**-  a section of code that has to be included in many places with little to no alteration. [↩] (https://isetta.io/blogs/week-7/#fnref:3954920)
+
+**Function Templates**- functions definitions that, at compile time, generate individual function definitions for any types used with the template. This can be very useful for cutting out duplicate code, but greatly increases compile time and code size. [↩] (https://isetta.io/blogs/week-7/#fnref:290252)
+
+**BitSquid**-  more modernly known as Autodesk Stingray, is a discontinued game engine from Stockholm, Sweden. End of sale was announced for January 7, 2018, and afterward it became a plugin for Autodesk 3DS Max known as 3DS Max Interactive. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:284972)
+
+**IMGUI**- stands for immediate mode GUI which is a code-driven GUI system where on each rendering frame the application needs to issue the draw commands of the GUI (the GUI is not stored for multiple frames) [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:1024)
+
+**Scaleform**- a vector graphics rendering engine used to display Adobe Flash-based user interfaces and HUDs for video games. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:231)
+
+**Retained GUI**-  also known as canvas/scene graph, is where GUI is registered once and is displayed, "retained", on screen until it removes itself from rendering. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:1025)
+
+**Frostbite**- EA's proprietary game engine used across most of their studios. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:134)
+
+**Heads-up Display (HUD)**- overlay on the screen that presents important information to the player. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:135)
+
+**Intellisense**- an intelligent code completion feature in Microsoft Visual Studio that is capable of detailing information about the code and objects that the programmer is working with while coding. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:83838392)
+
+**Retro Compatibility**-  also known as backwards compatibility, is when a system is setup such that it works with legacy code/input. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:53)
+
+**Thread-safe code**- only manipulates shared data structures in a manner that ensures that all threads behave properly and fulfill their design specifications without unintended interaction. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:2384972)
+
+**Std::iterator**- a C++ type that can be used to iterate through collections of elements based on that collection. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:668322)
