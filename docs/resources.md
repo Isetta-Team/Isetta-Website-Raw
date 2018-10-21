@@ -13,6 +13,32 @@ Useful articles/resources we used during the development of Isetta
 * [Scott Meyers - CPU Caches and Why You care](https://vimeo.com/97337258)
 * [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 
+## Collisions
+* Collision Detection
+    * *Real-Time Collision Detection* by Christer Ericson
+    * *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
+    * *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
+    * [Collision Detection](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects)
+    * [Broadphase Detection](https://dai.fmph.uniba.sk/upload/8/87/Ca15_lesson05.pdf)
+    * [Deriving OBB to OBB Intersection | Randy Gual](http://www.randygaul.net/2014/05/22/deriving-obb-to-obb-intersection-sat/)
+    * [Collision Detection | Ryan Schmidt - Duke](https://www2.cs.duke.edu/courses/cps124/spring04/notes/12_collisions/collision_detection.pdf)
+    * [Simple Intersection Tests for Games](https://www.gamasutra.com/view/feature/131790/simple_intersection_tests_for_games.php?print=1)
+    * [Correct Box Sphere Intersection](http://theorangeduck.com/page/correct-box-sphere-intersection)
+    * [Simple 3D OBB-Collision | StackExchange](https://gamedev.stackexchange.com/questions/112883/simple-3d-obb-collision-directx9-c)
+    * [Separating Axis Theorem for OBB](http://www.jkh.me/files/tutorials/Separating%20Axis%20Theorem%20for%20Oriented%20Bounding%20Boxes.pdf)
+    * [Distance between 3D Lines & Segments](http://geomalgorithms.com/a07-_distance.html)
+    * [Capsule-Capsule Collision in Games](http://thunderfist-podium.blogspot.com/2012/02/capsule-capsule-collision-in-games.html)
+    * [Dynamic AABB Tree | Randy Gual](http://www.randygaul.net/2013/08/06/dynamic-aabb-tree/)
+    * [Broadphase - Dynamic AABB Tree | Allen Chou](http://allenchou.net/2014/02/game-physics-broadphase-dynamic-aabb-tree/)
+    * [AABB Collision Detection](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection)
+    * [Ray-Capsule Test Github Code](https://gist.github.com/jdryg/ecde24d34aa0ce2d4d87)
+    * [GJK Github Code](https://github.com/kevinmoran/GJK)
+    * [Implementing GJK  | Casey Muratori](https://caseymuratori.com/blog_0003)
+    * [Capsule-Box Intersection Forum](https://www.gamedev.net/forums/topic/360869-capsule-or-swept-sphere---box-collision/)
+    * [Ray-OBB Intersection Test](https://www.gamedev.net/forums/topic/360869-capsule-or-swept-sphere---box-collision/)
+    * [Picking with custom Ray-OBB function](http://www.opengl-tutorial.org/miscellaneous/clicking-on-objects/picking-with-custom-ray-obb-function/)
+    * [Details of Ray/OBB Intersection Paper](https://svn.wildfiregames.com/public/ps/trunk/docs/ray_intersect.pdf)
+    * [Introductory Guide to AABB Tree Collision Detection](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/)
 
 ## Config File (Engine Config)
 * [Create A Simple Configuration Parser](https://www.dreamincode.net/forums/topic/183191-create-a-simple-configuration-file-parser/)
@@ -55,15 +81,18 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * *Game Engine Architecture 2nd edition* - Chapter 5.3: Containers
 * [Why inheritance is viewed poorly](https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents/260354#260354)
 
+## DLL
+* [Windows Walkthrough: Creating and Using a Dynamic Link Library](https://msdn.microsoft.com/en-us/library/ms235636.aspx)
+* [Inline Functions with dllimport/dllexport](https://stackoverflow.com/questions/8876279/c-inline-functions-with-dllimport-dllexport)
+* [Multiple Classes in DLL File](https://stackoverflow.com/questions/37291851/multiple-classes-in-dll-file)
+* [How to export a DLL from Visual Studio 2017 C++ Project](https://stackoverflow.com/questions/46071035/how-to-export-a-dll-from-visual-studio-2017-community-edition-c-project)
 
 ## ECS
 * [Nomad Game Engine: Part 2 — ECS](https://medium.com/@savas/nomad-game-engine-part-2-ecs-9132829188e5)
 
-
 ## Engine Loop
 * [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
 * [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
-
 
 ## Filesystem
 * [Windows with C++ - The Evolution of Threads and IO in Windows](https://msdn.microsoft.com/en-us/magazine/jj883951.aspx)
@@ -85,6 +114,22 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
     * [End of File Example](https://docs.microsoft.com/en-us/windows/desktop/fileio/testing-for-the-end-of-a-file)
 * [Multithreading Performance](https://msdn.microsoft.com/en-us/library/ms810437.aspx)
 * [Understanding Async IO Operations](https://softwareengineering.stackexchange.com/questions/322387/using-asynchronous-calls-for-heavy-io-operation-how-to-prevent-crushing-the-cpu)
+
+## Graphics
+* Horde3D
+    * [Some How-To Code](http://horde3d.org/wiki/index.php5?title=Horde3D_Wiki:HOWTO)
+    * [Procedural Generated Geometry](http://horde3d.org/wiki/index.php5?title=Procedurally_generated_geometry_tutorial)
+    * Forum:
+        * [Horde3D Overlay](http://www.horde3d.org/forums/viewtopic.php?f=2&t=169)
+        * [How to Draw Primitives](http://www.horde3d.org/forums/viewtopic.php?f=1&t=1027&p=10332#p10332)
+        * [Basic OpenGL functions with Horde3D](http://www.horde3d.org/forums/viewtopic.php?f=1&t=1734)
+        * [Raw OpenGL](http://www.horde3d.org/forums/viewtopic.php?f=1&t=978)
+* OpenGL
+    * LearnOpenGL
+        * [Hello Window](https://learnopengl.com/Getting-started/Hello-Window)
+        * [Hello Triangle](https://learnopengl.com/Getting-started/Hello-Triangle)
+        * [Transformations](https://learnopengl.com/Getting-started/Transformations)
+    * [OpenGL Error Codes](https://www.khronos.org/opengl/wiki/OpenGL_Error)
 
 ## GUI
 * [Retained Mode Versus Immediate Mode](https://docs.microsoft.com/en-us/windows/desktop/learnwin32/retained-mode-versus-immediate-mode)
@@ -145,13 +190,14 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
 * [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
 
-## Transforms
-* *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
-* *Mathematics for 3D Game Programming and Computer Graphics 3rd edition* - Chapter 2-4
-* [Godot Engine - Using transforms](http://docs.godotengine.org/en/3.0/tutorials/3d/using_transforms.html)
-* [Unity API - transform](https://docs.unity3d.com/ScriptReference/Transform.html)
-* [Unreal’s FTransform class](https://api.unrealengine.com/INT/API/Runtime/Core/Math/FTransform/index.html)
-* [YouTube - Gimbal Lock Explained](https://youtu.be/zc8b2Jo7mno)
+## Scene Graph
+* Transform:
+    * *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
+    * *Mathematics for 3D Game Programming and Computer Graphics 3rd edition* - Chapter 2-4
+    * [Godot Engine - Using transforms](http://docs.godotengine.org/en/3.0/tutorials/3d/using_transforms.html)
+    * [Unity API - transform](https://docs.unity3d.com/ScriptReference/Transform.html)
+    * [Unreal’s FTransform class](https://api.unrealengine.com/INT/API/Runtime/Core/Math/FTransform/index.html)
+    * [YouTube - Gimbal Lock Explained](https://youtu.be/zc8b2Jo7mno)
 
 
 ## Visual Studio
