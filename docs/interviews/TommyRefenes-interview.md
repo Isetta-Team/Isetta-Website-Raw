@@ -18,7 +18,7 @@ The biggest point of confusion when I was starting out was actually learning how
 
 [^3]: **OpenGL** is short for Open Graphics Library - a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.
 
-[^4]: Microsoft **DirectX** is a collection of application programming interfaces (APIs) for handling tasks related to multimedia, especially game programming, on Microsoft platforms, like Windows and Xbox. It serves similar purposes as OpenGL.
+[^4]: Microsoft **DirectX** is a collection of application programming interfaces (APIs) for handling tasks related to multimedia, especially game programming, on Microsoft platforms, like Windows and Xbox. It is most known for Direct3D which is the graphics API used for creating windows and rendering, and serves similar purposes as OpenGL.
 
 
 ## Basic Principles of Abstraction
@@ -70,9 +70,9 @@ If you think of this with regards to programming, I'm very used to C++, and peop
 
 [^654]: **JAI** is a language being developed by Jonathan Blow and his at Thekla to address some of the issues game developers have with the current industry standard, C++.
 
-When making _Super Meat Boy_, [Edmund](https://twitter.com/edmundmcmillen)[^4] was the most comfortable with Flash, just like I was, since we both started out on Newgrounds[^5] and everything. It's what he drew in and animated in. So instead of making something new or trying to shoehorn him into some other process, I took the burden on myself. I made a tool that would let us export all the images, timelines and animations from Flash. The tool arranged all the assets on the stage, and then moved and sorted them so they were packed into the smallest texture possible. Finally,  it would export texture coordinates and go through the timeline, which would be used by my custom animation index and PNG files that run all of _Super_ _Meat Boy_. And that made it easy for Edmund to just work the way he needed to work. 
+When making _Super Meat Boy_, [Edmund](https://twitter.com/edmundmcmillen)[^35290] was the most comfortable with Flash, just like I was, since we both started out on Newgrounds[^5] and everything. It's what he drew in and animated in. So instead of making something new or trying to shoehorn him into some other process, I took the burden on myself. I made a tool that would let us export all the images, timelines and animations from Flash. The tool arranged all the assets on the stage, and then moved and sorted them so they were packed into the smallest texture possible. Finally,  it would export texture coordinates and go through the timeline, which would be used by my custom animation index and PNG files that run all of _Super_ _Meat Boy_. And that made it easy for Edmund to just work the way he needed to work. 
 
-[^4]: Edmund McMillen worked on _Super Meat Boy_ together with Tommy as an artist and designer. He is also famous for making _The Binding of Isaac_ and its remake.
+[^35290]: Edmund McMillen worked on _Super Meat Boy_ together with Tommy as an artist and designer. He is also famous for making _The Binding of Isaac_ and its remake.
 
 [^5]: Newgrounds is an American online entertainment and social media website and company. The site hosts user-generated content such as games, movies, audio, and artwork in four respective site "portals".
 
