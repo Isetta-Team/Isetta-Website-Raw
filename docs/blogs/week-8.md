@@ -79,9 +79,6 @@ Yes, it can still register the type to the type hierarchy map, but the `BoxColli
 So let's recap the problem: Every template specialization has the same variable name, `registered`, and this leads to the problem of having an ambiguous symbol. Since we were using macros in level registration, why not utilize macros further to provide a unique variable name for each component? Or specifically, for each template specialization?
 
 ```cpp
-
-
-```
 #define CREATE_COMPONENT_BEGIN(NAME, BASE)                    \
   template <>                                                 \
   class ISETTA_API_DECLARE                                    \
@@ -105,9 +102,6 @@ So let's recap the problem: Every template specialization has the same variable 
                                    std::type_index(typeid(BASE)));
 ```
 
-
-```
-
 Now we are manually specializing the template and defining different `registered` variables with different names by macros. The ambiguous symbol issue should be all good and ironed out now.
 
 But actually, it brought us another issue! When defining the value of the static variable of a fully specialized template, the definition statement [^9583] should actually be written in the .cpp file instead of the header file. However, this would requires game developers to write two different macros in two different files, which is easily forgettable and could cause quite a bit of headache if forgotten. So we had to find a way to keep the definition statement in the header file.
@@ -120,9 +114,6 @@ But actually, it brought us another issue! When defining the value of the static
 Since the problem is mainly caused by fully specialized templates, we thought, "What about adding a dummy parameter to keep the templates partially specialized?" As long as the template is not _fully _specialized, the definition statement can be kept in the header file with the other macros!
 
 ```cpp
-
-
-```
 #define CREATE_COMPONENT_BEGIN(NAME, BASE)                    \
   template <typename Dummy>                                   \
   class ISETTA_API_DECLARE                                    \
@@ -145,9 +136,6 @@ Since the problem is mainly caused by fully specialized templates, we thought, "
   bool ComponentRegistry<NAME, BASE, Exclude, Dummy>::NAME##Registered = \
       Component::RegisterComponent(std::type_index(typeid(NAME)),        \
                                    std::type_index(typeid(BASE)));
-```
-
-
 ```
 
 This idea might just be stupid enough to work...and it does! With this trick, we can now declare a new component like this:
@@ -186,7 +174,7 @@ A couple of other decisions had to be made regarding the collision handling desi
 
 While writing about this topic, our team actually broke out into an in-depth discussion about the behaviour when a collider's ancestors are changed. In the case that an entity above the root `CollisionHandler` (the collision handler that the collider has reference to) in the scene hierarchy was moved, no additional behaviour is needed because the collider reference to the collision handler remains unchanged. But in the case the handler isn't moved but the collider is, the collider now holds a reference to an invalid handler, one not in its ancestor tree! To fix this, we have a callback event for when a parent is changed, `OnHierarchyChanged`, that the `Collider` components subscribe to. When that event is fired, each of the colliders walks up the hierarchy tree looking for a `CollisionHandler` to store a reference of. We even got some early optimizations going with this solution, too: this process can be short circuited by also looking at `Collider`s while we're walking up the tree and using their reference to the `CollisionHandler` instead. This system is also still in development because it is tied with the event-messaging system.
 
-![CollisionHandler](../images/blogs/week-8/collision-handler.png "Collision Handler Entity")
+![CollisionHandler](../images/blogs/week-8/collision-handler.PNG "Collision Handler Entity")
 
 
 ### Box-Capsule Collisions Will be the Death of Us
@@ -290,11 +278,7 @@ Our project has had a small chunk of persistent memory leaks for the past couple
 
 > This could have been fixed by making the memory freeing function a template function, but even in our template frenzy, we could recognize that that would balloon our compile time astronomically, so we decided to just be explicit about object destruction instead.
 
-And so, we began our hunt for memory leaks as one typically does: by pulling systems out of our engine until a memory leak disappears! This was actually very effective to a point, and it even got us to realize that we had an insufficient engine exiting scheme, which you can 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "read above"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[read above](#heading=h.l03urit9xuh2). We found that upon exiting a level, the `Level` object was not getting destructed, and within that `Level` object, we also have a `levelRoot` object for the uppermost transform in the scene graph hierarchy that was also not getting destructed. That cleared up most of our memory leaks, but there were still a couple left.
+And so, we began our hunt for memory leaks as one typically does: by pulling systems out of our engine until a memory leak disappears! This was actually very effective to a point, and it even got us to realize that we had an insufficient engine exiting scheme, which you can [read above](#exiting-the-engine-loop). We found that upon exiting a level, the `Level` object was not getting destructed, and within that `Level` object, we also have a `levelRoot` object for the uppermost transform in the scene graph hierarchy that was also not getting destructed. That cleared up most of our memory leaks, but there were still a couple left.
 
 Via more extracting of systems in our engine, we discovered that our networking module contained the rest of our memory leaks. The first chunk was straightforward to fix; we simply didn't destruct our custom networking allocators (used by our networking library) before shutting down `NetworkingModule`. But we still had 80 bytes of memory leak going on _somewhere_, and we couldn't find out where. Our code was clean, as far as we could tell.
 
