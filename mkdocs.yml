@@ -30,6 +30,9 @@ nav:
     - "[Week 7] A Real Game Engine": blogs/week-7.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Aras Pranckevicius: 
+      - Interview: interviews/ArasPranckevicius-interview.md
+      - Video Story: interviews/ArasPranckevicius-video.md
     - Amandine Coget:
       - Interview: interviews/AmandineCoget-interview.md
       - Video Story: interviews/AmandineCoget-video.md
@@ -44,7 +47,6 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
-    - Aras Pranckevicius: interviews/ArasPranckevicius-interview.md
     - Raymond Graham: interviews/RaymondGraham-interview.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
