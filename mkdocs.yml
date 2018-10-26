@@ -30,19 +30,19 @@ nav:
     - "[Week 7] A Real Game Engine": blogs/week-7.md
     #- Week #: blogs/week-#.md
   - Interviews:
-    - Adam Serdar: 
-      - Interview: interviews/AdamSerdar-interview.md
-      - Video Story: interviews/AdamSerdar-video.md
+    - Amandine Coget:
+      - Interview: interviews/AmandineCoget-interview.md
+      - Video Story: interviews/AmandineCoget-video.md
+    - Tommy Refenes:
+      - Interview: interviews/TommyRefenes-interview.md
+      - Video Story: interviews/TommyRefenes-video.md
     - Casey Muratori:
       - Interview: interviews/CaseyMuratori-interview.md
       - Video Story: interviews/CaseyMuratori-video.md
       - Video Interview: interviews/CaseyMuratori-hmh-video.md
-    - Tommy Refenes:
-      - Interview: interviews/TommyRefenes-interview.md
-      - Video Story: interviews/TommyRefenes-video.md
-    - Amandine Coget:
-      - Interview: interviews/AmandineCoget-interview.md
-      - Video Story: interviews/AmandineCoget-video.md
+    - Adam Serdar: 
+      - Interview: interviews/AdamSerdar-interview.md
+      - Video Story: interviews/AdamSerdar-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
     - Aras Pranckevicius: interviews/ArasPranckevicius-interview.md
     - Raymond Graham: interviews/RaymondGraham-interview.md
