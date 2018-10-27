@@ -20,12 +20,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 7 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-7).
-- This week, our blog is titled ["A Real Game Engine"](blogs/week-7/). In it, we discuss the game we got up and running in our engine, as well as a lot of other new developments (like network messages!).
-- We recently interviewed with Amandine Coget, an independent game engine consultant! See what he has to say about the real work that goes into building an engine in [It's All Plumbing](interviews/AmandineCoget-interview/).
+- The latest changes for week 8 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-8).
+- This week, our blog is titled ["Patching Holes"](blogs/week-8/). In it, we discuss our improvements to our components, collisions system, and other smaller but equally important patches within the engine!
+- We recently interviewed with [Aras Pranckevičius](https://twitter.com/aras_p), an engineer who has been at Unity since 2006! See what he has to say about what working on a long-lived engine is like in [Growing Pains in Engine Development](interviews/ArasPranckevicius-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](../images/engine_architecture/week7.png "Week 7 Progress Architecture")
+![Engine Architecture](../images/engine_architecture/week8.png "Week 8 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
