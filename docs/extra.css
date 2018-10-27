@@ -37,7 +37,19 @@ img + p>em {
 	text-align: center;
 }
 
+img + em {
+	margin-top: -.75em;
+	display: block;
+	text-align: center;
+}
+
 div + p>em {
+	margin-top: -.75em;
+	display: block;
+	text-align: center;
+}
+
+div + em {
 	margin-top: -.75em;
 	display: block;
 	text-align: center;
