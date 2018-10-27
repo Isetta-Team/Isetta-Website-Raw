@@ -5,6 +5,8 @@
 *   [Component Registry](#component-registry): To add component inheritance support, we added a component registration mechanism for the components to store their type hierarchy.
 *   [Collisions](#collisions): Third week working with collisions and things seem to be wrapping up, main focus was on how to handle collision events when one occurs.
 
+![Engine Architecture](../images/engine_architecture/week8.png "Week 8 Progress Architecture")
+*You may not notice a difference from last week...as it turns out, high-level architecture diagrams aren't great at showing progress after the early stages of development!*
 
 ## Component Registry
 
