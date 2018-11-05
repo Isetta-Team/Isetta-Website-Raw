@@ -26,7 +26,7 @@ We are supporting multiple types of colliders, like `BoxCollider`, `SphereCollid
 
 After lengthy discussion, we decided that we want to make a similar system like the level registration. If you remember from [Template Black Magic! in Week 6](../week-6/#template-black-magic), we used a template with a static variable that calls a static register function to register the level into the engine so that the level could be loaded by name later. We wanted to use the same technique to save the components' hierarchy metadata before the engine is started. To do that, we need a key-value map[^8383] whose key is a type index of a component and the value is a list of type indices that indicate the subclass components (including itself) of the key component. We are using a linked list instead of an array here for two reasons: one, we don't need random access for the list, and two, we can simply use `push_front` to make sure the component itself is always the first one of its subcomponent list.
 
-[^8383] A **key-value map** (or a dictionary) is an abstract data type composed of a collection of (key, value) pairs. 
+[^8383]: A **key-value map** (or a dictionary) is an abstract data type composed of a collection of (key, value) pairs. 
 
 ![Component map](../images/blogs/week-8/component-map.png "Component map")
 
@@ -108,7 +108,7 @@ Now we are manually specializing the template and defining different `registered
 
 But actually, it brought us another issue! When defining the value of the static variable of a fully specialized template, the definition statement [^9583] should actually be written in the .cpp file instead of the header file. However, this would requires game developers to write two different macros in two different files, which is easily forgettable and could cause quite a bit of headache if forgotten. So we had to find a way to keep the definition statement in the header file.
 
-[^9583] Since `typeid()` doesn't work with incomplete classes, we had to declare this function first in the class and define it after the component class is completed.
+[^9583]: Since `typeid()` doesn't work with incomplete classes, we had to declare this function first in the class and define it after the component class is completed.
 
 
 #### Third Try: Introducing "Dummy" Template Parameter
