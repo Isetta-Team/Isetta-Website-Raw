@@ -2,7 +2,8 @@
 
 ![headshot](../images/interviews/raymond-graham.jpg "Raymond Graham")
 
-_Ray has extensive experience working at the bleeding edge of technology. He has over 19 years experience developing 3D interactive entertainment products for various platforms (Xbox One, PS4, iOS, Xbox 360, PS3 and many others). Ray has worked in technical management, leadership and individual contributor positions at several leading Gaming and Entertainment companies, including Ubisoft, 2K Marin, Electronic Arts and Visual Concepts._
+_**Ray** has extensive experience working at the bleeding edge of technology. He has over 19 years experience developing 3D interactive entertainment products for various platforms (Xbox One, PS4, iOS, Xbox 360, PS3 and many others). Ray has worked in technical management, leadership and individual contributor positions at several leading Gaming and Entertainment companies, including Ubisoft, 2K Marin, Electronic Arts and Visual Concepts._
+(The following is the edited transcription of a conversation we had with Raymond Graham.)
 
 
 ## Who is Raymond Graham?
