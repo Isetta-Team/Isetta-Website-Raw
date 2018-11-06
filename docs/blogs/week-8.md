@@ -36,41 +36,27 @@ The registration process seems straightforward, since it's just adding the type 
 #### First Try: Another Registration Pattern
 
 ```cpp
-
 template <typename Curr, typename Base>
-
 class ComponentRegistry {
-
  protected:
-
   static bool registered;
-
 };
 
 class MeshComponent: public Component, public ComponentRegistry<MeshComponent, Component> {
-
   static bool IsRegistered() { return registered; } // required
-
   ...
-
 }
 
 template <typename Curr, typename Base>
-
 bool ComponentRegistry <Curr, Base>::registered =
-
-    Component::Register(std::type_index{typeof(Curr)}, std::type_index{typeof(Base)});
-
+  Component::Register(std::type_index{typeof(Curr)}, std::type_index{typeof(Base)});
 ```
 
 Just like what we did for the level registration, we created a template to run the static initialization process. Each component inherited from the template will have a static `registered` variable which registers the component to the type hierarchy map. It works perfectly well with levels and most components. However, it breaks when a component is inheriting an existing component like this:
 
 ```cpp
-
 class Collider: public Component, public ComponentRegistry<Collider, Component> {...}
-
 class BoxCollider: public Component, public ComponentRegistry<BoxCollider, Collider> {...}
-
 ```
 
 Yes, it can still register the type to the type hierarchy map, but the `BoxCollider` now contains two `registered` variables— one from its base class `Collider`, and one from the template class `ComponentRegistery<BoxCollider, Collider>`. There's no way to tell the compiler which is which, and this results in a compilation error!
@@ -113,7 +99,7 @@ But actually, it brought us another issue! When defining the value of the static
 
 #### Third Try: Introducing "Dummy" Template Parameter
 
-Since the problem is mainly caused by fully specialized templates, we thought, "What about adding a dummy parameter to keep the templates partially specialized?" As long as the template is not _fully _specialized, the definition statement can be kept in the header file with the other macros!
+Since the problem is mainly caused by fully specialized templates, we thought, "What about adding a dummy parameter to keep the templates partially specialized?" As long as the template is not _fully_ specialized, the definition statement can be kept in the header file with the other macros!
 
 ```cpp
 #define CREATE_COMPONENT_BEGIN(NAME, BASE)                    \
@@ -143,19 +129,14 @@ Since the problem is mainly caused by fully specialized templates, we thought, "
 This idea might just be stupid enough to work...and it does! With this trick, we can now declare a new component like this:
 
 ```cpp
-
 CREATE_COMPONENT_BEGIN(GUIComponent, Component)
-
 private:
-
 ...
 
 public:
-
 ...
 
 CREATE_COMPONENT_END(GUIComponent, Component)
-
 ```
 
 As we move forward with our engine development, we're becoming more and more of C++ Magicians™!
@@ -299,7 +280,6 @@ From development we are acquiring a lot of great resources from where we learned
 
 
 _Originally Published October 26, 2018._
-
 
 <br>
 
