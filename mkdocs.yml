@@ -29,8 +29,12 @@ nav:
     - "[Week 6] We Think It's Playable": blogs/week-6.md
     - "[Week 7] A Real Game Engine": blogs/week-7.md
     - "[Week 8] Patching Holes": blogs/week-8.md
+    - "[Week 9] Title Eluding Us": blogs/week-9.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Raymond Graham: 
+      - Interview: interviews/RaymondGraham-interview.md
+      - Video Story: interviews/RaymondGraham-video.md
     - Aras Pranckevicius: 
       - Interview: interviews/ArasPranckevicius-interview.md
       - Video Story: interviews/ArasPranckevicius-video.md
@@ -48,9 +52,6 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
-    - Raymond Graham: 
-      - Interview: interviews/RaymondGraham-interview.md
-      - Video Story: interviews/RaymondGraham-video.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
