@@ -271,7 +271,7 @@ Well, it actually was. The memory leak was found within our networking library [
 
 We just released our interview with [Aras Pranckevicius](../interviews/ArasPranckevicius-interview.md), where we had a great talk about the history and design of the Unity game engine.
 
-This past week we interviewed with [Jeff Preshing](../interviews/JeffPreshing-interview.md) ([@wadarass](https://twitter.com/preshing) and talked about some key skills for engine developers, so keep your eye out for that and the other interviews coming soon.
+This past week we interviewed with [Jeff Preshing](../interviews/JeffPreshing-interview.md) ([@preshing](https://twitter.com/preshing)) and talked about some key skills for engine developers, so keep your eye out for that and the other interviews coming soon.
 
 
 ## [Resources](../resources.md)
