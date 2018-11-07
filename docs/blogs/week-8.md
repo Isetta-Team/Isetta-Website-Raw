@@ -1,4 +1,3 @@
-# Patching Holes
 
 ## Byte-Sized Updates
 
