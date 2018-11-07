@@ -4,6 +4,7 @@
 
 
 _**Aras Pranckevičius** is a Lithuanian programmer who has been working on the Unity game engine since 2006. Before that, he worked on some demoscene demos and small games that you have never heard about._
+
 (The following is the edited transcription of a conversation we had with Aras Pranckevičius.)
 
 ## Experts Are Human Too

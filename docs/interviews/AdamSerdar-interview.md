@@ -5,6 +5,7 @@
 _**Adam Serdar** is a Senior Game Engineer at Schell Games where he works on projects that need server technology, graphic effects, or frame rate optimization._
 
 _Most recently, Serdar was part of the team that created HoloLAB Champions, a virtual reality lab practice game in which he was deeply involved with its integral game systems, including how virtual objects could realistically simulate solids and liquids and how they are handled. When he's not coding at Schell Games, where he has been employed for twelve years, he is working on costume and robotics development projects as well as learning, practicing, and teaching Kung Fu._
+
 (The following is the edited transcription of a conversation we had with Adam Serdar.)
 
 ## A Game Engine and its Needs

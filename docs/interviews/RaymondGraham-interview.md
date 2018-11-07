@@ -3,6 +3,7 @@
 ![headshot](../images/interviews/raymond-graham.jpg "Raymond Graham")
 
 _**Ray** has extensive experience working at the bleeding edge of technology. He has over 19 years experience developing 3D interactive entertainment products for various platforms (Xbox One, PS4, iOS, Xbox 360, PS3 and many others). Ray has worked in technical management, leadership and individual contributor positions at several leading Gaming and Entertainment companies, including Ubisoft, 2K Marin, Electronic Arts and Visual Concepts._
+
 (The following is the edited transcription of a conversation we had with Raymond Graham.)
 
 
@@ -23,7 +24,9 @@ There weren't any graphics or engine tricks we employed with early basketball ga
 
 Developing for consoles in the late 90's compared to consoles today was very similar, but also different in a lot of ways. That's because the Nintendo 64 and PlayStation were completely different pieces of hardware with different specs and texture requirements, which meant the whole pipeline of how you actually built your data was different. The Nintendo 64 had a completely different graphics pipeline, but we still tried to abstract as much as we could. For instance, the engine was designed with the gameplay stuff in one layer and then the core stuff in another layer that talks to the hardware so that core layer was kind of the same on all platforms. Nowadays, with Xbox One, PS4, and PC all essentially having the same architecture, I would say the process is a little bit easier. 
 
-I think the console makers want to make things easier on the developers that are making games, and so they want their platform to be as easy to program for as possible. With the way hardware is now, though, I don't think we ever will go back to the PS3s' style. The thing about SPU is that it works really differently from every other platform around, and so being able to to do it in a way that's cross-platform and that gives you enough time to actually really get the most out of that platform is definitely a challenge. It's a pity. It makes me real sad, because that's likely the way it's going to stay. It's disappointing because when you look at PS3 exclusive games, like the ones Naughty Dog made; they milked the most they could out of the console. It's an incredible platform to get the most power out of, but it's just too specialized.
+I think the console makers want to make things easier on the developers that are making games, and so they want their platform to be as easy to program for as possible. With the way hardware is now, though, I don't think we ever will go back to the PS3s' style. The thing about SPU[^847] is that it works really differently from every other platform around, and so being able to to do it in a way that's cross-platform and that gives you enough time to actually really get the most out of that platform is definitely a challenge. It's a pity. It makes me real sad, because that's likely the way it's going to stay. It's disappointing because when you look at PS3 exclusive games, like the ones Naughty Dog made; they milked the most they could out of the console. It's an incredible platform to get the most power out of, but it's just too specialized.
+
+[^847]: A **Synergistic Processing Unit (SPU)** is the processing unit associated with the Cell architecture of the PS3. The PS3 had seven as part of its hardware, only six of which were usable by game developers.
 
 I loved working with the PS3 cell architecture! A little bit of background: When I worked on _NBA Street_, PS2 had the VU architecture with VU0 and VU1 chips[^379], and with that if you wanted to get the most out of your graphics platform, you would have VU1 basically doing the draw calls [^9583], batching[^93] up the polygons to send them over to the graphics chip. At the time, that was all a form of assembly language where you would just have to figure it out. I actually had the four black manuals on my desk that I would pull out to determine which bit goes where, and I found that really fun! PS3 and SPU is very similar to that, except its programming language is either C or C++. My brain naturally understood how it's supposed to work: You DMA[^8833] in and you double buffer[^9955], and you work on the data as more data is being DMA'd in. From there you stream it out, switch to another buffer, call for the next DMA. Because of this, you can work on batches of data in a streaming parallelized fashion.
 
@@ -33,7 +36,7 @@ I loved working with the PS3 cell architecture! A little bit of background: When
 
 [^93]: Encapsulating a draw call is expensive, and the GPU can render fairly fast, so **batching** draw calls up is a good technique to speed up.
 
-[^8833]: **Direct memory access (DMA)** is a technique  of computer systems that allows certain hardware subsystems to access main system memory without taking up the CPU cycles.
+[^8833]: **Direct memory access (DMA)** is a technique of computer systems that allows certain hardware subsystems to access main system memory without taking up the CPU cycles.
 
 [^9955]: **Double buffer** is the use of two buffers to hold data. By switching the buffers, the reader can see the complete version of data instead of a partially written one.
 
