@@ -3,7 +3,7 @@
 ![Amandine Coget Headshot](../images/interviews/amandine-coget.jpg "Amandine Coget")
 
 _**Amandine Coget** is a French game engine plumber living in Stockholm, freelancing after having worked on the Frostbite and Bitsquid engines. Other interests include crafts, politics, and the politics of crafts._
-
+(The following is the edited transcription of a conversation we had with Amandine Coget.)
 
 ## Introduction
 

@@ -48,7 +48,9 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
-    - Raymond Graham: interviews/RaymondGraham-interview.md
+    - Raymond Graham: 
+      - Interview: interviews/RaymondGraham-interview.md
+      - Video Story: interviews/RaymondGraham-video.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
