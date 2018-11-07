@@ -32,13 +32,11 @@ img[alt="team-headshot"]{
 }
 
 img + p>em {
-	margin-top: -.75em;
 	display: block;
 	text-align: center;
 }
 
 img + em {
-	margin-top: -.75em;
 	display: block;
 	text-align: center;
 }
