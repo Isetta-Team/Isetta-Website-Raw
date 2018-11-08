@@ -209,3 +209,21 @@ Also, please add any terms we haven't touched on that you think of!
 **Thread-safe code**- only manipulates shared data structures in a manner that ensures that all threads behave properly and fulfill their design specifications without unintended interaction. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:2384972)
 
 **Std::iterator**- a C++ type that can be used to iterate through collections of elements based on that collection. [↩] (https://isetta.io/interviews/AmandineCoget-interview/#fnref:668322)
+
+**Path Tracing**- a realistic lighting algorithm that simulates light bouncing around a scene. It uses the Monte Carlo method to give a faithful rendition of the global illumination of the scene. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:23421) 
+
+**The Demoscene**- an international computer art subculture focused on producing demos, which are self-contained, sometimes extremely small, audio-visual computer programs. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:9)
+
+**RenderWare**-  a game engine by Criterion Software that launched in 1993 and continued to regularly support games through 2010. It was known for providing an off-the-shelf solution to the difficulties of PS2 graphics programming. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:10)
+
+**Autodesk 3ds Max**- formerly 3D Studio and 3D Studio Max, is a professional 3D computer graphics program for making 3D animations, models, games, and images. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:11)
+
+**FBX**- a proprietary file format owned by Autodesk that is mostly commonly used for 3D model and animation data within the games industry. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:12)
+
+**GlTF(GL Transmission Format)**- a royalty-free file format for 3D scenes and models using the JSON standard. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:13)
+
+**Open Dynamic Engine (ODE)**- a free and open source physics engine written in C/C++ that can do both rigid body dynamics simulation and collision detection. [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:14)
+
+**Cocoa**- Apple's native object-oriented API for macOS.  [↩] (https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:1)
+
+**UNIX**- a family of multitasking, multiuser operating systems that derive from the original AT&T Unix, originally developed at Ken Thompson, Dennis Ritchie, and others at Bell Labs. It's main comparable is Microsoft's DOS, which is mono-task and monouser. [↩](https://isetta.io/interviews/ArasPranckevicius-interview/#fnref:2)
