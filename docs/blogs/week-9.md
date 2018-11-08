@@ -1,6 +1,8 @@
+Before we get started, we apologize for the delay with publishing Week 9. The Isetta Team was in Los Angeles this past week trying to wrangle some engine developers for interviews and meetings, so we naturally fell a little behind on our usually strict schedule!
+
+That being said, we got a couple of interviews while we were out galavanting in LA, and we hope you anticipate them in the coming weeks! Special thanks to [Cort Stratton](https://twitter.com/postgoodism), Sunil Nayak, and Jibran Khan for helping us figure things out while we were out on the west coast!
+
 ## Byte-Sized Updates
-
-
 
 *   [Network Transform](#network-transform): Built up the entire `NetworkTransform` class, including client authority and transform interpolation.
 *   [Event Messaging System](#event-messaging-system): Implemented the event messaging system with both queued callbacks and immediate callbacks.
