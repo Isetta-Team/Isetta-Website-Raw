@@ -543,7 +543,7 @@ The algorithm we are using is depth-first search. The helper function iterates t
 
   <video playsinline autoplay muted loop>
 
-    <source src="../../images/blogs/week-10/flatten-hierarchy-tree.mp4" type="video/mp4">
+    <source src="../../images/blogs/week-9/flatten-hierarchy-tree.mp4" type="video/mp4">
 
 Your browser does not support the video tag.
 
