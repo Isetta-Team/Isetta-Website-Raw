@@ -25,7 +25,7 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 - We recently interviewed with [Aras Pranckevičius](https://twitter.com/aras_p), an engineer who has been at Unity since 2006! See what he has to say about what working on a long-lived engine is like in [Growing Pains in Engine Development](interviews/ArasPranckevicius-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](../images/engine_architecture/week9.png "Week 9 Progress Architecture")
+![Engine Architecture](images/engine_architecture/week9.png "Week 9 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">

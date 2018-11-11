@@ -591,7 +591,7 @@ However, what this didn't take into account is what happens if you don't reach t
 
 This past week we were out in Los Angeles, California interviewing with [Jeet Shroff](https://twitter.com/theshroffage), [Florian Strauss](https://twitter.com/likamutha?lang=en), and [Elan Ruskin](https://twitter.com/despair?lang=en) which we will be posting as soon as we can! This also leads perfectly into our other deliverable during this period, which is publishing these interviews into a book through CMU's ETC Press. More details to come soon!
 
-With regards to future work, we are coming close to the final moments of the project but still have a lot of work to do... Luckily, we only have 2 major systems left to develop as well as the final sample demo game we showed back in [week 0](week0.md#The-Example-Game).
+With regards to future work, we are coming close to the final moments of the project but still have a lot of work to do... Luckily, we only have 2 major systems left to develop as well as the final sample demo game we showed back in [week 0](week-0.md#The-Example-Game).
 
 
 ## [Resources](../resources.md)
