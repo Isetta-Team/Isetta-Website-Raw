@@ -35,26 +35,24 @@ Now that we have our snazzy new components system and our network messaging syst
 Using our components system, we can also generate a component for our networked transforms, conveniently called `NetworkTransform`. This will be what's responsible for updating the entity's actual transform with whatever we receive from the network, or on the flip side, sending out the most recent transform to the network. To do so, we need to register some network message handlers that will handle any incoming `TransformMessage` traffic—we can register these message handlers within the first `Start` function that runs for any `NetworkTransform` components, and doing so will create a couple of callbacks:
 
 ``` cpp
-
 // Client callback code
 
-          Entity* entity = NetworkManager::Instance.GetNetworkEntity( \
-              transformMessage->netId); \
-          if (entity) { \
-            Transform t = entity->GetTransform; \
-            t.SetLocalPos(transformMessage->localPos); \
-            t.SetLocalScale(transformMessage->localScale); \
-            t.SetLocalRot(transformMessage->localRot); \
-          }
+Entity* entity = NetworkManager::Instance.GetNetworkEntity( \
+  transformMessage->netId); \
+if (entity) { \
+  Transform t = entity->GetTransform; \
+  t.SetLocalPos(transformMessage->localPos); \
+  t.SetLocalScale(transformMessage->localScale); \
+  t.SetLocalRot(transformMessage->localRot); \
+}
 
 // …
 
 // Server callback code \
-           NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>( \
-              transformMessage);
+NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>( \
+  transformMessage);
 
 // ...
-
 ```
 
 Pretty basic, right? This is essentially all you need to get started with networking transform data (although you might notice a problem in this code that we'll [delve into later](#who-owns-what)). The final bit is sending out the actual `TransformMessage` objects. We could just send a new `TransformMessage` every time we update the component, but we need to start thinking less about the functionality and more about the data now. Each of these `TransformMessage` objects contains two `Vector3`s, one `Quaternion`, and an `int` for the network ID. That amounts to 4 bytes per float and int, and 11 floats/ints in total, which is total of 44 bytes. Messages will typically also have some amount of overhead in them, which we can say will be 16 bytes for a round 60 bytes total per message (the actual overhead depends on your packet and message implementation!). Now imagine, if we're sending a `TransformMessage` every update and our game updates 60 times every second, then we're sending 3.5KB of data every second _for every networked object in the game_. That doesn't seem like an incredible amount of data, but network bandwidth is a shared resource not only in the game, but across entire local networks. Also, the amount of data you send across the network can often correspond with the latency of the response on other player's machines.
@@ -76,12 +74,12 @@ This is a trivial check when handling messages:
 
 ``` cpp
 
-         NetworkId* netId = \
-              NetworkManager::Instance.GetNetworkId(transformMessage->netId);
+NetworkId* netId = \
+  NetworkManager::Instance.GetNetworkId(transformMessage->netId);
 
-         if (!netId || netId->HasClientAuthority) { \
-            return; \
-          }
+if (!netId || netId->HasClientAuthority) { \
+  return; \
+}
 
 ```
 
@@ -126,26 +124,24 @@ In order to properly interpolate the transform data over time, we need to keep t
 For the time being, we'll only focus on positional interpolation as that's the most obvious and straightforward of the trio. We can update our `TransformMessage` client handler to register these previous and target positions:
 
 ``` cpp
-            // … client callback boilerplate here
-            Transform& t = entity->GetTransform; \
-            targetPos = \
-                t.GetParent->GetWorldPos + transformMessage->localPos; \
-            prevPos = t.GetWorldPos;
+// … client callback boilerplate here
+Transform& t = entity->GetTransform; \
+targetPos = \
+  t.GetParent->GetWorldPos + transformMessage->localPos; \
+prevPos = t.GetWorldPos;
 
 ```
 
 And we can add another section to the `NetworkTransform`'s `FixedUpdate` function that uses a new `interpolation` float value to determine how far along it is between the previous and target positions:
 
 ``` cpp
-
- if (netId->HasClientAuthority) { \
-   // … send out the TransformMessage \
-  } else if (interpolation < 1) { \
-    Transform& t = entity->GetTransform; \
-    interpolation = max(interpolation + 1.0 / netId->updateInterval, 1); \
-    t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation)); \
-  }
-
+if (netId->HasClientAuthority) { \
+  // … send out the TransformMessage \
+} else if (interpolation < 1) { \
+  Transform& t = entity->GetTransform; \
+  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1); \
+  t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation)); \
+}
 ```
 
 Every frame, `interpolation` is being incremented (in this case, by enough that it will be finished with the interpolation by the time the next `TransformMessage` should be due), then the entity is set to some corresponding position based on `interpolation`'s new value. If we receive a new `TransformMessage` but we haven't finished our interpolation, then we simply reset the previous position to exactly where we're currently at and interpolate from there!
@@ -204,16 +200,14 @@ As it turns out, keeping track of message order can be pretty important. Our ass
 Our networking library [yojimbo](https://github.com/networkprotocol/yojimbo/) does this with its ordered-reliable messaging, but that messaging system is really meant to be used for things that you need to receive in the correct order so that you can properly process the information. We just need to know whether or not we should be ignoring a given message, so our solution can be simpler and lighter-weight. Each of the transform message classes now contains a `timestamp` float that indicates when the message was sent last, so all we have to do is check that against our most recently used timestamp to see if it's valid:
 
 ``` cpp
+// Inside the client position callback code
 
-         // Inside the client position callback code
+NetworkTransform* nt = entity->GetComponent<NetworkTransform>; \
+if (nt && positionMessage->updateTime < nt->lastPosMessage) { \
+  return; \
+}
 
-         NetworkTransform* nt = entity->GetComponent<NetworkTransform>; \
-           if (nt && positionMessage->updateTime < nt->lastPosMessage) { \
-            return; \
-          }
-
-         // … go on to process the message if it's valid
-
+// … go on to process the message if it's valid
 ```
 
 This does introduce an extra 4 bytes of size to each of the transform messages, but it's important for correctness. Another thing that can be done to prevent bogus transform messages (which we did do) is to keep track of the most recent timestamps for each networked object and throw out any messages that fail before even sending them to the clients. This can take a good chunk of memory on the server depending on how many networked objects you have, but it will reduce unnecessary network bandwidth even further.
@@ -263,19 +257,12 @@ In the [Gang of Four](https://www.amazon.com/Design-Patterns-Elements-Reusable-O
 The two basic factors of an event are its name and its parameters. The name is quite straightforward; it's a `string` used to tell which event is raised, such as an "Explosion Event" or a "Collecting Event". The parameters are the tricky part. They can be of various types and the amount is also changeable. Usually, people use `union` to handle the various types and use a `string` to indicate which type is this parameter:
 
 ```cpp
-
 struct EventParam {
-
   std::string type;
-
   union {
-
     int, float, …
-
   } value;
-
 }
-
 ```
 
 This old technique is no longer encouraged by modern C++, mostly because of its un-safeness, where safeness is referring to type safety[^98761]. Any developer using this `EventParam` can get messy values if they try to read the value as an different type than it is. C++17 provides a safe alternative to use—`std::variant`—which will generate a compile time error if the developer fetches data of the wrong type. So now, we have all the data we need to encapsulate an event object, what about the command behavior? This is an easy answer: We are also introducing Observer Pattern into the event object.
@@ -340,29 +327,19 @@ Before we dive into how insertion works, let's look at the two most important pr
 And so a BV Tree node looks like this:
 
 ``` cpp
-
 struct Node {
-
   Node* parent;
-
   Node* left;
-
   Node* right;
-
+  
   // we know a node is leaf when the collider is null,
-
   // or the left/right is null
-
   Collider* const collider;
-
+  
   // The leaves' AABB are just the AABB of primitive colliders, 
-
   // and the branches' AABB are the AABB of both its children. 
-
   AABB aabb;
-
 };
-
 ```
 
 These two properties make it so easy for us to add and remove colliders from the tree. And thanks to these properties, the logic of adding a collider to the tree is the following (you can refer to our [Github repo](https://github.com/Isetta-Team/Isetta-Engine/blob/c92e0223d1db0841343edc1a5bddfb4c052c14b6/Isetta/IsettaEngine/Collisions/BVTree.cpp) for actual implementation):
@@ -386,19 +363,12 @@ Finally, we have a BV Tree we can use! The final step is to just generate a list
 We did this by looking at every collider, walking down the tree, and adding possible collisions to a `unordered_set` of collider-collider pairs. However, if we do this naively, we may end up having duplicate pairs in the set—for example, we may have both `<Collider A, Collider B>` and `<Collider B, Collider A>`. The way we solved this problem is to have a customized hash function for the set like this:
 
 ``` cpp
-
 struct UnorderedPairHash {
-
   template <typename T>
-
   std::size_t operator(std::pair<T, T> const& p) const {
-
     return (std::hash<T>(p.first) ^ std::hash<T>(p.second));
-
   }
-
 };
-
 ```
 
 So `<Collider A, Collider B>` and `<Collider B, Collider A>` will be hashed to the same value and the set will help us prevent the duplicate. 
@@ -508,31 +478,20 @@ We could have just put the start check at the beginning of `FixedUpdate` and cal
 The way we optimized the hierarchy tree is to flatten the tree so that the parent component is not only mapped to its direct children components but also mapped to all the descendent components. This preprocessing can greatly reduce the lookup time to find all the descendent while it also increases the space the tree takes up. Thanks to our experience in using Unity, we know that functions like `GetComponent` are called quite frequently, so we finally decided to sacrifice some of the memory space to contain the type tree.
 
 ``` cpp
-
 void Component::FlattenHelper(std::type_index parent, std::type_index curr) {
-
   std::unordered_map<std::type_index, std::list<std::type_index>>& children =
-
       childrenTypes;
-
+	  
   std::list<std::type_index>* parentList = &children.at(parent);
-
   std::list<std::type_index>* componentList = &children.at(curr);
-
+  
   for (auto& childList : *componentList) {
-
     if (childList != curr) {
-
       parentList->push_back(childList);
-
       FlattenHelper(curr, childList);
-
     }
-
   }
-
 }
-
 ```
 
 The algorithm we are using is depth-first search. The helper function iterates through the direct children list and appends it to its parent component's  children list. Then it calls the helper function recursively with itself as the parent component. The result is like this.
