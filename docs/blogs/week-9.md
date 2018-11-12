@@ -125,10 +125,8 @@ In order to properly interpolate the transform data over time, we need to keep t
 
 For the time being, we'll only focus on positional interpolation as that's the most obvious and straightforward of the trio. We can update our `TransformMessage` client handler to register these previous and target positions:
 
-``` cpp \
+``` cpp
             // … client callback boilerplate here
-
- \
             Transform& t = entity->GetTransform; \
             targetPos = \
                 t.GetParent->GetWorldPos + transformMessage->localPos; \
@@ -509,7 +507,7 @@ We could have just put the start check at the beginning of `FixedUpdate` and cal
 
 The way we optimized the hierarchy tree is to flatten the tree so that the parent component is not only mapped to its direct children components but also mapped to all the descendent components. This preprocessing can greatly reduce the lookup time to find all the descendent while it also increases the space the tree takes up. Thanks to our experience in using Unity, we know that functions like `GetComponent` are called quite frequently, so we finally decided to sacrifice some of the memory space to contain the type tree.
 
-```cpp
+``` cpp
 
 void Component::FlattenHelper(std::type_index parent, std::type_index curr) {
 
