@@ -38,17 +38,17 @@ Using our components system, we can also generate a component for our networked 
 // Client callback code
 
 Entity* entity = NetworkManager::Instance.GetNetworkEntity( \
-  transformMessage->netId); \
-if (entity) { \
-  Transform t = entity->GetTransform; \
-  t.SetLocalPos(transformMessage->localPos); \
-  t.SetLocalScale(transformMessage->localScale); \
-  t.SetLocalRot(transformMessage->localRot); \
+  transformMessage->netId);                                 \
+if (entity) {                                               \
+  Transform t = entity->GetTransform;                       \
+  t.SetLocalPos(transformMessage->localPos);                \
+  t.SetLocalScale(transformMessage->localScale);            \
+  t.SetLocalRot(transformMessage->localRot);                \
 }
 
 // …
 
-// Server callback code \
+// Server callback code                                              \
 NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>( \
   transformMessage);
 
@@ -73,14 +73,10 @@ Our client authority is very straightforward; every time a networked object is i
 This is a trivial check when handling messages:
 
 ``` cpp
-
-NetworkId* netId = \
-  NetworkManager::Instance.GetNetworkId(transformMessage->netId);
-
-if (!netId || netId->HasClientAuthority) { \
-  return; \
+NetworkId* netId = NetworkManager::Instance.GetNetworkId(transformMessage->netId); \
+if (!netId || netId->HasClientAuthority) {                                         \
+  return;                                                                          \
 }
-
 ```
 
 To keep ourselves from sending way more data than is needed, we also perform this check inside of `NetworkTransform` to ensure that we own the networked object and we should indeed be sending this object's transform to the server.
@@ -125,21 +121,19 @@ For the time being, we'll only focus on positional interpolation as that's the m
 
 ``` cpp
 // … client callback boilerplate here
-Transform& t = entity->GetTransform; \
-targetPos = \
-  t.GetParent->GetWorldPos + transformMessage->localPos; \
+Transform& t = entity->GetTransform;                               \
+targetPos = t.GetParent->GetWorldPos + transformMessage->localPos; \
 prevPos = t.GetWorldPos;
-
 ```
 
 And we can add another section to the `NetworkTransform`'s `FixedUpdate` function that uses a new `interpolation` float value to determine how far along it is between the previous and target positions:
 
 ``` cpp
-if (netId->HasClientAuthority) { \
-  // … send out the TransformMessage \
-} else if (interpolation < 1) { \
-  Transform& t = entity->GetTransform; \
-  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1); \
+if (netId->HasClientAuthority) {                                         \
+  // … send out the TransformMessage                                     \
+} else if (interpolation < 1) {                                          \
+  Transform& t = entity->GetTransform;                                   \
+  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1);   \
   t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation)); \
 }
 ```
@@ -182,7 +176,7 @@ Within a transform, you have the three components of position, rotation, and sca
 
 If we remove scale from our `TransformMessage` object, the message's size now becomes 48 bytes. That reduces our bandwidth usage by 20%! But what do we do about the scale? We can't just leave it the same all the time, because sometimes games really do need to change scale. In this case, we can create a new message class for it called `ScaleMessage`, which only contains the `Vector3` for the scale and an int for the network ID, and all it updates is the scale.
 
-Wait, so if our `TransformMessage` is now only 48 bytes, why don't we also separate position and rotation into `PositionMessage` and `RotationMessage`? Well, we _have _done that for convenience sake, but it's not necessarily a good idea. Don't forget that every message we create adds a (blindly estimated) 16 bytes of overhead to the total plus any other necessary information, so our `ScaleMessage` object isn't just the 12 bytes of the scale's `Vector3`, it's 32 bytes (because of the message overhead plus the network ID). And if you're developing a twin-stick shooter and you know that position and rotation are almost glued to the hip, then by separating the position and rotation messages, you're adding almost 20 bytes of extra data to the network stream for every two messages! Not to mention you'll have to perform extra processing for each individual message as well.
+Wait, so if our `TransformMessage` is now only 48 bytes, why don't we also separate position and rotation into `PositionMessage` and `RotationMessage`? Well, we _have_ done that for convenience sake, but it's not necessarily a good idea. Don't forget that every message we create adds a (blindly estimated) 16 bytes of overhead to the total plus any other necessary information, so our `ScaleMessage` object isn't just the 12 bytes of the scale's `Vector3`, it's 32 bytes (because of the message overhead plus the network ID). And if you're developing a twin-stick shooter and you know that position and rotation are almost glued to the hip, then by separating the position and rotation messages, you're adding almost 20 bytes of extra data to the network stream for every two messages! Not to mention you'll have to perform extra processing for each individual message as well.
 
 ![Message Overhead](../images/blogs/week-9/message-overhead.png)
 
@@ -201,13 +195,11 @@ Our networking library [yojimbo](https://github.com/networkprotocol/yojimbo/) do
 
 ``` cpp
 // Inside the client position callback code
-
 NetworkTransform* nt = entity->GetComponent<NetworkTransform>; \
-if (nt && positionMessage->updateTime < nt->lastPosMessage) { \
-  return; \
+if (nt && positionMessage->updateTime < nt->lastPosMessage) {  \
+  return;                                                      \
 }
-
-// … go on to process the message if it's valid
+// ... go on to process the message if it's valid
 ```
 
 This does introduce an extra 4 bytes of size to each of the transform messages, but it's important for correctness. Another thing that can be done to prevent bogus transform messages (which we did do) is to keep track of the most recent timestamps for each networked object and throw out any messages that fail before even sending them to the clients. This can take a good chunk of memory on the server depending on how many networked objects you have, but it will reduce unnecessary network bandwidth even further.
@@ -243,7 +235,7 @@ And so, `NetworkTransform` is finished! We're sure that it will still take a lot
 
 > Games are inherently event-driven. — Jason Gregory, _Game Engine Architecture, 3rd Ed._
 
-When we are playing games, the progress is often driven by events like killing an enemy or collecting coins. Once the event is raised or triggered, multiple game entities need to respond to that. For example, after you kill an enemy, your score will increase and enemy AI will locate your position. Since there is clearly  a variety of in-game events, it's near impossible to keep them as function APIs in the base class like `OnExplosion`. This _Statically Typed Late Function Binding _introduces inflexibility by baking the event types into the engine code and by creating an enormous base entity class which contains all possible callbacks, even most entities only override a few of them. The former one also leads to the failure of data-driven design, since events are not extendable.
+When we are playing games, the progress is often driven by events like killing an enemy or collecting coins. Once the event is raised or triggered, multiple game entities need to respond to that. For example, after you kill an enemy, your score will increase and enemy AI will locate your position. Since there is clearly  a variety of in-game events, it's near impossible to keep them as function APIs in the base class like `OnExplosion`. This _Statically Typed Late Function Binding_ introduces inflexibility by baking the event types into the engine code and by creating an enormous base entity class which contains all possible callbacks, even most entities only override a few of them. The former one also leads to the failure of data-driven design, since events are not extendable.
 
 To deal with this problem, we need a more flexible solution, which can dynamically add new events and register corresponding events to them. This is what an event messaging system is meant to be. It is a hub that contains all the events, maps them to the callbacks and handles the raised events together.
 
@@ -260,14 +252,14 @@ The two basic factors of an event are its name and its parameters. The name is q
 struct EventParam {
   std::string type;
   union {
-    int, float, …
+    int, float, ...
   } value;
 }
 ```
 
 This old technique is no longer encouraged by modern C++, mostly because of its un-safeness, where safeness is referring to type safety[^98761]. Any developer using this `EventParam` can get messy values if they try to read the value as an different type than it is. C++17 provides a safe alternative to use—`std::variant`—which will generate a compile time error if the developer fetches data of the wrong type. So now, we have all the data we need to encapsulate an event object, what about the command behavior? This is an easy answer: We are also introducing Observer Pattern into the event object.
 
-[^98761]: **Type safety **is when the compiler can check whether the written code is using the right types and whether the language prevents or discourages type errors, errors from mismatching types.
+[^98761]: **Type safety** is when the compiler can check whether the written code is using the right types and whether the language prevents or discourages type errors, errors from mismatching types.
 
 As mentioned above, one single event can affect a lot of game objects. Due to the need to decouple the massive game objects from the event object, we have to use the Observer Pattern. Also, the nature of this pattern fits the event-driven system perfectly. Because we have already extensively used the Observer Pattern in our game engine, such as with the input, network, and collision modules, we won't talk too much about it again. If you want to know more about this pattern and how it works in the game engine, this [article](http://gameprogrammingpatterns.com/observer.html) will be very helpful.
 
@@ -278,7 +270,7 @@ After an event is raised, we can easily look up all the callbacks observing this
 
 We can see the use for both of them. For the immediate callbacks, they are simple and responsive. It runs the expected code right after something happens. For queued callbacks, they are less responsive than the immediate ones, but allow for the frame to complete so all objects have a chance to update before the callbacks are called. There is a special queue called a priority queue (or heap) which sorts all of the elements that are inserted into it. This sorting property allows us to add two more parameters: The priority and the frame count when the event is triggered. When the "Main Character Dies" event comes with an "NPC Goes to Sleep" event, we definitely think the former one is more important to handle. In this case, we should have different priorities for those two events and let the priority queue sort the events for us. Also, with the frame count parameter, we can now say "raise this event ten frames later". Since we are not implementing true multi-threading or coroutines, this can help the engine with some asynchronous[^76] features. We could do something similar with delaying based on time, however because our update is variable there is no guarantee the event would be raised exactly N seconds later. With this type of inconsistency we decided to hold off from implementing events based on time and to just use the frame count instead.
 
-[^76]: **Asynchronous **is typically associated with parallel programming, and is when a task runs and completes separately from the main application/thread.
+[^76]: **Asynchronous** is typically associated with parallel programming, and is when a task runs and completes separately from the main application/thread.
 
 After all that, we have both queued and immediate callbacks in our engine. We provide two different API's so that the developers can choose whatever fits their needs best.
 
@@ -349,7 +341,7 @@ These two properties make it so easy for us to add and remove colliders from the
 1.  Walk down the tree along the direction that causes minimum surface area change (as mentioned in [Week 7 blog](week-7.md#collisions), we should keep the tree balanced, and a typical balancing heuristic[^83] is surface area). Each step is done by *trying* to enclose the new collider's AABB with the left and right children, and comparing their surface area change after the enclosing operation. 
 1.  After arriving at a leaf, construct a new branch node at that leaf's position, and set the original leaf and the new collider as the two children of the new branch node. Also do some other pointer bookkeeping to make the tree valid.
 
-[^83]: A **heuristic **is similar to a rule that an algorithm or program follows as an optimization technique; it is used to arrive at the result with fewer iterations.
+[^83]: A **heuristic** is similar to a rule that an algorithm or program follows as an optimization technique; it is used to arrive at the result with fewer iterations.
 
 We also need to remove nodes from the tree when collider components are removed or disabled. Removing is also a pretty straightforward operation—just find the node's sibling, and pop it up to the position of its parent. A thing to note is that everytime we modify something at the leaf level, we should pop up level by level to make sure the parent's AABB still contains both children.
 
@@ -397,7 +389,7 @@ As the tree is integrated into the engine and has a well-defined interface, we c
 
 ## Console
 
-A console, in-game command-line, logger...the system has many names, but none of them can be seen on our engine architecture diagram. That's because it (sort of) isn't a system in the engine. The console is a great _editor _tool.
+A console, in-game command-line, logger...the system has many names, but none of them can be seen on our engine architecture diagram. That's because it (sort of) isn't a system in the engine. The console is a great _editor_ tool.
 
 > Wait, I remember you said you weren't going to write an editor!
 
@@ -425,7 +417,7 @@ The other functionality of the console is to be able to change configuration var
 
 But why stop there? We could make it even easier for the developer! 
 
-To start, let's list out all the commands available with an additional command. This requires the ability for users to define their own commands and callbacks for the console, so the user can create a command by having a keyword associated with a callback function that takes the console instance and string that follows their command, which in turn can be used as input parameters and parsed based on function need. So a command followed by a user delimiter[^230495] (the pipe symbol "|" for the Isetta Engine) denotes a user command and a command followed by a config delimiter "=" denotes a config command—this stops users from overriding config commands with their own. The reason to also pass an instance of the console to the callback is so the console's `AddLog` function can be called within the callback, which will only display information on that console in the case the developer has multiple consoles.
+To start, let's list out all the commands available with an additional command. This requires the ability for users to define their own commands and callbacks for the console, so the user can create a command by having a keyword associated with a callback function that takes the console instance and string that follows their command, which in turn can be used as input parameters and parsed based on function need. So a command followed by a user delimiter[^230495]  (the pipe symbol "|" for the Isetta Engine) denotes a user command and a command followed by a config delimiter "=" denotes a config command—this stops users from overriding config commands with their own. The reason to also pass an instance of the console to the callback is so the console's `AddLog` function can be called within the callback, which will only display information on that console in the case the developer has multiple consoles.
 
 [^230495]: A **delimiter** is a sequence of one or more characters used to specify the boundary between separate regions in text or other data streams. An example would be the comma character for comma-separated values.
 
