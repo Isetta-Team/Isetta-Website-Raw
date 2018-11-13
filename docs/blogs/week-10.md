@@ -227,7 +227,7 @@ Debugging this memory issue was hard but very interesting. It also helped us to 
 
 Originally, our `NetworkTransform` class checked the world position, rotation, and scale to know whether or not it should be sending any messages over the network. This was due to us wanting consistency for our `NetworkTransform` behavior; an object whose parent is scaled to 100 units being moved .001 units in local space will move the same distance as an object whose parent is scaled to 1 unit being moved 1 unit in local space, and the straightforward way to keep those distances matching is to just work in world space.
 
-![Local to World](../images/blogs/week-10/local-to-world.png)
+<!-- ![Local to World](../images/blogs/week-10/local-to-world.png) -->
 
 Well, as it turns out, world space brings its own slew of messes. For some reason, we didn't test out our networked transforms on parented networked objects, and as you can probably now imagine, it was not just a disaster, but a very bandwidth-wasteful disaster! We decided to shift almost all of our calculations and data to local space afterwards, with the one exception being the case mentioned above; when we want to know whether or not we should be sending an update across the network, we quickly convert to world space and check that.
 
