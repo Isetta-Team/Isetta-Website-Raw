@@ -20,12 +20,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 9 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-9).
-- This week, our blog is titled ["Hello from the West Coast"](blogs/week-9/). This week we talk more about our network transform, event messaging, accelerated BV tree, console, and component updates!
+- The latest changes for week 10 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-10).
+- This week, our blog is titled ["Grab A Bucket"](blogs/week-10/), because we were leaking memory all across the engine. We've patched a few of the big holes and also made our second game!
 - We recently interviewed with [Raymond Graham](https://twitter.com/wadarass), an engineer at the San Francisco Unity office on the Spotlight Team! Raymond gave us some great insight ranging from his time working on NBA games to helping team make their best possible game with Unity. Much like others he mentioned there are fewer engine developers and how its becoming [A Lost Art](interviews/RaymondGraham-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](images/engine_architecture/week9.png "Week 9 Progress Architecture")
+![Engine Architecture](images/engine_architecture/week10.png "Week 9 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
