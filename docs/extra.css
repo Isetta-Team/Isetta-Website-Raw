@@ -45,13 +45,13 @@ img + em {
 	text-align: center;
 }
 
-div + p>em {
+.video-wrapper + p>em {
 	margin-top: -.75em;
 	display: block;
 	text-align: center;
 }
 
-div + em {
+.video-wrapper + em {
 	margin-top: -.75em;
 	display: block;
 	text-align: center;
