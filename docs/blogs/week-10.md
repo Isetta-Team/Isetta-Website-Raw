@@ -166,7 +166,7 @@ Thing 1 deals with our static memory problem pretty nicely, whereas Thing 2 is m
 
 ### Placement `new` for Arrays is Undefined
 
-When we were implementing the `MemoryManager`, we provided a `NewArr` function to allow us to get a continuous memory chunk from our stack memory or our free list memory. The way we do this is by calculating the address of that memory chunk and constructing the array in that specific address by using _[placement](https://en.cppreference.com/w/cpp/language/new#Placement_new) _`new`. It worked well in most cases, but when we used it to allocate an array of strings, we found something very strange.
+When we were implementing the `MemoryManager`, we provided a `NewArr` function to allow us to get a continuous memory chunk from our stack memory or our free list memory. The way we do this is by calculating the address of that memory chunk and constructing the array in that specific address by using [_placement_](https://en.cppreference.com/w/cpp/language/new#Placement_new) `new`. It worked well in most cases, but when we used it to allocate an array of strings, we found something very strange.
 
 Before we look into the strange things, let's go over the basic properties of a string. A naive implementation would require three fields: The pointer to the allocated memory (the characters), the size of the string (how many characters are we storing), and the capacity of the string (how many characters could we store). On a 64-bit system, the total size of a string object should be 24 bytes. However, MSVC[^3721] does some [optimizations](https://shaharmike.com/cpp/std-string/) which expands the `sizeof(std::string)` to 40 bytes. The basic structure is some pointer (maybe pointing to the vtable[^1]), the pointer to the allocated memory, the size and the capacity.
 
@@ -218,17 +218,17 @@ int main() {
 
 ```
 
-In theory, an array is the same as a pointer that points to the continuous data. It should have no overhead in memory. However, using the _placement _`new` statement, strange bytes are inserted before the string array.
+In theory, an array is the same as a pointer that points to the continuous data. It should have no overhead in memory. However, using the placement `new` statement, strange bytes are inserted before the string array.
 
 ![New string](../images/blogs/week-10/new_array.png)
 
-After several tests, we figured out that these bytes represent the length of the array. It seems that the _placement _`new` statement is adding an additional guard in the front of memory chunk, so if this guard is added every time the placement `new` constructs an array, it kind of makes sense for us to add an additional 8 bytes to hold the length of the array.
+After several tests, we figured out that these bytes represent the length of the array. It seems that the placement `new` statement is adding an additional guard in the front of memory chunk, so if this guard is added every time the placement `new` constructs an array, it kind of makes sense for us to add an additional 8 bytes to hold the length of the array.
 
 Sadly, this doesn't make sense in C++-land. When we tried again to allocate an array of integers instead, there's no guard memory any more! 
 
 Is there a way to tell whether the guard will be added or not? Not really. We asked Google for help, and from this [StackOverflow thread](https://stackoverflow.com/questions/4011577/placement-new-array-alignment?rq=1), we learned that the offset may be different for every invocation of the array, so we can hardly use this in our precisely controlled memory manager.
 
-Is there a way to construct an array at the specific address without using _placement _`new`? Fortunately, yes, and the solution turns out to be very simple. All we need to do is manually iterate through the array and construct (or allocate) every single element! It's not the most elegant solution, but it's straightforward and doesn't have any undefined behavior hidden inside of it.
+Is there a way to construct an array at the specific address without using placement `new`? Fortunately, yes, and the solution turns out to be very simple. All we need to do is manually iterate through the array and construct (or allocate) every single element! It's not the most elegant solution, but it's straightforward and doesn't have any undefined behavior hidden inside of it.
 
 Debugging this memory issue was hard but very interesting. It also helped us to use Visual Studio's memory inspector to debug, which is a very good practice for us to keep up!
 
@@ -250,7 +250,7 @@ We're still iterating quite a bit on our network programming, so you'll no doubt
 
 What's to come in the next few weeks? The engine ideally. We have 2 weeks left before our intended feature lock, and we still have a lot to do... We aren't _too, too _worried, but just like the game industry, we foresee crunch coming our way in the very near future.
 
-We posted our interview with [Raymond Graham](../interviews/RaymondGraham-interview.md) this past week, and we definitely think you should check it out. We will posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md), [Elan Ruskin](../interviews/ElanRuskin-interview.md), and [Jeet Shroff and Florian Strauss](../interviewsJeetShroff-FlorianStrauss-interview.md) as soon as we can, which will be very soon because we will be releasing a small book of all of our interviews in the coming weeks!
+We posted our interview with [Raymond Graham](../interviews/RaymondGraham-interview.md) this past week, and we definitely think you should check it out. We will posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md), [Elan Ruskin](../interviews/ElanRuskin-interview.md), and [Jeet Shroff and Florian Strauss](../interviews/JeetShroff-FlorianStrauss-interview.md) as soon as we can, which will be very soon because we will be releasing a small book of all of our interviews in the coming weeks!
 
 
 ## Resources
