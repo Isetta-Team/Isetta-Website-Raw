@@ -1,3 +1,5 @@
+# Grab A Bucket
+
 ## Byte-Sized Updates
 *   [Graphics](#graphics) Added in functionality to the texture class, so it now does more than just loading and can actually be used!
 *   [Tools](#tools) Abstracted some previously developed tools into an editor component which is already proving valuable for development!
@@ -9,7 +11,7 @@
 
 Progress may have slowed due to our trip to LA, but we can assure you it wasn't for nothing. Our initial plan to go out there was decided months back; we had a full lineup of industry professionals who agreed to do interviews and look at our engine progress. Of course, in the fast-moving game industry, the best laid plans don't always come together. A number of our planned interviewees had to drop out at the last minute, which left us in a bit of a panic. 
 
-We reached out to about a dozen other contacts in LA to try and find some other people we could talk with. One of those contacts was at Sony's Santa Monica Studios, and he was able to get us in touch with [Jeet Shroff](https://twitter.com/theshroffage) and Florian Strauss, gameplay and technical directors on the latest _[God of War](https://godofwar.playstation.com/)_. What's more, we still had an interview locked in with Insomniac Games' senior engine programmer and ETC alumni [Elan Ruskin](https://twitter.com/despair). We also finally got to meet up and talk shop with Cort Stratton of Unity, who has been supporting us all semester long. Because these were all on-site talks, we were able to get a lot of clear answers to our questions and more direct feedback. 
+We reached out to about a dozen other contacts in LA to try and find some other people we could talk with. One of those contacts was at Sony's Santa Monica Studios, and he was able to get us in touch with [Jeet Shroff](https://twitter.com/theshroffage) and Florian Strauss, gameplay and technical directors on the latest [_God of War_](https://godofwar.playstation.com/). What's more, we still had an interview locked in with Insomniac Games' senior engine programmer and ETC alumni [Elan Ruskin](https://twitter.com/despair). We also finally got to meet up and talk shop with Cort Stratton of Unity, who has been supporting us all semester long. Because these were all on-site talks, we were able to get a lot of clear answers to our questions and more direct feedback. 
 
 While the extra downtime wasn't ideal, it did give us an opportunity to catch up with our classmates who were in LA on internships and new jobs. Ultimately, the trip was more productive for the team than expected.
 
@@ -51,7 +53,7 @@ Honestly, though, the inspector, hierarchy, and console shouldn't be components 
 
 This past week, we created a custom vector class labeled `Array` so as not to be confused with `Vector3` and our other math classes. The main reason for recreating `std::vector` was it is one of the most heavily used data structures in our engine yet it doesn't use our memory allocation, and that wasn't sitting well for us. Creating the basic functionality of the class was very straightforward, and using the STL vector as a guide for functions and naming, the implementation was completed relatively quickly. However, to fully mimic the functionality of the `std::vector`, we needed to implement iterators, which wasn't as straightforward as it seems. We didn't find any amazing resource on the subject, so it's still something we feel shaky on within our `Array` class. Learning from past mistakes, we tried to do a good unit test coverage of the whole class, and that helped us iron out the easy-to-find/fix bugs (like using prefix operators instead of postfix operators with sizing/capacity changes). This was also before the `Array` was integrated into the engine, so changes didn't cause massive recompile times—always a plus for rapid development!
 
-Unfortunately, as you might expect, once our `Array` class replaced the STL vectors in the engine, we found _way _more bugs. Most of the bugs actually lead us to find bugs within our memory management, and for that, they deserve their own sections: [A Drawback to Preallocating All Your Memory](#A-Drawback-to-Preallocating-All-Your-Memory), [Initialization Timing and Memory Management](#Initialization-Timing-and-Memory-Management), and [Placement New for Arrays is Undefined](#Placement-New-for-Arrays-is-Undefined).
+Unfortunately, as you might expect, once our `Array` class replaced the STL vectors in the engine, we found _way_ more bugs. Most of the bugs actually lead us to find bugs within our memory management, and for that, they deserve their own sections: [A Drawback to Preallocating All Your Memory](#a-drawback-to-preallocating-all-your-memory), [Initialization Timing and Memory Management](#initialization-timing-and-memory-management), and [Placement New for Arrays is Undefined](#placement-new-for-arrays-is-undefined).
 
 These were fairly involved bugs with our memory, so we are glad we ended up implementing the custom vector class. We also still have other memory issues that we weren't able to solve this week (or even understand yet) which we will be writing about in future weeks.
 
@@ -168,7 +170,7 @@ Thing 1 deals with our static memory problem pretty nicely, whereas Thing 2 is m
 
 When we were implementing the `MemoryManager`, we provided a `NewArr` function to allow us to get a continuous memory chunk from our stack memory or our free list memory. The way we do this is by calculating the address of that memory chunk and constructing the array in that specific address by using [_placement_](https://en.cppreference.com/w/cpp/language/new#Placement_new) `new`. It worked well in most cases, but when we used it to allocate an array of strings, we found something very strange.
 
-Before we look into the strange things, let's go over the basic properties of a string. A naive implementation would require three fields: The pointer to the allocated memory (the characters), the size of the string (how many characters are we storing), and the capacity of the string (how many characters could we store). On a 64-bit system, the total size of a string object should be 24 bytes. However, MSVC[^3721] does some [optimizations](https://shaharmike.com/cpp/std-string/) which expands the `sizeof(std::string)` to 40 bytes. The basic structure is some pointer (maybe pointing to the vtable[^1]), the pointer to the allocated memory, the size and the capacity.
+Before we look into the strange things, let's go over the basic properties of a string. A naive implementation would require three fields: The pointer to the allocated memory (the characters), the size of the string (how many characters are we storing), and the capacity of the string (how many characters could we store). On a 64-bit system, the total size of a string object should be 24 bytes. However, MSVC[^3721] does some [optimizations](https://shaharmike.com/cpp/std-string/) which expands the `sizeof(std::string)` to 40 bytes. The basic structure is <span style="color:#bf9000">some pointer (maybe pointing to the vtable[^1])</span>, <span style="color:#38761d">the pointer to the allocated memory</span>, <span style="color:#0b5394">the size</span> and <span style="color:#85200c">the capacity</span>.
 
 [^3721]: Microsoft Visual C++ (**MSVC**) is an integrated development environment (IDE) for writing and debugging C and C++ programming languages.
 
@@ -177,19 +179,15 @@ Before we look into the strange things, let's go over the basic properties of a 
 Okay, let's first see how placement `new` works on a normal `std::string` object.
 
 ```cpp
-
 #include <cstdlib>
-
 #include <string>
 
+using namespace std; // just to keep things shorter here
+
 int main() {
-
-  void* allocationPlace = malloc(4 * sizeof(std::string));
-
-  std::string* str = new (allocationPlace) std::string{"Testing the normal string"};
-
+  void* allocationPlace = malloc(4 * sizeof(string));
+  string* str = new (allocationPlace) string{"Testing the normal string"};
   free(allocationPlace);
-
 }
 
 ```
@@ -201,19 +199,13 @@ In this code snippet, we first allocate a chunk of "clean" memory to test, then 
 There's no overhead and no overflow. The string takes up exactly the whole 40 bytes. However, when we decide to allocate an array that only contains a single string, unexpected things happen.
 
 ```cpp
-
 #include <cstdlib>
-
 #include <string>
 
 int main() {
-
   void* allocationPlace = malloc(4 * sizeof(std::string));
-
   std::string* str = new (allocationPlace) std::string[1];
-
   free(allocationPlace);
-
 }
 
 ```
@@ -237,7 +229,7 @@ Debugging this memory issue was hard but very interesting. It also helped us to 
 
 Originally, our `NetworkTransform` class checked the world position, rotation, and scale to know whether or not it should be sending any messages over the network. This was due to us wanting consistency for our `NetworkTransform` behavior; an object whose parent is scaled to 100 units being moved .001 units in local space will move the same distance as an object whose parent is scaled to 1 unit being moved 1 unit in local space, and the straightforward way to keep those distances matching is to just work in world space.
 
-![Local to World](../images/blogs/week-10/local-to-world.png)
+<!-- ![Local to World](../images/blogs/week-10/local-to-world.png) -->
 
 Well, as it turns out, world space brings its own slew of messes. For some reason, we didn't test out our networked transforms on parented networked objects, and as you can probably now imagine, it was not just a disaster, but a very bandwidth-wasteful disaster! We decided to shift almost all of our calculations and data to local space afterwards, with the one exception being the case mentioned above; when we want to know whether or not we should be sending an update across the network, we quickly convert to world space and check that.
 
@@ -248,7 +240,7 @@ We're still iterating quite a bit on our network programming, so you'll no doubt
 
 ## Coming Soon
 
-What's to come in the next few weeks? The engine ideally. We have 2 weeks left before our intended feature lock, and we still have a lot to do... We aren't _too, too _worried, but just like the game industry, we foresee crunch coming our way in the very near future.
+What's to come in the next few weeks? The engine ideally. We have 2 weeks left before our intended feature lock, and we still have a lot to do... We aren't _too, too_ worried, but just like the game industry, we foresee crunch coming our way in the very near future.
 
 We posted our interview with [Raymond Graham](../interviews/RaymondGraham-interview.md) this past week, and we definitely think you should check it out. We will posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md), [Elan Ruskin](../interviews/ElanRuskin-interview.md), and [Jeet Shroff and Florian Strauss](../interviews/JeetShroff-FlorianStrauss-interview.md) as soon as we can, which will be very soon because we will be releasing a small book of all of our interviews in the coming weeks!
 
