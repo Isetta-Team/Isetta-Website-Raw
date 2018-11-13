@@ -71,7 +71,8 @@ nav:
 
 # Configuration
 theme:
-  name: 'material'
+  name: material
+  custom_dir: theme/
   include_sidebar: false
   feature:
     tabs: true
@@ -81,9 +82,8 @@ theme:
   font:
     text: 'Lato'
     code: 'Source Code Pro'
-  # favicon: assets/images/favicon.png
-  logo:
-    icon: "memory"
+  favicon: images/isetta_icon.ico
+  logo: images/isetta_logo.png
 
 # Extensions
 markdown_extensions:

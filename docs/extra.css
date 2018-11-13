@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /*#region Home */
 .hseparator {
     display: block;
@@ -130,4 +134,13 @@ article .md-typeset__table {
 
 article .md-typeset__table table th, article .md-typeset__table table td{
 	font-size: 1.6rem;
+}
+
+.md-logo img {
+	min-height: 32px;
+	min-width: 32px;
+}
+
+.cursor_pointer {
+	cursor: pointer;
 }
