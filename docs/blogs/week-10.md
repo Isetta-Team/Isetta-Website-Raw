@@ -1,11 +1,11 @@
 # Grab A Bucket
 
 ## Byte-Sized Updates
-*   [Graphics](#graphics) Added in functionality to the texture class, so it now does more than just loading and can actually be used!
-*   [Tools](#tools) Abstracted some previously developed tools into an editor component which is already proving valuable for development!
-*   [Custom Dynamic Array](#Custom-Dynamic-Array) We were originally not planning on creating our own data structures and just relying on STL but we gave into the temptation and it revealed some dark secrets.
-*   [Second Game](#Second-Game) We made our second game (which is not a twin stick shooter) and it works!
-*   [Patch Notes](#patch-notes) There's typically not a header for patch notes, but this week we found some really interesting bugs, mainly involving memory, which we think were great learning experiences.
+*   [Graphics](#graphics): Added in functionality to the texture class, so it now does more than just loading and can actually be used!
+*   [Tools](#tools): Abstracted some previously developed tools into an editor component which is already proving valuable for development!
+*   [Custom Dynamic Array](#custom-dynamic-array): We were originally not planning on creating our own data structures and just relying on STL but we gave into the temptation and it revealed some dark secrets.
+*   [Second Game](#second-game): We made our second game (which is not a twin stick shooter) and it works!
+*   [Patch Notes](#patch-notes): There's typically not a header for patch notes, but this week we found some really interesting bugs, mainly involving memory, which we think were great learning experiences.
 
 ![Engine Architecture](../images/engine_architecture/week10.png "Week 10 Progress Architecture")
 
