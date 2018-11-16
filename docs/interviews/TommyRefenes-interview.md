@@ -122,7 +122,6 @@ In _Super_ _Meat Boy,_ when you would go into the chapter, it would start playin
 
 The garbage physics came about all from iteration[^154]. For_ Forever,_ I wanted to keep the exact same feel of Meat Boy with the new game, so a lot of the physics are exactly the same. The player doesn't have control over the direction, so physics from _Super Meat Boy_ like air friction for when you're turning around in the air, the amount of time when you're going in one direction and then  switch to another direction, those don't exist in _Forever_ because you don't have any control over direction. But how his jump works and the new mechanics, like his punch and dive, were also developed from what I call "garbage physics." There's different obstacles, like fans, that had to be adjusted for this game, which also required iteration. Nothing in the game is physically accurate to real physics, not a single thing. All of Meat Boy's weird controls are done in-game, not in-engine.
 
-_Interview conducted September 13. 2018._
-
 [^154]: Tommy talked more about the creation of the Meat Boy physics in an interview with [Casey Muratori](https://twitter.com/cmuratori?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) at [HandmadeCon 2015](https://www.youtube.com/watch?v=QVpSIdWE0do&t=1s&index=2&list=PLEMXAbCVnmY6HE0bxUHeLLP5QbBE2zhJi).
 
+_Interview conducted September 13, 2018._

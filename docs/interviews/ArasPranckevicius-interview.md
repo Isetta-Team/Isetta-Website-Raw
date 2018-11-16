@@ -112,4 +112,4 @@ That said, I see the future of game engines being more modular. That's what we a
 
 [^16]: **npm** is a package manager for the JavaScript programming language. It's the default package manager for the JavaScript runtime environment Node.js.
 
-__Interview conducted on October 8, 2018.__
+_Interview conducted on October 8, 2018._

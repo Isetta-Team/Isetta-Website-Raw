@@ -35,7 +35,7 @@ nav:
     # - "[Week 12] ": blogs/week-12.md
     #- Week #: blogs/week-#.md
   - Interviews:
-    # - Martin Middleton: interviews/MartinMiddleton-interview.md
+    - Martin Middleton: interviews/MartinMiddleton-interview.md
     # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
     # - Jeff Preshing:
     #   - Interview: interviews/JeffPreshing-interview.md
