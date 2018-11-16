@@ -33,7 +33,7 @@ The texture class originally was set a static loader, but was changed to hold sp
 
 ![ImGui Texture](../images/blogs/week-10/gui_image.PNG "GUI Texture Image")
 
-Because we are using Horde3D to load the texture, it is storing it as a resource in its resource map and attempts to destroy the texture on Hored's destruction. We originally ran into an issue when trying to destroy the texture ourselves because we were trying to delete something we weren't the owners of. A simple call to Horde3D to release the memory allowed us to implement a `Texture::Unload` function, and we learned a good lesson on remembering to keep track of who really owns what.
+Because we are using Horde3D to load the texture, it is storing it as a resource in its resource map and attempts to destroy the texture on Horde's destruction. We originally ran into an issue when trying to destroy the texture ourselves because we were trying to delete something we weren't the owners of. A simple call to Horde3D to release the memory allowed us to implement a `Texture::Unload` function, and we learned a good lesson on remembering to keep track of who really owns what.
 
 
 ## Tools

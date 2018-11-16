@@ -2,7 +2,7 @@
 
 ![headshot](../images/interviews/martin-middleton.jpeg "Martin Middleton")
 
-_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including _Luna_, _Woorld_, and the upcoming _Wattam_. Previously Martin was an engine programmer at thatgamecompany, where he worked on _Flow_, _Flower_, and _Journey_._
+_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including __Luna_, __Woorld_, _and the upcoming __Wattam_. _Previously Martin was an engine programmer at thatgamecompany, where he worked on __Flow_, __Flower_, and __Journey_._
 
 (The following is the edited transcription of a conversation we had with Martin Middleton.)
 
@@ -81,7 +81,7 @@ For _Journey_'s networking, the peer-matching system was based on the lobby syst
 
 [^10]: A **hash** is a structure that maps keys to values through a formula defined to convert structures into a index, typically the formula is constructed to avoid collisions between similar objects. The hash of the same object will always return the same value.
 
-One interesting aspect to this is that we implemented a maximum room size—otherwise the room could be flooded by tons of people spamming each other with messages. If a room becomes too big, then you create a new room. That means the number of rooms grows as the audience grows. But the game's online play goes through periods of more and less activity, so then you have the issue where there's a whole lot of rooms but there's only a couple people in each room, and they're all stranded from each other. To solve this, I ran a room defragmentation[^11] system where if a player is in one room for too long, they would leave and try to join a busier room. \
+One interesting aspect to this is that we implemented a maximum room size—otherwise the room could be flooded by tons of people spamming each other with messages. If a room becomes too big, then you create a new room. That means the number of rooms grows as the audience grows. But the game's online play goes through periods of more and less activity, so then you have the issue where there's a whole lot of rooms but there's only a couple people in each room, and they're all stranded from each other. To solve this, I ran a room defragmentation[^11] system where if a player is in one room for too long, they would leave and try to join a busier room. 
 
 
 [^11]: **Defragmentation** is the process of reducing fragmentation (well that's a dumb definition), where **fragmentation** is where memory is used inefficiently with lots of gaps in between used memory chunks. In this context, defragmentation is used in the sense of keeping the rooms fully utilized, not wasting space on a fairly empty room.
