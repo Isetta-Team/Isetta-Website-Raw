@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /*#region Home */
 .hseparator {
     display: block;
@@ -41,13 +45,13 @@ img + em {
 	text-align: center;
 }
 
-div + p>em {
+.video-wrapper + p>em {
 	margin-top: -.75em;
 	display: block;
 	text-align: center;
 }
 
-div + em {
+.video-wrapper + em {
 	margin-top: -.75em;
 	display: block;
 	text-align: center;
@@ -130,4 +134,13 @@ article .md-typeset__table {
 
 article .md-typeset__table table th, article .md-typeset__table table td{
 	font-size: 1.6rem;
+}
+
+.md-logo img {
+	min-height: 32px;
+	min-width: 32px;
+}
+
+.cursor_pointer {
+	cursor: pointer;
 }

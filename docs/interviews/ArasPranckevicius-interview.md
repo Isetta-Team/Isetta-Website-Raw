@@ -111,3 +111,5 @@ I don't know what the future holds for game engines. Looking back to when we wer
 That said, I see the future of game engines being more modular. That's what we are currently trying to do with Unity itself in terms of packages and and modules, but the risk is going overboard with modularity. For everything that's good about JavaScript npm[^16], they sometimes go too crazy; they have a single line of code becoming its own module. As Unity and Unreal are currently these big, monolithic pieces of tools and functionality, they aren't inherently versatile enough for different game genres. While they both have some malleability, you still have to deal with gigabytes of extra stuff. I think something more modular will happen in the future – I can hope that will be Unity, but we'll see.
 
 [^16]: **npm** is a package manager for the JavaScript programming language. It's the default package manager for the JavaScript runtime environment Node.js.
+
+_Interview conducted on October 8, 2018._

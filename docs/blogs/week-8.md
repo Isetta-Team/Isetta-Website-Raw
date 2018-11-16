@@ -1,4 +1,4 @@
-
+# Patching Holes
 ## Byte-Sized Updates
 
 *   [Component Registry](#component-registry): To add component inheritance support, we added a component registration mechanism for the components to store their type hierarchy.

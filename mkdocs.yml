@@ -30,8 +30,19 @@ nav:
     - "[Week 7] A Real Game Engine": blogs/week-7.md
     - "[Week 8] Patching Holes": blogs/week-8.md
     - "[Week 9] Hello from the West Coast": blogs/week-9.md
+    - "[Week 10] Grab A Bucket": blogs/week-10.md
+    # - "[Week 11] ": blogs/week-11.md
+    # - "[Week 12] ": blogs/week-12.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Martin Middleton: interviews/MartinMiddleton-interview.md
+    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
+    # - Jeff Preshing:
+    #   - Interview: interviews/JeffPreshing-interview.md
+    #   - Video Story: interviews/JeffPreshing-video.md
+    # - Elan Ruskin:
+    #   - Interview: interviews/ElanRuskin-interview.md
+    #   - Video Story: interviews/ElanRuskin-video.md
     - Raymond Graham: 
       - Interview: interviews/RaymondGraham-interview.md
       - Video Story: interviews/RaymondGraham-video.md
@@ -51,21 +62,17 @@ nav:
     - Adam Serdar: 
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
-    - Martin Middleton: interviews/MartinMiddleton-interview.md
     - Summarized Advice:
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
       - Alice Ching: interviews/AliceChing-advice.md
-    - Coming Soon: interviews/coming-soon.md
-    #- Person:
-    # - Interview: interviews/person-interview.md
-    # - Video: interviews/person-video.md
 
 # Configuration
 theme:
-  name: 'material'
+  name: material
+  custom_dir: theme/
   include_sidebar: false
   feature:
     tabs: true
@@ -75,9 +82,8 @@ theme:
   font:
     text: 'Lato'
     code: 'Source Code Pro'
-  # favicon: assets/images/favicon.png
-  logo:
-    icon: "memory"
+  favicon: images/isetta_icon.ico
+  logo: images/isetta_logo.png
 
 # Extensions
 markdown_extensions:

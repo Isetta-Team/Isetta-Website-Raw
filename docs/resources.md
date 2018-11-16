@@ -4,6 +4,11 @@
 
 Useful articles/resources we used during the development of Isetta
 
+## 3D Math
+* *Game Engine Architecture 2nd edition* - Chapter 4： 3D Math for Games
+* *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
+* *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
+
 ## Builds
 * [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 
@@ -13,32 +18,38 @@ Useful articles/resources we used during the development of Isetta
 * [Scott Meyers - CPU Caches and Why You care](https://vimeo.com/97337258)
 * [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 
-## Collisions
-* Collision Detection
-    * *Real-Time Collision Detection* by Christer Ericson
-    * *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
-    * *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
-    * [Collision Detection](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects)
-    * [Broadphase Detection](https://dai.fmph.uniba.sk/upload/8/87/Ca15_lesson05.pdf)
-    * [Deriving OBB to OBB Intersection | Randy Gual](http://www.randygaul.net/2014/05/22/deriving-obb-to-obb-intersection-sat/)
-    * [Collision Detection | Ryan Schmidt - Duke](https://www2.cs.duke.edu/courses/cps124/spring04/notes/12_collisions/collision_detection.pdf)
-    * [Simple Intersection Tests for Games](https://www.gamasutra.com/view/feature/131790/simple_intersection_tests_for_games.php?print=1)
-    * [Correct Box Sphere Intersection](http://theorangeduck.com/page/correct-box-sphere-intersection)
-    * [Simple 3D OBB-Collision | StackExchange](https://gamedev.stackexchange.com/questions/112883/simple-3d-obb-collision-directx9-c)
-    * [Separating Axis Theorem for OBB](http://www.jkh.me/files/tutorials/Separating%20Axis%20Theorem%20for%20Oriented%20Bounding%20Boxes.pdf)
-    * [Distance between 3D Lines & Segments](http://geomalgorithms.com/a07-_distance.html)
-    * [Capsule-Capsule Collision in Games](http://thunderfist-podium.blogspot.com/2012/02/capsule-capsule-collision-in-games.html)
-    * [Dynamic AABB Tree | Randy Gual](http://www.randygaul.net/2013/08/06/dynamic-aabb-tree/)
-    * [Broadphase - Dynamic AABB Tree | Allen Chou](http://allenchou.net/2014/02/game-physics-broadphase-dynamic-aabb-tree/)
+## Collision Detection
+* General Introduction
+    * [*Real-Time Collision Detection*](https://realtimecollisiondetection.net/) by Christer Ericson
+    * [Toptal - Collision Detection for Solid Objects](https://www.toptal.com/game/video-game-physics-part-ii-collision-detection-for-solid-objects)
+    * [Ryan Schmidt (Duke University) - Everything you ever wanted to know about collision detection](https://www2.cs.duke.edu/courses/cps124/spring04/notes/12_collisions/collision_detection.pdf)
+
+* Coarse Phase (Broad Phase)
+    * [Comenius University Slides - Broad Phase Collision Detection](https://dai.fmph.uniba.sk/upload/8/87/Ca15_lesson05.pdf)
+    * [Randy Gual - Dynamic AABB Tree](http://www.randygaul.net/2013/08/06/dynamic-aabb-tree/)
+    * [Allen Chou - Broadphase - Dynamic AABB Tree](http://allenchou.net/2014/02/game-physics-broadphase-dynamic-aabb-tree/)
     * [AABB Collision Detection](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection)
-    * [Ray-Capsule Test Github Code](https://gist.github.com/jdryg/ecde24d34aa0ce2d4d87)
-    * [GJK Github Code](https://github.com/kevinmoran/GJK)
-    * [Implementing GJK  | Casey Muratori](https://caseymuratori.com/blog_0003)
-    * [Capsule-Box Intersection Forum](https://www.gamedev.net/forums/topic/360869-capsule-or-swept-sphere---box-collision/)
+    * [Introductory Guide to AABB Tree Collision Detection](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/)
+
+* Fine Phase & Others
+    * [Gamasutra - Simple Intersection Tests for Games](https://www.gamasutra.com/view/feature/131790/simple_intersection_tests_for_games.php?print=1)
+    * [Correct Box Sphere Intersection](http://theorangeduck.com/page/correct-box-sphere-intersection)
+    * [StackExchange - Simple 3D OBB-Collision](https://gamedev.stackexchange.com/questions/112883/simple-3d-obb-collision-directx9-c)
+    * [Separating Axis Theorem for OBB](http://www.jkh.me/files/tutorials/Separating%20Axis%20Theorem%20for%20Oriented%20Bounding%20Boxes.pdf)
+    * [Randy Gual - Deriving OBB to OBB Intersection](http://www.randygaul.net/2014/05/22/deriving-obb-to-obb-intersection-sat/)
+    * [Capsule-Capsule Collision in Games](http://thunderfist-podium.blogspot.com/2012/02/capsule-capsule-collision-in-games.html)
+    * [gamedev.net - Capsule-Box Intersection](https://www.gamedev.net/forums/topic/360869-capsule-or-swept-sphere---box-collision/)
+    * [Distance between 3D Lines & Segments](http://geomalgorithms.com/a07-_distance.html)
+
+* Raycasting
+    * [Ray-Capsule Test Sample Code on Github](https://gist.github.com/jdryg/ecde24d34aa0ce2d4d87)
     * [Ray-OBB Intersection Test](https://www.gamedev.net/forums/topic/360869-capsule-or-swept-sphere---box-collision/)
     * [Picking with custom Ray-OBB function](http://www.opengl-tutorial.org/miscellaneous/clicking-on-objects/picking-with-custom-ray-obb-function/)
-    * [Details of Ray/OBB Intersection Paper](https://svn.wildfiregames.com/public/ps/trunk/docs/ray_intersect.pdf)
-    * [Introductory Guide to AABB Tree Collision Detection](https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/)
+    * [Details of Ray/OBB Intersection Paper by Wildfire Games](https://svn.wildfiregames.com/public/ps/trunk/docs/ray_intersect.pdf)
+
+* GJK
+    * [Casey Muratori - Implementing GJK](https://caseymuratori.com/blog_0003)
+    * [GJK Sample Code on Github](https://github.com/kevinmoran/GJK)
 
 ## Config File (Engine Config)
 * [Create A Simple Configuration Parser](https://www.dreamincode.net/forums/topic/183191-create-a-simple-configuration-file-parser/)
