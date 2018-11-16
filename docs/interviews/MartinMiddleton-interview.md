@@ -1,6 +1,6 @@
 # Thinking about the Data
 
-![headshot](../images/interviews/jeff-preshing.jpeg "Jeff Preshing")
+![headshot](../images/interviews/martin-middleton.jpeg "Martin Middleton")
 
 _Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including _Luna_, _Woorld_, and the upcoming _Wattam_. Previously Martin was an engine programmer at thatgamecompany, where he worked on _Flow_, _Flower_, and _Journey_._
 
@@ -54,7 +54,7 @@ While Unity is free for non-professionals, I haven't found it to be as accessibl
 For professional development, Unity is actually our second-highest cost in software, coming only after Maya. Unity has a somewhat pricey monthly subscription fee as well. On the other hand, Unity is much more widely used while the Phyre team was very small within Sony. They were very limited resources wise, whereas Unity is an enormous organization with lots of engineers. That being said, Unity had not prioritized console development at all for a long time; they just didn't see that as their audience. Developing a console title with Unity was kind of a struggle, and still is in some ways. They're just now starting to support console development more, I think because the platform holders themselves are investing resources because they know that a lot of people use Unity.
 
 
-## Technology from _Flower _to _Journey_
+## Technology from _Flower_ to _Journey_
 
 A lot of the _Journey_ engine was the _Flower_ engine. We started developing _Journey_ with the _Flower_ engine pretty early on because we really wanted to focus on an engine we could iterate on and develop and use for multiple projects. The structure of it was meant to support multithreading really well, and having systems for gathering up data and sending them off to the SPU's and synchronizing and reporting back when those SPU's were finished with the data.
 
