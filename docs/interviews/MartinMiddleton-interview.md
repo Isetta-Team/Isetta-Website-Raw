@@ -1,8 +1,8 @@
 # Thinking about the Data
 
-![headshot](../images/interviews/jeff-preshing.jpeg "Jeff Preshing")
+![headshot](../images/interviews/martinheadshot.jpg "Martin Middleton")
 
-_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including _Luna_, _Woorld_, and the upcoming _Wattam_. Previously Martin was an engine programmer at thatgamecompany, where he worked on _Flow_, _Flower_, and _Journey_._
+_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including __Luna_, __Woorld_, _and the upcoming __Wattam_. _Previously Martin was an engine programmer at thatgamecompany, where he worked on __Flow_, __Flower_, and __Journey_._
 
 (The following is the edited transcription of a conversation we had with Martin Middleton.)
 
@@ -54,7 +54,7 @@ While Unity is free for non-professionals, I haven't found it to be as accessibl
 For professional development, Unity is actually our second-highest cost in software, coming only after Maya. Unity has a somewhat pricey monthly subscription fee as well. On the other hand, Unity is much more widely used while the Phyre team was very small within Sony. They were very limited resources wise, whereas Unity is an enormous organization with lots of engineers. That being said, Unity had not prioritized console development at all for a long time; they just didn't see that as their audience. Developing a console title with Unity was kind of a struggle, and still is in some ways. They're just now starting to support console development more, I think because the platform holders themselves are investing resources because they know that a lot of people use Unity.
 
 
-## Technology from _Flower _to _Journey_
+## Technology from _Flower_ to _Journey_
 
 A lot of the _Journey_ engine was the _Flower_ engine. We started developing _Journey_ with the _Flower_ engine pretty early on because we really wanted to focus on an engine we could iterate on and develop and use for multiple projects. The structure of it was meant to support multithreading really well, and having systems for gathering up data and sending them off to the SPU's and synchronizing and reporting back when those SPU's were finished with the data.
 
@@ -81,7 +81,7 @@ For _Journey_'s networking, the peer-matching system was based on the lobby syst
 
 [^10]: A **hash** is a structure that maps keys to values through a formula defined to convert structures into a index, typically the formula is constructed to avoid collisions between similar objects. The hash of the same object will always return the same value.
 
-One interesting aspect to this is that we implemented a maximum room size—otherwise the room could be flooded by tons of people spamming each other with messages. If a room becomes too big, then you create a new room. That means the number of rooms grows as the audience grows. But the game's online play goes through periods of more and less activity, so then you have the issue where there's a whole lot of rooms but there's only a couple people in each room, and they're all stranded from each other. To solve this, I ran a room defragmentation[^11] system where if a player is in one room for too long, they would leave and try to join a busier room. \
+One interesting aspect to this is that we implemented a maximum room size—otherwise the room could be flooded by tons of people spamming each other with messages. If a room becomes too big, then you create a new room. That means the number of rooms grows as the audience grows. But the game's online play goes through periods of more and less activity, so then you have the issue where there's a whole lot of rooms but there's only a couple people in each room, and they're all stranded from each other. To solve this, I ran a room defragmentation[^11] system where if a player is in one room for too long, they would leave and try to join a busier room. 
 
 
 [^11]: **Defragmentation** is the process of reducing fragmentation (well that's a dumb definition), where **fragmentation** is where memory is used inefficiently with lots of gaps in between used memory chunks. In this context, defragmentation is used in the sense of keeping the rooms fully utilized, not wasting space on a fairly empty room.
