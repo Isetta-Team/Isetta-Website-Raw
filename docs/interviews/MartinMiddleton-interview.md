@@ -2,7 +2,7 @@
 
 ![headshot](../images/interviews/martin-middleton.jpg "Martin Middleton")
 
-_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including_ Luna, Woorld, _and the upcoming_ Wattam. _Previously Martin was an engine programmer at thatgamecompany, where he worked on_ Flow, Flower, _and_ Journey.
+_**Martin Middleton** is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including_ Luna, Woorld, _and the upcoming_ Wattam. _Previously Martin was an engine programmer at thatgamecompany, where he worked on_ Flow, Flower, _and_ Journey.
 
 (The following is the edited transcription of a conversation we had with Martin Middleton.)
 

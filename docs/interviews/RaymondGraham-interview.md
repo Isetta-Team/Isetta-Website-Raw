@@ -32,7 +32,7 @@ I loved working with the PS3 cell architecture! A little bit of background: When
 
 [^379]: **Vector unit architecture (VU)** is the architecture for the Emotion Engine that was used in the Playstation 2 console. The two processing units were focused for 3D math and predecessor for the vertex shader pipelines.
 
-[^9583]: A **draw call **is a command from CPU to GPU that contains all the information encapsulated by CPU about textures, states, shaders, rendering objects, buffers, etc.
+[^9583]: A **draw call** is a command from CPU to GPU that contains all the information encapsulated by CPU about textures, states, shaders, rendering objects, buffers, etc.
 
 [^93]: Encapsulating a draw call is expensive, and the GPU can render fairly fast, so **batching** draw calls up is a good technique to speed up.
 
@@ -45,7 +45,7 @@ I loved working with the PS3 cell architecture! A little bit of background: When
 
 Porting _BioShock_ to PS3 was hard, because one of the main requirements we were given was to keep all the data and level loading flow the same. The problem with that is that while Xbox 360 and PC have unified memory architecture[^9463], the PS3 does not. PS3 has video memory and it has main memory, and you can't use the video memory for general purpose stuff because it was too slow to access it directly. With _BioShock_, we had a game made for unified memory architecture, and we were trying to get it to run on PS3; most of the system memory was graphics related but it couldn't all fit in the 256 megabytes of the PS3's video RAM. So there was this constant struggle of figuring out how to get the memory to fit. The last thing that we could have done (but would have been too much work) was cutting the levels up and adding loading screens. Because there was no streaming at that point, it was still "load level" and that was it. We didn't want to do that because it would change how the player experiences the game, and it would take all sorts of technical work to do that. In the end, we handled the issue by enabling the virtual memory[^1995]; PS3 had the ability to use its hard drive as a backing for virtual memory, so we used that to fit the stuff that spilled over into virtual memory. It wasn't the greatest solution, and there's definitely some noticeable lag in the final product, but it was the only way that game would have shipped.
 
-[^9463]: **Unified memory architecture **use a portion of a computer's RAM rather than dedicated graphics memory. It is a single memory address space accessible from any processor in a system.
+[^9463]: **Unified memory architecture** use a portion of a computer's RAM rather than dedicated graphics memory. It is a single memory address space accessible from any processor in a system.
 
 [^1995]: **Virtual memory** is a memory management technique that abstracts uniformed memory space from different kind of storage device.
 
@@ -64,11 +64,11 @@ Much like Apple, Unity definitely has a very rigorous testing process, because w
 
 PC development is also definitely changing with the times. I think we're starting to see more people embracing low-level graphics APIs like Metal[^8395] and Vulkan[^1835]. Pretty much all the console devs are telling them, "Welcome to the party, we've been doing this for years!" On PS2 and on PS3, we were working with very specialized low-level API's that gave you access to the hardware. Finally now that people in the desktop space want Vulkan and Metal, we can tell them why that's important. Also, we're trying to use ECS[^234] systems and data-oriented design at Unity, which I think is also something that we _had_ to do on the console side to get performance. You had to have your data laid out efficiently to save memory and get performance. Now you're starting to see that be more of a focus in general code, which I think is a good thing.
 
-[^8395]: **Metal **is a low-level, low-overhead hardware-accelerated 3D graphic and compute shader application programming interface (API) developed by Apple Inc.
+[^8395]: **Metal** is a low-level, low-overhead hardware-accelerated 3D graphic and compute shader application programming interface (API) developed by Apple Inc.
 
-[^1835]: **Vulkan **is a low-overhead, cross-platform 3D graphics and compute API targeting high-performance realtime 3D graphics applications such as video games and interactive media across all platforms.
+[^1835]: **Vulkan** is a low-overhead, cross-platform 3D graphics and compute API targeting high-performance realtime 3D graphics applications such as video games and interactive media across all platforms.
 
-[^234]: **Entity-Component-System (ECS) **is an architectural pattern that follows composition over inheritance principle and is mostly used in games.
+[^234]: **Entity-Component-System (ECS)** is an architectural pattern that follows composition over inheritance principle and is mostly used in games.
 
 A lot of the other features we make at Unity are driven by the artists; if there's something they need to be able to do but don't have a solution, we create a solution out of necessity. As a graphics programmer, your number-one client is the art team. We're just making sure that they have all the tools they need to actually use the system.
 
@@ -83,7 +83,7 @@ The changes in development from early 3D to now are hard to describe. I think I 
 
 [^1221]: **Programmable shader pipeline** allows the developer to customize some phases in the render pipeline (mostly the vertex processing phase and the fragment shader phase). It was introduced by OpenGL 3.2 in 2009.
 
-[^971221]: A **Compute Shader **is a shader stage that is used entirely for computing arbitrary information. While it can do rendering, it is generally used for tasks not directly related to drawing triangles and pixels. 
+[^971221]: A **Compute Shader** is a shader stage that is used entirely for computing arbitrary information. While it can do rendering, it is generally used for tasks not directly related to drawing triangles and pixels. 
 
 I've been thinking a lot about how to help make things accessible for new graphics programmers. Early on, I think every programmer I knew had made a ray tracer[^9712], and now that's all the rage again—everyone's making ray tracers. I think that's a really good starting point, because it's just understanding the fundamentals of how light transport, reflections, refractions, and other essentials work. That's what helps graphics programmers build a solid foundation, and then they can build on that with more advanced skills. On top of that, definitely read every paper that's coming out and the latest things people are doing in the field. Quite frankly, there's just too much stuff to know.
 

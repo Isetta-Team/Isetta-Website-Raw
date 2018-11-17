@@ -35,6 +35,10 @@ img[alt="team-headshot"]{
 	width: 250px;
 }
 
+img[alt="headshot"]{
+	max-width: 400px;
+}
+
 img + p>em {
 	display: block;
 	text-align: center;
