@@ -1,8 +1,8 @@
 # Thinking about the Data
 
-![headshot](../images/interviews/martin-middleton.jpeg "Martin Middleton")
+![headshot](../images/interviews/martin-middleton.jpg "Martin Middleton")
 
-_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including __Luna_, __Woorld_, _and the upcoming __Wattam_. _Previously Martin was an engine programmer at thatgamecompany, where he worked on __Flow_, __Flower_, and __Journey_._
+_Martin Middleton is the CTO at Funomena, an independent game studio in San Francisco he co-founded in 2012 with Robin Hunicke. Funomena has put out award-winning titles on a variety of platforms, including_ Luna, Woorld, _and the upcoming_ Wattam. _Previously Martin was an engine programmer at thatgamecompany, where he worked on_ Flow, Flower, _and_ Journey.
 
 (The following is the edited transcription of a conversation we had with Martin Middleton.)
 
@@ -33,7 +33,7 @@ So there's always a trade-off when it comes to how much of this engine you can u
 
 [^2]: **PhyreEngine** is Sony's game engine that is freely available for Playstation developers. The engine is compatible with the playstation platforms of the last decade.
 
-[^3]: A pure **entity-system **is similar to a flat hierarchy, where the entities hold data and functions to be called by the system manager.
+[^3]: A pure **entity-system** is similar to a flat hierarchy, where the entities hold data and functions to be called by the system manager.
 
 
 ### Custom Entity System in Unity
@@ -42,7 +42,7 @@ For our entity system in Unity, we were trying to solve two separate problems. O
 
 For _Wattam_, we're using both our own entity system and Unity's `GameObject` system. The way it works is, by default, we will start with something derived from `MonoBehaviour`, and if it turns out that we need a lot of those "residents" in an array at a time, then we'll decide they don't all need to have their own transform in the scene graph[^5] and I can just give them a "simple transform", which uses a `Vector3` for the position and the `Quaternion` for rotation. I think that's actually my biggest gripe with Unity, that in order to just store a `Transform` you have to hook it into the scene graph, which just makes everything really slow and heavy. So I think having a lot of objects where you can write out their position and rotation without needing to be plugged into an update loop is really good.
 
-[^4]: **MonoBehaviour **is the base class within Unity that all components which attach to `GameObject` must derive from, it has methods for start, update, and destroy, among a ton of others.
+[^4]: **MonoBehaviour** is the base class within Unity that all components which attach to `GameObject` must derive from, it has methods for start, update, and destroy, among a ton of others.
 
 [^5]: The **scene graph** of a game engine holds the entities and components (including transforms and parent hierarchies) of a level, also known as a scene.
 
@@ -114,9 +114,9 @@ Unity is far on one end of the spectrum, and then at the other end is the [Casey
 [^13]: Simple DirectMedia Layer (**SDL)** is a hardware abstraction layer for audio, input, and graphics across multiple platforms. \
 [^14]: **OpenGL**, short for Open Graphics Library, a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering. It's the underlying rendering library for many modern game engines.
 
-[^15]: Microsoft **DirectX **is a collection of application programming interfaces (APIs) for handling tasks related to multimedia, especially game programming, on Microsoft platforms, like Windows and Xbox. It is most known for Direct3D which is the graphics API used for creating windows and rendering, and serves similar purposes as OpenGL.
+[^15]: Microsoft **DirectX** is a collection of application programming interfaces (APIs) for handling tasks related to multimedia, especially game programming, on Microsoft platforms, like Windows and Xbox. It is most known for Direct3D which is the graphics API used for creating windows and rendering, and serves similar purposes as OpenGL.
 
-[^16]: **Application context **is the context, the set of data required to interrupt and continue a task,  of an application.
+[^16]: **Application context** is the context, the set of data required to interrupt and continue a task,  of an application.
 
 [^17]: An **audio renderer** is a system which plays/outputs spatialized sound, sound that is positioned in the world.
 
