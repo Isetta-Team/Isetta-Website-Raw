@@ -31,6 +31,10 @@ img:hover {
 	cursor: pointer;
 }
 
+.video-wrapper:hover {
+	cursor: pointer;
+}
+
 img[alt="team-headshot"]{
 	width: 250px;
 }
