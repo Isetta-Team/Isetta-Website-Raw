@@ -161,5 +161,3 @@ _Interview conducted September 8, 2018._
 [^400]: **CMake** is a cross-platform, open-source application for managing the build process of software in a compiler-independent way.
 
 [^401]: **Ninja** is a small build system that is designed to run builds as fast as possible.
-
-_Interview conducted September 8, 2018._
