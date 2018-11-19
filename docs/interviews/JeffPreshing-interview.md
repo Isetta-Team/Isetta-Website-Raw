@@ -1,6 +1,6 @@
 # An Engine Developer's Toolbox
 
-![headshot](../images/interviews/jeff-preshing.jpeg "Jeff Preshing")
+![headshot](../images/interviews/jeff-preshing.png "Jeff Preshing")
 
 _Jeff Preshing is a programmer with close to 20 years of experience working for various game companies and non-game companies. He recently wrote a C++ game engine from scratch and is using it to make a dope cartoon-action game for mobile. You should follow his blog at [preshing.com](http://preshing.com/). He likes rock climbing and Vindaloo curry._
 
