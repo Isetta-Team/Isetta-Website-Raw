@@ -53,7 +53,7 @@ For the design and development of a project, it is better to have an iterative a
 
 From my perspective, usually graphics is the first thing people are worrying about, and poor audio is always last. That tends to be my experience in a development space of working with N number of features. We'll get to audio when we get to audio, but the shiny and pretty stuff tends to come first. 
 
-Is anything neglected? I would say no. Even audio has a bunch of people that are very enthusiastic about the systems that they care about, and even Unity is spending time creating brand new—well, more likely importing new systems to make their audio better. Usually, if it's neglected from a Unity standpoint, it means Unity is at least marginally aware of it and is probably looking for a solution to integrate cleanly. Some of their newest systems are mostly graphics, like the node-based shader system[^5], the scriptable render pipeline[^6], that sort of thing. They're going through a very radical shift over what you can and can't do with the graphics pipeline, which I'm personally excited about.
+Is anything neglected? I would say no. Even audio has a bunch of people that are very enthusiastic about the systems that they care about, and even Unity is spending time creating brand new—well, more likely importing new systems to make their audio better. Usually, if it's neglected from a Unity standpoint, it means Unity is at least marginally aware of it and is probably looking for a solution to integrate cleanly. Some of their newest systems are mostly graphics, like the node-based shader system[^5], the Scriptable Render Pipeline[^6], that sort of thing. They're going through a very radical shift over what you can and can't do with the graphics pipeline, which I'm personally excited about.
 
 
 ## Industry Standards for Engine Systems
@@ -94,26 +94,26 @@ The funny thing is we are looking into possibly taking at least some of the rend
 
 _Interview conducted May 15, 2018._
 
-[^0]: MonoBehaviour is the base class within Unity that all components which attach to GameObjects must derive from, it has methods for start, update, and destroy. 
+[^0]: **MonoBehaviour** is the base class within Unity that all components which attach to GameObjects must derive from, it has methods for start, update, and destroy. 
 
-[^1]: ScriptableObjects are scripts which cannot be attached to GameObjects but still store (serialize) user data.
+[^1]: **ScriptableObjects** are scripts which cannot be attached to GameObjects but still store (serialize) user data.
 
-[^2]: An animation-blended system can be graph of multiple animations and transitions from an animation to another, i.e., idle to walk, and the blend system is how the animations are "mixed" together, it extrapolates from the starting animation to the ending animation.
+[^2]: An **animation-blended system** can be a graph of multiple animations and transitions from an animation to another, i.e., a idle animation to a walking animation, and the blend system is how the animations are "mixed" together. It extrapolates from the starting animation to the ending animation.
 
-[^3]: A core refers to a CPU in a multi-core processor, it is one of the processing units in the single computing component that read and execute machine instructions.
+[^3]: A **core** refers to a CPU in a multi-core processor, it is one of the processing units in the single computing component that read and execute machine instructions.
 
-[^4]: Waterfall schedules is a linear schedule where each subsequent item is dependent on the previous components being completed, it is less iterative and flexible because the flow is usually mono-directional.
+[^4]: A **waterfall schedule** is a linear schedule where each subsequent item is dependent on the previous components being completed, it is less iterative and flexible because the flow is usually mono-directional.
 
-[^5]: Node-based means the interface is visual with components, "boxes", that are connected to each other with outputs connected to inputs; a shader is a program that alters the graphical look of an object. A node-based shader system means a shader is edited through nodes.
+[^5]: **Node-based** means the interface is visual with components, "boxes", that are connected to each other with outputs connected to inputs. A **shader** is a program that alters the graphical look of an object. A **node-based shader system** means a shader is edited through nodes.
 
-[^6]: A scriptable render pipeline is a term specific to Unity, however can use in more generic sense of being able to customize the graphics pipeline for different platform requirements by downgrading/upgrading the level of detail, shader information, etc.
+[^6]: The **Scriptable Render Pipeline** is a system in Unity that allows the game developer to configure and control the graphics and rendering process via high-level scripting.
 
-[^7]: An audio library used for games, although it contains the word open it actually isn't open-sourced. Its open-source counterpart is OpenALSoft.
+[^7]: **OpenAL** is an audio library used for games, although it contains the word open it actually isn't open-sourced. Its open-source counterpart is OpenALSoft.
 
-[^8]: Panda3D is a game engine, a framework for 3D rendering and game development for Python and C++ programs. It was originally developed by Disney and expanded by past ETC projects.
+[^8]: **Panda3D** is a game engine, a framework for 3D rendering and game development for Python and C++ programs. It was originally developed by Disney and expanded by past ETC projects.
 
-[^9]: Core render loop is the loop where the rendering function is called. The way the rendering occurs/is called varies from engine to engine, but is usually performed at the end of the main game loop.
+[^9]: **Core render loop** is the loop where the rendering function is called. The way the rendering occurs/is called varies from engine to engine, but is usually performed at the end of the main game loop.
 
-[^10]: NVIDIA PhysX is a proprietary realtime physics engine SDK created by NVIDIA. It is used in most commercial game engines such as Unity, Unreal, and Lumberyard.
+[^10]: **NVIDIA PhysX** is a proprietary realtime physics engine SDK created by NVIDIA. It is used in most commercial game engines such as Unity, Unreal, and Lumberyard.
 
-[^11]: Unreal's Blueprint Visual Scripting System is the node-based scripting in the Unreal Engine used for gameplay scripting.
+[^11]: **Unreal's Blueprint Visual Scripting System** is the node-based scripting in the Unreal Engine used for gameplay scripting.

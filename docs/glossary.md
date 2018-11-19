@@ -38,15 +38,15 @@ Also, please add any terms we haven't touched on that you think of!
 
 **ScriptableObjects**- scripts which cannot be attached to GameObjects but still store (serialize) user data. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:1)
 
-**Animation-blended System**- can be graph of multiple animations and transitions from an animation to another, i.e., idle to walk, and the blend system is how the animations are "mixed" together, it extrapolates from the starting animation to the ending animation. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:2)
+**Animation-blended System**- a graph of multiple animations and transitions from an animation to another, i.e., a idle animation to a walking animation, and the blend system is how the animations are "mixed" together. It extrapolates from the starting animation to the ending animation. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:2)
 
 **Core**- refers to a CPU in a multi-core processor, it is one of the processing units in the single computing component that read and execute machine instructions. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:3)
 
 **Waterfall Schedules**- a linear schedule where each subsequent item is dependent on the previous components being completed, it is less iterative and flexible because the flow is usually mono-directional. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:4)
 
-**Node-based**- when an interface is visual with components, "boxes", that are connected to each other with outputs connected to inputs; a shader is a program that alters the graphical look of an object. A node-based shader system means a shader is edited through nodes. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:5)
+**Node-based**- when an interface is visual with components, "boxes", that are connected to each other with outputs connected to inputs. A node-based shader system means a shader is edited through nodes. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:5)
 
-**Scriptable Render Pipeline**- a term specific to Unity, however can use in more generic sense of being able to customize the graphics pipeline for different platform requirements by downgrading/upgrading the level of detail, shader information, etc. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:6)
+**Scriptable Render Pipeline**- a system in Unity that allows the game developer to configure and control the graphics and rendering process via high-level scripting. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:6)
 
 **OpenAL**- an audio library used for games, although it contains the word open it actually isn't open-sourced. Its open-source counterpart is OpenALSoft. [↩](https://isetta.io/interviews/AdamSerdar-interview/#fnref:7)
 
