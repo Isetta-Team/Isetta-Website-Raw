@@ -35,7 +35,7 @@ This is not the way of things usually. In fact, I'd go so far as to say most of 
 
 ## Adding New Engine Features
 
-Updating an existing engine is somewhat iterative. If we're looking at _Madden _specifically, the very basic rules are always going to be the same, but there are always going to be features that the team would like to add. Offhand, what I'm thinking is the first iteration on the Playstation 2. The team needed to render players, and the players also had to be customizable enough to be recognizable. Different sizes, widths, girths—lots of different qualities. And the different players need to interact reasonably well.
+Updating an existing engine is somewhat iterative. If we're looking at _Madden_ specifically, the very basic rules are always going to be the same, but there are always going to be features that the team would like to add. Offhand, what I'm thinking is the first iteration on the Playstation 2. The team needed to render players, and the players also had to be customizable enough to be recognizable. Different sizes, widths, girths—lots of different qualities. And the different players need to interact reasonably well.
 
 In the second iteration, the team considers a more advanced problem. What if three or four players all collide into the center? Initially, the implementation may require players to collide in a sequence, like the first two, then the next two, etc. Is that good enough? The team may decide that they want some animation-blended system[^2] where all of the players come into a giant huddle to make the pile-ups even more realistic.
 
