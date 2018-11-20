@@ -44,11 +44,6 @@ Lastly, for capsules, the problem of finding an intersection point may seem daun
 
 ![Capsule Intersection Calculation](../images/blogs/week-11/capsule-intersection-calculation.png)
 
-> As a quick technical aside, we mentioned that our capsule intersection point calculation checked if we're on one of the caps of the capsule. If an `if` statement was used here, then we would possibly take the hit of a branch mispredict, which is no bueno for our performance. Fortunately, we could use a neat trick. `switch` statements in C++ are branch-free because they use the integral value passed into the `switch` call to calculate the jump to the next instruction in the assembly code, so if we used a `switch` statement instead, we wouldn't take a performance hit. How do we use a switch statement with a `float`, you ask? \
-
-
->Cast it into an integer! Normally you cannot use a `float` in a `switch` statement because it is not an integral value, but in our case, we're only checking if the `float` is `0`, `1`, or something else. `0` and `1` are both integral values, which means we can guarantee what their corresponding `uint_32` value will be when cast from a `float` (it's `0x0` and `0x3f800000`, if you were curious). And for any other values, we can just use the `default` switch case to capture them!
-
 That covers our first pass of work for task number 2; now let's take a swing at task number 3. A very naive solution for moving the colliders once their intersections are solved is to just take the difference vector between the two intersection points and split that between the two colliders (also accounting for any static objects that should be immovable). This indeed works, but (we'll discuss later)[#how-does-unity-do-it] why this isn't correct.
 
 
