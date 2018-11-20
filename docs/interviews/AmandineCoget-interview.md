@@ -60,7 +60,7 @@ But at scale, I find IM code just gets really messy when you're fetching data fr
 
 If you can pair IM and retained modes cleanly when designing your system, then it is absolutely a good idea to have both. _Battlefield 4_ did a little bit of that because the HUD[^135] was very immediate mode-ish and so it had to be fast.
 
-[^135]: HUD stands for **Heads-Up-Display**. It usually refers to overlay on the screen that presents important information to the player
+[^135]: **HUD** stands for Heads-Up-Display. It usually refers to overlay on the screen that presents important information to the player
 
 My main work on _Battlefield 4_ was the customization screen, which is tons of small widgets controlled by a ton of data. Working on that screen taught me the biggest challenge with UI is fetching all that data. In that case, having persistent entities that just fetch the stuff once and hold on to it can help set up a nice architecture, but it depends on your particular project. Rendering UI can also be challenging because you're doing layered 2D rendering with a lot of transparency, which modern renderers don't like. And with UI there will often be more string manipulation than you would like, so you need to optimize that.
 
@@ -87,7 +87,7 @@ A skill I've taken from my time in AAA to my time as a consultant is not needing
 
 Whether you decide to do versioning inside of your engine or write a tool to change old data really depends on your data and on your users. Can you afford to break retro compatibility[^53]? How annoyed do you get at an API that deprecates something you're relying on? Something like Unity, for instance, is heavily bogged down by having to keep old projects running. Can they afford to break old projects, though? Probably not. If you're in AAA and you've got a dedicated team that has to take the new engine version all at the same time and will have months of work put into this upgrade, you can afford to break old stuff (just don't do it without telling people, that's not very nice). Can the conversion be done automatically? Sometimes yes, sometimes no— it depends. Will Perforce's automatic merging be able to handle changes? Possibly, possibly not. I had the case of a `for` loop being merged with a `while` loop so the counter was still being incremented at the end of it, and we only had half the UI rendering. When you are merging tens of thousands of files, you are going to miss that. 
 
-[^53]: **Retro compatibility,** also known as backwards compatibility, is when a system is setup such that it works with legacy code/input.
+[^53]: **Retro compatibility,** also known as backward compatibility, is when a system is setup such that it works with legacy code/input.
 
 This is why you have senior engineers who can guide you on good choices to make, thanks to their experience and instinct. You will have tech directors who call the shots telling you what they're going for, keeping all the trade-offs in mind. Producers also help with this by keeping you on schedule, because in the end you have to ship. 
 

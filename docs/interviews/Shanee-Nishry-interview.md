@@ -1,8 +1,8 @@
 # Going Beyond the Books
 
-![headshot](../images/interviews/shanee-nishry.jpg "Raymond Graham")
+![headshot](../images/interviews/shanee-nishry.jpg "Shanee Nishry")
 
-_**Shanee Nishry** is a VR Software Engineer at Google working on the Daydream team. She is concurrently developing her own engine for a fantasy RTS game. Shanee has also programmed for game engines at companies including Side-kick and Moon Active. In her spare time, Shanee practices swordfighting and European martial arts._
+_**Shanee Nishry** is a Google engineer by day, game developer by night and a fencer in-between. When she isn't working on official Google Daydream VR and AR projects, she is enthusiastically developing her real-time strategy game using her own game engine!_
 
 (The following is the edited transcription of a conversation we had with Shanee Nishry.)
 
