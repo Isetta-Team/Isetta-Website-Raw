@@ -1,12 +1,12 @@
 # The One Where the Team Picks a Font
 
 ## Byte-Sized Updates
-*   [Collision Solving](#collision-solving) Implemented rudimentary collision solving, but still have lots of distance to cover for a decent collision response system.
-*   [Level Loading](#level-loading) Got loading from startup level to another prebuilt loader in the engine working. There were a few catching points, but overall went smoothly.
-*   [Asset Processing Tool](#asset-processing-tool) Built an asset processing tool to process the Collada files (`.dae`) more efficiently, easier than in the past.
-*   [GUI](#gui) Added more to the GUI system by fully integrating fonts, so font size and type can be changed per GUI function.
-*   [Full-Feature Game](#full-feature-game) Started development of the target game that the engine is being built for, which forced some other smaller features.
-*   [AI](#ai-pathfinding) Implemented an AI pathfinding system by combining vector flow fields and steering behaviors.
+*   [Collision Solving](#collision-solving): Implemented rudimentary collision solving, but still have lots of distance to cover for a decent collision response system.
+*   [Level Loading](#level-loading): Got loading from startup level to another prebuilt loader in the engine working. There were a few catching points, but overall went smoothly.
+*   [Asset Processing Tool](#asset-processing-tool): Built an asset processing tool to process the Collada files (`.dae`) more efficiently, easier than in the past.
+*   [GUI](#gui): Added more to the GUI system by fully integrating fonts, so font size and type can be changed per GUI function.
+*   [Full-Feature Game](#full-feature-game): Started development of the target game that the engine is being built for, which forced some other smaller features.
+*   [AI](#ai-pathfinding): Implemented an AI pathfinding system by combining vector flow fields and steering behaviors.
 
 ![Engine Architecture](../images/engine_architecture/week11.png "Week 11 Progress Architecture")
 
