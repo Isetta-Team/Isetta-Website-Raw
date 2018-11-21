@@ -47,7 +47,7 @@ These were skills I didn't expect to need in the beginning of my career, but I e
 
 ### Systems Integration
 
-I call the first one **Systems Integration**. It's actually a big category, as it has to do with integrating third-party libraries—taking separate codebases and making them build and link together to run as one thing. Another systems integration exercise would be porting to new platforms, as well as doing big three-way merges (you've branched a library, integrated it at some point, then maybe you've made changes both to your code and inside the library itself). That happens a lot in the industry; months later, there's a new version of a library you want to integrate, which is the latest and greatest of that dependency[^6]. That can end up being a huge task that can take weeks or months to accomplish.
+I call the first one _Systems Integration_. It's actually a big category, as it has to do with integrating third-party libraries—taking separate codebases and making them build and link together to run as one thing. Another systems integration exercise would be porting to new platforms, as well as doing big three-way merges (you've branched a library, integrated it at some point, then maybe you've made changes both to your code and inside the library itself). That happens a lot in the industry; months later, there's a new version of a library you want to integrate, which is the latest and greatest of that dependency[^6]. That can end up being a huge task that can take weeks or months to accomplish.
 
 [^6]: **Dependencies** are links that are required between programs, such that one program is reliant on another.
 
@@ -58,7 +58,7 @@ Between all of those things, Systems Integration is a valuable category of skill
 
 ### Low-level Debugging
 
-**Low-level Debugging** is another great skill to have, especially when you are tracking down crashes in the final optimized build. Especially at the end of the project, you'll have testers hammering on the optimized build, so there's bound to be crashes and issues that don't happen in a debug build. The ability to diagnose and fix those bugs is useful because you want to ship a stable game! How you develop that skill is a different story, but at some point you or someone on your team will have to go into the disassembly[^8] window or the memory view and figure things out at that level. It's kind of considered a black art, which is a bit of a shame because it doesn't really have to be. 
+_Low-level Debugging_ is another great skill to have, especially when you are tracking down crashes in the final optimized build. Especially at the end of the project, you'll have testers hammering on the optimized build, so there's bound to be crashes and issues that don't happen in a debug build. The ability to diagnose and fix those bugs is useful because you want to ship a stable game! How you develop that skill is a different story, but at some point you or someone on your team will have to go into the disassembly[^8] window or the memory view and figure things out at that level. It's kind of considered a black art, which is a bit of a shame because it doesn't really have to be. 
 
 [^8]: **Disassembly** is the assembly language, translated from machine code, of a program; it is the compiler's version of the program.
 
@@ -67,22 +67,22 @@ I started developing my low-level debugging skills when I had no other choice bu
 
 ### Profiling
 
-The next skill on the list is **Profiling.** Everyone agrees that it's important—you want to profile before you decide where and how you should optimize. How you use profilers is kind of similar to low-level debugging in that it's a skill passed on from one person to another on a project. I would point to a talk I gave on profiling at a [student conference](https://www.youtube.com/watch?v=3iXcjwTflac). I think it's a pretty good introduction to the different types of profilers and examples of how you would use them in practice. 
+The next skill on the list is _Profiling_. Everyone agrees that it's important—you want to profile before you decide where and how you should optimize. How you use profilers is kind of similar to low-level debugging in that it's a skill passed on from one person to another on a project. I would point to a talk I gave on profiling at a [student conference](https://www.youtube.com/watch?v=3iXcjwTflac). I think it's a pretty good introduction to the different types of profilers and examples of how you would use them in practice. 
 
 
 ### Concurrency
 
-The fourth skill worth developing is **Concurrency**, or multi-threading, which is probably no surprise considering everyone talks about it. Everyone knows it's part of life as a game developer. 
+The fourth skill worth developing is _Concurrency_, or multi-threading, which is probably no surprise considering everyone talks about it. Everyone knows it's part of life as a game developer. 
 
 
 ### Iterative Development
 
-Number five, **Iterative Development,** is the ability to look at feature goals and envision how it'll work at a level. If you can break that into bite-sized tasks and decide what's your rollout plan (which tasks you'll do in what order) is a good skill. Managers love it because they want these enumerated tasks, which helps them create a schedule.
+Number five, _Iterative Development_, is the ability to look at feature goals and envision how it'll work at a level. If you can break that into bite-sized tasks and decide what's your rollout plan (which tasks you'll do in what order) is a good skill. Managers love it because they want these enumerated tasks, which helps them create a schedule.
 
 
 ### Development Journal
 
-I also think an engine developer should** **keep a** Journal**. When you're working on a task or debugging a problem, you might open NotePad or a text editor and start taking notes, you could copy and paste call stacks[^9], and maybe you take notes when you're researching things on Google and Stack Overflow or even while brainstorming. I especially make a lot of notes when I'm brainstorming—looking at all my options and alternatives and trying to figure out what's the best one.
+I also think an engine developer should keep a _Journal_. When you're working on a task or debugging a problem, you might open NotePad or a text editor and start taking notes, you could copy and paste call stacks[^9], and maybe you take notes when you're researching things on Google and Stack Overflow or even while brainstorming. I especially make a lot of notes when I'm brainstorming—looking at all my options and alternatives and trying to figure out what's the best one.
 
 [^9]: The **call stack** is a stack data structure that stores the information about the active routines of a computer. It can be walked up/down into the callee functions and function definitions, respectively.
 
@@ -91,14 +91,14 @@ So when I talk about keeping a journal, I'm not talking about keeping a diary of
 
 ### Reflection and Serialization
 
-The next two things on my list of skills are **Reflection and Serialization**. In the industry, every game engine has their own approach for this. You don't even need to have an approach at all, but just be aware that there are varying approaches to reflecting data structures. There's different reasons to have reflection, ranging from serialization to managing shader parameters to networking. Being able to think in those terms is a particularly useful skill for game development because C++ has nothing for runtime reflection. Well, there is RTTI[^10], but RTTI doesn't provide any information about data members, so it can't help you implement things like serialization. 
+The next two things on my list of skills are _Reflection and Serialization_. In the industry, every game engine has their own approach for this. You don't even need to have an approach at all, but just be aware that there are varying approaches to reflecting data structures. There's different reasons to have reflection, ranging from serialization to managing shader parameters to networking. Being able to think in those terms is a particularly useful skill for game development because C++ has nothing for runtime reflection. Well, there is RTTI[^10], but RTTI doesn't provide any information about data members, so it can't help you implement things like serialization. 
 
 [^10]: **Run-time type information/identification (RTTI)** is specific to C++ in that information about an object's type is available at runtime.
 
 
 ### Professionalism
 
-The final thing is a soft skill: being** Professional.** You'll have to do most of your work on a team, so obviously it's a matter of treating your teammates with respect. This was a mistake I made at the beginning, when I really wanted to advance in my career and I really wanted to shine as a good contributor to the project. A better way of thinking, though, is to help make sure that the game ships. Five to ten years from now, no one will remember who shined and who didn't, but if you have a shipped project on your resume, that's like currency; employers love to see that. So you need to stay professional and not get attached to your way of doing things. Letting other people tackle the problem their way, even if you don't think it's the best way, will minimize friction on the team, and that helps the game ship. 
+The final thing is a soft skill: being _Professional_. You'll have to do most of your work on a team, so obviously it's a matter of treating your teammates with respect. This was a mistake I made at the beginning, when I really wanted to advance in my career and I really wanted to shine as a good contributor to the project. A better way of thinking, though, is to help make sure that the game ships. Five to ten years from now, no one will remember who shined and who didn't, but if you have a shipped project on your resume, that's like currency; employers love to see that. So you need to stay professional and not get attached to your way of doing things. Letting other people tackle the problem their way, even if you don't think it's the best way, will minimize friction on the team, and that helps the game ship. 
 
 
 ## Console Development Experiences
