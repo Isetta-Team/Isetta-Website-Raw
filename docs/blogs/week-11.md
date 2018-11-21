@@ -5,7 +5,7 @@
 *   [Level Loading](#level-loading): Got loading from startup level to another prebuilt loader in the engine working. There were a few catching points, but overall went smoothly.
 *   [Asset Processing Tool](#asset-processing-tool): Built an asset processing tool to process the Collada files (`.dae`) more efficiently, easier than in the past.
 *   [GUI](#gui): Added more to the GUI system by fully integrating fonts, so font size and type can be changed per GUI function.
-*   [Full-Feature Game](#full-feature-game): Started development of the target game that the engine is being built for, which forced some other smaller features.
+*   [Full-Feature Game](#full-featured-game): Started development of the target game that the engine is being built for, which forced some other smaller features.
 *   [AI](#ai-pathfinding): Implemented an AI pathfinding system by combining vector flow fields and steering behaviors.
 
 ![Engine Architecture](../images/engine_architecture/week11.png "Week 11 Progress Architecture")
@@ -163,7 +163,7 @@ Your browser does not support the video tag.
 
 The current asset pipeline is focused around Horde3D's needs for models, animations, and materials. The models are processed into `.geo` and `.scene.xml` files, the animations into `.anim`, and the materials into `.material.xml` files. The other file types aren't compressed or packaged in any other file format, although they probably should to be for better loading speeds by the engine and to yield a smaller memory footprint. Alas, we don't have time for that, so let's just deal with Horde3D's formats.
 
-Horde3DUtil has a COLLADA conversion application that processes `.dae` (COLLADA) files to these other file formats, but requires the command line to determine which file to process. In weeks prior, we created a simple batch script that process _all _`.dae` files in the folder and subfolder of the script into model and animation files. The problem we have now is that, regardless of if the COLLADA file has mesh or animation data, it will produce `geo`, `scene.xml`, and `.anim` files as well as processing _all _models, even if they haven't been updated or changed since last processing. This script is great to quickly get things done but isn't great for small tweaks or keeping files/memory to a minimum.
+Horde3DUtil has a COLLADA conversion application that processes `.dae` (COLLADA) files to these other file formats, but requires the command line to determine which file to process. In weeks prior, we created a simple batch script that process _all_ `.dae` files in the folder and subfolder of the script into model and animation files. The problem we have now is that, regardless of if the COLLADA file has mesh or animation data, it will produce `geo`, `scene.xml`, and `.anim` files as well as processing _all_ models, even if they haven't been updated or changed since last processing. This script is great to quickly get things done but isn't great for small tweaks or keeping files/memory to a minimum.
 
 We created a tool in WPF to select which file you want processed and what type of output the file should produce. It searches for the base 'Resource' directory, which is required by Horde3D, and everything is based off of that folder. This is what the tool looks like:
 
@@ -228,7 +228,7 @@ AI is not necessarily a part of a game engine. Instead, it's more like a replace
 
 ### A* Versus Vector Field
 
-There are a bunch of pathfinding algorithms in the game AI field, from breadth-first search[^489392] and Dijkstra's algorithm[^4848392] to all sorts of A*[^558694] derivations. How can we find one that fits our game best? Let's look back to what our game AI requires:
+There are a bunch of pathfinding algorithms in the game AI field, from breadth-first search[^489392] and Dijkstra's algorithm[^4848392] to all sorts of A* [^558694] derivations. How can we find one that fits our game best? Let's look back to what our game AI requires:
 
 [^489392]: **Breadth-first search (BFS)** is an algorithm for traversing or searching tree or graph data structures; it starts at the tree root and explores all neighbor nodes before looking at children nodes.
 
