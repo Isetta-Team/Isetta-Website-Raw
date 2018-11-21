@@ -5,6 +5,8 @@ window.onload = function() {
             window.open(this.src);
         }
     }
+
+    document.getElementById("isetta-logo").onclick = null;
 		
     var anchors = document.getElementsByClassName('video-wrapper');
     for(var i = 0; i < anchors.length; i++) {
