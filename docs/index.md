@@ -7,7 +7,7 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 ## New here?
 - We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
 - We are documenting our whole process and recording all our discussions and decisions (even the bad ones) in weekly blogs starting from [Week 0](blogs/week-0/).
-- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/TommyRefenes-interview/).
+- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/MartinMiddleton-interview/).
 
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -20,12 +20,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 10 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-10).
-- This week, our blog is titled ["Grab A Bucket"](blogs/week-10/), because we were leaking memory all across the engine. We've patched a few of the big holes and also made our second game!
-- We recently interviewed with [Raymond Graham](https://twitter.com/wadarass), an engineer at the San Francisco Unity office on the Spotlight Team! Raymond gave us some great insight ranging from his time working on NBA games to helping team make their best possible game with Unity. Much like others he mentioned there are fewer engine developers and how its becoming [A Lost Art](interviews/RaymondGraham-interview/).
+- The latest changes for week 11 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-11).
+- This week, our blog is titled ["The One Where the Team Picks a Font"](blogs/week-11/). We picked a font to use for our feature game! ...we also completed some AI and collision solving features, but that's less important.
+- We recently interviewed with [Martin Middleton](http://www.funomena.com/about/), the CTO of Funomena and an ex-engine programmer at thatgamecompany. We talked a lot about what programming on strange but powerful architectures is like. [Read it here!](interviews/MartinMiddleton-interview/).
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](images/engine_architecture/week10.png "Week 9 Progress Architecture")
+![Engine Architecture](images/engine_architecture/week11.png "Week 11 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
