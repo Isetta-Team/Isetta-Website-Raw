@@ -22,7 +22,7 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 ## Where are we now?
 - The latest changes for week 11 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-11).
 - This week, our blog is titled ["The One Where the Team Picks a Font"](blogs/week-11/). We picked a font to use for our feature game! ...we also completed some AI and collision solving features, but that's less important.
-- We recently interviewed with [Martin Middleton](http://www.funomena.com/about/), the CTO of Funomena and an ex-engine programmer at thatgamecompany. We talked a lot about what programming on strange but powerful architectures is like. [Read it here!](interviews/MartinMiddleton-interview/).
+- We recently interviewed with [Martin Middleton](http://www.funomena.com/about/), the CTO of Funomena and an ex-engine programmer at thatgamecompany. We talked a lot about what programming on strange but powerful architectures is like. [Read it here!](interviews/MartinMiddleton-interview/)
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
 ![Engine Architecture](images/engine_architecture/week11.png "Week 11 Progress Architecture")
