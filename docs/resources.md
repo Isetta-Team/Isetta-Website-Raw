@@ -174,6 +174,9 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
 * [*Multiplayer Game Programming*](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
     * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
+* UDP Sockets
+    * [Rutgers - Programming with UDP sockets](https://www.cs.rutgers.edu/~pxk/417/notes/sockets/udp.html)
+    * Sample [`BroadcastSender.c`](http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/code/BroadcastSender.c) and [`BroadcastReceiver.c`](http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/code/BroadcastReceiver.c)
 
 
 ## Serialization / Reflection
