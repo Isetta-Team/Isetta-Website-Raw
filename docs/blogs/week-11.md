@@ -335,7 +335,7 @@ As far as the engine goes, our original feature lock was this past Friday! As yo
 We posted our interview with [Martin Middleton](../interviews/MartinMiddleton-interview.md) this past week, which you should definitely check out. We will be posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md) this week, and in the next couple of weeks we will be putting up several more. In related news, we're submitting our interviews for publication this week, so hopefully we'll have more news on that next time you hear from us!
 
 
-## Resources
+## [Resources](../resources.md)
 
 Not much was added in the resource section this week, but it still remains a great source. We even find ourselves going there to see what the others on the team are using, especially when debugging systems that aren't our own. If you have any resource that you think we should take a look at, please let us know!
 

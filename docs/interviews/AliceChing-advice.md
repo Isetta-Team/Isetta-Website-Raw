@@ -26,6 +26,6 @@ Advice (_not_ verbatim):
     *   If you have data-driven pipelines, debugging and ensuring correct patches is even more difficult because you can't tell from the code that something else in the engine depends on particular parameters.
     *   Having developers test parts of the game that they don't work on can help you gain perspective on the bigger picture and wrap your head around such a complex system.
 
-[^1]: A **project fork **is a when developers take a copy of source code from one software package and develop on it independent from the original.
+[^1]: A **project fork** is a when developers take a copy of source code from one software package and develop on it independent from the original.
 
 [^2]: A **sanity check** is a basic test to quickly evaluate whether a result can possibly be true or correct.
