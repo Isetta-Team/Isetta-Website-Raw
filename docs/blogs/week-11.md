@@ -5,7 +5,7 @@
 *   [Level Loading](#level-loading): Got loading from startup level to another prebuilt loader in the engine working. There were a few catching points, but overall went smoothly.
 *   [Asset Processing Tool](#asset-processing-tool): Built an asset processing tool to process the Collada files (`.dae`) more efficiently, easier than in the past.
 *   [GUI](#gui): Added more to the GUI system by fully integrating fonts, so font size and type can be changed per GUI function.
-*   [Full-Feature Game](#full-featured-game): Started development of the target game that the engine is being built for, which forced some other smaller features.
+*   [Full-Feature Game Demo](#full-featured-game-demo): Started development of the target game that the engine is being built for, which forced some other smaller features.
 *   [AI](#ai-pathfinding): Implemented an AI pathfinding system by combining vector flow fields and steering behaviors.
 
 ![Engine Architecture](../images/engine_architecture/week11.png "Week 11 Progress Architecture")
@@ -184,7 +184,7 @@ We had already integrated some font functionality into our engine. ...Or so we t
 ![Level Loading](../images/blogs/week-11/gui_font.PNG "Font Demo")
 
 
-## Full-Featured Game
+## Full-Featured Game Demo
 
 This past week, we started implementing features of the game we set out to build from the [beginning](week-0.md#the-example-game). This game will have slightly more polish than either of the previous games (or other games we end up building) because we'd like this to be a good demonstration of what the engine is capable. As explained in Week 0, the gameplay itself won't be all that fun or exciting, but it will be the capstone of the engine.
 
