@@ -44,7 +44,7 @@ The goal of the tool was to display all of the `CVar` variables in the engine, w
 
 [^2]: **`grep`** is a command for a Linux command line that will search specific files for a regular expression or string. When compared with Window's `findstr` it is much more flexible in its capabilities.
 
-![Config Editor](../images/blogs/week-12/config-editor.PNG "Config Editor")
+![Config Editor](../images/blogs/week-12/config-editor.png "Config Editor")
 
 
 ## Build
