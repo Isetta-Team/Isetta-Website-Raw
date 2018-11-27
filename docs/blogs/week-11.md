@@ -28,7 +28,7 @@ Collision solving is going to be a difficult feature to implement. This is not o
 
 ### Getting Started
 
-While the 3D math is difficult, the conceptual organization behind collision solving isn't. The important tasks we need to accomplish are (1) figuring out which colliders are actually colliding, (2) figure out where they're colliding on each other, and (3) move them. The first one is very expensive if you perform an `O(n<sup>2</sup>)` check of all colliders against all other colliders, but fortunately as part of our previous collision detection work we implemented a (Dynamic Bounding Volume Tree)[week-9.md/#collisions-dynamic-aabb-tree], which is essentially a sorted tree of axis-aligned bounding boxes (AABB) that allows you to cull out most of your collision tests in sparse systems. Unfortunately once we've begun the collision solving process, our colliders will have moved so our Bounding Volume Tree will have been invalidated and we need to regenerate it, but for the time being we're going to ignore that problem. (We do plan to address that eventually)[#future-plans-with-collision-solving] with a neat little solution using a feature we've already implemented with our Bounding Volume Tree.
+While the 3D math is difficult, the conceptual organization behind collision solving isn't. The important tasks we need to accomplish are (1) figuring out which colliders are actually colliding, (2) figure out where they're colliding on each other, and (3) move them. The first one is very expensive if you perform an `O(n^2)` check of all colliders against all other colliders, but fortunately as part of our previous collision detection work we implemented a [Dynamic Bounding Volume Tree](week-9.md/#collisions-dynamic-aabb-tree), which is essentially a sorted tree of axis-aligned bounding boxes (AABB) that allows you to cull out most of your collision tests in sparse systems. Unfortunately once we've begun the collision solving process, our colliders will have moved so our Bounding Volume Tree will have been invalidated and we need to regenerate it, but for the time being we're going to ignore that problem. [We do plan to address that eventually](#future-plans-with-collision-solving) with a neat little solution using a feature we've already implemented with our Bounding Volume Tree.
 
 So with the first task already out of the way, we can focus on tasks number 2 and 3! Task number 2 is unfortunately still pretty daunting though. To get started, we broke up our collision solving into a case-by-case basis; every individual collider will generate its collision point based on its own shape (i.e. Box, Sphere, or Capsule) regardless of the other collider its intersecting with. This isn't terribly correct because it assumes that our other collider is radially symmetric and that's only true for spheres, but we should first focus on getting our collision points calculated in the first place.
 
@@ -44,7 +44,7 @@ Lastly, for capsules, the problem of finding an intersection point may seem daun
 
 ![Capsule Intersection Calculation](../images/blogs/week-11/capsule-intersection-calculation.png)
 
-That covers our first pass of work for task number 2; now let's take a swing at task number 3. A very naive solution for moving the colliders once their intersections are solved is to just take the difference vector between the two intersection points and split that between the two colliders (also accounting for any static objects that should be immovable). This indeed works, but (we'll discuss later)[#how-does-unity-do-it] why this isn't correct.
+That covers our first pass of work for task number 2; now let's take a swing at task number 3. A very naive solution for moving the colliders once their intersections are solved is to just take the difference vector between the two intersection points and split that between the two colliders (also accounting for any static objects that should be immovable). This indeed works, but [we'll discuss later](#how-does-unity-do-it) why this isn't correct.
 
 
 ### AABB Disarray
@@ -70,7 +70,7 @@ You know what? We'll take it as a win. But we clearly have more work to do.
 
 ### How Does Unity Do It?
 
-Following the same pattern as we have before, once we realized that our system doesn't quite meet expectations, we did some field research. And by field research, we mean we opened Unity and tried to reverse engineer its own systems. With the following video, you can actually see some interesting behavior that we didn't consider before:
+Following the same pattern as we have before, once we realized that our system doesn't quite meet expectations, we did some field research. And by field research, we mean we opened Unity and tried to reverse engineer its own systems. With the following video, you can actually see some interesting behavior that we didn't consider before. The red objects are movable and the white ones are completely immovable, so we're focusing on how the red ones are moved by the collisions:
 
 <div class="video-wrapper">
 
@@ -335,7 +335,7 @@ As far as the engine goes, our original feature lock was this past Friday! As yo
 We posted our interview with [Martin Middleton](../interviews/MartinMiddleton-interview.md) this past week, which you should definitely check out. We will be posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md) this week, and in the next couple of weeks we will be putting up several more. In related news, we're submitting our interviews for publication this week, so hopefully we'll have more news on that next time you hear from us!
 
 
-## Resources
+## [Resources](../resources.md)
 
 Not much was added in the resource section this week, but it still remains a great source. We even find ourselves going there to see what the others on the team are using, especially when debugging systems that aren't our own. If you have any resource that you think we should take a look at, please let us know!
 

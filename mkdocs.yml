@@ -123,7 +123,7 @@ extra_javascript:
   - 'extra.js'
 
 extra:
-  # disqus: 'isetta-engine'
+  disqus: 'isetta-engine'
   social:
     - type: envelope
       link: mailto:isetta.engine@gmail.com
