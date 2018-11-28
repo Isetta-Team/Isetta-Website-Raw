@@ -145,7 +145,7 @@ The reason why we were not following RAII is that memory manager, who is holding
 
 ### Performance optimization
 
-During the process of upgrading the pool allocator we realized that nothing is really using it, and that feels like a waste of work! So we looked at our systems and found two perfect candidates that can be refactored to be used pool allocators - entities and nodes in the [BV Tree]([https://isetta.io/blogs/week-9/#collisions-dynamic-aabb-tree](https://isetta.io/blogs/week-9/#collisions-dynamic-aabb-tree)) - both are instantiated and deleted very frequently and are of fixed sizes. It's a pretty straightforward refactor. After changing it, we ran a simple benchmark that creates 250 entities and deletes them every frame and here are the results:
+During the process of upgrading the pool allocator we realized that nothing is really using it, and that feels like a waste of work! So we looked at our systems and found two perfect candidates that can be refactored to be used pool allocators - entities and nodes in the [BV Tree](https://isetta.io/blogs/week-9/#collisions-dynamic-aabb-tree) - both are instantiated and deleted very frequently and are of fixed sizes. It's a pretty straightforward refactor. After changing it, we ran a simple benchmark that creates 250 entities and deletes them every frame and here are the results:
 
 ![Memory Benchmarking](../images/blogs/week-12/memory_benchmarking.png)
 
