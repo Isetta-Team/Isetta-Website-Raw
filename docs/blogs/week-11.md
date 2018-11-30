@@ -5,8 +5,8 @@
 *   [Level Loading](#level-loading): Got loading from startup level to another prebuilt loader in the engine working. There were a few catching points, but overall went smoothly.
 *   [Asset Processing Tool](#asset-processing-tool): Built an asset processing tool to process the Collada files (`.dae`) more efficiently, easier than in the past.
 *   [GUI](#gui): Added more to the GUI system by fully integrating fonts, so font size and type can be changed per GUI function.
-*   [Full-Feature Game Demo](#full-featured-game-demo): Started development of the target game that the engine is being built for, which forced some other smaller features.
 *   [AI](#ai-pathfinding): Implemented an AI pathfinding system by combining vector flow fields and steering behaviors.
+*   [Full-Feature Game Demo](#full-featured-game-demo): Started development of the target game that the engine is being built for, which forced some other smaller features.
 
 ![Engine Architecture](../images/engine_architecture/week11.png "Week 11 Progress Architecture")
 
@@ -183,44 +183,6 @@ We had already integrated some font functionality into our engine. ...Or so we t
 
 ![Level Loading](../images/blogs/week-11/gui_font.PNG "Font Demo")
 
-
-## Full-Featured Game Demo
-
-This past week, we started implementing features of the game we set out to build from the [beginning](week-0.md#the-example-game). This game will have slightly more polish than either of the previous games (or other games we end up building) because we'd like this to be a good demonstration of what the engine is capable. As explained in Week 0, the gameplay itself won't be all that fun or exciting, but it will be the capstone of the engine.
-
-So far, we've implemented the main menu and most of the UI needed for the game. The main menu needs to be able to transition the player into single player mode, multiplayer mode, and exiting the game. The multiplayer mode needs to allow the player to opt into hosting a game or to connect to another host player. For the hosting option, this is when we will boot up the server (which has yet to be done for the game), but for the connection option the player must be able to input the IP address of the host. The first iteration of our IP address input system aims for looks over functionality. Using the idea that all IPv4[^39042] addresses are 15 digits long, so the IP address can be formatted as `xxx.xxx.xxx.xxx`. Then when the user types, the `x`'s can be replaced with the number and the `.` won't change. Which turned out like this:
-
-[^39042]: Internet Protocol version 4 (**IPv4**) is the fourth version of the Internet Protocol (IP). It is one of the core protocols of standards-based internetworking methods in the Internet, and does not guarantee delivery or proper sequencing.
-
-<div class="video-wrapper">
-
- <video playsinline autoplay muted loop>
-
-   <source src="../../images/blogs/week-11/IP_input.mp4" type="video/mp4">
-
-Your browser does not support the video tag.
-
- </video>
-
-</div>
-
-Then some of the team commented on that IP addresses aren't always 15 digits, as the numbers are actually `0` to `255` and don't need to fill 3 digits, i.e. `000` for 0. So even though the IP addresses could be represented by 15 characters with four sets of three characters, it is inconvenient to ask players to type extra characters if their IP address doesn't use the hundreds or tens places. So removing the nicety of the `x`'s, we just went back to the plain implementation.
-
-When the single player button is clicked, the game then loads the single player level which has the basic health and score UI. The game could have been done in one level by just turning the UI off once the game starts, but then there would menu entities in the game level—this is what forced us to develop the level loading system. Here is what we have so far!
-
-<div class="video-wrapper">
-
- <video playsinline autoplay muted loop>
-
-   <source src="../../images/blogs/week-11/Game_demo.mp4" type="video/mp4">
-
-Your browser does not support the video tag.
-
- </video>
-
-</div>
-
-
 ## AI Pathfinding
 
 AI is not necessarily a part of a game engine. Instead, it's more like a replaceable gameplay system built above the underlying game engine, which is why we have AI almost at the top of our architecture diagram. But also, if a game engine is mostly designed for one game or one type of game, some of the AI code can be baked into the game engine. Since our team is quite interested in implementing an AI system, and our game also needs a simple pathfinding algorithm to guide the enemies to avoid obstacles and move towards the players, we decided to implement the AI pathfinding system inside of our engine.
@@ -315,6 +277,41 @@ There are still some minor features like multiple target support we haven't impl
 
 [^9583]: For more about arrive algorithm, please read _Artificial Intelligence For Games Page 66_
 
+## Full-Featured Game Demo
+
+This past week, we started implementing features of the game we set out to build from the [beginning](week-0.md#the-example-game). This game will have slightly more polish than either of the previous games (or other games we end up building) because we'd like this to be a good demonstration of what the engine is capable. As explained in Week 0, the gameplay itself won't be all that fun or exciting, but it will be the capstone of the engine.
+
+So far, we've implemented the main menu and most of the UI needed for the game. The main menu needs to be able to transition the player into single player mode, multiplayer mode, and exiting the game. The multiplayer mode needs to allow the player to opt into hosting a game or to connect to another host player. For the hosting option, this is when we will boot up the server (which has yet to be done for the game), but for the connection option the player must be able to input the IP address of the host. The first iteration of our IP address input system aims for looks over functionality. Using the idea that all IPv4[^39042] addresses are 15 digits long, so the IP address can be formatted as `xxx.xxx.xxx.xxx`. Then when the user types, the `x`'s can be replaced with the number and the `.` won't change. Which turned out like this:
+
+[^39042]: Internet Protocol version 4 (**IPv4**) is the fourth version of the Internet Protocol (IP). It is one of the core protocols of standards-based internetworking methods in the Internet, and does not guarantee delivery or proper sequencing.
+
+<div class="video-wrapper">
+
+ <video playsinline autoplay muted loop>
+
+   <source src="../../images/blogs/week-11/IP_input.mp4" type="video/mp4">
+
+Your browser does not support the video tag.
+
+ </video>
+
+</div>
+
+Then some of the team commented on that IP addresses aren't always 15 digits, as the numbers are actually `0` to `255` and don't need to fill 3 digits, i.e. `000` for 0. So even though the IP addresses could be represented by 15 characters with four sets of three characters, it is inconvenient to ask players to type extra characters if their IP address doesn't use the hundreds or tens places. So removing the nicety of the `x`'s, we just went back to the plain implementation.
+
+When the single player button is clicked, the game then loads the single player level which has the basic health and score UI. The game could have been done in one level by just turning the UI off once the game starts, but then there would menu entities in the game level—this is what forced us to develop the level loading system. Here is what we have so far!
+
+<div class="video-wrapper">
+
+ <video playsinline autoplay muted loop>
+
+   <source src="../../images/blogs/week-11/Game_demo.mp4" type="video/mp4">
+
+Your browser does not support the video tag.
+
+ </video>
+
+</div>
 
 ## Patch Notes
 
