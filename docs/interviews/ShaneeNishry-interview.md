@@ -71,7 +71,7 @@ For developing a level editor, the best advice I can give is to figure out what 
 
 [^3]: In computer graphics and games, a **heightmap** is a texture (rasterized image) where pixels have different meaning rather than representing color. One common usage of heightmap is to store surface elevation data.
 
-The biggest mistake I learned from that experience is over-engineering; do not make features for the sake of making features, _ever_. This is especially the case when you're working on an engine, where you should always have a use case in mind. It's ideal if you are able to make a small game while you're making the engine, even if it's as simple as _Pong _or _Breakout._ If you can make something like that with your engine easily, then you're doing well! 
+The biggest mistake I learned from that experience is over-engineering; do not make features for the sake of making features, _ever_. This is especially the case when you're working on an engine, where you should always have a use case in mind. It's ideal if you are able to make a small game while you're making the engine, even if it's as simple as _Pong_ or _Breakout_. If you can make something like that with your engine easily, then you're doing well! 
 
 When I made my very first level editor, it was very tightly related to the game engine itself. That was the first mistake, because it was basically living in the same application and codebase, and so it affected everything else a lot. When making the _Super Sam_ editor, it was an entirely different application, and it didn't even share any of the code base; all it needed to know was the level format and how to output that. We didn't even use the engine to render the levels.
 
