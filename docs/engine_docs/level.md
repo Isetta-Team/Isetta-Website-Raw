@@ -20,8 +20,6 @@ DEFINE_LEVEL_END
 `LEVEL_NAME.cpp`
 ```cpp
 #include "LEVEL_NAME.h"
-
-// IsettaCore not necessarily needed, holds a number of useful header files
 #include <IsettaEngine.h>
 
 using namespace Isetta;
