@@ -24,9 +24,17 @@ We ran out of time on this one, so if you need additional help ask Jacob or Yidi
                           const InputStyle& style = {})`
 
 ### Texture
-- `Texture::Texture(std::string_view fileName, bool load = true)`
+- `Texture::Texture(std::string_view pathToFile, bool load = true)`: Load in the texture at the given file path and returns a `Texture*`
 - `GUI::Image(const RectTransform& transform,
-                    const class Texture& texture, const ImageStyle& style = {})`
+                    const class Texture& texture, const ImageStyle& style = {})`: Draw GUI image using the texture loaded before
 
 ## Code Snippets
-See [`GUIComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/master/Isetta/IsettaTestbed/GUILevel/GUIComponent.cpps)
+See [`GUIComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/master/Isetta/IsettaTestbed/GUILevel/GUIComponent.cpp)
+
+## Example UI
+![Network Monitor](..images/engine_docs/network_monitor.jpg)
+*Network Monitor*
+![Main Menu](..images/engine_docs/main_menu.png)
+![Main Menu](..images/engine_docs/main_menu.jpg)
+*Main Menu*
+*Main Menu*

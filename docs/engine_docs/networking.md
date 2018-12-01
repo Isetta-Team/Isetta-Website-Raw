@@ -37,7 +37,7 @@ If you do use networking a lot, the team members in the room are probably the be
 - `NetworkManager::.SendMessageFromServerToAll<MyMessage>(MyMessage*)`
 
 ## Code Snippets
-Defining a HandleMessage:
+Defining a `HandleMessage`:
 ``` cpp
 // HandleMessage simply sends an integer handle between 0 and 64 across the
 // network
@@ -69,7 +69,7 @@ int handle = 0;  // Obviously we'll just use a handle
 DEFINE_NETWORK_MESSAGE_END
 ```
 
-Registering a callback for HandleMessage on the client:
+Registering a callback for `HandleMessage` on the client:
 ``` cpp
 exampleClientHandleId =
     NetworkManager::Instance().RegisterClientCallback<HandleMessage>(
