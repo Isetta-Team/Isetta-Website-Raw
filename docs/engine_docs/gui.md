@@ -32,9 +32,9 @@ We ran out of time on this one, so if you need additional help ask Jacob or Yidi
 See [`GUIComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/master/Isetta/IsettaTestbed/GUILevel/GUIComponent.cpp)
 
 ## Example UI
-![Network Monitor](..images/engine_docs/network_monitor.jpg)
+![Network Monitor](../images/engine_docs/network_monitor.jpg)
 *Network Monitor*
-![Main Menu](..images/engine_docs/main_menu.png)
-![Main Menu](..images/engine_docs/main_menu.jpg)
+![Main Menu](../images/engine_docs/main_menu.png)
+![Main Menu](../images/engine_docs/main_menu.jpg)
 *Main Menu*
 *Main Menu*

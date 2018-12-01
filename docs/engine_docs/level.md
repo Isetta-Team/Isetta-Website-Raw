@@ -45,6 +45,9 @@ void LEVEL_NAME::OnUnload() {
 - `LevelManager::Instance().loadedLevel`: get information about current level
 
 ## Example Levels
+!!! note "Level Inputs"
+	Some of the levels have inputs, too. But they display badly here! Go to our [git repo](https://github.com/Isetta-Team/Isetta-Engine#selectable-levels) to look like them!
+
 |	Level Name			|	Level Description																|
 |		:-:				|			:-:																		|
 |	[`AILevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/AILevel)			|	Level showing how navigation module works in the engine and how to use the particle system  |	
