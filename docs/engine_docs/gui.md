@@ -22,6 +22,8 @@ We ran out of time on this one, so if you need additional help ask Jacob or Yidi
                           float min, float max, float power = 1,
                           const char* format = "%.3f",
                           const InputStyle& style = {})`
+!!! warning
+    All GUI function calls must be contained with `Component::GuiUpdate`.
 
 ### Texture
 - `Texture::Texture(std::string_view pathToFile, bool load = true)`: Load in the texture at the given file path and returns a `Texture*`
