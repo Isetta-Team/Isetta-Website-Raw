@@ -9,8 +9,7 @@ To create a level, add the following `.h` and `.cpp` file.
 `LEVEL_NAME.h`
 ```cpp
 #pragma once
-#include <Scene/IsettaLevel.h>
-#include <Scene/Level.h>
+#include <IsettaEngine.h>
 
 DEFINE_LEVEL(LEVEL_NAME)
 void Load() override;
@@ -23,8 +22,7 @@ DEFINE_LEVEL_END
 #include "LEVEL_NAME.h"
 
 // IsettaCore not necessarily needed, holds a number of useful header files
-#include <Core/IsettaCore.h>
-#include <Graphics/CameraComponent.h>
+#include <IsettaEngine.h>
 
 using namespace Isetta;
 

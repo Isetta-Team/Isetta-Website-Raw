@@ -9,5 +9,4 @@ The Isetta Engine uses an entity-component-system, comparable to Unity's GameObj
 not protect a naive user from shooting themselves in the foot)
 
 ## Execution Order
-
 [ExecutionOrder](../images/engine_architecture/execution_order.png)

@@ -19,7 +19,7 @@ To create a component, create a header (.h) and cpp (.cpp) file of the name of y
 `ExampleComponent.h`
 ```cpp
 #pragma once
-#include <Scene/Component.h>
+#include <IsettaEngine.h>
 
 DEFINE_COMPONENT(ExampleComponent, Component, false)
 private:
@@ -55,7 +55,7 @@ The cpp file then contains the definitions for each of these functions. Not all 
 Here are empty template of component header to copy:
 ```cpp
 #pragma once
-#include <Scene/Component.h>
+#include <IsettaEngine.h>
 
 DEFINE_COMPONENT(COMPONENT_NAME, Component, false)
 private:
