@@ -5,9 +5,11 @@ Debug logging in the engine is done through `Logger.h` which has multiple macros
 
 ## Essential API
 Each macro has multiple variations and will also output:
+
 - filename
 - line number
 - engine time
+<br><br>
 
 - `LOG(message)` -- defaults to `Debug::Channel::General` and `Debug::Verbosity::Info`
 - `LOG_INFO(message)` -- defaults to `Debug::Channel::General` and `Debug::Verbosity::Info`
