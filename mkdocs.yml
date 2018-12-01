@@ -71,6 +71,9 @@ nav:
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
       - Alice Ching: interviews/AliceChing-advice.md
+  - GameJam:
+    - Isetta-GameTemplate: https://github.com/Isetta-Team/Isetta-GameTemplate
+    - Isetta Example Levels: https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed
 
 # Configuration
 theme:
