@@ -1,3 +1,4 @@
+disqus:
 # Basics
 The Isetta Engine uses an entity-component-system, comparable to Unity's GameObject-MonoBehavior system. 
 

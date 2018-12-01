@@ -1,3 +1,4 @@
+disqus:
 # Entities/Transforms
 Entities in the Isetta engine are comparable to GameObjects in Unity and Entities in Unreal. They are the objects that persist in the level/scene that can have a parent entity and can have children entities. Entities hold components and have a transform to locate them in the world. Entities can be add to the level through the macros `Entity::Instantiate(std::string name, Entity* parent, bool isStatic)` included with `#include "Scene/Entity.h"`, and return an entity pointer. The `parent` defaults to `nullptr` which sets the entity's parent to the top level and `isStatic` defaults to `false`. Static entities cannot be translated, rotated, or scaled once the level has loaded.
 

@@ -1,3 +1,4 @@
+disqus:
 # How to use Isetta Engine
 
 This page gives you an index of how to do certain game development tasks using Isetta Engine.
