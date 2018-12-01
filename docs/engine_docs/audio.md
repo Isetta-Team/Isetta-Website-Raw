@@ -33,7 +33,7 @@ audio3D->transform->SetWorldPos(Math::Vector3{0, 0, 0});
 AudioSource* src3D = audio3D->AddComponent<AudioSource>(
     0b001, AudioClip::Load("Sound/zombie-hit.wav"));
 // AudioPlay component which plays AudioSource on KeyCode press
-audio3D->AddComponent<AudioPlay>(KeyCode::NUM3, src3D);
+audio3D->Play();
 ```
 
 **Play a 2D sound:**
@@ -43,8 +43,8 @@ AudioClip* clip = AudioClip::Load("Sound/sample_sound.mp3");
 AudioSource* src2D = audio2D->AddComponent<AudioSource>();
 src2D->SetProperty(AudioSource::Property::IS_3D, false);
 src2D->SetProperty(AudioSource::Property::LOOP, true);
-src2D->SetAudioClip(clip);
+src2D->clip = clip;
 src2D->SetVolume(0.5f);
-audio2D->AddComponent<AudioPlay>(KeyCode::NUM2, src2D);
+src2D->Play();
 ```
 
