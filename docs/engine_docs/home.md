@@ -19,7 +19,9 @@ The best way to get started quickly is to browse through our example levels [her
 1. [Logging](logging.md): we all know `print` is the best way to debug, right?!
 1. [Networking](networking.md): Wait, you sure you want to make a networked game during this jam???
 
+
 ## Important Notes
+
 !!! note "Engine Header"
 	You must include `#include <IsettaEngine.h>` at the beginning of all of your `.h` and `.cpp` files
 !!! note "Memory Management"
