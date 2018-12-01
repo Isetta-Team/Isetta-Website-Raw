@@ -12,7 +12,7 @@ Each macro has multiple variations and will output:
 \[Engine Time\]\[Verbosity\]\[Channel\] Filename(Line number) Message
 
 !!! example
-    [0.000][Info][General] gamejam.cpp (64) You are the best jammers!` 
+    [0.000][Info][General] gamejam.cpp (64) You are the best jammers!
 <br><br>
 
 - `LOG(message)` -- defaults to `Debug::Channel::General` and `Debug::Verbosity::Info`
