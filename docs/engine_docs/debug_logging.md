@@ -1,3 +1,4 @@
+disqus:
 # Debug Logging
 Debug logging in the engine is done through `Logger.h` which has multiple macros to help you log your messages. The Logger works in conjunction with other systems in the engine, so we recommend you use that to `std::cout`. In case you didn't read this paragraph...
 

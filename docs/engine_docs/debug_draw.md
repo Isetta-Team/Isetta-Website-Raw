@@ -1,3 +1,4 @@
+disqus:
 # Debug Drawing
 The [`DebugComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/develop/Isetta/IsettaTestbed/DebugLevel/DebugComponent.cpp) and [debug level](level.md#example-levels) are the best places for you to get started.
 

@@ -1,3 +1,4 @@
+disqus:
 # Components
 
 Components in the Isetta Engine are similar to components in other engines, they should be designed for individal tasks and have minimal coupling with other components. Components cannot be standalone/instantiated in a level without being attached to an entity, done with `entity->AddComponent<COMPONENT, bool isActive = true>(Component constructor args...)`. You can look at any of our [example levels](level.md#example-levels) for usage
