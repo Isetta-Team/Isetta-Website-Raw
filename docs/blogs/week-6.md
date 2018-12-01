@@ -221,7 +221,7 @@ The _handedness_ defines where the world basis vectors are pointing to, and affe
 
 ![Handedness](../images/blogs/week-6/handedness.png)
 
-This convention also has implications on our gameplay code. In local space, let's define the z vector to be the _forward_ vector, and the y vector to be the _up_ vector. In a left-handed coordinate, the x vector will turn out to be the _right _vector. While in a right-handed coordinate, the x vector will be the _left_ vector. This is why in the last section we said the first three elements of the matrix's first column is the _left_ vector - it's always "the x vector", but the "left" or "right" is some meaning we impose on it.
+This convention also has implications on our gameplay code. In local space, let's define the z vector to be the _forward_ vector, and the y vector to be the _up_ vector. In a left-handed coordinate, the x vector will turn out to be the _right_ vector. While in a right-handed coordinate, the x vector will be the _left_ vector. This is why in the last section we said the first three elements of the matrix's first column is the _left_ vector - it's always "the x vector", but the "left" or "right" is some meaning we impose on it.
 
 
 #### Column/Row Vector
