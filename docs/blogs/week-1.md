@@ -89,7 +89,7 @@ After some experiments, we decided to use Horde3D as our rendering library. We d
 
 In the first week, we made a simple wrapper around the Horde3D as a proof-of-concept (see the HordeDemo folder). We will finish the wrapper as a module in the upcoming week.
 
-![Horde3D Test](../images/blogs/horde3d_Isetta_test.png "Horde3D Test Render")
+![Horde3D Test](../images/blogs/week-1/horde3d_Isetta_test.png "Horde3D Test Render")
 
 
 ### Audio
@@ -125,7 +125,7 @@ Our original plan for running low-level networking sockets was to use [Valve's G
 
 At the time of writing this, the GameNetworkingSockets library is a pretty big pain to build, involving several installs and build steps. One of us even took a couple of days automating the build process, and it's still not 100% consistent! Beyond this, the resulting API seems to cover our engine's use case, which is as minor as we can possibly make it without removing networking entirely. Unfortunately, the codebase is still heavily in clean-up mode, and that makes it less accessible for integrating our own allocators and APIs with it. Not to mention that very little exists for documentation.
 
-![Networking](../images/blogs/game_networking_sockets_test.png "Successful Build of GameNetworkingSockets")
+![Networking](../images/blogs/week-1/game_networking_sockets_test.png "Successful Build of GameNetworkingSockets")
 
 Recently, we found another heavily featured networking library named [yojimbo](https://github.com/networkprotocol/yojimbo), built by [Glenn Fiedler](https://gafferongames.com/) of game network programming fame. This library appears to be more ready for integrating into our own engine, albeit with equally as poor documentation (there's a bit of Doxygen to use, I guess). One big plus to this library is that it's not riddled with commented-out code like the GameNetworkingSockets one is at the time of this writing, which makes us lean more toward yojimbo.
 
@@ -160,7 +160,7 @@ For the profiler, we imported [Brofiler](http://brofiler.com/), a C++ game profi
 
 The Brofiler tool has also been used on the game _Skyforge_ and has been integrated into CryEngine, although CryEngine creates a wrapper around Brofiler. With more time, we would do the same, but it doesn't seem necessary for basic usage. Examples and the original repo can be found on the [Brofiler github](https://github.com/bombomby/brofiler).
 
-![Brofiler](../images/blogs/brofiler.png "Brofiler")
+![Brofiler](../images/blogs/week-1/brofiler.png "Brofiler")
 
 ### Math
 Math isn’t a very complicated system, it’s all the components you would need in a typical math library. Our methodology with the Math library is to create what we need now as well as what we foresee needing but not more. For our math library, we have followed Unity’s API design fairly closely.
@@ -172,7 +172,7 @@ We chose Github as our version control platform as we are open sourcing the game
 
 We also established a workflow to help us collaborate effectively. We decided to open a new branch for each feature and only merge it back to the "trunk" when finished, because a game engine is really a feature-heavy product. This strategy enables us to work on multiple features at a time without interfering with each other. The common use case is like this:
 
-![Workflow Diagram](../images/blogs/workflow_diagram.png "Workflow Diagram")
+![Workflow Diagram](../images/blogs/week-1/workflow_diagram.png "Workflow Diagram")
 
 
 ## Coming Soon/Next Week
