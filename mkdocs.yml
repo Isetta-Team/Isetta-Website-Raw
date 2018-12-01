@@ -81,6 +81,7 @@ nav:
     - Input: engine_docs/input.md
     - Debug Logging: engine_docs/debug_logging.md
     - Debug Draw: engine_docs/debug_draw.md
+    - GUI: engine_docs/gui.md
     - Audio: engine_docs/audio.md
     - Collisions: engine_docs/collisions.md
     - Networking: engine_docs/networking.md
