@@ -10,6 +10,7 @@ To create a level, add the following `.h` and `.cpp` file.
 ```cpp
 #pragma once
 #include <IsettaEngine.h>
+using namespace Isetta;
 
 DEFINE_LEVEL(LEVEL_NAME)
 void Load() override;

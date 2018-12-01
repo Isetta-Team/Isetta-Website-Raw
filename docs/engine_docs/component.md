@@ -20,6 +20,7 @@ To create a component, create a header (.h) and cpp (.cpp) file of the name of y
 ```cpp
 #pragma once
 #include <IsettaEngine.h>
+using namespace Isetta;
 
 DEFINE_COMPONENT(ExampleComponent, Component, false)
 private:
@@ -57,6 +58,7 @@ The cpp file then contains the definitions for each of these functions. Not all 
     ```cpp
     #pragma once
     #include <IsettaEngine.h>
+    using namespace Isetta;
     
     DEFINE_COMPONENT(COMPONENT_NAME, Component, false)
     private:
