@@ -10,7 +10,9 @@ Our logger will log to Visual Studio's output window, and in-game console window
 ## Essential API
 Each macro has multiple variations and will output:
 \[Engine Time\]\[Verbosity\]\[Channel\] Filename(Line number) Message
-For example: `[0.000][Info][General] gamejam.cpp (64) You are the best jammers!` 
+
+!!! example
+    [0.000][Info][General] gamejam.cpp (64) You are the best jammers!` 
 <br><br>
 
 - `LOG(message)` -- defaults to `Debug::Channel::General` and `Debug::Verbosity::Info`
@@ -22,7 +24,7 @@ For example: `[0.000][Info][General] gamejam.cpp (64) You are the best jammers!`
 !!! tip
     To specify a channel, change `(message)` to `(Debug::Channel::CHANNEL, message)`
 
-Available channels: General, Memory, Networking, Graphics, Horde3D, Collisions, Gameplay, Sound, FileIO, GUI, All
+    Available channels: General, Memory, Networking, Graphics, Horde3D, Collisions, Gameplay, Sound, FileIO, GUI, All
 
 ## Code snippets
 ```cpp

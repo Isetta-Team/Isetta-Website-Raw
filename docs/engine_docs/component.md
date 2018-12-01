@@ -52,17 +52,18 @@ DEFINE_COMPONENT_END(ExampleComponent, Component)
 
 The cpp file then contains the definitions for each of these functions. Not all functions need to be defined, if not overriden, the function update will run faster.
 
-Here are empty template of component header to copy:
-```cpp
-#pragma once
-#include <IsettaEngine.h>
-
-DEFINE_COMPONENT(COMPONENT_NAME, Component, false)
-private:
-public:
-COMPONENT_NAME() = default;
-DEFINE_COMPONENT_END(COMPONENT_NAME, Component)
-```
+!!! example
+    Here are empty template of component header to copy:
+    ```cpp
+    #pragma once
+    #include <IsettaEngine.h>
+    
+    DEFINE_COMPONENT(COMPONENT_NAME, Component, false)
+    private:
+    public:
+    COMPONENT_NAME() = default;
+    DEFINE_COMPONENT_END(COMPONENT_NAME, Component)
+    ```
 
 ## Essential API
 - `Entity::AddComponent<T>`: Add a component to an entity
