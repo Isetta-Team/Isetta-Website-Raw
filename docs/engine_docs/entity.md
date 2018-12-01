@@ -10,6 +10,8 @@ Transform* transform = entity->transform;
 entity->AddComponent<ExampleComponent>();
 ```
 
+We also provided API for creating primitive like spheres, capsules and boxes. They are super useful for testing things out quickly, please refer to the [PrimitiveLevel](https://github.com/Isetta-Team/Isetta-Engine/blob/master/Isetta/IsettaTestbed/PrimitiveLevel/PrimitiveLevel.cpp) for their usage sample.
+
 ## Essential API
 - static `Entity::Instantiate`: instantiate a new (but empty) entity to the current level
 - `Entity::transform*`: entities hold a pointer to their transform
@@ -20,3 +22,4 @@ entity->AddComponent<ExampleComponent>();
 - `Transform::LookAt(Math::Vector3 target)`
 - `Transform::GetLocalToWorldMatrix()`: returns a Matrix4, can be useful for debug drawing
 - For more, look at the `Transform.h` file under "Engine/Scene" folder
+- `Primitive::Create(Primitive::Type, string name, bool withCollider)`

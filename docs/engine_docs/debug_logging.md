@@ -5,6 +5,8 @@ Debug logging in the engine is done through `Logger.h` which has multiple macros
 !!! warning
     DO NOT USE `std::cout`
 
+Our logger will log to Visual Studio's output window, and in-game console window if you add `EditorComponent` to any entity.
+
 ## Essential API
 Each macro has multiple variations and will output:
 \[Engine Time\]\[Verbosity\]\[Channel\] Filename(Line number) Message
