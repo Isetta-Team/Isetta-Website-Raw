@@ -25,4 +25,4 @@ The best way to get started quickly is to browse through our example levels [her
 !!! note "Engine Header"
 	You must include `#include <IsettaEngine.h>` at the **first line** of all of your `.h` and `.cpp` files
 !!! note "Memory Management"
-    Isetta Engine takes care of memory management for the most part, and you should not try to call `new` or `delete` on built in classes like levels and componenets.
+    Isetta Engine takes care of memory management for the most part, and you should not try to call `new` or `delete` on built in classes like levels and components.
