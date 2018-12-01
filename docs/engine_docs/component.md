@@ -67,6 +67,13 @@ The cpp file then contains the definitions for each of these functions. Not all 
     DEFINE_COMPONENT_END(COMPONENT_NAME, Component)
     ```
 
+!!! warning
+    Every component must have a default constructor!
+
+!!! warning
+    Components header currently cannot be wrapped in any namespace.
+
+
 ## Essential API
 - `Entity::AddComponent<T>`: Add a component to an entity
 - `Entity::GetComponent<T>`: Get a component from an entity
