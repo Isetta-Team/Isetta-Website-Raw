@@ -19,8 +19,8 @@ DEFINE_LEVEL_END
 
 `LEVEL_NAME.cpp`
 ```cpp
-#include "LEVEL_NAME.h"
 #include <IsettaEngine.h>
+#include "LEVEL_NAME.h"
 
 using namespace Isetta;
 
