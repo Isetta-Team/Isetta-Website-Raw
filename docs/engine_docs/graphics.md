@@ -3,7 +3,7 @@
 The best place for you to get started is the [mesh anim level](https://github.com/Isetta-Team/Isetta-Engine/blob/develop/Isetta/IsettaTestbed/MeshAnimLevel/MeshAnimLevel.cpp).
 
 ## Essential API
-- `Entity::AddComponent<MeshComponent>("pathToMeshFile")`: the mesh file to be included here have postfix `.scene.xml`, like "Zombie/Zombie.scene.xml"
+- `Entity::AddComponent<MeshComponent>("pathToMeshFile")`: the mesh file to be included here has postfix `.scene.xml`, like "Zombie/Zombie.scene.xml"
 - `Entity::AddComponent<AnimationComponent>(MeshComponent*)`: add an animation component to an entity
 - `AnimationComponent::AddAnimation("pathToAnimationFile", int layer, "startNode", bool additive)`: add an animation to animation component
 - `AnimationComponent::TransitToAnimationState(int state, float time)`: transit between animations
