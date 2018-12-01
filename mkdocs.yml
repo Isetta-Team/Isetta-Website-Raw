@@ -78,10 +78,11 @@ nav:
     - Entity/Transform: engine_docs/entity.md
     - Component: engine_docs/component.md
     - Graphics: engine_docs/graphics.md
-    - Audio: engine_docs/audio.md
     - Input: engine_docs/input.md
-    - Collisions: engine_docs/collisions.md
+    - Component: engine_docs/debug_logging.md
     - Debug Draw: engine_docs/debug_draw.md
+    - Audio: engine_docs/audio.md
+    - Collisions: engine_docs/collisions.md
     - Networking: engine_docs/networking.md
 
 # Configuration
