@@ -62,7 +62,7 @@ void LEVEL_NAME::OnUnload() {
 |	[`EditorLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/EditorLevel)		|	Level showing the editor components: inspector, heirarchy, and console and level loading menu  |
 |	[`EmptyLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/EmptyLevel)		|	Empty level to be used as a starting point for user created levels				|
 |	[`EventLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/EventLevel)		|	Level demoing our event messaging system with sender and listener components	|
-|	[`ExampleLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/ExampleLevel)			|	Level with an animating model and example component								|
+|	[`ExampleLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/Example)			|	Level with an animating model and example component								|
 |	[`GUILevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/GUILevel)			|	Level demoing some of our GUI capabilities										|
 |	[`InputLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/InputLevel)		|	Level demoing some of the input capabilities 									|
 |	[`LevelLoadingLevel`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaTestbed/LevelLoadingLevel)		|	Level showing a menu to browse levels and load specific level 										|
