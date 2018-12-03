@@ -86,6 +86,7 @@ nav:
     - Collisions: engine_docs/collisions.md
     - Networking: engine_docs/networking.md
   - Compendium:
+    - Introduction: compendium/introduction.md
     - 3rd Party: compendium/3rdParty.md
     - Build & Resource Management: compendium/Build-ResourceManagement.md
     - Collisions: compendium/Collisions.md
