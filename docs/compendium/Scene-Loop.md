@@ -2,19 +2,10 @@
 
 ## Week 0
 - [Module Manager](../blogs/week-1/#module-manager): Used a module which friends to all the modules to manage the start-up and shut-down of them.
- 
-## Week 1
-- []()
-
-## Week 2
-- []()
 
 ## Week 3
 - [Engine Loop](../blogs/week-3/#engine-loop): Implemented the engine loop with fixed update time step and variable rendering.
 - [Timer](../blogs/week-3/#timer): Created a clock class to support multiple clocks in-engine and a stopwatch class to record time.
-
-## Week 4
-- []()
 
 ## Week 5
 - [Goodbye Module Manager](../blogs/week-5/#goodbye-module-manager): Removed the manager that handled the lifecycle of all of our modules because redundancy.
