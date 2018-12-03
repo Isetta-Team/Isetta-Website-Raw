@@ -1,10 +1,7 @@
 # 3rd Party
-
-## Week 0
-- []()
  
 ## Week 1
-- []()
+- [Audio](https://isetta.io/blogs/week-1/#audio): Chose FMOD over OpenAL Soft, integrated it into our engine, and made a wrapper on it
 
 ## Week 2
 - []()

@@ -2,7 +2,7 @@
 
 ## Byte-Sized Updates
 *   [Graphics](#graphics): Added in functionality to the texture class, so it now does more than just loading and can actually be used!
-*   [Tools](#tools): Abstracted some previously developed tools into an editor component which is already proving valuable for development!
+*   [Editor Component](#editor-component): Abstracted some previously developed tools into an editor component which is already proving valuable for development!
 *   [Custom Dynamic Array](#custom-dynamic-array): We were originally not planning on creating our own data structures and just relying on STL but we gave into the temptation and it revealed some dark secrets.
 *   [Second Game](#second-game): We made our second game (which is not a twin stick shooter) and it works!
 *   [Patch Notes](#patch-notes): There's typically not a header for patch notes, but this week we found some really interesting bugs, mainly involving memory, which we think were great learning experiences.
@@ -36,7 +36,7 @@ The texture class originally was set a static loader, but was changed to hold sp
 Because we are using Horde3D to load the texture, it is storing it as a resource in its resource map and attempts to destroy the texture on Horde's destruction. We originally ran into an issue when trying to destroy the texture ourselves because we were trying to delete something we weren't the owners of. A simple call to Horde3D to release the memory allowed us to implement a `Texture::Unload` function, and we learned a good lesson on remembering to keep track of who really owns what.
 
 
-## Tools
+## Editor Component
 
 [Last week](week-9.md#console), we spoke about developing a console, and in the past we had developed smaller tools like an inspector and hierarchy. These tools were developed out of necessity, and we can see a game developer who uses our engine finding them useful, so we thought we should wrap all these tools in an `EditorComponent` available as an engine component.
 
@@ -128,7 +128,7 @@ Also, we found some missing features when making the game:
 
 ### Modifying Input with Modifier Keys
 
-Modifier keys are keys on the keyboard which can be pressed alongside other keys to alter the received input. The four modifier keys GLFW supports are `CTRL`, `ALT`, `SHIFT`, and `SUPER`. The reason we saw the need to add these was for any type of developer feature, you don't want to lose gameplay functionality of your keys when debugging, so with modifier keys you can an easier time debugging. While developing the [`EditorComponent`](#tools) we thought it would be a good idea to have shortcut keys; other developers might find the same need or will want to use them in a game, and it's no skin off our back to add the functionality since it's already supported by GLFW.
+Modifier keys are keys on the keyboard which can be pressed alongside other keys to alter the received input. The four modifier keys GLFW supports are `CTRL`, `ALT`, `SHIFT`, and `SUPER`. The reason we saw the need to add these was for any type of developer feature, you don't want to lose gameplay functionality of your keys when debugging, so with modifier keys you can an easier time debugging. While developing the [`EditorComponent`](#editor-component) we thought it would be a good idea to have shortcut keys; other developers might find the same need or will want to use them in a game, and it's no skin off our back to add the functionality since it's already supported by GLFW.
 
 This required us to refactor the `InputModule` to have key-modifier pairs rather than just keys, and then be able to search and remove based on those pairs. To keep things backwards compatible with the old system (the one without modifier keys), the `Input` class which holds the publicly available commands to access `InputModule` was changed to have a function for registering and unregistering keys with modifier keys and the old function definition, without modifier keys, was left unchanged with a `0` passed to the `InputModule` to signify no modifier key. Modifier keys can also be chained to form a mask with the bitwise-OR operator as well, to allow for even more possibilities!
 
