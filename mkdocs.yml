@@ -85,6 +85,16 @@ nav:
     - Audio: engine_docs/audio.md
     - Collisions: engine_docs/collisions.md
     - Networking: engine_docs/networking.md
+  - Compendium:
+    - 3rd Party: compendium/3rdParty.md
+    - Build & Resource Management: compendium/Build-ResourceManagement.md
+    - Collisions: compendium/Collisions.md
+    - Core: compendium/Core.md
+    - Gameplay: compendium/Gameplay.md
+    - General: compendium/General.md
+    - Networking: compendium/Networking.md
+    - Scene & Engine Loop: compendium/Scene-Loop.md
+    - Tools: compendium/Tools.md
 
 # Configuration
 theme:
