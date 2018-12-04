@@ -1,3 +1,4 @@
+# Is This a Game Engine?
 
 ## Byte-Sized Updates
 
@@ -18,6 +19,8 @@ As you can see from the architectural diagram, the engine looks complete! We are
 1.  Starting our engine postmortems
 1.  Finishing our full-feature demo game, including finishing necessary features for the game
 
+Now the real question we are asking is:
+![Engine Architecture](../images/blogs/week-13/is_this_an_engine.png "Is This An Engine?")
 
 ## Full-Feature Demo Game
 
@@ -564,3 +567,9 @@ When we were working on [hitscan](#hitscan) for the feature game, we heavily use
 ### Window
 
 We've had a `WindowModule` since [week 2](https://isetta.io/blogs/week-2/#the-window-module), but only the `RenderModule` and `GUIModule` had direct access to it. We've had some need for some window-like features but have been able to just shove them in other classes up until now. However, for our [knight game](#the-knight-game) we needed to use the actual window size but there was no good access to it. So we decided why not, like all our other modules, have an accessing class, appropriately named `Window`. The class is relatively simple acting as an access point to get width and height of the window as well as change some other GLFW properties. There are a few properties like the cursor sprite and visibility that we would like to change but ImGui is also managing those properties so it isn't as simple as adding in a function but actually getting it to function with multiple modules.
+
+### Coming Soon
+Not much is left to be coming soon. We have one last blog post we will make about our last bit of development as well as posting about our GameJam. We will be trying to add some additional maneuverability to our documentation by adding a compendium tab, which will chronologize each section of the engine week by week as well as roping in the relevant interviews to that topic. We will also have postmortems coming to wrap up our project as a whole, so be on the look out for that.
+
+## [Resources](/resources.md)
+Probably no one has added much to the page this week, since it has been more focus on refining and bug fixing over adding new features. Hopefully it will get one last boost in the next few weeks as we dumb any resources we've been hoarding on there!

@@ -35,9 +35,9 @@ For my own engine, I write everything. I've written my own containers, string cl
 
 So I don't know if it's a good or bad idea, but one way to build your own initial game engine is to look at it as an integration exercise: Go get [GLM](https://glm.g-truc.net/0.9.9/index.html)[^4], download [Bullet](https://pybullet.org/wordpress/)[^5], download some renderer like Horde3D, and so on. You've got libraries for a lot of things, like libraries that import 3D models and everything, so you can stitch together an engine out of those. I think that's a good way of going about it, since it will expose you to the interfaces to each component. That's the best starting point, and then depending on how your needs evolve, maybe you'll end up opening those black boxes and modifying things under the hood. For a beginner, you can integrate available code rather than doing everything from scratch, because that's taken me a long time. But that's just my style. 
 
-[^4]: **OpenGL Mathematics (GLM) **is a mathematics library based off of OpenGL specifications, that contains definitions for typical math constructs used in graphics.
+[^4]: **OpenGL Mathematics (GLM)** is a mathematics library based off of OpenGL specifications, that contains definitions for typical math constructs used in graphics.
 
-[^5]: **Bullet Physics **is a real-time physics simulation library, a physics engine, which simulate collisions for soft and rigid body dynamics.
+[^5]: **Bullet Physics** is a real-time physics simulation library, a physics engine, which simulate collisions for soft and rigid body dynamics.
 
 
 ## Skills of Engine Development
@@ -105,9 +105,9 @@ The final thing is a soft skill: being _Professional_. You'll have to do most of
 
 The first time I did a seek-free loading[^11] system, it was only for the Xbox console on the game _Rainbow Six: Lockdown_. Since we were loading from DVDs, seeks[^12] were expensive, so you wanted to avoid them. My job was looking at the problem of how the game is opening all these files and reading from different places. All I did was implement a mode where the game runs, and as it starts up it's logging which files it's reading from and in what positions. It then takes that data and makes a linear version of the same data with no seeks. I also added another mode of running the game that uses the seek-free files, so I was able to just focus on the strategy of how and when the data is accessed. That also included fallbacks, so if the game loaded a little differently the next time, it wouldn't totally break. At that time, though, I didn't have to worry so much about platform differences. The second time that I did it I already had experience with the strategy, but I had to do it in a cross-platform way: for PC, PS3, and Xbox 360.
 
-[^11]: **Seek-free loading **is a system which is able to read a file "free" (without) "seeking", (searching) a file, for data/position within a file. Seeking causes disk activity which is generally slower than CPU performance. 
+[^11]: **Seek-free loading** is a system which is able to read a file "free" (without) "seeking", (searching) a file, for data/position within a file. Seeking causes disk activity which is generally slower than CPU performance. 
 
-[^12]: A **seek **is a programming concept related to file reading, where a program has a file pointer associated with a position and a seek moves the pointer to a specific position within that file.
+[^12]: A **seek** is a programming concept related to file reading, where a program has a file pointer associated with a position and a seek moves the pointer to a specific position within that file.
 
 That meant it was just a matter of reimplementing the same thing, but using cross-platform primitives. The engine already had some cross-platform wrappers for low-level things like opening files and such, but not everything. I remember on the PS3, there was a limit to how many files you could have open, and that limit was very small. At some point, I had to make a wrapper layer between the engine and the hardware that let the game pretend it was opening a lot of files, but if it wasn't actually reading from those open file handles—I was closing the files and it would be opening them on next access.
 
@@ -117,7 +117,7 @@ The reason I had to do a lot of PS3 optimization was that the _Rainbow Six: Vega
 
 [^14]: **Frame buffers** are a portion of RAM containing a bitmap of the display, containing the data for that given frame on the video display.
 
-[^15]: The **z-buffer **also known as the depth buffer, contains information regarding the distance from the camera, the depth. **Z-buffering** can also refer to the technique in which pixels are culled from the frame, not rendered, because another pixel's depth is closer to the camera, therefore the pixel in the background is being covered.
+[^15]: The **z-buffer** also known as the depth buffer, contains information regarding the distance from the camera, the depth. **Z-buffering** can also refer to the technique in which pixels are culled from the frame, not rendered, because another pixel's depth is closer to the camera, therefore the pixel in the background is being covered.
 
 
 ## How Profiling Can Differ

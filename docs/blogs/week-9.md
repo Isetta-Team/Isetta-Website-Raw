@@ -39,19 +39,19 @@ Using our components system, we can also generate a component for our networked 
 ``` cpp
 // Client callback code
 
-Entity* entity = NetworkManager::Instance.GetNetworkEntity( \
-  transformMessage->netId);                                 \
-if (entity) {                                               \
-  Transform t = entity->GetTransform;                       \
-  t.SetLocalPos(transformMessage->localPos);                \
-  t.SetLocalScale(transformMessage->localScale);            \
-  t.SetLocalRot(transformMessage->localRot);                \
+Entity* entity = NetworkManager::Instance.GetNetworkEntity(
+  transformMessage->netId);
+if (entity) {
+  Transform t = entity->GetTransform;
+  t.SetLocalPos(transformMessage->localPos);
+  t.SetLocalScale(transformMessage->localScale);
+  t.SetLocalRot(transformMessage->localRot);
 }
 
 // …
 
-// Server callback code                                              \
-NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>( \
+// Server callback code
+NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>(
   transformMessage);
 
 // ...
@@ -75,9 +75,9 @@ Our client authority is very straightforward; every time a networked object is i
 This is a trivial check when handling messages:
 
 ``` cpp
-NetworkId* netId = NetworkManager::Instance.GetNetworkId(transformMessage->netId); \
-if (!netId || netId->HasClientAuthority) {                                         \
-  return;                                                                          \
+NetworkId* netId = NetworkManager::Instance.GetNetworkId(transformMessage->netId);
+if (!netId || netId->HasClientAuthority) {
+  return;
 }
 ```
 
@@ -123,20 +123,20 @@ For the time being, we'll only focus on positional interpolation as that's the m
 
 ``` cpp
 // … client callback boilerplate here
-Transform& t = entity->GetTransform;                               \
-targetPos = t.GetParent->GetWorldPos + transformMessage->localPos; \
+Transform& t = entity->GetTransform;
+targetPos = t.GetParent->GetWorldPos + transformMessage->localPos;
 prevPos = t.GetWorldPos;
 ```
 
 And we can add another section to the `NetworkTransform`'s `FixedUpdate` function that uses a new `interpolation` float value to determine how far along it is between the previous and target positions:
 
 ``` cpp
-if (netId->HasClientAuthority) {                                         \
-  // … send out the TransformMessage                                     \
-} else if (interpolation < 1) {                                          \
-  Transform& t = entity->GetTransform;                                   \
-  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1);   \
-  t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation)); \
+if (netId->HasClientAuthority) {
+  // … send out the TransformMessage
+} else if (interpolation < 1) {
+  Transform& t = entity->GetTransform;
+  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1);
+  t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation));
 }
 ```
 
@@ -300,7 +300,7 @@ Your browser does not support the video tag.
 
 Without BV Tree, having 80 sphere colliders in the scene results in an average frame time of ~35 ms, or 28 FPS, which is okay but certainly not enough given that we will have lots of zombies in the game. With BV Tree, we can handle more than 200 dynamic colliders in ~15 ms. Alright, alright, enough bragging—how did we do it?
 
-First, let's make clear what we are trying to do. Detecting collisions by comparing each possible object pair results in `O(n<sup>2</sup>)` time complexity, but in reality, the chance that all pairs collide with each other is really close to zero. As it might be too hard to reduce the time of each single collision detection ("Although definitely possible with our implementation," says the person who programmed them), what we want is to efficiently find those pairs that *can* possibly collide with each other. Basically, we want determine if a pair could collide before doing a math intensive check. Our dear friend, BV Tree, can help us with it. With a BV Tree, when we want to find all the other colliders that are colliding with collider A, we just need to walk down from the tree root where we can possibly find another collider that collides with it—more specifically, where collider A is spatially located in the tree. We will talk about how we can do this in detail later. In theory, it reduces time complexity from `O(n<sup>2</sup>)` to `O(n logn)`.
+First, let's make clear what we are trying to do. Detecting collisions by comparing each possible object pair results in `O(n^2)` time complexity, but in reality, the chance that all pairs collide with each other is really close to zero. As it might be too hard to reduce the time of each single collision detection ("Although definitely possible with our implementation," says the person who programmed them), what we want is to efficiently find those pairs that *can* possibly collide with each other. Basically, we want determine if a pair could collide before doing a math intensive check. Our dear friend, BV Tree, can help us with it. With a BV Tree, when we want to find all the other colliders that are colliding with collider A, we just need to walk down from the tree root where we can possibly find another collider that collides with it—more specifically, where collider A is spatially located in the tree. We will talk about how we can do this in detail later. In theory, it reduces time complexity from `O(n^2)` to `O(n logn)`.
 
 The BV Tree uses bounding volumes to do this, as stated in weeks prior, so we need to decide on the type of bounding volume we wanted to use for the tree. The choices are usually between axis-aligned bounding boxes (AABB) and bounding spheres. An AABB is the smallest box whose edges are lined up with the world's X, Y, and Z axes and can enclose the specified object (in our case, collider primitives). A bounding sphere is similar, just being a sphere instead of a box. They are both pretty easy to construct and detect collisions between, but bounding spheres require additional volume when encapsulating oblong shapes, such as humanoid characters, which we will have more of than anything in our game, so we chose AABB's as our bounding objects. We also found AABB's to be more widely used than bounding spheres through our research (You can look as our references [here](../../resources/#collision-detection)!
 
