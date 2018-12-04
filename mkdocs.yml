@@ -35,6 +35,7 @@ nav:
     - "[Week 12] Getting Ready for Game Jam!": blogs/week-12.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Introduction: interviews/introduction.md
     - Shanee Nishry:
       - Interview: interviews/ShaneeNishry-interview.md
       - Video Story: interviews/ShaneeNishry-video.md
