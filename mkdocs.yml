@@ -36,6 +36,7 @@ nav:
     - "[Week 13] ": blogs/week-13.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Introduction: interviews/introduction.md
     - Shanee Nishry:
       - Interview: interviews/ShaneeNishry-interview.md
       - Video Story: interviews/ShaneeNishry-video.md
