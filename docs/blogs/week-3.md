@@ -113,7 +113,7 @@ The pool allocator we implemented last week was templated, which means it only r
 
 This week, we decided to implement a naive memory defragmentation system and see how it works for us. So we implemented object handles first, which is a prerequisite of defragmentation (for a review on what object handles are, see our [architecture post](engine-architecture.md#core)). 
 
-![Defragmentation](../images/blogs/defragmentation.png "Defragmentation")
+![Defragmentation](../images/blogs/week-3/defragmentation.png "Defragmentation")
 
 Defragmentation works by removing "holes" of free memory between objects. This is achieved by moving objects in memory so they are packed nicely into a contiguous area, leaving enough contiguous space for later allocations. Maybe you've noticed that the address of the objects will change during this process, and will invalidate the pointers pointing to the old addresses. To fix this issue, we made a middleman between the game developers and the actual allocated memory of objects. This middleman is called the object handle.
 
