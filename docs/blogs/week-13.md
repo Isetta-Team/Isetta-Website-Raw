@@ -1,7 +1,7 @@
 
 ## Byte-Sized Updates
 
-*   [Full-Feature Demo Game](#full-featured-demo-game): Implemented hitscan to be used in our feature game.
+*   [Full-Feature Demo Game](#full-feature-demo-game): Implemented hitscan to be used in our feature game.
 *   [The Knight Game](#the-knight-game): Developed another game that flexes some of our new components and our collision system that hasn't been shown in a game just yet.
 *   [Collision Solving](#collision-solving): Wrapped up our collision solver by making it moderately more correct, and added a "mass" feature.
 *   [Build System](#build-system): Set up a build pipeline for our engine after one too many rebuilds aggravated our programmers to no end.
@@ -21,7 +21,7 @@ As you can see from the architectural diagram, the engine looks complete! We are
 
 ## Full-Feature Demo Game
 
-We're continuing to build our [feature game](week-0.md/#the-example-game). We still needed a few engine features discussed in this blog to finish the game, so we used that as an excuse to do some more engine development before putting down serious work into the game's foundation. (That being said, we've already made a [basic version](week-7.md/#first-game) of it, so it shouldn't be too hard to just expand upon that!)
+We're continuing to build our [feature game](week-0.md#the-example-game). We still needed a few engine features discussed in this blog to finish the game, so we used that as an excuse to do some more engine development before putting down serious work into the game's foundation. (That being said, we've already made a [basic version](week-7.md#first-game) of it, so it shouldn't be too hard to just expand upon that!)
 
 
 ### Hitscan
@@ -67,7 +67,7 @@ Since we're building up from these decisions, they're the least likely to change
 
 ### Hitscan is Easy (with an Existing Collision System)
 
-For our first decision, we need a different method of simulating each bullet than giving each one its own `Entity` and (expensively) moving it using our scene hierarchy. Luckily, we've already implemented [raycasting in our collisions](week-7.md/#collisions), so we can leverage that functionality with the `Ray` class for performing hitscans. We also need to keep track of the `travel` distance for each bullet as well. In all, it should look a little something like this:
+For our first decision, we need a different method of simulating each bullet than giving each one its own `Entity` and (expensively) moving it using our scene hierarchy. Luckily, we've already implemented [raycasting in our collisions](week-7.md#collisions), so we can leverage that functionality with the `Ray` class for performing hitscans. We also need to keep track of the `travel` distance for each bullet as well. In all, it should look a little something like this:
 
 ``` cpp
 // Check if the bullet collides with anything
@@ -188,7 +188,7 @@ Your browser does not support the video tag.
 
 </div>
 
-With the assets set up, we wanted to focus on the collision of the sword with an "enemy". Keeping it simple, we just wanted to ensure we could align a collider with a mesh as desired. What we found out was, first, the pivot of the sword was in a terrible location, but more importantly, the collider drawn was displaying shearing as spoken about [last week](week-12.md/#collider-debug-shearing).  After fixing that, we attached a `CollisionHandler` to a box to cause a splitting effect. This was a great exercise in using our own API. It had been a few weeks since some of us had touched collisions, so remembering how they worked took a minute. Because there weren't any examples of how to use the `CollisionHandler` before, it hadn't occurred to even use some functionality, such as the `IgnoreCollisionLayer`. Here is how it was looking:
+With the assets set up, we wanted to focus on the collision of the sword with an "enemy". Keeping it simple, we just wanted to ensure we could align a collider with a mesh as desired. What we found out was, first, the pivot of the sword was in a terrible location, but more importantly, the collider drawn was displaying shearing as spoken about [last week](week-12.md#collider-debug-shearing).  After fixing that, we attached a `CollisionHandler` to a box to cause a splitting effect. This was a great exercise in using our own API. It had been a few weeks since some of us had touched collisions, so remembering how they worked took a minute. Because there weren't any examples of how to use the `CollisionHandler` before, it hadn't occurred to even use some functionality, such as the `IgnoreCollisionLayer`. Here is how it was looking:
 
 <div class="video-wrapper">
 
@@ -364,7 +364,7 @@ Another feature we need for the game is to easily get the network role of their 
 
 #### Updates to Network Messaging API
 
-One of the things we left in our sea of TODOs is unifying `GenerateNetworkMessage` and `SendNetworkMessage` but we never found a good way to do it, neither did we have a better reason than, "so developers can write less code". Well, the need finally comes when we want to send a message from the server to all of the clients. If you remember our long journey of evolving network messages in the [week 7 blog post,](https://isetta.io/blogs/week-7/#networking) each message generated on the server is only meant to be sent to a single client and `GenerateMessageFromServer` always take one parameter as client index. So when you want to send the same message to all clients, who do you generate it for? Here is the need in our API!
+One of the things we left in our sea of TODOs is unifying `GenerateNetworkMessage` and `SendNetworkMessage` but we never found a good way to do it, neither did we have a better reason than, "so developers can write less code". Well, the need finally comes when we want to send a message from the server to all of the clients. If you remember our long journey of evolving network messages in the [week 7 blog post,](week-7.md#networking) each message generated on the server is only meant to be sent to a single client and `GenerateMessageFromServer` always take one parameter as client index. So when you want to send the same message to all clients, who do you generate it for? Here is the need in our API!
 
 Therefore, we decided to change our `SendMessage` functions from taking a message pointer to taking an `Action<T*>` that initialize the message. Inside the function body, it will generate a new message and initialize that message with the given initializer. This also saves the developer from the tedious work of `reinterpret_cast` messages to their message type every time. By doing this, we effectively eliminated the need for calling both `Generate` and `Send` - they are nicely unified in one now!
 
@@ -532,7 +532,7 @@ We still cannot sleep like a baby. It was us who set the transform pointer to be
 
 ### Delegates
 
-One thing we forgot to mention weeks ago is that we abstracted our [callback-handle structure](https://isetta.io/blogs/week-3/#input-module) out. Originally, we only had callbacks in input module, so we used member functions like  `RegisterCallback` and `UnregisterCallback` in `InputModule` to handle them. Later we found that the game engine is much more event-driven than we thought. In addition to the event messaging system, which is designed for global events, we still need a unified structure to deal with point-to-point event subscription. Thus, just like what [Casey Muratori](https://isetta.io/interviews/CaseyMuratori-interview/#problem-2-the-complexity-explosion) said before, we wrote it out first, and then we pulled it out. This structure is called `Delegate`.
+One thing we forgot to mention weeks ago is that we abstracted our [callback-handle structure](https://isetta.io/blogs/week-3#input-module) out. Originally, we only had callbacks in input module, so we used member functions like  `RegisterCallback` and `UnregisterCallback` in `InputModule` to handle them. Later we found that the game engine is much more event-driven than we thought. In addition to the event messaging system, which is designed for global events, we still need a unified structure to deal with point-to-point event subscription. Thus, just like what [Casey Muratori](https://isetta.io/interviews/CaseyMuratori-interview/#problem-2-the-complexity-explosion) said before, we wrote it out first, and then we pulled it out. This structure is called `Delegate`.
 
 Implementing the `Delegate` is not hard. The interface is simple, with only four functions: `Subscribe`, `Unsubscribe`, `Invoke` and `Clear`. In the first two functions, we integrated the `HandleBin` we implemented before so that it can revoke the handles after it's unsubscribed. It was a little bit tricky when we were implementing the `Invoke` function. It iterates through all the handle-function pairs and invokes the corresponding functions. However, simply using a range-based for loop is not enough. When the callback function is unsubscribing itself, it will invalidate the iterator we are visiting and thus break the `for` loop in the `Invoke` function.
 
