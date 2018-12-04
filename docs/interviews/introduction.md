@@ -4,4 +4,4 @@ Here you will find interviews with industry professionals about game engine deve
 
 If you are more of a physical person you can purchase a published version of the interviews in book format, [here](http://www.lulu.com/shop/caleb-biasco-and-jared-ettinger-and-jacob-wilson-and-chaojie-zhu/behind-the-black-box-sessions-with-game-engine-professionals/paperback/product-23880229.html). The price is $3 and is to basically cover printing cost.
 
-[Front Cover](../../images/timeline-only/social_cover.png)
+![Front Cover](../../images/timeline-only/social_cover.png)
