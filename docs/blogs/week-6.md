@@ -89,7 +89,7 @@ Although this wrapped up nicely, getting debug drawing to work was taxing becaus
 
 *   Check the winding order of your drawings
 *   Horde3D and OpenGL use column-major[^9021] matrices, our Matrix4 is row-major[^9021], this distinction is important
-*   Horde3D renders down the negative Z-axis, as do many computer graphics programs, but this isn't intuitive for developers used to Unity which is the opposite. This is something we may also decide to "change" by offsetting the camera's rotation by 180° always, so it would effectively be looking down our positive Z-axis.
+*   Horde3D renders down the negative z-axis, as do many computer graphics programs, but this isn't intuitive for developers used to Unity which is the opposite. This is something we may also decide to "change" by offsetting the camera's rotation by 180° always, so it would effectively be looking down our positive z-axis.
 *   Have a good understanding of transformations (matrix and vector math)
 
 [^9021]: Every Matrix4 has 16 numbers is it, and the 16 numbers are usually stored in a big array in a specific order. **Column-major** and **row-major** are two different orders of storing them. In Column-row matrices, numbers are put in the array "column by column", i.e., the 4 numbers in the first column occupy the first 4 slots in the array. While row-column matrices store them "row by row" - the first 4 slots in the array correspond to the first row in the matrix.
