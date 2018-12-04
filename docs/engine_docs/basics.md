@@ -10,4 +10,4 @@ For anything math-related, you need to use the `Math` namespace. For instance, f
 not protect a naive user from shooting themselves in the foot)
 
 ## Execution Order
-Refer to our Execution Order diagram [here](../images/engine_architecture/execution_order.png)!
+![Execution Order](../images/engine_architecture/execution_order.png)
