@@ -18,6 +18,17 @@ nav:
   - Resources: resources.md
   - Glossary: glossary.md
   - FAQ: faq.md
+  - Compendium:
+    - Introduction: compendium/introduction.md
+    - 3rd Party: compendium/3rdParty.md
+    - Build & Resource Management: compendium/Build-ResourceManagement.md
+    - Collisions: compendium/Collisions.md
+    - Core: compendium/Core.md
+    - Gameplay: compendium/Gameplay.md
+    - General: compendium/General.md
+    - Networking: compendium/Networking.md
+    - Scene & Engine Loop: compendium/Scene-Loop.md
+    - Tools: compendium/Tools.md
   - Blogs:
     - '[Week 0] Preparation': blogs/week-0.md
     - '[Week 1] The Building Blocks': blogs/week-1.md
@@ -73,7 +84,7 @@ nav:
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
       - Alice Ching: interviews/AliceChing-advice.md
-  - Game Jam:
+  - Usage:
     - FAQs: engine_docs/home.md
     - Basics: engine_docs/basics.md
     - Level: engine_docs/level.md
@@ -87,17 +98,6 @@ nav:
     - Audio: engine_docs/audio.md
     - Collisions: engine_docs/collisions.md
     - Networking: engine_docs/networking.md
-  - Compendium:
-    - Introduction: compendium/introduction.md
-    - 3rd Party: compendium/3rdParty.md
-    - Build & Resource Management: compendium/Build-ResourceManagement.md
-    - Collisions: compendium/Collisions.md
-    - Core: compendium/Core.md
-    - Gameplay: compendium/Gameplay.md
-    - General: compendium/General.md
-    - Networking: compendium/Networking.md
-    - Scene & Engine Loop: compendium/Scene-Loop.md
-    - Tools: compendium/Tools.md
 
 # Configuration
 theme:
