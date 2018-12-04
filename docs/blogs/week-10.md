@@ -21,7 +21,7 @@ In terms of development, be prepared to see talk about memory throughout the blo
 ## Graphics
 ### Texture
 
-Looking back at [week 5](week-5.md/#gui-and-textures) we realized we needed to be able to load textures outside just our graphics module, specifically for GUI images. As stated then, ImGui isn't an image loading library, so our images had to be loaded into our engine from another module. Horde3D has texture loading functionality, but how the functionality worked wasn't apparent or well documented. After struggling with Horde3D for too long, we had the texture in BGRA stored in a `uint8_t`.
+Looking back at [Week 5](week-5.md#gui-and-textures), we realized we needed to be able to load textures outside just our graphics module, specifically for GUI images. As stated then, ImGui isn't an image loading library, so our images had to be loaded into our engine from another module. Horde3D has texture loading functionality, but how the functionality worked wasn't apparent or well documented. After struggling with Horde3D for too long, we had the texture in BGRA stored in a `uint8_t`.
 
 The ImGui library still needed the image in the renderer's format. The renderer we're using is OpenGL, so the the texture needs to be loaded into OpenGL memory—ImGui provides an example of how to do this, however the sample code alone won't load the texture. Not knowing OpenGL well enough, we ended up spinning up a completely isolated project with a simple OpenGL scene to test texture loading. Following [this tutorial](https://learnopengl.com/Getting-started/Textures), we were able to get the textures loading right away but there was a lot of unneeded code, so we just had to find which parts of the texture loading were necessary.
 

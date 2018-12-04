@@ -39,19 +39,19 @@ Using our components system, we can also generate a component for our networked 
 ``` cpp
 // Client callback code
 
-Entity* entity = NetworkManager::Instance.GetNetworkEntity( \
-  transformMessage->netId);                                 \
-if (entity) {                                               \
-  Transform t = entity->GetTransform;                       \
-  t.SetLocalPos(transformMessage->localPos);                \
-  t.SetLocalScale(transformMessage->localScale);            \
-  t.SetLocalRot(transformMessage->localRot);                \
+Entity* entity = NetworkManager::Instance.GetNetworkEntity(
+  transformMessage->netId);
+if (entity) {
+  Transform t = entity->GetTransform;
+  t.SetLocalPos(transformMessage->localPos);
+  t.SetLocalScale(transformMessage->localScale);
+  t.SetLocalRot(transformMessage->localRot);
 }
 
 // …
 
-// Server callback code                                              \
-NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>( \
+// Server callback code
+NetworkManager::Instance.SendAllMessageFromServer<TransformMessage>(
   transformMessage);
 
 // ...
@@ -75,9 +75,9 @@ Our client authority is very straightforward; every time a networked object is i
 This is a trivial check when handling messages:
 
 ``` cpp
-NetworkId* netId = NetworkManager::Instance.GetNetworkId(transformMessage->netId); \
-if (!netId || netId->HasClientAuthority) {                                         \
-  return;                                                                          \
+NetworkId* netId = NetworkManager::Instance.GetNetworkId(transformMessage->netId);
+if (!netId || netId->HasClientAuthority) {
+  return;
 }
 ```
 
@@ -123,20 +123,20 @@ For the time being, we'll only focus on positional interpolation as that's the m
 
 ``` cpp
 // … client callback boilerplate here
-Transform& t = entity->GetTransform;                               \
-targetPos = t.GetParent->GetWorldPos + transformMessage->localPos; \
+Transform& t = entity->GetTransform;
+targetPos = t.GetParent->GetWorldPos + transformMessage->localPos;
 prevPos = t.GetWorldPos;
 ```
 
 And we can add another section to the `NetworkTransform`'s `FixedUpdate` function that uses a new `interpolation` float value to determine how far along it is between the previous and target positions:
 
 ``` cpp
-if (netId->HasClientAuthority) {                                         \
-  // … send out the TransformMessage                                     \
-} else if (interpolation < 1) {                                          \
-  Transform& t = entity->GetTransform;                                   \
-  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1);   \
-  t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation)); \
+if (netId->HasClientAuthority) {
+  // … send out the TransformMessage
+} else if (interpolation < 1) {
+  Transform& t = entity->GetTransform;
+  interpolation = max(interpolation + 1.0 / netId->updateInterval, 1);
+  t.SetLocalPos(Math::Vector3::Lerp(prevPos, targetPos, interpolation));
 }
 ```
 

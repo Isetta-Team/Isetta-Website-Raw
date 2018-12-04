@@ -306,7 +306,7 @@ Oh, and one more bug popped up that we should note: As we alluded to above, each
 
 Oh, did you think we were done? We're just getting started! (Just kidding, don't worry, you're in the home stretch!)
 
-So after we finished the pre-code review version of our networking system, we had a bad taste left in our mouth. Why should the developer have to remember some weird string tag in order to send messages of a particular type, like `"HNDL"`? And what happens if we have conflicting string tags or need longer strings? Well, as it turns out, we already utilize a system similar to this tagging but by using actual _object types_ somewhere else in the code: our component system!
+So after we finished the pre-code review version of our networking system, we had a bad taste left in our mouth. Why should the developer have to remember some weird string tag in order to send messages of a particular type, like `"HNDL"`? And what happens if we have conflicting string tags or need longer strings? Well, as it turns out, we already utilize a system similar to this tagging but by using actual _object types_ somewhere else in the code: Our component system!
 
 Specifically, inside of [Entity.h](https://github.com/Isetta-Team/Isetta-Engine/blob/7cbc43d4b3df5cea830ceacc3c58724685aa5ab7/Isetta/IsettaEngine/Scene/Entity.h) we have a vector of component types that we use for checking whether or not the current entity has a component that's requested using the `GetComponent` function. Since the function is a template function, it can utilize C++'s `std::type_index` class which essentially enumerates the classes. By a similar method, we can just enumerate our user-defined messages by their type if we turn all of our message-based functions into template functions[^290252]!
 
