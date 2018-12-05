@@ -447,7 +447,7 @@ Last but not least, if you don't have memory leaks, our engine actually praises 
 
 ![No memory leak](../images/blogs/week-13/memory_leak_4.png)
 
-> We should be doing more of this! Developers always love appreciations to their hard work, right?
+> We should be doing more of this! Developers always love appreciation to their hard work, right?
 
 
 ## Engine vs. Game Resources
@@ -539,7 +539,7 @@ One thing we forgot to mention weeks ago is that we abstracted our [callback-han
 
 Implementing the `Delegate` is not hard. The interface is simple, with only four functions: `Subscribe`, `Unsubscribe`, `Invoke` and `Clear`. In the first two functions, we integrated the `HandleBin` we implemented before so that it can revoke the handles after it's unsubscribed. It was a little bit tricky when we were implementing the `Invoke` function. It iterates through all the handle-function pairs and invokes the corresponding functions. However, simply using a range-based for loop is not enough. When the callback function is unsubscribing itself, it will invalidate the iterator we are visiting and thus break the `for` loop in the `Invoke` function.
 
-How to deal with that? We decided to use a two phase strategy to invoke all the callbacks. In the first pass, We filtered all the callbacks out to a new array. We then called all callbacks in the new array in the second pass. Since unsubscribing only changes the original pair array, the array we are iterating through now is unaffected and safe.
+How do we deal with that? We decided to use a two phase strategy to invoke all the callbacks. In the first pass, we filtered all the callbacks out to a new array. We then called all callbacks in the new array in the second pass. Since unsubscribing only changes the original pair array, the array we are iterating through now is unaffected and safe.
 
 The related code is like this:
 

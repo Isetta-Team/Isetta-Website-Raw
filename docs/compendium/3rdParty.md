@@ -4,6 +4,7 @@
 - [Rendering: Ogre vs Horde3D](../../blogs/week-1/#rendering): We narrowed down to two choices, [Ogre](https://www.ogre3d.org/) and [Horde3D](http://horde3d.org/). While Ogre is powerful and well-known, we decided on Horde3D due to the ease of building it and its lightweight design. Then we made a demo to prove we could!
 - [Audio: OpenAL Soft vs FMOD](../../blogs/week-1/#audio): For audio, our two choices were [OpenAL Soft](https://github.com/kcat/openal-soft) and [FMOD](https://www.fmod.com/). We tried out OpenAL Soft due to it being open source, but we were confused with it even three hours after working at it. On the other hand, FMOD was a breeze to use and had ample documentation. So we jumped right into it and implemented our audio engine using FMOD!
 - [Networking: GameNetworkingSockets vs yojimbo](../../blogs/week-1/#networking): See the [Networking Compendium](Networking/#week-1) for more details!
+- [String ID](../blogs/engine-architecture.md#core): String hashing is a very helpful utility that allows strings to use less memory and serve better as keys for other values, so we found an [open-source string ID library](https://github.com/TheAllenChou/string-id) to bring in.
 
 ## Week 2
 - [Making our Rendering API](../../blogs/week-2/#graphics): After settling on Horde3D, we wrapped it up inside our engine as `RenderModule`, and [for windows](../../week-2/#the-window-module), we wrapped GLFW as `WindowModule`. Our initial module design was a bust, but we learned to keep things flat and managed in one place early on.

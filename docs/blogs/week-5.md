@@ -16,7 +16,7 @@ Although things look like they are not changing much, most of the current work i
 
 ## Goodbye Module Manager
 
-You will not be missed. What `ModuleManager` became was a container that held all of the modules and dictated their lifecycle. It was originally meant to act as a protective barrier for the game developer, as described in [week 1](week-1.md#module-manager), to stop them from "accidentally" starting or stopping a module.
+You will not be missed. What `ModuleManager` became was a container that held all of the modules and dictated their lifecycle. It was originally meant to act as a protective barrier for the game developer, as described in [Week 1](week-1.md#module-manager), to stop them from "accidentally" starting or stopping a module.
 
 So why _are_ we removing something that is at the center of our engine, holding all of the module's lifecycle? Well, that's exactly the reason we are removing the manager. We could easily see the module manager becoming the central hub of the engine, i.e. everything needs to go through the module manager to work, which doesn't make sense.
 
@@ -233,7 +233,7 @@ It's unfair to say choosing Horde3D was a bad idea, but the lightweight-ness we 
 Starting from the last week, our team started integrating our own memory manager into the subsystems and 3rd party libraries (yay!). It's a very exciting task, but it exposed many issues and limitations of our memory manager. As others were busy integrating the memory manager, one of our developers spent time gathering and analyzing incoming requirements so that we could make some updates to our memory manager. 
 
 
-### Freedom from The Free List Allocator
+### Freedom of The Free List Allocator
 
 The first thing is that the existing memory allocators are very limited and can't cover all of our usage scenarios. 
 
