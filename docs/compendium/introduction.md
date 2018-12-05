@@ -1,3 +1,5 @@
+disqus:
+
 # What is a "Compendium"?
 
 A compendium is a collection of concise but detailed information about a particular subject, like a comprehensive summary. For example, the encyclopedia can be referred to as a compendium of all human knowledge.
