@@ -6,8 +6,10 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 
 ## New here?
 - We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
-- We are documenting our whole process and recording all our discussions and decisions (even the bad ones) in weekly blogs starting from [Week 0](blogs/week-0/).
-- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/MartinMiddleton-interview/).
+- We are documenting our whole process and compiling what we learn all on this website. The best place to look for our knowledge of an engine subsystem is our [compendium](compendium/introduction).
+- You can see all of the specifics for our development starting from [Week 0](blogs/week-0/) for our weekly blog.
+- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" versions of the talks [here](interviews/introduction/).
+- If you're interested in using our engine (we appreciate your curiousity!), you can see some of our starting documentation at our [Usage](engine_docs/home/) page.
 
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -20,12 +22,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 11 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-11).
-- This week, our blog is titled ["The One Where the Team Picks a Font"](blogs/week-11/). We picked a font to use for our feature game! ...we also completed some AI and collision solving features, but that's less important.
-- We recently interviewed with [Martin Middleton](http://www.funomena.com/about/), the CTO of Funomena and an ex-engine programmer at thatgamecompany. We talked a lot about what programming on strange but powerful architectures is like. [Read it here!](interviews/MartinMiddleton-interview/)
+- The latest changes for week 13 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-13).
+- This week, our blog is titled ["Is This a Game Engine"](blogs/week-13/). We *technically* feature locked our engine, and we're pushing forward on game development. Only bugs from here on out!
+- We recently interviewed with [Shanee Nishry](https://twitter.com/Lunarsong), VR software engineer at Google Daydream and veteran game engine programmer. She had a lot to say about performance and memory across differing platforms. [Read it here!](interviews/ShaneeNishry-interview/)
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](images/engine_architecture/week11.png "Week 11 Progress Architecture")
+![Engine Architecture](images/engine_architecture/week13.png "Week 13 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
