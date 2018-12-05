@@ -26,7 +26,7 @@ nav:
     - Core: compendium/Core.md
     - Gameplay: compendium/Gameplay.md
     - Networking: compendium/Networking.md
-    - Other Topics: compendium/Other.md
+    # - Other Topics: compendium/Other.md
     - Scene & Engine Loop: compendium/Scene-Loop.md
     - Tools: compendium/Tools.md
   - Blogs:
