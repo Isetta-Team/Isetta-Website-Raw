@@ -143,7 +143,7 @@ So on this project, I felt like I was ready to do that for the first time. Wheth
 
 ### Justifying Brought-In Systems
 
-Even for myself — who advocates a very limber style of programming where I don't think you do a lot of upfront design — even I want to spend more time recording and justifying decisions. I don't do them from the top down like a UML diagram[^399] disaster situation or anything like that, but I do feel that a higher level of rigor is necessary. What I try to do in this situation is sort of play the devil's advocate; as if I was more than one programmer. I try to come at it from different angles. Can I justify it from a speed perspective? An ease-of-use perspective? A compatibility perspective? So we'll see if it works.  Ask me in ten years!
+Even for myself —who advocates a very limber style of programming where I don't think you do a lot of upfront design —even I want to spend more time recording and justifying decisions. I don't do them from the top down like a UML diagram[^399] disaster situation or anything like that, but I do feel that a higher level of rigor is necessary. What I try to do in this situation is sort of play the devil's advocate; as if I was more than one programmer. I try to come at it from different angles. Can I justify it from a speed perspective? An ease-of-use perspective? A compatibility perspective? So we'll see if it works.  Ask me in ten years!
 
 [^399]: **UML** is the Unified Modeling Language, whose purpose is visually representing a software system with its actors and roles so that a programmer can better understand and design said system. Sometimes, UML diagrams can end up as a "disaster situation".
 

@@ -441,7 +441,7 @@ The autocomplete works by comparing the characters since the last space with the
 ## Components
 
 
-### Awake myth
+### Awake Myth
 
 When we were designing the functions of the engine loop, we decided to have `OnEnable`, `Start`, `Update`, `FixedUpdate`, `OnDisable` and `OnDestroy` functions for the entity and the components. This is the smallest number of functions we thought we would need at that time. The reason we have `OnEnable` and `Start` is that some code should be run every time when a component is set active, while some should only be run once throughout its lifetime. Same logic applies to the `OnDisable` and `OnDestroy` functions. If you've used Unity before, you will find that it's quite similar with Unity's `MonoBehaviour`, but with one function missing: The `Awake` function. We didn't understand before why both `Awake` and `Start` are needed. Is that simply because of Unity is providing one additional phase for you to control?
 
@@ -465,7 +465,7 @@ However, when we were working on our `NetworkTransform` component, we were addin
 We could have just put the start check at the beginning of `FixedUpdate` and called it a day, but at that point we would be checking every component if it was added to its entity many times _per frame_. So we came up with a new scheme where components no longer check to be started inside of `Update`, but instead are added to a stack of `entitiesToStart` on the current `Level` object that is popped from every `Update` and `FixedUpdate`. This way, we gain two benefits: We are no longer checking every component if they need to be started every frame, and the entity's `Update` function no longer controls the `Start` of components because the `Level` handles it instead.
 
 
-### Preprocessing the component hierarchy tree
+### Preprocessing the Component Hierarchy Tree
 
 [Last week](week-8/#component-registry), we registered the components' hierarchy tree by a static registration function. After the registration, we have the `unordered_map` that maps every component type to its direct children component types (like mapping `Collider` to `BoxCollider`, `SphereCollider`, and `CapsuleCollider`). When `GetComponent<T>` is called, we do a lookup into the map and find all descendant component types by digging down into the tree and matching the types of components already attached to current entity. This is straightforward but quite expensive, because digging down involves multiple function calls. Since the type hierarchy tree is constructed during the static initialization time, we can always preprocess the tree to meet our needs after static initialization and before it is actually used. 
 
@@ -503,7 +503,7 @@ Your browser does not support the video tag.
 </div>
 
 
-### Checking components' uniqueness
+### Checking Components' Uniqueness
 
 When we were working on the collision handler, which contains all the collision callbacks and is queried by the collision module for collision tests, we realized that it should be a unique component on each entity. This means that if one single entity has multiple collision handles, it might behave strangely. It's not a good rule to be enforced by the game developer, since it will be hard to debug if the developer happens to have multiple collision handlers on one entity. Thus, we want to enforce this uniqueness requirement from our engine by providing one more option when creating a new component. 
 

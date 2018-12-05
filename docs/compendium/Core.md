@@ -4,7 +4,7 @@
 
 ### Week 1
 - [The Whole Core](../../blogs/engine-architecture.md#core): At the start of our journey, we layed out the roadmap of our core libraries and introduced each of them — even though some were changed or removed later on.
-- [Module Manager](../../blogs/week-1.md#module-manager): Our module manager takes care of module start-up, shut-down and update sequence. We thought it would be trivial but actually fell into a 2-hour discussion about the fundamental design of the modules...
+- [Module Manager](../../blogs/week-1.md#module-manager): Our module manager takes care of module startup, shutdown and update sequence. We thought it would be trivial but actually fell into a 2-hour discussion about the fundamental design of the modules...
 - [Error Handling](../../blogs/week-1.md#error-handling): We agreed on the usages of exceptions and asserts, and hesitantly brought in the Microsoft Foundation Class library to help with asserts.
 - [Math](../../blogs/week-1.md#math): The first version of our Math library was quickly implemented by referencing Unity's Math API and various online 3D math resources.
 - [String ID](../../blogs/engine-architecture.md#core): We didn't think too much and brought in an open-source string ID library.

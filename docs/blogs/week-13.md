@@ -490,7 +490,7 @@ It sounds simple, right? The only thing we needed to do seems to be checking the
 We changed our definition of static attribute later to solve this problem. The transform of a static entity is no longer unchangeable throughout the lifetime of the entity. Instead, it can be moved wherever and however you want until the level finish loading. As we are using `Level::Load` to replace the level scene file, this makes so much sense when compared with Unity and Unreal Editor where static entities/GameObjects can be moved before we hit the play button!
 
 
-### Revisiting `transform` in `Component` class
+### Revisiting `transform` in the `Component` Class
 
 Last week, when we were replacing all `GetTransform` function to `transform` variable, we introduced two static member variables in `Component` class to deal with the const initialization issue: since we can only assign the value of a `Transform* const` in the constructor and we cannot pass in the transform for it to point to, we can just make a shared state in the `Component` class for the component to read in its constructor. It seems working well but, as mentioned last week, this method changes and exposes (not directly available for the game developer though) the shared state.
 

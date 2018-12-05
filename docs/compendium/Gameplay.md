@@ -26,7 +26,7 @@
 ### Tommy Refenes
 - ["Garbage Physics"](../../interviews/TommyRefenes-interview/#garbage-physics)
 ### Adam Serdar
-- ["The Engine Dictates the Game"](../../interviews/AdamSerdar-interview/#the-engine-dictates-the-game)
+- [The Engine Dictates the Game](../../interviews/AdamSerdar-interview/#the-engine-dictates-the-game)
 ### [Amit Patel & Rob Shillingsburg](../../interviews/AmitRob-advice/)
 ### [Jason Gregory](../../interviews/JasonGregory-advice/)
 
