@@ -21,7 +21,8 @@
 - [Solving More Correctly](../../blogs/week-13/#collision-solving): Our box collision solving still had some slippery kinks that we worked out by baking the collision solving into the intersection test phase of our algorithm, then we topped it off with a [little nudge in the right direction](../../blogs/week-13/#that-epsilon-spice) to prevent indefinitely prolonged intersections. We also [added "mass"](../../blogs/week-13/#mass-in-a-collision-system) into an engine with no physics so that colliders could seem heavier!
 
 ## Relevant Interviews
-- Tommy Refenes:
-    - [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
+
+### Tommy Refenes
+- [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
 
 ## Postmortem

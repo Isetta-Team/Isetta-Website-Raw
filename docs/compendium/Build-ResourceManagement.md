@@ -18,11 +18,12 @@
 - [Building a Build Pipeline](../../blogs/week-13/#build-system): Our previous build tools were all functioning well and good, but we found that building the engine was taking more of our time with every day. We already had a build pipeline for our website set up in Jenkins, so we drafted a couple of build scripts to be used with our header exporter from Week 12 and gave them a test drive. ...After many more test drives, we nailed down the last details and had a smart, effective build pipeline on our hands!
 
 ## Relevant Interviews
-- Jeff Preshing:
-    - [System Integration](../../interviews/JeffPreshing-interview/#systems-integration)
-- Aras Pranckevičius:
-    - [From Graphics to Plumbing](../../interviews/ArasPranckevicius-interview/#from-graphics-to-plumbing)
-- Casey Muratori:
-    - [Builds: Keep 'em Simple](../../interviews/CaseyMuratori-interview/#builds-keep-em-simple)
+
+### Jeff Preshing
+- [System Integration](../../interviews/JeffPreshing-interview/#systems-integration)
+### Aras Pranckevičius
+- [From Graphics to Plumbing](../../interviews/ArasPranckevicius-interview/#from-graphics-to-plumbing)
+### Casey Muratori
+- [Builds: Keep 'em Simple](../../interviews/CaseyMuratori-interview/#builds-keep-em-simple)
 
 ## Postmortem

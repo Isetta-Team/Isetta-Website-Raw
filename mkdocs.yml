@@ -25,8 +25,8 @@ nav:
     - Collisions: compendium/Collisions.md
     - Core: compendium/Core.md
     - Gameplay: compendium/Gameplay.md
-    - General: compendium/General.md
     - Networking: compendium/Networking.md
+    - Other Topics: compendium/Other.md
     - Scene & Engine Loop: compendium/Scene-Loop.md
     - Tools: compendium/Tools.md
   - Blogs:
@@ -79,11 +79,11 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Summarized Advice:
+      - Alice Ching: interviews/AliceChing-advice.md
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
-      - Alice Ching: interviews/AliceChing-advice.md
   - Usage:
     - FAQs: engine_docs/home.md
     - Basics: engine_docs/basics.md

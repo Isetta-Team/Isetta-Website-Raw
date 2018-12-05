@@ -31,16 +31,17 @@
 - [How Can Audio Be 3D If Our Ears Are 2D?](../../blogs/week-12/#audio): Audio is often left until the end on game projects, and the Isetta Engine is no different! We found that our audio system wasn't quite enough, so we implemented spatialized audio and reworked the rest of our module to be more effective and usable.
 
 ## Relevant Interviews
-- Jeff Preshing:
-    - [Creating Your First Engine](../../interviews/JeffPreshing-interview/#creating-your-first-engine)
-    - [Systems Integration](../../interviews/JeffPreshing-interview/#systems-integration)
-- Martin Middleton:
-    - [The Spectrum of Engine Development](../../interviews/MartinMiddleton-interview/#the-spectrum-of-engine-development)
-- Amandine Coget:
-    - [GUI: Immediate vs Retained Modes](../../interviews/AmandineCoget-interview/#gui-immediate-vs-retained-modes)
-- Tommy Refenes:
-    - [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
-- Adam Serdar:
-    - [Integrated Libraries into an Engine](../../interviews/AdamSerdar-interview/#integrating-libraries-into-an-engine)
+
+### Jeff Preshing
+- [Creating Your First Engine](../../interviews/JeffPreshing-interview/#creating-your-first-engine)
+- [Systems Integration](../../interviews/JeffPreshing-interview/#systems-integration)
+### Martin Middleton
+- [The Spectrum of Engine Development](../../interviews/MartinMiddleton-interview/#the-spectrum-of-engine-development)
+### Amandine Coget
+- [GUI: Immediate vs Retained Modes](../../interviews/AmandineCoget-interview/#gui-immediate-vs-retained-modes)
+### Tommy Refenes
+- [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
+### Adam Serdar
+- [Integrated Libraries into an Engine](../../interviews/AdamSerdar-interview/#integrating-libraries-into-an-engine)
 
 ## Postmortem

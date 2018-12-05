@@ -59,23 +59,28 @@
 	- [Moving the Dynamic Array](../../blogs/week-13.md#move-assignment-operator-for-arrays): Our custom dynamic array had a bug that completely broke any `move` operations on them.
 
 ## Relevant Interviews
-- Shanee Nishry:
-	- [Keeping it Minimal, Decoupled & Data-Oriented](../../interviews/ShaneeNishry-interview/#keeping-it-minimal-decoupled-data-oriented)
-	- [Developing for an iOS Engine](../../interviews/ShaneeNishry-interview/#developing-for-an-ios-engine)
-	- [Caching in on Memory](../../interviews/ShaneeNishry-interview/#caching-in-on-memory)
-- Jeff Preshing:
-	- [The Arc80 Engine Architecture](../../interviews/RaymondGraham-interview/#the-console-evolution-and-engine-implications)
-	- [Systems Integration](../../interviews/JeffPreshing-interview/#systems-integration)
-	- [Low-level Debugging](../../interviews/JeffPreshing-interview/#low-level-debugging)
-	- [Reflection and Serialization](../../interviews/JeffPreshing-interview/#reflection-and-serialization)
-	- [Console Development Experiences](../../interviews/JeffPreshing-interview/#console-development-experiences)
-- Raymond Graham:
-	- [The Console Evolution and Engine Implications](../../interviews/RaymondGraham-interview/#the-console-evolution-and-engine-implications)
-	- [Porting between Non-Compatible Architectures](../../interviews/RaymondGraham-interview/#porting-between-non-compatible-architectures)
-- Amandine Coget:
-	- [Parallelism and Data-Oriented Design](../../interviews/AmandineCoget-interview/#parallelism-and-data-oriented-design)
-- Tommy Refenes:
-	- [Basic Principles of Abstraction](../../interviews/TommyRefenes-interview/#basic-principles-of-abstraction)
-	- [Stealth Loading in Super Meat Boy](../../interviews/TommyRefenes-interview/#stealth-loading-in-super-meat-boy)
+
+### Shanee Nishry
+- [Keeping it Minimal, Decoupled & Data-Oriented](../../interviews/ShaneeNishry-interview/#keeping-it-minimal-decoupled-data-oriented)
+- [Developing for an iOS Engine](../../interviews/ShaneeNishry-interview/#developing-for-an-ios-engine)
+- [Caching in on Memory](../../interviews/ShaneeNishry-interview/#caching-in-on-memory)
+### Jeff Preshing
+- [The Arc80 Engine Architecture](../../interviews/RaymondGraham-interview/#the-console-evolution-and-engine-implications)
+- [Systems Integration](../../interviews/JeffPreshing-interview/#systems-integration)
+- [Low-level Debugging](../../interviews/JeffPreshing-interview/#low-level-debugging)
+- [Reflection and Serialization](../../interviews/JeffPreshing-interview/#reflection-and-serialization)
+- [Console Development Experiences](../../interviews/JeffPreshing-interview/#console-development-experiences)
+### Raymond Graham
+- [The Console Evolution and Engine Implications](../../interviews/RaymondGraham-interview/#the-console-evolution-and-engine-implications)
+- [Porting between Non-Compatible Architectures](../../interviews/RaymondGraham-interview/#porting-between-non-compatible-architectures)
+### Amandine Coget
+- [Parallelism and Data-Oriented Design](../../interviews/AmandineCoget-interview/#parallelism-and-data-oriented-design)
+### Tommy Refenes
+- [Basic Principles of Abstraction](../../interviews/TommyRefenes-interview/#basic-principles-of-abstraction)
+- [Stealth Loading in Super Meat Boy](../../interviews/TommyRefenes-interview/#stealth-loading-in-super-meat-boy)
+### [Alice Ching](../../interviews/AliceChing-advice/)
+### [Jason Gregory](../../interviews/JasonGregory-advice/)
+### [Oliver Franzke](../../interviews/OliverFranzke-advice/)
+### [Walt Destler](../../interviews/WaltDestler-advice/)
 
 ## TODO: Postmortem

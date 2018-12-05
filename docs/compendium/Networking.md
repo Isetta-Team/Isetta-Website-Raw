@@ -33,8 +33,11 @@
 - [Network Discovery](../../week-13/#network-discovery): Another big out-of-game feature we were missing was a lobby system! Our previous systems required the player to know the IP of their host, but we implemented a LAN broadcasting system using some basic socket programming.
 
 ## Relevant Interviews
-- Martin Middleton
-    - [Technology from Flower to Journey](../../interviews/MartinMiddleton-interview/#technology-from-flower-to-journey)
-    - [Journey's Peer Networking System](../../interviews/MartinMiddleton-interview/#journeys-peer-networking-system)
+
+### Martin Middleton
+- [Technology from Flower to Journey](../../interviews/MartinMiddleton-interview/#technology-from-flower-to-journey)
+- [Journey's Peer Networking System](../../interviews/MartinMiddleton-interview/#journeys-peer-networking-system)
+### [Amit Patel & Rob Shillingsburg](../../interviews/AmitRob-advice/)
+### [Walt Destler](../../interviews/WaltDestler-advice/)
 
 ## Postmortem
