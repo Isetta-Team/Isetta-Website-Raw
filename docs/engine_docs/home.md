@@ -16,7 +16,7 @@ The best way to get started quickly is to browse through our example levels [her
 1. [Input](input.md): how to receive inputs?
 1. [Collisions](collisions.md): how to work with collisions in Isetta?
 1. [DebugDraw](debug_draw.md): how to use debug draw for lines, cubes, axis, etc?
-1. [Logging](logging.md): we all know `print` is the best way to debug, right?!
+1. [Logging](debug_logging.md): we all know `print` is the best way to debug, right?!
 1. [Networking](networking.md): Wait, you sure you want to make a networked game during this jam???
 
 

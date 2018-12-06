@@ -106,7 +106,7 @@ In our engine, we have lots of predefined components that you can use out of the
 |   [`SphereCollider`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Collisions/SphereCollider.h)        |       ...         |
 |   [`CollisionHandler`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Collisions/CollisionHandler.h)        |       ...         |
 
-- [General Components](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Components) - [Documentation](https://isetta.io/engine_docs/components/):
+- [General Components](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Components) - [Documentation](https://isetta.io/engine_docs/component/):
 
 |   Component Name          |   Component Description               |
 |       :-:         |           :-:             |

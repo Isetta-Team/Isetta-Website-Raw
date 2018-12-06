@@ -5,19 +5,19 @@
 ### Week 1
 - [Rendering: Ogre vs Horde3D](../../blogs/week-1/#rendering): We narrowed down to two choices, [Ogre](https://www.ogre3d.org/) and [Horde3D](http://horde3d.org/). While Ogre is powerful and well-known, we decided on Horde3D due to the ease of building it and its lightweight design. Then we made a demo to prove we could!
 - [Audio: OpenAL Soft vs FMOD](../../blogs/week-1/#audio): For audio, our two choices were [OpenAL Soft](https://github.com/kcat/openal-soft) and [FMOD](https://www.fmod.com/). We tried out OpenAL Soft due to it being open source, but we were confused with it even three hours after working at it. On the other hand, FMOD was a breeze to use and had ample documentation. So we jumped right into it and implemented our audio engine using FMOD!
-- [Networking: GameNetworkingSockets vs yojimbo](../../blogs/week-1/#networking): See the [Networking Compendium](Networking/#week-1) for more details!
+- [Networking: GameNetworkingSockets vs yojimbo](../../blogs/week-1/#networking): See the [Networking Compendium](../Networking/#week-1) for more details!
 - [String ID](../blogs/engine-architecture.md#core): String hashing is a very helpful utility that allows strings to use less memory and serve better as keys for other values, so we found an [open-source string ID library](https://github.com/TheAllenChou/string-id) to bring in.
 
 ### Week 2
-- [Making our Rendering API](../../blogs/week-2/#graphics): After settling on Horde3D, we wrapped it up inside our engine as `RenderModule`, and [for windows](../../week-2/#the-window-module), we wrapped GLFW as `WindowModule`. Our initial module design was a bust, but we learned to keep things flat and managed in one place early on.
+- [Making our Rendering API](../../blogs/week-2/#graphics): After settling on Horde3D, we wrapped it up inside our engine as `RenderModule`, and [for windows](../../blogs/week-2/#the-window-module), we wrapped GLFW as `WindowModule`. Our initial module design was a bust, but we learned to keep things flat and managed in one place early on.
 
 ### Week 3
 - [Input Implementation](../../blogs/week-3/#input-module): We implemented our `InputModule` by wrapping the basic `GLFW` functionality with a couple of our own interfaces, namely a polling method and a callback registration method.
 
 ### Week 5
 - [Ooey GUI](../../blogs/week-5/#gui): As it turns out, Horde3D has no GUI solutions, so we looked into [ImGui](https://github.com/ocornut/imgui) and [Qt](https://www.qt.io/). ImGui had a more lenient usage policy, and we could tell it was in very active development, so we went ahead with that.
-    - [ImGui Stands for Something?](../../week-5/#guimodule): After choosing a library, we needed to decide on how developers would use our GUI system. We took advice from [Amandine Coget](../../interviews/AmandineCoget-interview/#gui-immediate-vs-retained-modes) and [Walt Destler](../../interviews/WaltDestler-advice/) and went with a immediate mode GUI implementation, then quickly realized how important making a game is for proving which GUI features you actually need!
-- [Horde3D Turns Out to Be a Pain](../../blogs/week-5/#more-on-horde3d): We discovered that "lightweight" sometimes means "missing features" when Horde3D revealed that it [does not expose its texture loading functionality](../../week-5/#gui-and-textures) (needed by our GUI system), attempts to [load some resources during runtime](../../week-5/#loading-nested-resources), and [won't let us control its memory](../../week-5/#loading-nested-resources).
+    - [ImGui Stands for Something?](../../blogs/week-5/#guimodule): After choosing a library, we needed to decide on how developers would use our GUI system. We took advice from [Amandine Coget](../../interviews/AmandineCoget-interview/#gui-immediate-vs-retained-modes) and [Walt Destler](../../interviews/WaltDestler-advice/) and went with a immediate mode GUI implementation, then quickly realized how important making a game is for proving which GUI features you actually need!
+- [Horde3D Turns Out to Be a Pain](../../blogs/week-5/#more-on-horde3d): We discovered that "lightweight" sometimes means "missing features" when Horde3D revealed that it [does not expose its texture loading functionality](../../blogs/week-5/#gui-and-textures) (needed by our GUI system), attempts to [load some resources during runtime](../../blogs/week-5/#loading-nested-resources), and [won't let us control its memory](../../blogs/week-5/#loading-nested-resources).
 
 ### Week 10
 - [We Expose Textures!](../../blogs/week-10/#graphics): We complained about textures five weeks ago, and we felt that had dealt with Horde3D's oppressive control of the textures for long enough, so we whipped up our own OpenGL texture loader and hooked that in!
