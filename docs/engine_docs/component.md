@@ -123,7 +123,7 @@ In our engine, we have lots of predefined components that you can use out of the
 |   [`CameraComponent`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Graphics/CameraComponent.h)        |       ...         |
 |   [`LightComponent`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Graphics/LightComponent.h)      |       ...         |
 |   [`MeshComponent`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Graphics/MeshComponent.h)        |       ...         |
-|   [`ParticleSystemComponent`](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Components/ParticleSystemComponent.h)      |       ...         |
+|   [`ParticleSystemComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/week-13/Isetta/IsettaEngine/Graphics/ParticleSystemComponent.h)      |       ...         |
 
 - [Networking](https://github.com/Isetta-Team/Isetta-Engine/tree/master/Isetta/IsettaEngine/Networking) - [Documentation](https://isetta.io/engine_docs/networking/):
 
