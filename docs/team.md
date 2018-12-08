@@ -9,7 +9,7 @@ This is the team behind Isetta Engine. They are graduate students studying at Ca
 **Producer**
 
 ## [Jared Ettinger](https://jettingerworks.com/)  
-![team-headshot] (images/team/Jared.jpg "Jared Headshot")  
+![team-headshot](images/team/Jared.jpg "Jared Headshot")  
 Jared is a creative writer and producer from New York. He is excited about the intersection of art and technology, particularly in video games and animation. He hopes to further his production skills by keeping the rest of the team steady on this wild ride. 
 
 **Programmers**
@@ -29,4 +29,4 @@ Chaojie has a background in software engineering from Shanghai Jiao Tong Univers
 
 ## [Yidi Zhu](http://yidizhu.com/)  
 ![team-headshot](images/team/yidi_color.jpg "Yidi Headshot")  
-Yidi is a gameplay programmer / designer who escaped from the building construction management field. He loves making meaningful and joyful interactive experiences.
+Yidi is a gameplay programmer/designer who enjoys making meaningful and playful interactive experiences. He is probably having too much fun in this swamp of game engine development.

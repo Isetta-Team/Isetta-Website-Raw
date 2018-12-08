@@ -26,38 +26,35 @@
 
       <!-- Link to home -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}"
-            title="{{ config.site_name }}"
-            class="md-header-nav__button md-logo">
+        <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
           {% if config.theme.logo.icon %}
-            <i class="md-icon">{{ config.theme.logo.icon }}</i>
+          <i class="md-icon">{{ config.theme.logo.icon }}</i>
           {% else %}
-            <img src="{{ config.theme.logo | url }}" width="24" height="24" />
+          <img id="isetta-logo" src="{{ config.theme.logo | url }}" width="24" height="24" />
           {% endif %}
         </a>
       </div>
 
       <!-- Button to toggle drawer -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button"
-            for="__drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
 
       <!-- Header title -->
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title"
-            data-md-component="title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           {% block site_name %}
-            {% if config.site_name == page.title %}
-              {{ config.site_name }}
-            {% else %}
-              <span class="md-header-nav__topic back_to_top cursor_pointer">
-                {{ config.site_name }} 
-              </span>
-              <span class="md-header-nav__topic back_to_top cursor_pointer">
-                {{ page.title }} ⇫
-              </span>
-            {% endif %}
+          {% if config.site_name == page.title %}
+          {{ config.site_name }}
+          {% else %}
+          <span class="md-header-nav__topic back_to_top cursor_pointer">
+            {{ config.site_name }}
+          </span>
+          <span class="md-header-nav__topic back_to_top cursor_pointer">
+            {{ page.title }}
+            <span style="padding-left: 10px;">⇫</span>
+          </span>
+          {% endif %}
           {% endblock %}
         </div>
       </div>
@@ -65,23 +62,22 @@
       <!-- Button to open search dialogue -->
       <div class="md-flex__cell md-flex__cell--shrink">
         {% block search_box %}
-          {% if "search" in config["plugins"] %}
-            <label class="md-icon md-icon--search md-header-nav__button"
-                for="__search"></label>
+        {% if "search" in config["plugins"] %}
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
 
-            <!-- Search interface -->
-            {% include "partials/search.html" %}
-          {% endif %}
+        <!-- Search interface -->
+        {% include "partials/search.html" %}
+        {% endif %}
         {% endblock %}
       </div>
 
       <!-- Repository containing source -->
       {% if config.repo_url %}
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            {% include "partials/source.html" %}
-          </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          {% include "partials/source.html" %}
         </div>
+      </div>
       {% endif %}
     </div>
 

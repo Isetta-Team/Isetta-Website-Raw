@@ -89,13 +89,13 @@ Although this wrapped up nicely, getting debug drawing to work was taxing becaus
 
 *   Check the winding order of your drawings
 *   Horde3D and OpenGL use column-major[^9021] matrices, our Matrix4 is row-major[^9021], this distinction is important
-*   Horde3D renders down the negative Z-axis, as do many computer graphics programs, but this isn't intuitive for developers used to Unity which is the opposite. This is something we may also decide to "change" by offsetting the camera's rotation by 180° always, so it would effectively be looking down our positive Z-axis.
+*   Horde3D renders down the negative z-axis, as do many computer graphics programs, but this isn't intuitive for developers used to Unity which is the opposite. This is something we may also decide to "change" by offsetting the camera's rotation by 180° always, so it would effectively be looking down our positive z-axis.
 *   Have a good understanding of transformations (matrix and vector math)
 
 [^9021]: Every Matrix4 has 16 numbers is it, and the 16 numbers are usually stored in a big array in a specific order. **Column-major** and **row-major** are two different orders of storing them. In Column-row matrices, numbers are put in the array "column by column", i.e., the 4 numbers in the first column occupy the first 4 slots in the array. While row-column matrices store them "row by row" - the first 4 slots in the array correspond to the first row in the matrix.
 
 
-## Level (Scene graph)
+## Level (Scene Graph)
 
 
 ### Level-Entity-Component Design
@@ -106,7 +106,7 @@ Since all of us agreed on object-oriented composition[^90865] approach for our s
 
 ![Level Structure](../images/blogs/week-6/level_structure.png "Level Structure")
 
-`LevelManager` manages all the entities in this level and updates them one by one (the order depends on when the entity is spawned in this level) in its `Update` function. An _entity_ is an object that exists in the current level. It's more like a data entry which only includes a name, pointers to its components, and a transform object (we spent a long time debating if transform should own the children or the entity should own them; see this [later section](#the-small-step) for details). `Entity` also has some lifetime-related functions like `OnEnable`, `Update`, and `LateUpdate`. Any user-declared component or built-in component (like `MeshComponent`) inherits from `Component` class and will be activated, updated and destroyed by its entity.
+`LevelManager` manages all the entities in this level and updates them one by one (the order depends on when the entity is spawned in this level) in its `Update` function. An _entity_ is an object that exists in the current level. It's more like a data entry which only includes a name, pointers to its components, and a transform object (we spent a long time debating if the transform should own the children or the entity should own them; see this [later section](#the-small-step) for details). `Entity` also has some lifetime-related functions like `OnEnable`, `Update`, and `LateUpdate`. Any user-declared component or built-in component (like `MeshComponent`) inherits from `Component` class and will be activated, updated and destroyed by its entity.
 
 ### Loading a Level
 
@@ -221,7 +221,7 @@ The _handedness_ defines where the world basis vectors are pointing to, and affe
 
 ![Handedness](../images/blogs/week-6/handedness.png)
 
-This convention also has implications on our gameplay code. In local space, let's define the z vector to be the _forward_ vector, and the y vector to be the _up_ vector. In a left-handed coordinate, the x vector will turn out to be the _right _vector. While in a right-handed coordinate, the x vector will be the _left_ vector. This is why in the last section we said the first three elements of the matrix's first column is the _left_ vector - it's always "the x vector", but the "left" or "right" is some meaning we impose on it.
+This convention also has implications on our gameplay code. In local space, let's define the z vector to be the _forward_ vector, and the y vector to be the _up_ vector. In a left-handed coordinate, the x vector will turn out to be the _right_ vector. While in a right-handed coordinate, the x vector will be the _left_ vector. This is why in the last section we said the first three elements of the matrix's first column is the _left_ vector - it's always "the x vector", but the "left" or "right" is some meaning we impose on it.
 
 
 #### Column/Row Vector
@@ -276,7 +276,7 @@ ForSelfAndDescendents([](Transform* trans) { trans->isDirty = true; });
 ```
 
 
-### The One who Owns All Children
+### The One Who Owns All Children
 
 We had a discussion (well, more like a war) on who should keep track of the hierarchy—the `Entity`, or the `Transform`. The reason for letting `Entity` keep it is that the `Entity` needs functions like `GetComponentsInChildren` and `GetComponentsInParent`. The reason for letting `Transform` keep it is that it needs the hierarchy information more frequently as they are calculating matrices, and the `Entity` should really just keep a bunch of different components (including the `Transform`) and let the components bring functionalities.
 

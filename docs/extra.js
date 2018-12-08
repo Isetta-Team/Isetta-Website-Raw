@@ -6,6 +6,15 @@ window.onload = function() {
         }
     }
 
+    document.getElementById("isetta-logo").onclick = null;
+		
+    var anchors = document.getElementsByClassName('video-wrapper');
+    for(var i = 0; i < anchors.length; i++) {
+        anchors[i].onclick = function() {
+            window.open(this.getElementsByTagName('source')[0].src);
+        }
+    }
+
     var scrollToTops = document.getElementsByClassName("back_to_top");
     for(var i = 0; i < scrollToTops.length; i++) {
         scrollToTops[i].onclick = function() {

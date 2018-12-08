@@ -2,7 +2,7 @@
 
 ## Byte-Sized Updates
 *   [Graphics](#graphics): Added in functionality to the texture class, so it now does more than just loading and can actually be used!
-*   [Tools](#tools): Abstracted some previously developed tools into an editor component which is already proving valuable for development!
+*   [Editor Component](#editor-component): Abstracted some previously developed tools into an editor component which is already proving valuable for development!
 *   [Custom Dynamic Array](#custom-dynamic-array): We were originally not planning on creating our own data structures and just relying on STL but we gave into the temptation and it revealed some dark secrets.
 *   [Second Game](#second-game): We made our second game (which is not a twin stick shooter) and it works!
 *   [Patch Notes](#patch-notes): There's typically not a header for patch notes, but this week we found some really interesting bugs, mainly involving memory, which we think were great learning experiences.
@@ -21,7 +21,7 @@ In terms of development, be prepared to see talk about memory throughout the blo
 ## Graphics
 ### Texture
 
-Looking back at [week 5](week-5.md/#gui-and-textures) we realized we needed to be able to load textures outside just our graphics module, specifically for GUI images. As stated then, ImGui isn't an image loading library, so our images had to be loaded into our engine from another module. Horde3D has texture loading functionality, but how the functionality worked wasn't apparent or well documented. After struggling with Horde3D for too long, we had the texture in BGRA stored in a `uint8_t`.
+Looking back at [Week 5](week-5.md#gui-and-textures), we realized we needed to be able to load textures outside just our graphics module, specifically for GUI images. As stated then, ImGui isn't an image loading library, so our images had to be loaded into our engine from another module. Horde3D has texture loading functionality, but how the functionality worked wasn't apparent or well documented. After struggling with Horde3D for too long, we had the texture in BGRA stored in a `uint8_t`.
 
 The ImGui library still needed the image in the renderer's format. The renderer we're using is OpenGL, so the the texture needs to be loaded into OpenGL memory—ImGui provides an example of how to do this, however the sample code alone won't load the texture. Not knowing OpenGL well enough, we ended up spinning up a completely isolated project with a simple OpenGL scene to test texture loading. Following [this tutorial](https://learnopengl.com/Getting-started/Textures), we were able to get the textures loading right away but there was a lot of unneeded code, so we just had to find which parts of the texture loading were necessary.
 
@@ -36,7 +36,7 @@ The texture class originally was set a static loader, but was changed to hold sp
 Because we are using Horde3D to load the texture, it is storing it as a resource in its resource map and attempts to destroy the texture on Horde's destruction. We originally ran into an issue when trying to destroy the texture ourselves because we were trying to delete something we weren't the owners of. A simple call to Horde3D to release the memory allowed us to implement a `Texture::Unload` function, and we learned a good lesson on remembering to keep track of who really owns what.
 
 
-## Tools
+## Editor Component
 
 [Last week](week-9.md#console), we spoke about developing a console, and in the past we had developed smaller tools like an inspector and hierarchy. These tools were developed out of necessity, and we can see a game developer who uses our engine finding them useful, so we thought we should wrap all these tools in an `EditorComponent` available as an engine component.
 
@@ -62,7 +62,7 @@ One of the issues we found from testing but wasn't resolved until actually runni
 
 ## Second Game
 
-As mentioned in a [previous blog post](https://isetta.io/blogs/week-7/#first-game), one of our major milestones is that we made a "real" game with our engine. This allows us to validate the features we have implemented as well as to find missing features we need. Last time, we made a twin stick shooter that is quite similar with our target game, but this time we wanted to make something different. The major differences between our current engine and the old engine are the networked entities, the event messaging system, and the polished entity system. Based on these new features, we want to make a simple multiplayer competitive game that can utilize those new features best.
+As mentioned in a [previous blog post](week-7.md#first-game), one of our major milestones is that we made a "real" game with our engine. This allows us to validate the features we have implemented as well as to find missing features we need. Last time, we made a twin stick shooter that is quite similar with our target game, but this time we wanted to make something different. The major differences between our current engine and the old engine are the networked entities, the event messaging system, and the polished entity system. Based on these new features, we want to make a simple multiplayer competitive game that can utilize those new features best.
 
 Finally, we decided to make a 3D fencing game like [Nidhogg](https://store.steampowered.com/app/94400/Nidhogg/). Here is the playthrough video of the game:
 
@@ -128,7 +128,7 @@ Also, we found some missing features when making the game:
 
 ### Modifying Input with Modifier Keys
 
-Modifier keys are keys on the keyboard which can be pressed alongside other keys to alter the received input. The four modifier keys GLFW supports are `CTRL`, `ALT`, `SHIFT`, and `SUPER`. The reason we saw the need to add these was for any type of developer feature, you don't want to lose gameplay functionality of your keys when debugging, so with modifier keys you can an easier time debugging. While developing the [`EditorComponent`](#tools) we thought it would be a good idea to have shortcut keys; other developers might find the same need or will want to use them in a game, and it's no skin off our back to add the functionality since it's already supported by GLFW.
+Modifier keys are keys on the keyboard which can be pressed alongside other keys to alter the received input. The four modifier keys GLFW supports are `CTRL`, `ALT`, `SHIFT`, and `SUPER`. The reason we saw the need to add these was for any type of developer feature, you don't want to lose gameplay functionality of your keys when debugging, so with modifier keys you can an easier time debugging. While developing the [`EditorComponent`](#editor-component) we thought it would be a good idea to have shortcut keys; other developers might find the same need or will want to use them in a game, and it's no skin off our back to add the functionality since it's already supported by GLFW.
 
 This required us to refactor the `InputModule` to have key-modifier pairs rather than just keys, and then be able to search and remove based on those pairs. To keep things backwards compatible with the old system (the one without modifier keys), the `Input` class which holds the publicly available commands to access `InputModule` was changed to have a function for registering and unregistering keys with modifier keys and the old function definition, without modifier keys, was left unchanged with a `0` passed to the `InputModule` to signify no modifier key. Modifier keys can also be chained to form a mask with the bitwise-OR operator as well, to allow for even more possibilities!
 
@@ -245,7 +245,7 @@ What's to come in the next few weeks? The engine ideally. We have 2 weeks left b
 We posted our interview with [Raymond Graham](../interviews/RaymondGraham-interview.md) this past week, and we definitely think you should check it out. We will posting our interview with [Jeff Preshing](../interviews/JeffPreshing-interview.md), [Elan Ruskin](../interviews/ElanRuskin-interview.md), and [Jeet Shroff and Florian Strauss](../interviews/JeetShroff-FlorianStrauss-interview.md) as soon as we can, which will be very soon because we will be releasing a small book of all of our interviews in the coming weeks!
 
 
-## Resources
+## [Resources](../resources.md)
 
 Not much was added in the resource section this week, but it still remains a great source. We even find ourselves going there to see what the others on the team are using, especially when debugging systems that aren't our own. If you have any resource that you think we should take a look at, please let us know!
 

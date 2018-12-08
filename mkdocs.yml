@@ -18,6 +18,17 @@ nav:
   - Resources: resources.md
   - Glossary: glossary.md
   - FAQ: faq.md
+  - Compendium:
+    - Introduction: compendium/index.md
+    - 3rd Party: compendium/3rdParty.md
+    - Build & Resource Management: compendium/Build-ResourceManagement.md
+    - Collisions: compendium/Collisions.md
+    - Core: compendium/Core.md
+    - Gameplay: compendium/Gameplay.md
+    - Networking: compendium/Networking.md
+    # - Other Topics: compendium/Other.md
+    - Scene & Engine Loop: compendium/Scene-Loop.md
+    - Tools: compendium/Tools.md
   - Blogs:
     - '[Week 0] Preparation': blogs/week-0.md
     - '[Week 1] The Building Blocks': blogs/week-1.md
@@ -31,15 +42,20 @@ nav:
     - "[Week 8] Patching Holes": blogs/week-8.md
     - "[Week 9] Hello from the West Coast": blogs/week-9.md
     - "[Week 10] Grab A Bucket": blogs/week-10.md
-    # - "[Week 11] ": blogs/week-11.md
-    # - "[Week 12] ": blogs/week-12.md
+    - "[Week 11] The One Where the Team Picks a Font": blogs/week-11.md
+    - "[Week 12] Getting Ready for Game Jam!": blogs/week-12.md
+    - "[Week 13] Is This a Game Engine?": blogs/week-13.md
     #- Week #: blogs/week-#.md
   - Interviews:
+    - Introduction: interviews/index.md
+    - Shanee Nishry:
+      - Interview: interviews/ShaneeNishry-interview.md
+      - Video Story: interviews/ShaneeNishry-video.md
+    - Jeff Preshing:
+      - Interview: interviews/JeffPreshing-interview.md
+      - Video Story: interviews/JeffPreshing-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
     # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
-    # - Jeff Preshing:
-    #   - Interview: interviews/JeffPreshing-interview.md
-    #   - Video Story: interviews/JeffPreshing-video.md
     # - Elan Ruskin:
     #   - Interview: interviews/ElanRuskin-interview.md
     #   - Video Story: interviews/ElanRuskin-video.md
@@ -63,11 +79,25 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Summarized Advice:
+      - Alice Ching: interviews/AliceChing-advice.md
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
-      - Alice Ching: interviews/AliceChing-advice.md
+  - Usage:
+    - FAQs: engine_docs/home.md
+    - Basics: engine_docs/basics.md
+    - Level: engine_docs/level.md
+    - Entity/Transform: engine_docs/entity.md
+    - Component: engine_docs/component.md
+    - Graphics: engine_docs/graphics.md
+    - Input: engine_docs/input.md
+    - Debug Logging: engine_docs/debug_logging.md
+    - Debug Draw: engine_docs/debug_draw.md
+    - GUI: engine_docs/gui.md
+    - Audio: engine_docs/audio.md
+    - Collisions: engine_docs/collisions.md
+    - Networking: engine_docs/networking.md
 
 # Configuration
 theme:
@@ -120,7 +150,7 @@ extra_javascript:
   - 'extra.js'
 
 extra:
-  # disqus: 'isetta-engine'
+  disqus: 'isetta-engine'
   social:
     - type: envelope
       link: mailto:isetta.engine@gmail.com

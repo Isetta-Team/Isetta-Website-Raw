@@ -33,13 +33,13 @@ Let's look at the problems we are trying to solve:
 
     Also, the memory returned by standard memory allocation functions may not satisfy our **alignment** requirement. Improperly aligned memory can severely affect the speed when using objects stored there, because some modern CPUs can only read properly aligned data. For example, if our processor can only read 4-byte aligned memory, and we have a `uint32` (of size 4 byte) stored at memory address `0x2`, the processor will have to read both `0x0` and `0x4`. Then it will have to combine them to return the `uint32` value you want. While if the value is stored at a properly aligned address, the processor only needs to read one line.
 
-    ![Memory Access](../images/blogs/memory_access.png "Memory Access")
+    ![Memory Access](../images/blogs/week-2/memory_access.png "Memory Access")
 
     By preventing frequent `malloc` and `free` calls and aligning memory, we can increase our program's speed significantly.
 
 *   **Memory fragmentation:** When we are doing dynamic memory allocations / de-allocations, we may leave small free memory gaps between used memory. In situations where the sum of those small gaps are big enough to satisfy a new memory allocation request, we cannot find a contiguous memory chunk for the new request. This situation is depicted in the following image.
 
-    ![Memory Fragmentation](../images/blogs/memory_fragmentation.png "Memory Fragmentation")
+    ![Memory Fragmentation](../images/blogs/week-2/memory_fragmentation.png "Memory Fragmentation")
 
 
 These two problems can be solved effectively by managing memory by ourselves rather than leaving it to the operating system. We learned the concept of several different types of memory allocators by referring to Jason's book and a bunch of [other resources](../resources.md#memory). The most useful ones are: Stack Allocator and Pool Allocator. You can refer to the resources and our git repo for implementation details. We are going to focus on how they can be used in our engine here.
@@ -51,7 +51,7 @@ A Stack Allocator works just like a normal stack data structure. When the alloca
 
 Stack Allocators can solve both speed and fragmentation issues very well, but aren't all that easy to use. As the objects' memory is organized like a stack, deleting an object at the bottom of the stack without deleting the ones at the top is impossible (meaning you always have to delete newly created object first). Also, when you delete an object, you need to pass in a "marker" to the stack allocator. This way it knows where to free its memory. However, passing a marker also requires you to keep track of each object's marker during their lifetime, which can quickly get tedious and ugly.
 
-![Stack Allocator](../images/blogs/stack_allocator.png "Stack Allocator")
+![Stack Allocator](../images/blogs/week-2/stack_allocator.png "Stack Allocator")
 
 Fortunately, Stack Allocators can be extremely useful without causing annoying side effects. For instance, by using a Stack Allocator as a basis, we can make a Single Frame Allocator. The Single Frame Allocator is a special usage of Stack Allocator which clears itself at the end of each frame. You can allocate memory from it like crazy and not have to worry about freeing them; they are all safely cleared at the end of the frame! However, the fact that it clears every frame means that it tends to be used for passing information between different sub-systems during a single frame. Be careful not to point a pointer to such allocated memory from the last frame!
 
@@ -62,7 +62,7 @@ A more useful type of stack allocator is the Double Buffered Allocator, which al
 
 The Pool Allocator solves the problems in a different way and is a great companion for the [Object Pool Pattern](http://gameprogrammingpatterns.com/object-pool.html). A Pool Allocator grabs a big chunk of memory from the OS. Then, it and separate the memory into a list of small chunks with identical sizes. Each small chunk is just big enough to hold a single element. The Pool Allocator then returns an element-- or the raw memory that can hold an element to you-- when requested, and adds it back to the list when the element gets deleted. So both allocation and deallocation take constant time because it's just deletion and insertion operations on a linked list. Also, as each element is of the same size, defragmentation won't happen for a Pool Allocator and `new`ing and `delete`ing can happen in any order.
 
-![Pool Allocator](../images/blogs/pool_allocator.png "Pool Allocator")
+![Pool Allocator](../images/blogs/week-2/pool_allocator.png "Pool Allocator")
 
 The constraint, however, is that every allocation from a Pool Allocator is of the same size. You can, of course, request more than one chunk of memory from a Pool Allocator, but the returned memory chunks are not guaranteed to be contiguous. 
 
@@ -95,7 +95,7 @@ We will allocate a big chunk of memory that's enough for the game from operating
 
 For the systems that are "persistent"—those who are always there when the game is running [^1], we will put them at the bottom of the big stack. Then, we will have a part of memory for level specific assets, such as meshes, materials, etc. Next, we will have several chunks dedicated for individual Pool Allocators to hold game objects that need to be pooled (like bullets and mobs). Then, we will have a Single Frame Allocator and a Double Buffered Allocator. On top of everything, we will have the memory left for occasional dynamic allocation. The whole structure can be visualized like this:
 
-![Memory Layout](../images/blogs/memory_layout.png "Memory Layout")
+![Memory Layout](../images/blogs/week-2/memory_layout.png "Memory Layout")
 
 [^1]: Jason Gregory refers to **persistent game data** as "LSR" data, Load-and-Stay-Resident, as seen in _Game Engine Architecture_ section 15.4.2
 
@@ -207,7 +207,7 @@ On that note, the Isetta team is moving forward with yojimbo for now. The jury i
 
 The first steps we've taken on networking have been simple ones, but we have results! Going beyond just using one of the testing functions packaged with yojimbo, we integrated said function into our Frankenstein-esque testbed to ensure that it would work correctly alongside the rest of our libraries and implementations. And it does! For now.
 
-![yojimbo Test](../images/blogs/yojimbo_test.png "yojimbo Test")
+![yojimbo Test](../images/blogs/week-2/yojimbo_test.png "yojimbo Test")
 
 We only have a simple back and forth messaging system running on a solo machine so that we can wrap our minds around the data flow of the library. Our next steps will be to:
 
@@ -224,7 +224,7 @@ At that point, we suspect we'll know enough about the terrors of networking to m
 
 ### Logging
 
-The Logger system's log functions were originally called through static functions, but we decided we wanted to know the file name and line number of the call site of the log. One method of achieving this would be forcing the `__FILE__` and `__LINE__` macros passed into each log call, which is repetitive and makes the logger hard to use. The macros couldn't just be placed within the logger file as they would always expand to be the same file and line number. The other option was to create a set of macros for the log which expanded to passing in the macros by default. The macro route removes the scope operator from the log. It could be argued this increases readability. We selected the macro route, so the log functions were removed and replaced with a `LogObject` which can be found in the [`Logger.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/master/Isetta/Isetta/Core/Debug/Logger.h).
+The Logger system's log functions were originally called through static functions, but we decided we wanted to know the file name and line number of the call site of the log. One method of achieving this would be forcing the `__FILE__` and `__LINE__` macros passed into each log call, which is repetitive and makes the logger hard to use. The macros couldn't just be placed within the logger file as they would always expand to be the same file and line number. The other option was to create a set of macros for the log which expanded to passing in the macros by default. The macro route removes the scope operator from the log. It could be argued this increases readability. We selected the macro route, so the log functions were removed and replaced with a `LogObject` which can be found in the [`Logger.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/week-2/Isetta/Isetta/Core/Debug/Logger.h).
 
 
 ### Assertions

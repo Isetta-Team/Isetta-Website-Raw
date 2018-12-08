@@ -6,8 +6,10 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 
 ## New here?
 - We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
-- We are documenting our whole process and recording all our discussions and decisions (even the bad ones) in weekly blogs starting from [Week 0](blogs/week-0/).
-- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" version of the talk [here](interviews/TommyRefenes-interview/).
+- We are documenting our whole process and compiling what we learn all on this website. The best place to look for our knowledge of an engine subsystem is our [compendium](compendium/index).
+- You can see all of the specifics for our development starting from [Week 0](blogs/week-0/) for our weekly blog.
+- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" versions of the talks [here](interviews/index/).
+- If you're interested in using our engine (we appreciate your curiousity!), you can see some of our starting documentation at our [Usage](engine_docs/home/) page.
 
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -20,12 +22,12 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 </div>
 
 ## Where are we now?
-- The latest changes for week 10 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-10).
-- This week, our blog is titled ["Grab A Bucket"](blogs/week-10/), because we were leaking memory all across the engine. We've patched a few of the big holes and also made our second game!
-- We recently interviewed with [Raymond Graham](https://twitter.com/wadarass), an engineer at the San Francisco Unity office on the Spotlight Team! Raymond gave us some great insight ranging from his time working on NBA games to helping team make their best possible game with Unity. Much like others he mentioned there are fewer engine developers and how its becoming [A Lost Art](interviews/RaymondGraham-interview/).
+- The latest changes for week 13 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-13).
+- This week, our blog is titled ["Is This a Game Engine"](blogs/week-13/). We *technically* feature locked our engine, and we're pushing forward on game development. Only bugs from here on out!
+- We recently interviewed with [Shanee Nishry](https://twitter.com/Lunarsong), VR software engineer at Google Daydream and veteran game engine programmer. She had a lot to say about performance and memory across differing platforms. [Read it here!](interviews/ShaneeNishry-interview/)
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
-![Engine Architecture](images/engine_architecture/week10.png "Week 9 Progress Architecture")
+![Engine Architecture](images/engine_architecture/week13.png "Week 13 Progress Architecture")
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">

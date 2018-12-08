@@ -1,6 +1,6 @@
-## Coming Soon
+# Upcoming Interview with Jeet Shroff and Florian Strauss
 
-We will be publishing our interview with Jeet and Florian in the coming weeks. Subscribe to our mailing list to be alerted when its published!
+We had an interview with Jeet Shroff and Florian Strauss of Sony Santa Monica Studios, where we discussed the merits of game engines at the scale of AAA studios. Sign up on our mailing list to know when we publish it online!
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">

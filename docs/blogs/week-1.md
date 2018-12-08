@@ -89,23 +89,23 @@ After some experiments, we decided to use Horde3D as our rendering library. We d
 
 In the first week, we made a simple wrapper around the Horde3D as a proof-of-concept (see the HordeDemo folder). We will finish the wrapper as a module in the upcoming week.
 
-![Horde3D Test](../images/blogs/horde3d_Isetta_test.png "Horde3D Test Render")
+![Horde3D Test](../images/blogs/week-1/horde3d_Isetta_test.png "Horde3D Test Render")
 
 
 ### Audio
 
 With the requirements listed in our [architecture blog](engine-architecture.md#audio) (a library which allows us to allocate the used memory ourselves and is widely used in the game industry) we started our research and found two strong candidates: OpenAL Soft and FMOD.
 
-OpenAL caught our eyes first because it seemed related to OpenGL (it's not, but they do have other things in common), and we found an open source implementation of the standard named [OpenAL Soft](https://github.com/kcat/openal-soft). On the other hand, we had heard of FMOD because Unity uses it on several platforms, and we think it's a good candidate purely from the [huge list of games](https://www.fmod.com/games) (with some hit titles) that use it.
+OpenAL caught our eyes first because it seemed related to OpenGL (it's not, but they do have other things in common), and we found an open source implementation of the standard named [OpenAL Soft](https://github.com/kcat/openal-soft). On the other hand, we had heard of [FMOD](https://www.fmod.com/) because Unity uses it on several platforms, and we think it's a good candidate purely from the [huge list of games](https://www.fmod.com/games) (with some hit titles) that use it.
 
-We chose to give OpenAL Soft a try first because it's open source, while FMOD is owned by a commercial company and is not free (however, it does provide a free license for indie games with a budget under 500k). However, the team member who was assigned the task failed to get anything working in 3 hours, by the end of which he was still confused and stuck. This is partially due to the lack of Getting Started documentation and tutorials online, and partially because he is not experienced with audio APIs at all.
+We chose to give OpenAL Soft a try first because it's open source, while FMOD is owned by a commercial company and is not free (however, it does provide a free license for indie games with a budget under 500k). However, the team member who was assigned the task failed to get anything working in three hours, by the end of which he was still confused and stuck. This is partially due to the lack of Getting Started documentation and tutorials online, and partially because he is not experienced with audio APIs at all.
 
 Then we decided to experiment with FMOD. It turns out that FMOD's low-level API is surprisingly easy to integrate and use, and has a [comprehensive documentation](https://www.fmod.com/resources/documentation-api). We were able to get the library integrated and play our first audio clip in 2 hours, with the help of some Getting Started tutorials [^5]. We think that, for novice engine programmers, these kind of tutorials are invaluable. They are a great way to introduce you to a new field and get you up and running quickly. Also, thanks to the FMOD documentation, we easily found the way to control its memory usage with [`Memory_Initialize()`](https://www.fmod.com/resources/documentation-api?page=content/generated/FMOD_Memory_Initialize.html#/). FMOD also provides a [tutorial](https://www.fmod.com/resources/documentation-api?page=content/generated/overview/memorysaving.html#/) on managing its memory!
 
 
 [^5]: We referred to two tutorials by Cody Claborn when integrating FMOD API. [Setting Up Xcode and Visual Studio for FMOD Development](https://codyclaborn.me/tutorials/setting-up-xcode-and-visual-studio-for-fmod-development/) and [Making a Basic FMOD Audio Engine in C++](https://codyclaborn.me/tutorials/making-a-basic-fmod-audio-engine-in-c/)
 
-After stitching the FMOD API into our project, we continued using it to create a minimal audio engine. It takes care of loading sound files, managing loaded sound assets (with the help of [string-id](engine-architecture.md#core)), playing sound, managing a sound's play mode, managing a sound's lifetime with pause/continue/stop, and prevent memory leaks. You can take a look at the source code: [`Audio.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.h), [`Audio.cpp`](https://github.com/Isetta-Team/Isetta-Engine/blob/code-review/Isetta/Isetta/Core/Audio/Audio.cpp)
+After stitching the FMOD API into our project, we continued using it to create a minimal audio engine. It takes care of loading sound files, managing loaded sound assets (with the help of [string-id](engine-architecture.md#core)), playing sound, managing a sound's play mode, managing a sound's lifetime with pause/continue/stop, and prevent memory leaks. You can take a look at the source code: [`Audio.h`](https://github.com/Isetta-Team/Isetta-Engine/blob/week-1/Isetta/Isetta/Core/Audio/Audio.h), [`Audio.cpp`](https://github.com/Isetta-Team/Isetta-Engine/blob/week-1/Isetta/Isetta/Core/Audio/Audio.cpp)
 
 #### Who Owns the Sound?
 In the current design,  every `AudioSource` owns an instance of `FMOD::Sound` and is responsible for loading their own audio clip. However, this prevents the same loaded `FMOD::Sound` from playing in multiple instances. For example, if we have a gunfire sound, which can possibly be played 3 times every second, we need to make a new `AudioSource` and load the same sound by calling `FMOD:System::createSound` again. This is clearly not what we want and definitely won’t satisfy the game’s requirements.
@@ -125,7 +125,7 @@ Our original plan for running low-level networking sockets was to use [Valve's G
 
 At the time of writing this, the GameNetworkingSockets library is a pretty big pain to build, involving several installs and build steps. One of us even took a couple of days automating the build process, and it's still not 100% consistent! Beyond this, the resulting API seems to cover our engine's use case, which is as minor as we can possibly make it without removing networking entirely. Unfortunately, the codebase is still heavily in clean-up mode, and that makes it less accessible for integrating our own allocators and APIs with it. Not to mention that very little exists for documentation.
 
-![Networking](../images/blogs/game_networking_sockets_test.png "Successful Build of GameNetworkingSockets")
+![Networking](../images/blogs/week-1/game_networking_sockets_test.png "Successful Build of GameNetworkingSockets")
 
 Recently, we found another heavily featured networking library named [yojimbo](https://github.com/networkprotocol/yojimbo), built by [Glenn Fiedler](https://gafferongames.com/) of game network programming fame. This library appears to be more ready for integrating into our own engine, albeit with equally as poor documentation (there's a bit of Doxygen to use, I guess). One big plus to this library is that it's not riddled with commented-out code like the GameNetworkingSockets one is at the time of this writing, which makes us lean more toward yojimbo.
 
@@ -160,7 +160,7 @@ For the profiler, we imported [Brofiler](http://brofiler.com/), a C++ game profi
 
 The Brofiler tool has also been used on the game _Skyforge_ and has been integrated into CryEngine, although CryEngine creates a wrapper around Brofiler. With more time, we would do the same, but it doesn't seem necessary for basic usage. Examples and the original repo can be found on the [Brofiler github](https://github.com/bombomby/brofiler).
 
-![Brofiler](../images/blogs/brofiler.png "Brofiler")
+![Brofiler](../images/blogs/week-1/brofiler.png "Brofiler")
 
 ### Math
 Math isn’t a very complicated system, it’s all the components you would need in a typical math library. Our methodology with the Math library is to create what we need now as well as what we foresee needing but not more. For our math library, we have followed Unity’s API design fairly closely.
@@ -172,7 +172,7 @@ We chose Github as our version control platform as we are open sourcing the game
 
 We also established a workflow to help us collaborate effectively. We decided to open a new branch for each feature and only merge it back to the "trunk" when finished, because a game engine is really a feature-heavy product. This strategy enables us to work on multiple features at a time without interfering with each other. The common use case is like this:
 
-![Workflow Diagram](../images/blogs/workflow_diagram.png "Workflow Diagram")
+![Workflow Diagram](../images/blogs/week-1/workflow_diagram.png "Workflow Diagram")
 
 
 ## Coming Soon/Next Week
