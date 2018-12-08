@@ -48,6 +48,10 @@ nav:
     #- Week #: blogs/week-#.md
   - Interviews:
     - Introduction: interviews/index.md
+    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
+    - Elan Ruskin:
+      - Interview: interviews/ElanRuskin-interview.md
+      - Video Story: interviews/ElanRuskin-video.md
     - Shanee Nishry:
       - Interview: interviews/ShaneeNishry-interview.md
       - Video Story: interviews/ShaneeNishry-video.md
@@ -55,10 +59,6 @@ nav:
       - Interview: interviews/JeffPreshing-interview.md
       - Video Story: interviews/JeffPreshing-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
-    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
-    - Elan Ruskin:
-      - Interview: interviews/ElanRuskin-interview.md
-      - Video Story: interviews/ElanRuskin-video.md
     - Raymond Graham: 
       - Interview: interviews/RaymondGraham-interview.md
       - Video Story: interviews/RaymondGraham-video.md
