@@ -1,8 +1,10 @@
-# Wisdom from Working at Three AAA Studios for 15 Years
+# Wisdom from Working at AAA Studios for 15 Years
 
 ![headshot](../images/interviews/elan-ruskin.png "Elan Ruskin")
 
-Elan Ruskin is a senior engine programmer at Insomniac Games, where he has worked on critically-acclaimed titles including Marvel's Spider-Man and Ratchet & Clank. Prior to his time at Insomniac, Elan worked at Valve, Naughty Dog, and Maxis on many of their flagship titles as a gameplay and engine programmer. When he's not programming, Elan enjoys theater, music, and Star Trek.
+_Elan Ruskin is a senior engine programmer at Insomniac Games, where he has worked on critically-acclaimed titles including Marvel's Spider-Man and Ratchet & Clank. Prior to his time at Insomniac, Elan worked at Valve, Naughty Dog, and Maxis on many of their flagship titles as a gameplay and engine programmer. When he's not programming, Elan enjoys theater, music, and Star Trek._
+
+(The following is the edited transcription of a conversation we had with Elan Ruskin.)
 
 ## Designer-Driven Tools
 
@@ -104,31 +106,3 @@ Onboarding engineers is a really hard problem no matter where you are. This is a
 Technology is always changing. The amount of power available to consoles and PCs has grown precipitously. PC's seem to have blown up recently, but consoles just keep getting more and more CPU power and memory. People underestimate the importance of RAM because they've been told it affects the amount of art you can get on the screen. Obviously, mobile is a big change—mobile and tablet games are going to be more and more significant over time. AAA isn't so much in that space yet, but a lot of other people are. In terms of revenue, mobile is a huge chunk of the market now, and of course the ubiquitous availability of networking has totally revolutionized the industry. That's because you can always count on the network being filled with people at any given time. This not only applies for multiplayer games, but also for downloadable content, achievements, and all the other good stuff that comes with being connected. 
 
 Engines are going to face a few challenges ahead. One is that consoles are getting bigger and have more memory, and teams are getting bigger as well. That's a deal; the tools have to cope with it and the engine has to deal with loading more heterogeneous assets at once. Mobile, obviously, is gonna be a bigger and bigger thing. The tricky thing with mobile is that tablets are actually catching up now in terms of computing power, but they're not catching up in terms of electrical power. Electricity conservation has become a surprising concern, as well as the different UI that you have with tablets. I think people will start to rely on networks more and more, but I think actually the penetration of networking is pretty slow. This is especially true in large countries like the United States, so it will be a while before people are building stuff around the cloud. The age of cloud rendering is not here yet. VR could be a big deal, or it could not—the jury is still out for that.
-
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" style="margin-top: -20px">
-    <form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <h3>Subscribe to our mailing list</h3>
-            <p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
-            <br><br>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL"> </label>
-                <input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-            </div>
-            <div class="clear" id="submit-button">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-        </div>
-    </form>
-</div>
-<!--End mc_embed_signup-->
