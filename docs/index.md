@@ -6,9 +6,9 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 
 ## New here?
 - We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
-- We are documenting our whole process and compiling what we learn all on this website. The best place to look for our knowledge of an engine subsystem is our [compendium](compendium/introduction).
+- We are documenting our whole process and compiling what we learn all on this website. The best place to look for our knowledge of an engine subsystem is our [compendium](compendium/index).
 - You can see all of the specifics for our development starting from [Week 0](blogs/week-0/) for our weekly blog.
-- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" versions of the talks [here](interviews/introduction/).
+- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" versions of the talks [here](interviews/index/).
 - If you're interested in using our engine (we appreciate your curiousity!), you can see some of our starting documentation at our [Usage](engine_docs/home/) page.
 
 <!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">

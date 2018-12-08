@@ -19,7 +19,7 @@ nav:
   - Glossary: glossary.md
   - FAQ: faq.md
   - Compendium:
-    - Introduction: compendium/introduction.md
+    - Introduction: compendium/index.md
     - 3rd Party: compendium/3rdParty.md
     - Build & Resource Management: compendium/Build-ResourceManagement.md
     - Collisions: compendium/Collisions.md
@@ -47,7 +47,7 @@ nav:
     - "[Week 13] Is This a Game Engine?": blogs/week-13.md
     #- Week #: blogs/week-#.md
   - Interviews:
-    - Introduction: interviews/introduction.md
+    - Introduction: interviews/index.md
     - Shanee Nishry:
       - Interview: interviews/ShaneeNishry-interview.md
       - Video Story: interviews/ShaneeNishry-video.md
