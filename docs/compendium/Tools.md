@@ -24,6 +24,10 @@
 
 ## Relevant Interviews
 
+### Elan Ruskin
+- [Designer-Driven Tools](../../interviews/ElanRuskin-interview/#designer-driven-tools)
+- [Intimate Bond of Engine and Tools](../../interviews/ElanRuskin-interview/#intimate-bond-of-engine-and-tools)
+- [Effectively Using Profiling](../../interviews/ElanRuskin-interview/#effectively-using-profiling)
 ### Shanee Nishry
 - [Editing with a Level Editor](../../interviews/ShaneeNishry-interview/#editing-with-a-level-editor)
 ### Jeff Preshing

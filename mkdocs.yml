@@ -25,6 +25,7 @@ nav:
     - Collisions: compendium/Collisions.md
     - Core: compendium/Core.md
     - Gameplay: compendium/Gameplay.md
+    - Memory: compendium/Memory.md
     - Networking: compendium/Networking.md
     # - Other Topics: compendium/Other.md
     - Scene & Engine Loop: compendium/Scene-Loop.md
