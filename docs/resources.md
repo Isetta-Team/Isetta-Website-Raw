@@ -5,7 +5,7 @@
 Useful articles/resources we used during the development of Isetta
 
 ## 3D Math
-* *Game Engine Architecture 2nd edition* - Chapter 4： 3D Math for Games
+* *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
 * *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
 * *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
 
