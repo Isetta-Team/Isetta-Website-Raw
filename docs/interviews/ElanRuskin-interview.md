@@ -1,4 +1,6 @@
-Wisdom from Working at Three AAA Studios for 15 Years
+<h1>Wisdom from Working at Three AAA Studios for 15 Years</h1>
+
+![headshot](../images/interviews/elan-ruskin.jpg "Elan Ruskin")
 
 Elan Ruskin is a senior engine programmer at Insomniac Games, where he has worked on critically-acclaimed titles including Marvel's Spider-Man and Ratchet & Clank. Prior to his time at Insomniac, Elan worked at Valve, Naughty Dog, and Maxis on many of their flagship titles as a gameplay and engine programmer. When he's not programming, Elan enjoys theater, music, and Star Trek.
 
