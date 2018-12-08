@@ -1,4 +1,4 @@
-<h1>Why Game Engine Development is Worth Learning</h1> 
+# Why Game Engine Development is Worth Learning 
 
 ![headshot](../images/interviews/casey-muratori.jpg "Casey Muratori")
 
