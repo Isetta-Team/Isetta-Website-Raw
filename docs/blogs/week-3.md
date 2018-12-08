@@ -47,7 +47,7 @@ As part of the network programming, we realized we would be encountering several
 
 ## Input Module
 
-As we mentioned in [last week's blog post](https://isetta.io/blogs/week-2/), we are using GLFW[^8987] to receive and notify input events. Unlike other modules which are completely hidden from the game developer by scene entity data, the input module is one that not only processes low-level operations, like receiving inputs, but also directly interacts with them. The developers should be able to know when an input is triggered as well as run custom code to react to that event. This requires us to design a simple, friendly but versatile interfaces for game developers to use.
+As we mentioned in [last week's blog post](week-2.md), we are using GLFW[^8987] to receive and notify input events. Unlike other modules which are completely hidden from the game developer by scene entity data, the input module is one that not only processes low-level operations, like receiving inputs, but also directly interacts with them. The developers should be able to know when an input is triggered as well as run custom code to react to that event. This requires us to design a simple, friendly but versatile interfaces for game developers to use.
 
 [^8987]: **GLFW** is a library utility for creating windows and receiving input from the window.
 

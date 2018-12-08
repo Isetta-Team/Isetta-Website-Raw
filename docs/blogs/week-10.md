@@ -62,7 +62,7 @@ One of the issues we found from testing but wasn't resolved until actually runni
 
 ## Second Game
 
-As mentioned in a [previous blog post](https://isetta.io/blogs/week-7/#first-game), one of our major milestones is that we made a "real" game with our engine. This allows us to validate the features we have implemented as well as to find missing features we need. Last time, we made a twin stick shooter that is quite similar with our target game, but this time we wanted to make something different. The major differences between our current engine and the old engine are the networked entities, the event messaging system, and the polished entity system. Based on these new features, we want to make a simple multiplayer competitive game that can utilize those new features best.
+As mentioned in a [previous blog post](week-7.md#first-game), one of our major milestones is that we made a "real" game with our engine. This allows us to validate the features we have implemented as well as to find missing features we need. Last time, we made a twin stick shooter that is quite similar with our target game, but this time we wanted to make something different. The major differences between our current engine and the old engine are the networked entities, the event messaging system, and the polished entity system. Based on these new features, we want to make a simple multiplayer competitive game that can utilize those new features best.
 
 Finally, we decided to make a 3D fencing game like [Nidhogg](https://store.steampowered.com/app/94400/Nidhogg/). Here is the playthrough video of the game:
 
