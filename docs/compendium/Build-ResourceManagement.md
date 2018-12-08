@@ -2,6 +2,9 @@
 
 ## Timeline
 
+### Week 2
+- [Engine Config](../../blogs/week-2/#engine-config): By [analyzing our needs](../../blogs/week-2/#requirements) and [referencing established engines](../../blogs/week-2/#comparison-with-other-engines), we designed and implemented a surprisingly easy to use configuration system.
+
 ### Week 5
 - [Loading Nested Resources with Horde3D](../../blogs/week-5/#loading-nested-resources): Many of the Horde3D resources that we use have resources nested within them like materials and geometry. Horde3D would mark these down but not load them when asked to, so we poked our way in to get a better handle on whether resources were unloaded or not.
 
