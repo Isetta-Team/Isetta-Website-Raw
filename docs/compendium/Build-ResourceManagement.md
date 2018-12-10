@@ -29,7 +29,7 @@
 ### Casey Muratori
 - [Builds: Keep 'em Simple](../../interviews/CaseyMuratori-interview/#builds-keep-em-simple)
 
-## Postmortem (IN-PROGRESS)
+## Postmortem
 *   Asset pipeline needs to be defined and easy
     *   Horde3D made this a mess for us
         *   Processing was difficult because of certain file types
