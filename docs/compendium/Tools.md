@@ -1,5 +1,7 @@
 # Tools
 
+## Timeline
+
 ### Week 1
 - [Profiler](../../blogs/week-1/#profiler): We imported [Brofiler](http://brofiler.com/), an open-source C++ game profiler, for our profiling needs in our engine, and we forked the repo in preparation of some needed changed.
 
