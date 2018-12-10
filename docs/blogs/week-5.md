@@ -16,7 +16,7 @@ Although things look like they are not changing much, most of the current work i
 
 ## Goodbye Module Manager
 
-You will not be missed. What `ModuleManager` became was a container that held all of the modules and dictated their lifecycle. It was originally meant to act as a protective barrier for the game developer, as described in [week 1](week-1.md#module-manager), to stop them from "accidentally" starting or stopping a module.
+You will not be missed. What `ModuleManager` became was a container that held all of the modules and dictated their lifecycle. It was originally meant to act as a protective barrier for the game developer, as described in [Week 1](week-1.md#module-manager), to stop them from "accidentally" starting or stopping a module.
 
 So why _are_ we removing something that is at the center of our engine, holding all of the module's lifecycle? Well, that's exactly the reason we are removing the manager. We could easily see the module manager becoming the central hub of the engine, i.e. everything needs to go through the module manager to work, which doesn't make sense.
 
@@ -170,7 +170,7 @@ After completing the wrapper, or more accurately, while developing the wrapper, 
 
 ## More on Horde3D
 
-In our [week 1 blog](https://isetta.io/blogs/week-1/#rendering), we mentioned that we chose Horde3D over Ogre 2.1 based on the fact that Horde3D has better documentation, is easier to build and is more lightweight. We thought it would give us good enough graphics with less cost importing the Horde3D library as our rendering engine. However, four weeks later, with integrating more modules into our game engine,  we found that Horde3D might have been less than ideal than we initially thought. It is lightweight for external function calling (the reason why it has fewer and clearer API in the documentation), but hides too much detail for a deeper integration.
+In our [week 1 blog](week-1.md#rendering), we mentioned that we chose Horde3D over Ogre 2.1 based on the fact that Horde3D has better documentation, is easier to build and is more lightweight. We thought it would give us good enough graphics with less cost importing the Horde3D library as our rendering engine. However, four weeks later, with integrating more modules into our game engine,  we found that Horde3D might have been less than ideal than we initially thought. It is lightweight for external function calling (the reason why it has fewer and clearer API in the documentation), but hides too much detail for a deeper integration.
 
 
 ### GUI and Textures
@@ -233,13 +233,13 @@ It's unfair to say choosing Horde3D was a bad idea, but the lightweight-ness we 
 Starting from the last week, our team started integrating our own memory manager into the subsystems and 3rd party libraries (yay!). It's a very exciting task, but it exposed many issues and limitations of our memory manager. As others were busy integrating the memory manager, one of our developers spent time gathering and analyzing incoming requirements so that we could make some updates to our memory manager. 
 
 
-### Freedom from The Free List Allocator
+### Freedom of The Free List Allocator
 
 The first thing is that the existing memory allocators are very limited and can't cover all of our usage scenarios. 
 
 For example, our `GUIModule`'s `StartUp()` process involves a lot of dispersed allocation and deallocation of random sized memory, and is managed by ImGui so we can't easily change it. All we can give ImGui is an allocation callback and a freeing callback. As a stack allocator can only handle sequential alloc/free; pool allocator can only handle same sized alloc/free; dynamic arena can only be used with `ObjectHandle`s, there is no way to make this work without just wasting memory.
 
-In addition, the networking module needs to allocate memory for each client connected to the server at runtime for receiving messages, etc. That means the memory needs to be persistent, so the single frame and double buffers are out. Memory arena (refers to our defragmentated memory area as [in last week's blog](week-4/#our-naive-naive-defragmentation)) sounds like a good candidate for this, but the networking module needs to allocate memory for its [ring buffer](https://isetta.io/blogs/week-3/#data-structures) data structures, which holds an array buffer. Uh oh! Our `ObjectHandle` is not well-prepared to work with arrays. 
+In addition, the networking module needs to allocate memory for each client connected to the server at runtime for receiving messages, etc. That means the memory needs to be persistent, so the single frame and double buffers are out. Memory arena (refers to our defragmentated memory area as [in last week's blog](week-4.md#our-naive-naive-defragmentation)) sounds like a good candidate for this, but the networking module needs to allocate memory for its [ring buffer](week-3.md#data-structures) data structures, which holds an array buffer. Uh oh! Our `ObjectHandle` is not well-prepared to work with arrays. 
 
 ![Memory Layout week 2](../images/blogs/week-5/memory_layout_week_2.png "Memory Layout Proposed in Week 2 Blog")
 
@@ -334,7 +334,7 @@ Our current implementation of the free list allocator is by no means optimal. Al
 
 ### The Almighty `Alloc` - Updates on Memory API Design
 
-We also updated our API to make it easier for the team to use. During the process, we had a big discussion on how to design one of the most fundamental APIs: How to alloc on the LSR and level data area (look at our [week 2 memory section](https://isetta.io/blogs/week-2/#proposed-memory-management-patterns-in-our-engine) for a review!). As a recap, the difference between this two memory areas is that, level data memory will be cleared at the end of each level, and LSR will only be cleared when the game shuts down. We have two choices.
+We also updated our API to make it easier for the team to use. During the process, we had a big discussion on how to design one of the most fundamental APIs: How to alloc on the LSR and level data area (look at our [week 2 memory section](week-2.md#proposed-memory-management-patterns-in-our-engine) for a review!). As a recap, the difference between this two memory areas is that, level data memory will be cleared at the end of each level, and LSR will only be cleared when the game shuts down. We have two choices.
 
 One is to make things _explicit_ and have both `AllocOnLSR` and `AllocOnLevelData` functions. These two functions will take care of their respective areas of the stack, and assert if called incorrectly. For example, if you try to allocate something on LSR after the level starts, it will pass an exception, as the main "big stack" is already in the stage of allocating level memory or other things. Similarly, if you try to allocate on the level before the level starts. This method prevents misuses of both functions by creating errors to ensure the developer knows what they are doing and when they are using a function incorrectly. However, the downside is that in the future, we may have more allocation types other than just LSR and level (sublevel for example) and it will be taxing for programmers to remember when to use each as well as tedious for module upkeep.
 
@@ -345,7 +345,7 @@ We chose the implicit solution for several reasons. First, we only have 4 progra
 
 ### Abandoning the "all static" fantasy
 
-In our [week 2 blog](https://isetta.io/blogs/week-2/#proposed-memory-management-patterns-in-our-engine), we said we wanted to achieve zero memory allocation after game `StartUp` and satisfy all memory requests with our memory manager. However, as fantastic as that sounds, it's been giving us a lot of headaches. We find it hard to predict how much memory we will need throughout the entire game, and how to make sure all systems run with enough memory. The audio system is a great example of this: there is no good way to determine its memory demand other than relentless iteration.
+In our [week 2 blog](week-2.md#proposed-memory-management-patterns-in-our-engine), we said we wanted to achieve zero memory allocation after game `StartUp` and satisfy all memory requests with our memory manager. However, as fantastic as that sounds, it's been giving us a lot of headaches. We find it hard to predict how much memory we will need throughout the entire game, and how to make sure all systems run with enough memory. The audio system is a great example of this: there is no good way to determine its memory demand other than relentless iteration.
 
 Fortunately, we have our free list allocator now! Although not implemented yet, the free list will grow in size when it requires more memory. This method isn't as detrimental as new/delete or malloc/free because instead of getting more memory each call and switching between kernel and user mode, the free list will allocate chunks of memory to be used. Therefore, it naturally became our ideal solution to the problems mentioned before for the systems whose memory usage is hard to predict before runtime, we will use a free list allocator. This decision surely breaks our "all static" fantasy, but it seems to be more practical and still keeps us away from our two problems, again, they are speed and fragmentation. 
 
@@ -357,7 +357,7 @@ Fortunately, we have our free list allocator now! Although not implemented yet, 
 
 Network programming has taken the back seat to other development recently, mainly because we hadn't nailed down our game object model yet. After all, unless we want to bake all of our systems code inside of our network code, then we need to have some sort of messaging protocol to make sure the right objects and functions are receiving the right packets. We also depend on object serialization and replication, but fortunately, [yojimbo](https://github.com/networkprotocol/yojimbo) handles some of that for us and we can solely focus on the data flow through our engine. If you aren't using yojimbo or another networking library for your game, you can learn more about object serialization and world state replication in Chapters 4 and 5 of _Multiplayer Game Programming_ by Joshua Glazer and Sanjay Madhav.
 
-With our final product being a game engine, it's important to abstract the network code as much as possible so that it's applicable across many games made using the engine. Some of the obvious use cases that our [sample game](https://isetta.io/blogs/week-0/#the-example-game) highlights are object spawning, object destruction, object behavior change (targeting a different location), and data updates (changing health and score), just to name a few. Other potential needs might come in the form of remote procedure calls, where we can invoke functions across the network.
+With our final product being a game engine, it's important to abstract the network code as much as possible so that it's applicable across many games made using the engine. Some of the obvious use cases that our [sample game](week-0.md#the-example-game) highlights are object spawning, object destruction, object behavior change (targeting a different location), and data updates (changing health and score), just to name a few. Other potential needs might come in the form of remote procedure calls, where we can invoke functions across the network.
 
 Bearing those thoughts in mind, we've nailed down more of our game object model and have begun work on our scene graph system, so you'll see the network code of our engine start to build out these concepts more in the coming weeks.
 

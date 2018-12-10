@@ -19,7 +19,7 @@ nav:
   - Glossary: glossary.md
   - FAQ: faq.md
   - Compendium:
-    - Introduction: compendium/introduction.md
+    - Introduction: compendium/index.md
     - Engine Postmortem:
       - Lessons:
         - 'Build Games with your Game Engine': engine_postmortem/BuildGames.md
@@ -38,8 +38,10 @@ nav:
     - Collisions: compendium/Collisions.md
     - Core: compendium/Core.md
     - Gameplay: compendium/Gameplay.md
-    - General: compendium/General.md
+    - Interviews: compendium/Interviews.md
+    - Memory: compendium/Memory.md
     - Networking: compendium/Networking.md
+    - Other Topics: compendium/Other.md
     - Scene & Engine Loop: compendium/Scene-Loop.md
     - Tools: compendium/Tools.md
   - Blogs:
@@ -57,10 +59,14 @@ nav:
     - "[Week 10] Grab A Bucket": blogs/week-10.md
     - "[Week 11] The One Where the Team Picks a Font": blogs/week-11.md
     - "[Week 12] Getting Ready for Game Jam!": blogs/week-12.md
-    - "[Week 13] Is This an Engine?": blogs/week-13.md
+    - "[Week 13] Is This a Game Engine?": blogs/week-13.md
     #- Week #: blogs/week-#.md
   - Interviews:
-    - Introduction: interviews/introduction.md
+    - Introduction: interviews/index.md
+    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
+    - Elan Ruskin:
+      - Interview: interviews/ElanRuskin-interview.md
+      - Video Story: interviews/ElanRuskin-video.md
     - Shanee Nishry:
       - Interview: interviews/ShaneeNishry-interview.md
       - Video Story: interviews/ShaneeNishry-video.md
@@ -68,10 +74,6 @@ nav:
       - Interview: interviews/JeffPreshing-interview.md
       - Video Story: interviews/JeffPreshing-video.md
     - Martin Middleton: interviews/MartinMiddleton-interview.md
-    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
-    # - Elan Ruskin:
-    #   - Interview: interviews/ElanRuskin-interview.md
-    #   - Video Story: interviews/ElanRuskin-video.md
     - Raymond Graham: 
       - Interview: interviews/RaymondGraham-interview.md
       - Video Story: interviews/RaymondGraham-video.md
@@ -92,11 +94,11 @@ nav:
       - Interview: interviews/AdamSerdar-interview.md
       - Video Story: interviews/AdamSerdar-video.md
     - Summarized Advice:
+      - Alice Ching: interviews/AliceChing-advice.md
       - Amit Patel & Rob Shillingsburg: interviews/AmitRob-advice.md
       - Jason Gregory: interviews/JasonGregory-advice.md
       - Oliver Franzke: interviews/OliverFranzke-advice.md
       - Walt Destler: interviews/WaltDestler-advice.md
-      - Alice Ching: interviews/AliceChing-advice.md
   - Usage:
     - FAQs: engine_docs/home.md
     - Basics: engine_docs/basics.md

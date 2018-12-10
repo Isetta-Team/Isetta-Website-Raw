@@ -1,4 +1,4 @@
-# Is This an Engine?
+# Is This a Game Engine?
 
 ## Byte-Sized Updates
 
@@ -177,7 +177,7 @@ Your browser does not support the video tag.
 
 </div>
 
-Once the actual animation was working in the engine, we wanted to "attach" a sword to the knight character which would follow a certain joint in its rig. Prior [`MeshComponent::GetJointWorldTransform`](https://isetta.io/blogs/week-12/#expose-more-functionalities-from-horde3d) there was no way to do this. The functionality before wasn't sufficient because although the sword could have been parented to the knight, there is no way to get the hand's transform information. With this function, the sword can be attached to the hands and will move through an animation. We were then able to get the knight chopping with his sword!
+Once the actual animation was working in the engine, we wanted to "attach" a sword to the knight character which would follow a certain joint in its rig. Prior [`MeshComponent::GetJointWorldTransform`](week-12.md#expose-more-functionalities-from-horde3d) there was no way to do this. The functionality before wasn't sufficient because although the sword could have been parented to the knight, there is no way to get the hand's transform information. With this function, the sword can be attached to the hands and will move through an animation. We were then able to get the knight chopping with his sword!
 
 <div class="video-wrapper">
 
@@ -447,12 +447,12 @@ Last but not least, if you don't have memory leaks, our engine actually praises 
 
 ![No memory leak](../images/blogs/week-13/memory_leak_4.png)
 
-> We should be doing more of this! Developers always love appreciations to their hard work, right?
+> We should be doing more of this! Developers always love appreciation to their hard work, right?
 
 
 ## Engine vs. Game Resources
 
-In the past week, we have been working on getting more and more ready for our game jam. Part of that has been moving our levels from inside the engine to the `IsettaTestbed`. The reason for this shift is because these levels aren't really part of the engine, but rather levels that we are using to test out systems and demo different features. We are also going to leverage these levels for our game jammers as examples of how to use different features of the engine. This shift also caused us to move resource files, like model and audio files, from the engine to the testbed. However, there are certain resources like the primitive meshes and lighting shaders that should just be packaged with the engine. Part of this change affected the [`ExportHeaders` batch script](https://isetta.io/blogs/week-12/#exporting-headers) which needed to copy over the resources from the engine that are needed to use the engine in general.
+In the past week, we have been working on getting more and more ready for our game jam. Part of that has been moving our levels from inside the engine to the `IsettaTestbed`. The reason for this shift is because these levels aren't really part of the engine, but rather levels that we are using to test out systems and demo different features. We are also going to leverage these levels for our game jammers as examples of how to use different features of the engine. This shift also caused us to move resource files, like model and audio files, from the engine to the testbed. However, there are certain resources like the primitive meshes and lighting shaders that should just be packaged with the engine. Part of this change affected the [`ExportHeaders` batch script](week-12.md#exporting-headers) which needed to copy over the resources from the engine that are needed to use the engine in general.
 
 This presented the problem of how should the engine know what path files should be loaded from, the engine or game? If we are packaging some of them with the engine while obviously the game developer will have their own files, how will we know? 
 
@@ -483,14 +483,14 @@ So why doesn't the callback update the tree? Why not just always have an up-to-d
 
 ### Static Entities
 
-When we were implementing our [collision solver](https://isetta.io/blogs/week-11/#collision-solving), we added static attribute to the entities to mark whether the entity is moveable by the collision or anything else. However, we were not utilizing that attribute to manage the movement of the entity elsewhere. This week, we went back to fix this missing feature and to make the transform of a static entity unchangeable.
+When we were implementing our [collision solver](week-11.md#collision-solving), we added static attribute to the entities to mark whether the entity is moveable by the collision or anything else. However, we were not utilizing that attribute to manage the movement of the entity elsewhere. This week, we went back to fix this missing feature and to make the transform of a static entity unchangeable.
 
 It sounds simple, right? The only thing we needed to do seems to be checking the static-ness before changing the transform, with any `SetXXX` in the `Transform` class. This is not necessarily true. The main reason of it is that we cannot assign the transformation information, including the position, the rotation and the scale when creating the entity. And with the static attribute, we can neither set the transform later. This causes all static entities to be instantiated at the  origin of the world with no rotation or scale, they all must be there! Poor statics!
 
 We changed our definition of static attribute later to solve this problem. The transform of a static entity is no longer unchangeable throughout the lifetime of the entity. Instead, it can be moved wherever and however you want until the level finish loading. As we are using `Level::Load` to replace the level scene file, this makes so much sense when compared with Unity and Unreal Editor where static entities/GameObjects can be moved before we hit the play button!
 
 
-### Revisiting `transform` in `Component` class
+### Revisiting `transform` in the `Component` Class
 
 Last week, when we were replacing all `GetTransform` function to `transform` variable, we introduced two static member variables in `Component` class to deal with the const initialization issue: since we can only assign the value of a `Transform* const` in the constructor and we cannot pass in the transform for it to point to, we can just make a shared state in the `Component` class for the component to read in its constructor. It seems working well but, as mentioned last week, this method changes and exposes (not directly available for the game developer though) the shared state.
 
@@ -535,11 +535,11 @@ We still cannot sleep like a baby. It was us who set the transform pointer to be
 
 ### Delegates
 
-One thing we forgot to mention weeks ago is that we abstracted our [callback-handle structure](https://isetta.io/blogs/week-3#input-module) out. Originally, we only had callbacks in input module, so we used member functions like  `RegisterCallback` and `UnregisterCallback` in `InputModule` to handle them. Later we found that the game engine is much more event-driven than we thought. In addition to the event messaging system, which is designed for global events, we still need a unified structure to deal with point-to-point event subscription. Thus, just like what [Casey Muratori](https://isetta.io/interviews/CaseyMuratori-interview/#problem-2-the-complexity-explosion) said before, we wrote it out first, and then we pulled it out. This structure is called `Delegate`.
+One thing we forgot to mention weeks ago is that we abstracted our [callback-handle structure](week-3.md#input-module) out. Originally, we only had callbacks in input module, so we used member functions like  `RegisterCallback` and `UnregisterCallback` in `InputModule` to handle them. Later we found that the game engine is much more event-driven than we thought. In addition to the event messaging system, which is designed for global events, we still need a unified structure to deal with point-to-point event subscription. Thus, just like what [Casey Muratori](../interviews/CaseyMuratori-interview.md#problem-2-the-complexity-explosion) said before, we wrote it out first, and then we pulled it out. This structure is called `Delegate`.
 
 Implementing the `Delegate` is not hard. The interface is simple, with only four functions: `Subscribe`, `Unsubscribe`, `Invoke` and `Clear`. In the first two functions, we integrated the `HandleBin` we implemented before so that it can revoke the handles after it's unsubscribed. It was a little bit tricky when we were implementing the `Invoke` function. It iterates through all the handle-function pairs and invokes the corresponding functions. However, simply using a range-based for loop is not enough. When the callback function is unsubscribing itself, it will invalidate the iterator we are visiting and thus break the `for` loop in the `Invoke` function.
 
-How to deal with that? We decided to use a two phase strategy to invoke all the callbacks. In the first pass, We filtered all the callbacks out to a new array. We then called all callbacks in the new array in the second pass. Since unsubscribing only changes the original pair array, the array we are iterating through now is unaffected and safe.
+How do we deal with that? We decided to use a two phase strategy to invoke all the callbacks. In the first pass, we filtered all the callbacks out to a new array. We then called all callbacks in the new array in the second pass. Since unsubscribing only changes the original pair array, the array we are iterating through now is unaffected and safe.
 
 The related code is like this:
 
@@ -566,7 +566,7 @@ When we were working on [hitscan](#hitscan) for the feature game, we heavily use
 
 ### Window
 
-We've had a `WindowModule` since [week 2](https://isetta.io/blogs/week-2/#the-window-module), but only the `RenderModule` and `GUIModule` had direct access to it. We've had some need for some window-like features but have been able to just shove them in other classes up until now. However, for our [knight game](#the-knight-game) we needed to use the actual window size but there was no good access to it. So we decided why not, like all our other modules, have an accessing class, appropriately named `Window`. The class is relatively simple acting as an access point to get width and height of the window as well as change some other GLFW properties. There are a few properties like the cursor sprite and visibility that we would like to change but ImGui is also managing those properties so it isn't as simple as adding in a function but actually getting it to function with multiple modules.
+We've had a `WindowModule` since [week 2](week-2.md#the-window-module), but only the `RenderModule` and `GUIModule` had direct access to it. We've had some need for some window-like features but have been able to just shove them in other classes up until now. However, for our [knight game](#the-knight-game) we needed to use the actual window size but there was no good access to it. So we decided why not, like all our other modules, have an accessing class, appropriately named `Window`. The class is relatively simple acting as an access point to get width and height of the window as well as change some other GLFW properties. There are a few properties like the cursor sprite and visibility that we would like to change but ImGui is also managing those properties so it isn't as simple as adding in a function but actually getting it to function with multiple modules.
 
 ### Coming Soon
 Not much is left to be coming soon. We have one last blog post we will make about our last bit of development as well as posting about our GameJam. We will be trying to add some additional maneuverability to our documentation by adding a compendium tab, which will chronologize each section of the engine week by week as well as roping in the relevant interviews to that topic. We will also have postmortems coming to wrap up our project as a whole, so be on the look out for that.

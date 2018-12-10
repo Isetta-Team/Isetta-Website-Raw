@@ -32,7 +32,7 @@ There are a few other things to think about, like how do we make all of the data
 
 ### Sending Our First Transform
 
-Now that we have our snazzy new components system and our network messaging system, why not use them to our advantage? We can create a message called `TransformMessage` that carries four things: the position, rotation, and scale of the object, and the object's network ID.  The reasoning for the first three should be obvious, but the reasoning for the ID might not be. A couple weeks ago in [Network Identities](week-7/#network-identities), we created a `NetworkId` class (previously named `NetworkIdentity`) that could be used to identify objects that correspond to one another between two separate computers, since you can't really use pointers over the network. We had only used `NetworkId` for a contrived spawning/despawning example, but networked transforms were the real motivation behind the network IDs. By sending that across the network along with the transform data, we can figure out who should be receiving the data once the message is received by the other computers.
+Now that we have our snazzy new components system and our network messaging system, why not use them to our advantage? We can create a message called `TransformMessage` that carries four things: the position, rotation, and scale of the object, and the object's network ID.  The reasoning for the first three should be obvious, but the reasoning for the ID might not be. A couple weeks ago in [Network Identities](../week-7/#network-identities), we created a `NetworkId` class (previously named `NetworkIdentity`) that could be used to identify objects that correspond to one another between two separate computers, since you can't really use pointers over the network. We had only used `NetworkId` for a contrived spawning/despawning example, but networked transforms were the real motivation behind the network IDs. By sending that across the network along with the transform data, we can figure out who should be receiving the data once the message is received by the other computers.
 
 Using our components system, we can also generate a component for our networked transforms, conveniently called `NetworkTransform`. This will be what's responsible for updating the entity's actual transform with whatever we receive from the network, or on the flip side, sending out the most recent transform to the network. To do so, we need to register some network message handlers that will handle any incoming `TransformMessage` traffic—we can register these message handlers within the first `Start` function that runs for any `NetworkTransform` components, and doing so will create a couple of callbacks:
 
@@ -110,7 +110,7 @@ Interpolation is used everywhere in game development because computers are machi
 
 There are multiple kinds of interpolation that we'll need to know about because of the nature of our data. Most data can be nicely smoothed by _linear interpolation_, or _lerp_, which is pretty much the same as the line example from above. Another kind that we'll need to use for our rotations is _spherical linear interpolation_, or _slerp_. We won't get into the math ([reference](https://en.wikipedia.org/wiki/Slerp) if you're interested), but it's effectively a constant speed movement like lerp but along the edge of a circle's arc.
 
-Functions for getting a data point along that range have already been dealt with all the way back in [Week 1](week-1.md#math), though. What we need to do for our `NetworkTransform` is the "over time" part.
+Functions for getting a data point along that range have already been dealt with all the way back in [Week 1](../week-1/#math), though. What we need to do for our `NetworkTransform` is the "over time" part.
 
 
 ### The Heftiness of Network Interpolation
@@ -282,7 +282,7 @@ After all that, we have both queued and immediate callbacks in our engine. We pr
 
 ### Introducing the Tree
 
-In [Week 7](week-7.md#speeding-it-up), we talked about accelerating our collision system using a DBVT (Dynamic Bounding Volume Tree; this will be referred to as BV Tree in the blog). This week, we finally got the chance to implement it in our engine and the improvement is phenomenal!
+In [Week 7](../week-7/#speeding-it-up), we talked about accelerating our collision system using a DBVT (Dynamic Bounding Volume Tree; this will be referred to as BV Tree in the blog). This week, we finally got the chance to implement it in our engine and the improvement is phenomenal!
 
  
 
@@ -395,7 +395,7 @@ A console, in-game command-line, logger...the system has many names, but none of
 
 > Wait, I remember you said you weren't going to write an editor!
 
-Well, we still aren't, but as alluded to back in [Week 2](week-2/#engine-config), the console is something that will be easy to develop and speed our debugging process. What the console needs to be able to do is output the same messages that are sent to the Visual Studio output window, and filter those messages based on verbosity level (info, warning, error) and channel (general, graphics, networking, etc.). So as part of this first requirement, since all the log messages pass through the `Logger` class, and we don't want to change how we do the logging, the `Logger` needs knowledge of the console.
+Well, we still aren't, but as alluded to back in [Week 2](week-2.md#engine-config), the console is something that will be easy to develop and speed our debugging process. What the console needs to be able to do is output the same messages that are sent to the Visual Studio output window, and filter those messages based on verbosity level (info, warning, error) and channel (general, graphics, networking, etc.). So as part of this first requirement, since all the log messages pass through the `Logger` class, and we don't want to change how we do the logging, the `Logger` needs knowledge of the console.
 
 But this doesn't seem right, since the `Logger` is one of our core systems and the console is just a feature; our solution, which is admittedly probably not the best, is to store a function pointer[^39] which is called each time the `Logger` write method is called, and with the same string that is given to the `Logger` write method. It doesn't use the event messaging system because that requires the `Logger`, so in the case that nothing is listening to the event, a warning message is sent; this creates an infinitely recursive loop, which is a commonly known allergen for most programmers. It also isn't using a registration system like our input system because we weren't sure any other system would need to be listening to the `Logger` messages, and why over complicate something when we could just keep it simple? The function pointer stops the `Logger` system being coupled with anything else, such as the console.
 
@@ -429,7 +429,7 @@ The history of the commands are also stored, so a developer can cycle back throu
 
 ![Console](../images/blogs/week-9/console-history.PNG "Console History")
 
-Okay—all of this is neat, with config and user commands and all, but there are so many commands, and even with the feature to list them all out, they can just be tiring in general. So we added an autocomplete feature on pressing the tab key!
+Okay—all of this is neat, with config and user commands and all, but there are so many commands, and even with the feature to list them all out, they can just be tiring in general. So we added an autocomplete feature on pressing the Tab key!
 
 The autocomplete works by comparing the characters since the last space with the same number of characters in all the commands. Once all the possible matches are found, the callback then determines if it can fully complete the word in the case of only one match, or it can complete a few more letters until the input word matches all the possible candidate commands, for example the commands "help", "hello" would be matched up to "he" if "h" was typed. The commands are currently stored in a vector and map, but the best data structure for this type of comparison would be a trie[^683892], so we may think of a way to use that for storage. Luckily, the console isn't a runtime feature so optimization isn't of the utmost importance.
 
@@ -441,7 +441,7 @@ The autocomplete works by comparing the characters since the last space with the
 ## Components
 
 
-### Awake myth
+### Awake Myth
 
 When we were designing the functions of the engine loop, we decided to have `OnEnable`, `Start`, `Update`, `FixedUpdate`, `OnDisable` and `OnDestroy` functions for the entity and the components. This is the smallest number of functions we thought we would need at that time. The reason we have `OnEnable` and `Start` is that some code should be run every time when a component is set active, while some should only be run once throughout its lifetime. Same logic applies to the `OnDisable` and `OnDestroy` functions. If you've used Unity before, you will find that it's quite similar with Unity's `MonoBehaviour`, but with one function missing: The `Awake` function. We didn't understand before why both `Awake` and `Start` are needed. Is that simply because of Unity is providing one additional phase for you to control?
 
@@ -465,9 +465,9 @@ However, when we were working on our `NetworkTransform` component, we were addin
 We could have just put the start check at the beginning of `FixedUpdate` and called it a day, but at that point we would be checking every component if it was added to its entity many times _per frame_. So we came up with a new scheme where components no longer check to be started inside of `Update`, but instead are added to a stack of `entitiesToStart` on the current `Level` object that is popped from every `Update` and `FixedUpdate`. This way, we gain two benefits: We are no longer checking every component if they need to be started every frame, and the entity's `Update` function no longer controls the `Start` of components because the `Level` handles it instead.
 
 
-### Preprocessing the component hierarchy tree
+### Preprocessing the Component Hierarchy Tree
 
-[Last week](week-8/#component-registry), we registered the components' hierarchy tree by a static registration function. After the registration, we have the `unordered_map` that maps every component type to its direct children component types (like mapping `Collider` to `BoxCollider`, `SphereCollider`, and `CapsuleCollider`). When `GetComponent<T>` is called, we do a lookup into the map and find all descendant component types by digging down into the tree and matching the types of components already attached to current entity. This is straightforward but quite expensive, because digging down involves multiple function calls. Since the type hierarchy tree is constructed during the static initialization time, we can always preprocess the tree to meet our needs after static initialization and before it is actually used. 
+[Last week](week-8.md#component-registry), we registered the components' hierarchy tree by a static registration function. After the registration, we have the `unordered_map` that maps every component type to its direct children component types (like mapping `Collider` to `BoxCollider`, `SphereCollider`, and `CapsuleCollider`). When `GetComponent<T>` is called, we do a lookup into the map and find all descendant component types by digging down into the tree and matching the types of components already attached to current entity. This is straightforward but quite expensive, because digging down involves multiple function calls. Since the type hierarchy tree is constructed during the static initialization time, we can always preprocess the tree to meet our needs after static initialization and before it is actually used. 
 
 The way we optimized the hierarchy tree is to flatten the tree so that the parent component is not only mapped to its direct children components but also mapped to all the descendent components. This preprocessing can greatly reduce the lookup time to find all the descendent while it also increases the space the tree takes up. Thanks to our experience in using Unity, we know that functions like `GetComponent` are called quite frequently, so we finally decided to sacrifice some of the memory space to contain the type tree.
 
@@ -503,7 +503,7 @@ Your browser does not support the video tag.
 </div>
 
 
-### Checking components' uniqueness
+### Checking Components' Uniqueness
 
 When we were working on the collision handler, which contains all the collision callbacks and is queried by the collision module for collision tests, we realized that it should be a unique component on each entity. This means that if one single entity has multiple collision handles, it might behave strangely. It's not a good rule to be enforced by the game developer, since it will be hard to debug if the developer happens to have multiple collision handlers on one entity. Thus, we want to enforce this uniqueness requirement from our engine by providing one more option when creating a new component. 
 
@@ -542,7 +542,7 @@ However, what this didn't take into account is what happens if you don't reach t
 
 This past week we were out in Los Angeles, California interviewing with [Jeet Shroff](https://twitter.com/theshroffage), [Florian Strauss](https://twitter.com/likamutha?lang=en), and [Elan Ruskin](https://twitter.com/despair?lang=en) which we will be posting as soon as we can! This also leads perfectly into our other deliverable during this period, which is publishing these interviews into a book through CMU's ETC Press. More details to come soon!
 
-With regards to future work, we are coming close to the final moments of the project but still have a lot of work to do... Luckily, we only have 2 major systems left to develop as well as the final sample demo game we showed back in [week 0](week-0.md#The-Example-Game).
+With regards to future work, we are coming close to the final moments of the project but still have a lot of work to do... Luckily, we only have 2 major systems left to develop as well as the final sample demo game we showed back in [week 0](../week-0/#The-Example-Game).
 
 
 ## [Resources](../resources.md)
