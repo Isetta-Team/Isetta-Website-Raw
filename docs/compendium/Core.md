@@ -70,5 +70,5 @@
 ### [Oliver Franzke](../../interviews/OliverFranzke-advice/)
 ### [Walt Destler](../../interviews/WaltDestler-advice/)
 
-## Core Postmortem (IN-PROGRESS)
+## Postmortem (IN-PROGRESS)
 -- TODO --
