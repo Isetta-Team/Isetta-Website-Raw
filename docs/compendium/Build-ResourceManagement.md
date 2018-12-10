@@ -29,4 +29,25 @@
 ### Casey Muratori
 - [Builds: Keep 'em Simple](../../interviews/CaseyMuratori-interview/#builds-keep-em-simple)
 
-## Postmortem
+## Postmortem (IN-PROGRESS)
+*   Asset pipeline needs to be defined and easy
+    *   Horde3D made this a mess for us
+        *   Processing was difficult because of certain file types
+        *   Create small tools to make it easy for your user but better than a tool would be to automate it
+    *   Some defined things are necessary, like having a defined "Resource" folder
+        *   You may want this to be something that is just a constant (not changeable by user)
+*   Use configuration files, start them early
+    *   Creating a configuration system not defined in code helped with iteration
+    *   Could be used for other systems to change things at runtime
+*   Optimizing the build pipeline not only saves time, but it also keeps things clear among teammates
+    *   Builds can be flagged as broken as soon as they break with automated building
+    *   Making gradual updates to the build doesn't require a big time investment from any developers
+    *   Be careful about the local repository you're building into with an automated git submission! If you're using that computer to work, you can accidentally wipe your work
+*   Changing the structure of your files mid-project should be avoided if possible
+    *   Refactors of the project can cause immediate productivity issues as well as lasting issues (version control can really get thrown for a loop after a refactor)
+    *   Assumptions made by certain systems may be forgotten about, and tracking those errors down will likely be difficult
+*   Debug, Release, Release Editor configurations should be tested regularly together
+    *   Bugs across configurations always happen more often than you'd hope
+    *   Also, distinguishing how build macros are used (e.g. EDITOR) is important for making the engine's behavior understandable for all of your developers
+*   Test your build pipeline on a clean computer
+    *   Includes setup steps, this will ensure you don't have any assumptions of your computer

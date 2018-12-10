@@ -25,4 +25,24 @@
 ### Tommy Refenes
 - [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
 
-## Postmortem
+## Postmortem (IN-PROGRESS)
+*   GJK is the industry standard for a reason
+    *   Detecting collisions geometrically tends to break down into case-by-case tests for things other than spheres
+*   Handling collisions is half the battle
+    *   How you handle collisions can be heavily dependent on your scene hierarchy
+*   Raycasting will be a widely used feature of the collisions system
+*   Spatial partitioning can be very expensive when used incorrectly
+    *   Gathering the results of a spatial partition (like DBVT) more than once a frame will impact your performance significantly
+    *   Heuristics are a good way to prevent over-calculation of the spatial partition, and can be as simple as a "fat" range
+    *   But is needed for performance
+*   For collision solving, accuracy is more important than performance
+    *   In the worst case, you can solve with only one iteration per frame and just let the solve work itself out over multiple frames
+    *   If a solve is inaccurate, that inaccuracy can propagate to totally incorrect behavior
+*   Use a physics engine library
+    *   If you want to do physics, you will definitely be better off using a physics engine
+    *   If you want to learn collisions, implement it partially
+        *   You may still want to use a physics library still
+*   Ordering of intersection testing, solving/resolving, and callbacks matter
+    *   If done in a certain order, your collision solver can nullify the effects of your collision callbacks
+*   Test different size/scale of your shapes, different rotations
+    *   Your code may be built on assumptions of uniform scaling! And it will definitely break as soon as something is not uniformly scaled

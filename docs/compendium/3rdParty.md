@@ -44,4 +44,33 @@
 ### Adam Serdar
 - [Integrated Libraries into an Engine](../../interviews/AdamSerdar-interview/#integrating-libraries-into-an-engine)
 
-## Postmortem
+## Postmortem (IN-PROGRESS)
+*   Integrating multiple rendering libraries isn't pleasant
+    *   Best steps of action is to get each working separately then slowly integrate one into the other in small testable steps/chunks
+*   You don't need all the features the library provides
+    *   Don't even try to expose everything that you "think" is necessary
+    *   Only expose the items you see as immediately being used by your target game
+    *   You can always expose/abstract more when you find the need to use it
+    *   This was a trap we fell into with GUI (and a little with Audio)
+*   Research the library and have a nights sleep on it before choosing to use it
+    *   Better yet, take some time to use it (not integrate it) in a separate test environment
+        *   You might (probably) want to do this for all the options you're considering
+    *   You will get to see some quirks and most likely will look up documentation
+        *   Take note of how good the documentation is, how many forum posts go unanswered, etc.
+    *   Don't feel like just because you now understand the library a bit better or started using it that you're stuck with it
+        *   You might want to do an evaluation after a week
+*   Create an abstraction layer, don't just expose the library to the developer
+    *   API reason: won't follow the same semantics as your engine
+        *   less confusing for your developers
+    *   You can then pull out that library later on without affecting the games that are using the module layer
+        *   So long as the result and declaration don't change
+    *   You first abstraction will look a lot like the library you are abstracting
+        *   That's okay
+        *   It doesn't need to look different until you need to bring in another library to abstract for that system, then it will change
+
+*   Our opinions on our 3rd-party libraries:
+    *   Dear, ImGui --> recommended
+    *   Horde3D --> not recommended
+    *   yojimbo --> recommended
+    *   FMOD --> recommended
+    *   brofiler --> no strong opinion

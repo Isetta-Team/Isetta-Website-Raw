@@ -44,4 +44,6 @@
 - [Customizing toward Flash](../../interviews/TommyRefenes-interview/#customizing-toward-flash)
 - [Tools for Your Teammates](../../interviews/TommyRefenes-interview/#tools-for-your-teammates)
 
-## Postmortem
+## Postmortem (IN-PROGRESS)
+*   If you think a tool would be useful, develop a MVP, put it in front of the users, get feedback, fix those, and then wait a few weeks to see if the tool is actually providing value before pouring endless hours into something that won't be used.
+*   Engine development is tied with tool development, you will end up making tools for your engine to help debugging. Recognize it is a tool, design it accordingly.
