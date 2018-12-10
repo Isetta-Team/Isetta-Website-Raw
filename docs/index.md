@@ -24,7 +24,7 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 ## Where are we now?
 - The latest changes for week 13 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-13).
 - This week, our blog is titled ["Is This a Game Engine"](blogs/week-13/). We *technically* feature locked our engine, and we're pushing forward on game development. Only bugs from here on out!
-- We recently interviewed with [Shanee Nishry](https://twitter.com/Lunarsong), VR software engineer at Google Daydream and veteran game engine programmer. She had a lot to say about performance and memory across differing platforms. [Read it here!](interviews/ShaneeNishry-interview/)
+- We recently interviewed with [Elan Ruskin](https://twitter.com/despair), senior game engine developer at Insomniac Games with an outstanding catalog of works behind him. Elan discussed not just the technical details behind games like _Marvel's Spider-Man_, but also the interpersonal details of teams interfacing with technology. [Read it here!](interviews/ElanRuskin-interview/)
 - For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
 
 ![Engine Architecture](images/engine_architecture/week13.png "Week 13 Progress Architecture")
