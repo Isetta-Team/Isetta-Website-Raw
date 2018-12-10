@@ -20,6 +20,19 @@ nav:
   - FAQ: faq.md
   - Compendium:
     - Introduction: compendium/introduction.md
+    - Engine Postmortem:
+      - Lessons:
+        - 'Build Games with your Game Engine': engine_postmortem/BuildGames.md
+        - 'Rubberduck Developing: Forced Explanation': engine_postmortem/RubberduckDeveloping.md
+        - "It's Not that Hard": engine_postmortem/ItsNotThatHard.md
+      - What went right:
+        - 'Hosting a Game Jam': engine_postmortem/HostingGameJam.md
+        - 'Having a Team of Novices': engine_postmortem/NoviceTeam.md
+        - 'Leveraging Professionals for Input': engine_postmortem/LeveragingProfessionals.md
+      - What went wrong:
+        - 'Questions for the Professionals': engine_postmortem/QuestionsForProfessionals.md
+        - 'Basic Software Development Practices': engine_postmortem/SoftwareDevelopment.md
+        - 'Crunch is Bad': engine_postmortem/Crunch.md
     - 3rd Party: compendium/3rdParty.md
     - Build & Resource Management: compendium/Build-ResourceManagement.md
     - Collisions: compendium/Collisions.md
