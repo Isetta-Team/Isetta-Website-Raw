@@ -22,9 +22,9 @@ nav:
     - Introduction: compendium/index.md
     - Engine Postmortem:
       - Lessons:
-        - 'Build Games with your Game Engine': engine_postmortem/BuildGames.md
+        - 'Build Games with Your Game Engine': engine_postmortem/BuildGames.md
         - 'Rubberduck Developing: Forced Explanation': engine_postmortem/RubberduckDeveloping.md
-        - "It's Not that Hard": engine_postmortem/ItsNotThatHard.md
+        - "It's Not That Hard": engine_postmortem/ItsNotThatHard.md
       - What went right:
         - 'Hosting a Game Jam': engine_postmortem/HostingGameJam.md
         - 'Having a Team of Novices': engine_postmortem/NoviceTeam.md
