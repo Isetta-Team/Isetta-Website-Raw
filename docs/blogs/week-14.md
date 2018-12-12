@@ -115,9 +115,9 @@ We had a lot of problems left in our collision solving system, but most of them 
 
 
 *   Boxes were really bad; we made the assumption of uniform scaling for the box colliders, which made us compare distances _from its center_ to determine which face should be pushing the other colliders. Obviously if one dimension of the box is scaled a lot larger than the other, then that dimension is way more likely to push the other collider! So we instead determined the distance by distance _from the faces_. \
-[!Box Dimensions for Collisions](../images/blogs/week-14/box-dimensions-for-collisions.png)
+![Box Dimensions for Collisions](../images/blogs/week-14/box-dimensions-for-collisions.png)
 *   Another problem with box colliders was that, when another colliders would collide with the box's edge, the box would give that collider its center as the reference point to solve the collision with. This would cause spheres to shift up or down whenever it touched a corner because its force vector would point towards the center of the box! This was solved by constricting the box's reference point to the orthogonal plane to the colliding edge that also passes through the sphere's center point—this effectively restrains our collision solve to only push on that plane, which makes it correct. \
-[!Collisions on Edge](../images/blogs/week-14/collisions-on-edge.png)
+![Collisions on Edge](../images/blogs/week-14/collisions-on-edge.png)
 
 
 ### Debug Drawing Can Be Non-Helpful Sometimes
