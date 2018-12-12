@@ -25,24 +25,20 @@
 ### Tommy Refenes
 - [Using 3rd Party Libraries](../../interviews/TommyRefenes-interview/#using-3rd-party-libraries)
 
-## Postmortem (IN-PROGRESS)
-*   GJK is the industry standard for a reason
-    *   Detecting collisions geometrically tends to break down into case-by-case tests for things other than spheres
-*   Handling collisions is half the battle
-    *   How you handle collisions can be heavily dependent on your scene hierarchy
-*   Raycasting will be a widely used feature of the collisions system
-*   Spatial partitioning can be very expensive when used incorrectly
-    *   Gathering the results of a spatial partition (like DBVT) more than once a frame will impact your performance significantly
-    *   Heuristics are a good way to prevent over-calculation of the spatial partition, and can be as simple as a "fat" range
-    *   But is needed for performance
-*   For collision solving, accuracy is more important than performance
-    *   In the worst case, you can solve with only one iteration per frame and just let the solve work itself out over multiple frames
-    *   If a solve is inaccurate, that inaccuracy can propagate to totally incorrect behavior
-*   Use a physics engine library
-    *   If you want to do physics, you will definitely be better off using a physics engine
-    *   If you want to learn collisions, implement it partially
-        *   You may still want to use a physics library still
-*   Ordering of intersection testing, solving/resolving, and callbacks matter
-    *   If done in a certain order, your collision solver can nullify the effects of your collision callbacks
-*   Test different size/scale of your shapes, different rotations
-    *   Your code may be built on assumptions of uniform scaling! And it will definitely break as soon as something is not uniformly scaled
+## Postmortem
+**Use a physics library. Seriously.** Well, if you want to implement your own physics engine, then maybe you should dig into an existing one and see how they do it, but if you just want physics or collisions in your engine, then for real—_don't implement your own!_
+
+We'll just talk about collisions from here since that's all we created in our own engine. Collisions will be one of the most error-prone systems in your engine because even when your math is correct, you may still be missing edge cases, or your scene hierarchy update is at odds with how your collision system processes its spatial data structure. This is not to mention that how you implement the collisions is up to you, but the ways that you understand better might be a bad choice in the long run. We decided to implement our collisions geometrically which meant we had pretty and fast equations that would determine intersections, but once we got to the oh-so-complex case of a capsule and a box colliding, we found that neatness faded away and we were stuck with a long and very case-based intersection test algorithm.
+
+You might think we're being overly pessimistic by recommending against building your own collision system, but **one of the nice parts of a collision system is that you can easily replace an existing one with your own later down the line.** Most of the features in a collision system are ones that you find in any implementation, so swapping them out doesn't tend to affect other systems unless you made assumptions about specific parts of the collision system, like how collisions are resolved.
+
+**Handling collisions is half the battle.** Our first inclination for the collision system was that we needed to mathematically solve all of our intersection tests and robustly implement that, which is definitely something that we needed to do eventually, but we quickly realized that our collision system meant nothing if we didn't have any collision handling system on top of it. And the collision handling system will be more intertwined with the rest of your engine depending on how you implement it. Ours relies on our scene hierarchy to match collisions to their collision handlers, but you could also just point collisions directly at their handlers and be done with it. Because we chose the more automated fashion, we also had to handle more cases such as when collisions or collision handlers are moved in the hierarchy.
+
+**More things to know:**
+
+*   GJK is the industry standard for a reason. Detecting collisions geometrically tends to break down into case-by-case tests for anything other than spheres, and even then you'll find a lot of bugs and inaccuracies because of the breadth of the code at that point.
+*   Raycasting will be a widely-used feature of your collisions system. Obviously colliders are good for things like trigger zones or physics simulations, but any game with the concept of "shooting" or "pointing" will need raycasting for many of its features.
+*   Spatial partitioning can be very expensive when used incorrectly. Gathering results from a spatial partition (like for our dynamic bounding volume tree) more than once a frame will impact your performance significantly, so using heuristics to prevent over-calculation and sharing the data with other systems is important to keep things running smoothly.
+*   For collision solving, accuracy is more important than performance. In the worst case, you can solve with only one iteration of collision resolution per frame and just let the solution work itself out over multiple frames, whereas if the solution is inaccurate, that will propagate to a totally incorrect behavior.
+*   The ordering of intersection testing, the collision resolution, and your collision callbacks matter. In our engine, we use our intersection tests to determine if we even need to perform collision resolution, then we move our colliders to where they should be, _then_ we run the collision callback functions. If the callbacks are run earlier, then any translation they do on entities would be overwritten by the collision resolution!
+*   Test different sizes and scales of your shapes along with different rotations. Your code may be built on assumptions of uniform transformations, and it will definitely break as soon as something is not uniformly transformed!

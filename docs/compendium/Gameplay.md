@@ -30,27 +30,17 @@
 ### [Amit Patel & Rob Shillingsburg](../../interviews/AmitRob-advice/)
 ### [Jason Gregory](../../interviews/JasonGregory-advice/)
 
-## Postmortem (IN-PROGRESS)
-*   Start building games as soon as you can
-    *   If you can't do a "game", then do something that you would be proud of as a programmer who just started programming; like a moving cube!
-    *   Games are naturally built iteratively, so starting small and growing the game with new features will work naturally
-*   Make games often
-    *   Make an in-depth, feature rich game is good, but that will limit you to the designs and use cases of what you have
-    *   Starting a new game allows you to focus in on whatever subsystems you want, new or old
-*   Games reveal more bugs than tech demos.
-    *   Games imply more subtle, complex, and intentional use cases, which makes bugs easier to spot
-    *   Tech demos will effectively reproduce bugs, help you resolve them, and keep you from regressing any features
-*   Hold onto past tech demo code as reference code of how you want people to use the engine
-    *   Half of the battle of a game engine is getting people to learn how to use the engine, and example usages are effective for learning from
-*   At least at the start, target your engine at a specific game. Do _not_ try to build a generic engine from the get-go.
-    *   A game engine that targets a genre or game can be adapted for other games
-    *   Most features used in games are shared heavily across genres, so you'll won't even be stuck in a particular genre if you change your mind
-    *   Having a specific game allows you to (1) cull out any unneeded features, (2) determine what needed features should really be doing, and (3) test your engine features as soon as they're done!
-*   The genre isn't that important
-    *   If you don't know what game you want to make OR what features you want in your engine can help narrow down
-    *   In professional environment game drives engine, genre is then decided near end
-    *   In learning environment, features may be chosen first then genre can help narrow what game you'd like to make but really it's the features deciding which game you make
-*   Start building games as soon as you can. When you don't think you can, try to get something that you might be proud of when you first started programming, like a cube moving then add input!
-*   Building games will produce more engine bugs than any feature demos you might have. Tech demos are great to reproduce and resolve the bugs.
-*   Try to keep your past tech demos. These can be used as code snippets of how you would like people to use the engine.
-*   Have a game you are building the engine for. Don't set out to build a generic engine.
+## Postmortem
+**Build games as soon and as often as you possibly can.** And if you can't do a "game" yet, then do something that you would be proud of as a starting programmers like a moving cube! We initially thought that we would just focus on engine development with some tech demos here and there, but games ended up being the stars during our development. Games test engine features in their natural environment against correct use cases and, most importantly, with other engine features! **Games will reveal more bugs in your engine than tech demos will.** Don't get us wrong, tech demos will prove whether or not your feature is working correctly, but games evoke a usage of your engine that just happens to break it a lot.
+
+Thankfully, our team had a lot of game engine programmers tell us from the get-go that we should be building games with our engine. We initially thought that they were just being overzealous with game development, but as it turns out, they were just being wiser than us. A good way to look at it is this: _If you want your car to be safe and effective to drive on the road, would you want it to only be driven in the small testing course in the manufacturing building?_
+
+**At least at the start, target your engine at a specific game. Do _not_ try to build a generic engine from the get-go.** When beginning to plan out our engine, we didn't weigh what we wanted to make with it very seriously because, if we're honest, a lot of different genres of games share most of their tech. But again, thanks to the wisdom of professionals, we were taught that _what_ tech is used is different from _how_ that tech is used. Having a target game (or, at the very least, genre) lets you create tests, demos, and other features that coalesce more easily, and it also makes features a lot easier to cull from your engine when you have a deadline.
+
+We started our development with a target game in mind, and it allowed us to refer back to a "ground truth" whenever we were implementing features. That ground truth was rarely where we ended development, though, but because we had that target, we could appropriately determine when we needed to focus on the target game's features and when we could expand upon existing features. This ended in a more feature-full engine than we anticipated having at the beginning, which is pretty contradictory to the action of targeting a single game for development!
+
+**More things to know:**
+
+*   The genre that your engine is targeting isn't that important. It can help you narrow down the systems that you believe your engine needs, but the features will be better dictated by a specific game.
+*   Tech demos will effectively reproduce bugs, help you resolve them, and keep you from regressing any features, so leverage that whenever you run into bugs that deserve the investment.
+*   Hold onto past tech demo and game code as reference of how you want people to use your engine. Half of the battle of a game engine is its API and learnability, and you've got perfect examples right at your fingertips!

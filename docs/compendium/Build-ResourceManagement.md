@@ -30,24 +30,16 @@
 - [Builds: Keep 'em Simple](../../interviews/CaseyMuratori-interview/#builds-keep-em-simple)
 
 ## Postmortem
-*   Asset pipeline needs to be defined and easy
-    *   Horde3D made this a mess for us
-        *   Processing was difficult because of certain file types
-        *   Create small tools to make it easy for your user but better than a tool would be to automate it
-    *   Some defined things are necessary, like having a defined "Resource" folder
-        *   You may want this to be something that is just a constant (not changeable by user)
-*   Use configuration files, start them early
-    *   Creating a configuration system not defined in code helped with iteration
-    *   Could be used for other systems to change things at runtime
-*   Optimizing the build pipeline not only saves time, but it also keeps things clear among teammates
-    *   Builds can be flagged as broken as soon as they break with automated building
-    *   Making gradual updates to the build doesn't require a big time investment from any developers
-    *   Be careful about the local repository you're building into with an automated git submission! If you're using that computer to work, you can accidentally wipe your work
-*   Changing the structure of your files mid-project should be avoided if possible
-    *   Refactors of the project can cause immediate productivity issues as well as lasting issues (version control can really get thrown for a loop after a refactor)
-    *   Assumptions made by certain systems may be forgotten about, and tracking those errors down will likely be difficult
-*   Debug, Release, Release Editor configurations should be tested regularly together
-    *   Bugs across configurations always happen more often than you'd hope
-    *   Also, distinguishing how build macros are used (e.g. EDITOR) is important for making the engine's behavior understandable for all of your developers
-*   Test your build pipeline on a clean computer
-    *   Includes setup steps, this will ensure you don't have any assumptions of your computer
+**Optimizing the build pipeline not only saves time, but it also keeps things clear among teammates.** We've heard varying advice from professionals on how engine builds should be managed, but from our own experience, we can definitely say that it's a topic worth putting serious investment into. The first reason is obviously build times, which can balloon to greatly annoying proportions if you liberally use C++ features like templates and have lots of separated files and dense headers. The second, less known reason is work friction. When we started developing the engine, we could make builds quickly and cleanly almost always because there was nothing in it and no systems touched each other, but over time, our systems began to intermingle, then we began to organize our Visual Studio files into different project structures, then we began using a DLL for actual game development. Next thing you know, our developers are frustrated with having to wait almost an hour just to iterate on one system within our testbed project simply because that's the way things are set up!
+
+So optimizing your build process can mean a lot more than just saving time on the build. In the latter half of the project, we set up an automated process on a shared team machine that would regularly build the engine and push that to a remote repository, and this gave us two swanky benefits: We could make gradual changes to the engine and eventually those would propagate out to others naturally, and we would know as soon as the engine breaks without having to build it ourselves and be greeted by a nasty error message. Spending more time on our build pipeline became more rewarding during the project because of how much it influenced our development time, so it's definitely something to be watching and improving from the start.
+
+**The asset pipeline of your engine needs to be clearly defined and easy for the game developer.** Our asset pipeline was unfortunately mostly determined by Horde3D, our graphics library, which made things a mess for us to manage. Processing our resources was difficult because we needed to use particular file types, so we bit the bullet and invested time in some small tools that automated a lot of that process for us. By the end of the project, we were able to mostly ignore the asset pipeline thanks to this, but for future projects we'll definitely consider automating this pipeline from the beginning.
+
+**More things to know:**
+
+*   Some predefined things are necessary, like a "Resources" folder. To make everything modular also makes your engine brittle, and the last thing that you want your probably bug-ridden engine to be is more brittle.
+*   Use configuration files, and start them from early on. We noticed very early in our development that we were hardcoding some dangerous configurations, and by implementing this system early, we also established good practices for exposing our engines variables to the game developer.
+*   Changing the structure of your files mid-project should be avoided if possible. Refactors of the project can cause immediate productivity issues as well as lasting issues through the remainder of the project, like version control messiness.
+*   _Debug_, _Release_, and _ReleaseWithDebugFeatures_ configurations should be tested regularly together. Bugs across configurations happen more often than you'd hope, especially when using 3rd party libraries.
+*   Test your build pipeline on a clean computer, including the setup steps. This will ensure that you don't have any assumptions about making the build from your own computer.
