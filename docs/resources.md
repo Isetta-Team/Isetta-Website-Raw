@@ -172,6 +172,8 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 
 ## Networking
 * [Gaffer On Games - Game Networking](https://gafferongames.com/categories/game-networking/)
+* [The TRIBES Engine Networking Model *or How to Make the Internet Rock for Multi­player Games*](https://www.gamedevs.org/uploads/tribes-networking-model.pdf)
+* [The DOOM III Network Architecture](http://mrelusive.com/publications/papers/The-DOOM-III-Network-Architecture.pdf)
 * [*Multiplayer Game Programming*](https://www.amazon.com/Multiplayer-Game-Programming-Architecting-Networked/dp/0134034309)
     * *Ch. 6, Network Topologies and Sample Games* covers how to build out an application layer for your game networking
 * UDP Sockets
