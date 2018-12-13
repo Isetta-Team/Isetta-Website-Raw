@@ -79,7 +79,7 @@ You can download and play some of the games made by our jammers [here](https://d
 
 After implementing necessary networking features for our final game last week, we finally dove into gameplay programming for the game. As it turned out, our engine was still pretty easy to use and we implemented the gameplay features in 2 days, and spent some more time adding sound and designing the level. As this is the last part of our project and we wanted to get the game running as fast as possible, our gameplay code got really dirty where the `GameManager` is like the almighty god who knows everything (we also used singletons in the game excessively)! 
 
-However, as we went into the polishing phase we started noticing more bugs in our engine. For example, we had a bug where animation blending stops halfway and boxes push other colliders in weird ways during collision solving, etc. We will talk about how those were fixed later.
+However, as we went into the polishing phase we started noticing more bugs in our engine. For example, we had a bug where boxes push other colliders in weird ways during collision solving. We will talk about how it's fixed in the patch notes.
 
 We also spent some good time tweaking Horde's light settings and ambient map to get the feel we wanted, and here is our final game: _The Last of Isetta_!
 
@@ -88,6 +88,8 @@ We also spent some good time tweaking Horde's light settings and ambient map to 
    <iframe width="1280" height="720" src="https://www.youtube.com/embed/40KGj2rzqbs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 </div>
+
+> *As a side note, the reason why we pushed the game to the final stage rather than making it earlier was that at this stage, we are not really interested in making the game as it's basically writing trivial code. But we made a enjoyable game anyway!*
 
 
 ## Engine Reflection
