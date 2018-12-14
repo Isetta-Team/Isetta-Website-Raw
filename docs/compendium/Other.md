@@ -53,7 +53,7 @@
 ## Postmortem
 -->
 
-## Debugging Postmortem (IN-PROGRESS)
+## Debugging Postmortem
 **Debug drawing was our (and very likely will be your) most used feature in the engine.** You can get some utility out of the output log, but seeing information visually in the same space as your actual games and tests makes a world of difference. We didn't anticipate that this would be so heavily used because we figured that our systems would be testable in their own individual ways, but fortunately, one of our programmers decided to do it early on and we've seen great dividends since. Particularly, whenever we're doing any precise or math-oriented feature in the 3D space (i.e. collisions), our debug drawings are usually the only effective form of information.
 
 That being said, **debug drawing is expensive, invasive, and clunky, so be mindful of how you implement it.** Even if you implement it using your rendering engine (which we recommend you do to keep things simple), drawing out a bunch of lines and faces based on individual function calls weighs heavily on the system, so make sure you preprocess your debug code out of your release builds! Similarly, debugging a low-level graphics API can be difficult, especially when you're using a rendering library for your graphics, so try to do your debug drawing features in a sterile project before integrating it all with your own engine's rendering.
