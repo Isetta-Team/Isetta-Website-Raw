@@ -46,6 +46,17 @@
 - [Customizing toward Flash](../../interviews/TommyRefenes-interview/#customizing-toward-flash)
 - [Tools for Your Teammates](../../interviews/TommyRefenes-interview/#tools-for-your-teammates)
 
-## Postmortem (IN-PROGRESS)
-*   If you think a tool would be useful, develop a MVP, put it in front of the users, get feedback, fix those, and then wait a few weeks to see if the tool is actually providing value before pouring endless hours into something that won't be used.
-*   Engine development is tied with tool development, you will end up making tools for your engine to help debugging. Recognize it is a tool, design it accordingly.
+## Postmortem
+**If you think a tool will be useful, develop a minimum viable product and get that in front of your users before anything else.** Seeing the real-world usage of a tool is the only true way to test if a tool will be effective or not, and that requires getting something made and in the hands of users for a decent amount of time. We were unable to predict which of our own tools would be the most used during our development timeline, but by the end, we were able to clearly tell that our asset processing tool and our engine exporting tool were used more than anything else. The other tools that we made fell somewhere between unused and somewhat used, and as far as the engine is concerned, we probably didn't need to develop the ones that were left unused.
+
+**Engine development is tied with tool development because tools will facilitate how you build your engine.** Tools are what's used to debug the engine. You might call it something else, but the applications and software that you make for the purpose of easing or improving engine development are the same as any tools that you'd make for game development.
+
+**Recognize the things that you make as part of your engine development that aren't engine systems or features as tools, and design them accordingly.** Tools have users who intend to get something specific out of them, so if you think about what that is for a given tool _before_ you develop it, then you can be a lot more efficient about making the tool.
+
+**More things to know:**
+
+*   Build an entity inspector and a scene-graph hierarchy view so that you can see all of the entities in your game, their transformations, and hopefully any other information on them as well (such as components). It doesn't need to be fancy, and it will really help with debugging throughout your engine's development and even into game development.
+*   A profiler won't be useful to an engine early on, and it's not usually very hard to integrate. In some initial fraction of an engine's development, the developers will be focusing on correctness over performance, and it won't be difficult to see if someone has caused performance issues with fundamental mistakes. Later down the line, you can opt to use the profiler to see the smaller performance hits accumulate and what needs your attention.
+*   An in-game console is nice to have, but isn't very necessary in this day and age. We created one mostly out of interest, and we found that none of us really used it after it was initially developed.
+*   Asset processing should be easy and seamless. If possible, create an automatic asset cooker that will prepare any game or engine assets. If it's not possible, then create a tool that is simple to use and doesn't force the user to edit any specific file manually. A lot of assets flow in and out of an engine/game, and reducing friction there will not just save time but will also reduce frustration among developers.
+*   Debug drawing will probably be the most used feature by the developers of the engine. Having in-engine visuals is a much stronger indicator that something is wrong than error messages. The debug drawing doesn't need to be very performant either because it can be removed using preprocessing for any release builds.

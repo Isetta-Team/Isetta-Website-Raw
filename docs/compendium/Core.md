@@ -70,5 +70,7 @@
 ### [Oliver Franzke](../../interviews/OliverFranzke-advice/)
 ### [Walt Destler](../../interviews/WaltDestler-advice/)
 
-## Postmortem (IN-PROGRESS)
--- TODO --
+## Postmortem
+*   Unit test your math library. Even if it's hard to create test cases for things like `Matrix4` and `Quaternion`, this is crucial. **If you don't unit test your math, something in the engine will definitely break.**
+*   If you have your own memory manager, be wary of creating your own standard library classes as well. We assumed that making an equivalent of the `std::vector` class would be straightforward since it's so ubiquitous, but there's a lot going under the hood for the commonly used classes and you'll likely do some of it incorrectly, which will propagate errors throughout your engine.
+*   Implementing your own data structures is wise, though, because you will often need it in more than one place, and duplicating the code will likely cause problems down the road.

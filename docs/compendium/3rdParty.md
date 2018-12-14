@@ -44,33 +44,20 @@
 ### Adam Serdar
 - [Integrated Libraries into an Engine](../../interviews/AdamSerdar-interview/#integrating-libraries-into-an-engine)
 
-## Postmortem (IN-PROGRESS)
-*   Integrating multiple rendering libraries isn't pleasant
-    *   Best steps of action is to get each working separately then slowly integrate one into the other in small testable steps/chunks
-*   You don't need all the features the library provides
-    *   Don't even try to expose everything that you "think" is necessary
-    *   Only expose the items you see as immediately being used by your target game
-    *   You can always expose/abstract more when you find the need to use it
-    *   This was a trap we fell into with GUI (and a little with Audio)
-*   Research the library and have a nights sleep on it before choosing to use it
-    *   Better yet, take some time to use it (not integrate it) in a separate test environment
-        *   You might (probably) want to do this for all the options you're considering
-    *   You will get to see some quirks and most likely will look up documentation
-        *   Take note of how good the documentation is, how many forum posts go unanswered, etc.
-    *   Don't feel like just because you now understand the library a bit better or started using it that you're stuck with it
-        *   You might want to do an evaluation after a week
-*   Create an abstraction layer, don't just expose the library to the developer
-    *   API reason: won't follow the same semantics as your engine
-        *   less confusing for your developers
-    *   You can then pull out that library later on without affecting the games that are using the module layer
-        *   So long as the result and declaration don't change
-    *   You first abstraction will look a lot like the library you are abstracting
-        *   That's okay
-        *   It doesn't need to look different until you need to bring in another library to abstract for that system, then it will change
+## Postmortem
+**Research the libraries you'd consider using, then have a night's sleep before choosing to use one. **Or even better, take some time to use the library (_not_ integrate it) in a separate test environment! Many of the libraries that we used for our engine were paired with some test projects, so we were able to go in and rummage around for a while before we made the leap and brought them into the engine. In doing so, we got to see (1) what are the most commonly used parts of the library, (2) what are the quirky or strange parts of the library, and (3) how comprehensive is the documentation. This stage was great for us to scour the internet for forums or documentation pages related to what we wanted out of the library, and if we struggled to find what we needed, then it was a good sign that the library might not be right for us. However, even after doing all of this, **don't feel like you're stuck with a library that you've chosen just because you've spent some time with it.** Long-term usage of a library will reveal much more of the negatives than short-term usage will. In our case, we first tried using the [GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets/) library for our networking solution, and we thought that it mostly had what we wanted after we ran the test project. Later, we discovered a lot of commented-out code and grew much more suspicious of missing functionality that we might need, so we jumped ship over to [yojimbo](https://github.com/networkprotocol/yojimbo/). We can't say for sure whether GameNetworkingSockets would have been a poor choice, but yojimbo has turned out nicely for our engine, so we certainly didn't lose anything by being cautious like this!
 
-*   Our opinions on our 3rd-party libraries:
-    *   Dear, ImGui --> recommended
-    *   Horde3D --> not recommended
-    *   yojimbo --> recommended
-    *   FMOD --> recommended
-    *   brofiler --> no strong opinion
+**Create an abstraction layer for your game developers—don't just expose the library.** Most libraries that you use will _not_ follow the same semantics, conventions, and guidelines as your own engine's API, and keeping that consistent is important for the usability of the engine. This will still be useful even if you have to do it for over 100 functions; in our case for Dear, Imgui, we had to abstract out quite a few functions and classes just to keep them within our own style. The result was a seamless GUI API from a 3rd party library that we brought into our engine! Without that, we likely would have had a much harder time utilizing our engine's GUI functionality since its API conventions would differ from the rest of the engine's API.
+
+Your first abstraction will look a lot like the library that you're abstracting, which is okay; it doesn't need to look different until you bring in another library for that system as well. This is another good reason to create an abstraction layer: You can much more easily pull out your previous 3rd party library without affecting the games that are using that module. You won't be able to change the return values or function signatures, of course, but you can change anything about the implementation and the game developer should hardly be able to tell the difference!
+
+**More things to know:**
+
+*   Integrating multiple rendering libraries isn't pleasant, but it may be necessary depending on what you use. The best steps you can follow would be to get each library working separately then slowly integrate one into another in small, testable chunks.
+*   Your engine doesn't need all of the features a library provides, so don't try to expose everything that you **think** is necessary; only expose things that you see as immediately being needed for the engine. We made this mistake with our GUI library, and regretted the time wasted on it. Another key benefit of an abstraction layer above your library would be that you can more easily expose more functionality when you find that you need it.
+*   Our opinions on the libraries that we used:
+    *   _Dear, Imgui_: **Recommended**. Dear, Imgui is a robust and consistently-improving library for immediate mode GUI rendering. The only negatives we found in using it were that we needed to provide the textures for it to render and Horde3D was not providing them, and it required access to our windows, which was another Horde3D annoyance.
+    *   _Horde3D_: **Not recommended**. Horde3D is definitely a lightweight rendering engine, but that was more of a hindrance than a help to us. We wanted something that would be quick to integrate into the engine, but we made the mistake of overlooking missing features until it was too late. The asset pipeline of Horde is also messy and slow, which got very annoying when we were developing games later in the project timeline.
+    *   _yojimbo_: **Recommended**. yojimbo does pretty much what it says it does: Real-time networking messages and client-server communications. We had to inject a lot of our own functionality, like connection callbacks and an abstracted method of declaring message types, but the base functionality was all there and good for us to build off of.
+    *   _FMOD_: **Recommended**. FMOD delivers simple audio functionality to a game engine, which is precisely what we needed. It possibly doesn't have the advanced functionality of its competitors, and controlling its memory accesses requires heavy modification, but we were able to get it running and integrated in record time, which means it's good in our book.
+    *   _Brofiler_: **No opinion**. Brofiler was sufficient for us to profile out our systems and even specific functions within the engine, but we had to make a fork of the repository to fix some things in it before we could even use a functional build. If we spent more time on this aspect of development, we may have formed a good opinion of the tool, but we didn't, so we haven't!
