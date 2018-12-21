@@ -34,8 +34,7 @@ And if you are still interested, the full documentary is right here!
 
 ## Game Jam
 
-As we've been mentioning in our past few weeks' blogs, we were planning, and now have, held a game jam. The game jam was never part of the plan for the 15 weeks of development on the engine, particularly because we never bought into the illusion that people would want to use our engine over any other option. However, as the weeks progressed, we often found our discussions gravitating towards the question of what a developer would be left with as a result of our decisions. We figured if we were talking about the hypothetical developer of our engine so much, why not put our engine to the test? We were also encouraged by our advisers and faculty to figure out ways to measure our project's success.
->>> Disclaimer: We aren't saying that this is necessarily the right way to do it.
+As we've been mentioning in our past few weeks' blogs, we were planning, and now have, held a game jam. The game jam was never part of the plan for the 15 weeks of development on the engine, particularly because we never bought into the illusion that people would want to use our engine over any other option. However, as the weeks progressed, we often found our discussions gravitating towards the question of what a developer would be left with as a result of our decisions. We figured if we were talking about the hypothetical developer of our engine so much, why not put our engine to the test? We were also encouraged by our advisers and faculty to figure out ways to measure our project's success. (Disclaimer: We aren't saying that this is necessarily the right way to do that.)
 
 ### Preparing for the Jam
 
@@ -130,7 +129,7 @@ We had a lot of problems left in our collision solving system, but most of them 
 
 
 
-*   Boxes were really bad; we made the assumption of uniform scaling for the box colliders, which allowed us to compare distances _from the box's center_ to determine which face of the box should be pushing the other colliders. Obviously if one dimension of the box is scaled a lot larger than the other, then that dimension is way more likely to push the other collider! So we instead determined the correct face to push with by the distance _from the box's faces_.
+*   Boxes were really bad; we made the assumption of uniform scaling for the box colliders, which allowed us to use the _largest_ distance _from the box's center_ to determine which face of the box should be pushing the other colliders. Obviously if one dimension of the box is scaled a lot larger than the other, then that dimension is way more likely to push the other collider! So we instead determined the correct face to push with by the _smallest_ distance _from the box's faces_.
 
 ![Box Dimensions for Collisions](../images/blogs/week-14/box-dimensions-for-collisions.png)
 

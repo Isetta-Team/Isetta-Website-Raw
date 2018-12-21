@@ -12,9 +12,13 @@ html {
     padding: 0;
 }
 
-#new-here, #where-are-we-now, #isetta-timeline {
+#new-here, #where-are-we-now, #isetta-timeline, #what-is-there-to-see {
 	background-color: #d6f2ff;
 	padding-left: 5px;
+}
+h3#the-engine, h3#the-compendium, h3#the-blogs, h3#the-interviews, h3#the-developers, h3#the-documentary {
+	background-color: #effaff;
+	padding-left: 15px;
 }
 
 /*#endregion*/
