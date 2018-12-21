@@ -211,7 +211,7 @@ With that, we technically had an RPC message system running, even if it still re
 
 With what we had implemented essentially enforcing the use of global variables and poor scoping, we knew we had to do something better. There were several places for us to improve upon, but the first was simple: Why in the world did we need a `NetworkRegistry` static class and a `NetworkManager` static class? It turns out, there is no reason! We had originally implemented the `NetworkRegistry` as a globally accessible form of using messages, but the `NetworkManager` already effectively serves that purpose, so we just went ahead and combined those two things.
 
-> (It was also at around this time that one of our developers refactored our codebase to use multiple projects, such as IsettaEngine, IsettaTestbed, and IsettaTest. Turns out, this can be a massive headache for anyone who was changing code when this happens! It really messed with our git commits and was an overall bad time. Would not recommend.)
+> (It was also at around this time that one of our developers refactored our codebase to use multiple projects, such as IsettaEngine, IsettaTestbed, and IsettaTest. Turns out, this can be a massive headache for anyone who was changing code when this happens! It really messed with our Git commits and was an overall bad time. Would not recommend.)
 
 Another improvement that we strove to get this time around was an actually usable message callback system. The previous one forced the developer to pair the functions that would be run when the RPC message object was received with the actual class of the message object itself, which obviously has very limited capability. Our immediate solution was to make a subscription-based callback system, much like our how `Input` class handles callback functions. Any message that is defined would get its own associated list of function pointers, and anybody in the world (who has the correct function parameters) can add their own function to that list. When that message object is received, every function in that callback list is called using that message object's data.
 
@@ -515,36 +515,3 @@ From development we are acquiring a lot of great resources from where we learned
 
 
 _Originally Published October 19, 2018._
-
-
-<!-- GD2md-html version 1.0β13 -->
-
-
-<br>
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" style="margin-top: -20px">
-    <form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <h3>Subscribe to our mailing list</h3>
-            <p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
-            <br><br>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL"> </label>
-                <input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-            </div>
-            <div class="clear" id="submit-button">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-        </div>
-    </form>
-</div>
-<!--End mc_embed_signup-->

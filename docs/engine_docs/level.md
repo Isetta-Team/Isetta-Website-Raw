@@ -49,7 +49,7 @@ void LEVEL_NAME::OnUnload() {
 ## Example Levels
 
 !!! note "Level Inputs"
-	Some of the levels have inputs, too. But they display badly here! Go to our [git repo](https://github.com/Isetta-Team/Isetta-Engine#selectable-levels) to look like them!
+	Some of the levels have inputs, too. But they display badly here! Go to our [Git repo](https://github.com/Isetta-Team/Isetta-Engine#selectable-levels) to look like them!
 
 |	Level Name			|	Level Description																|
 |		:-:				|			:-:																		|

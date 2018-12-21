@@ -5,7 +5,7 @@ This page gives you an index of how to do certain game development tasks using I
 
 The best way to get started quickly is to browse through our example levels [here](level.md#example-levels).
 
-1. How to set up the development environment? Visit our [Isetta-GameTemplate](https://github.com/Isetta-Team/Isetta-GameTemplate) git repo
+1. How to set up the development environment? Visit our [Isetta-GameTemplate](https://github.com/Isetta-Team/Isetta-GameTemplate) Git repo
 1. [Basics](basics.md): what are the assumptions and conventions we made?
 1. [Levels](level.md): what does a level mean and how to define/load levels?
 1. [Entity/Transform](entity.md): how to define/create/work with them?

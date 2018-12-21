@@ -1,57 +1,17 @@
 # Welcome to Isetta Engine
 
-We're building a game engine in 3 months. Is that crazy? We've been told so. But there's no way to learn like being pushed straight into the deep end!
+We built a game engine in 3 months. Is that crazy? We've been told so. But there's no way to learn like being pushed straight into the deep end!
 
 We are a student project from Carnegie Mellon's Entertainment Technology Center.  The aim of the project is to help demystify the game engine development process for ourselves and any other novice developers who have interest in engine development but like us were too intimidated of where to start.
 
 ## New here?
-- We are making a game engine called Isetta to learn about game engine development. The Isetta engine is open-sourced [here](https://github.com/Isetta-Team/Isetta-Engine).
-- We are documenting our whole process and compiling what we learn all on this website. The best place to look for our knowledge of an engine subsystem is our [compendium](compendium/index).
-- You can see all of the specifics for our development starting from [Week 0](blogs/week-0/) for our weekly blog.
-- We are interviewing industry professionals to help learn what we don't know, we don't know. Then we are sharing an edited, "concise" versions of the talks [here](interviews/index/).
-- If you're interested in using our engine (we appreciate your curiousity!), you can see some of our starting documentation at our [Usage](engine_docs/home/) page.
-
-<!-- <div class="video-wrapper" style="width: 90%; margin: auto; min-height: 400px">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_JBMqh5eQo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div> -->
+- We made a game engine! It's called the Isetta Engine, and we did it to learn about game engine development. The Isetta Engine is [open-sourced here for anyone to see and criticize](https://github.com/Isetta-Team/Isetta-Engine)!
+- We documented our whole development process and compiled what we learned on this website. The best place to look for [something specific about engine development is our compendium](compendium/index/).
+- If you want to read our week-by-week progress, you can [start at Week 0](blogs/week-0/) in our weekly blog.
+- We interviewed industry professionals as part of the project, and you can find [all of those interviews publically hosted on our website](interviews/index/)! We also have a [book published](http://www.lulu.com/shop/caleb-biasco-and-jared-ettinger-and-jacob-wilson-and-chaojie-zhu/behind-the-black-box-sessions-with-game-engine-professionals/paperback/product-23880229.html), if you're interested in getting a physical or PDF version of these interviews.
+- If you're interested in using our engine (we appreciate your curiosity!), you can find our [starter documentation on our website](engine_docs/home/) as well.
 
 ## Isetta timeline
-**Caution**: This timeline is a work in progress, so the natural solution was to have TODO's to mark missing pieces.
 <div class="timeline-wrapper" style="width: 90%; margin: auto; min-height: 400px">
     <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=12j4m_J7G6--z7E-7PyRyMvzOGKcbm8D3WpyqMLuGdt4&font=Lustria-Lato&lang=en&initial_zoom=5&height=650&start_at_end=true&ga_property_id=UA-124729724-1' width='100%' height='650' style="margin: auto" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 </div>
-
-## Where are we now?
-- The latest changes for week 13 are available on GitHub [here](https://github.com/Isetta-Team/Isetta-Engine/releases/tag/week-13).
-- This week, our blog is titled ["Is This a Game Engine"](blogs/week-13/). We *technically* feature locked our engine, and we're pushing forward on game development. Only bugs from here on out!
-- We recently interviewed with [Elan Ruskin](https://twitter.com/despair), senior game engine developer at Insomniac Games with an outstanding catalog of works behind him. Elan discussed not just the technical details behind games like _Marvel's Spider-Man_, but also the interpersonal details of teams interfacing with technology. [Read it here!](interviews/ElanRuskin-interview/)
-- For a quick glance at progress, here is our engine architecture and what we think we have completed so far.
-
-![Engine Architecture](images/engine_architecture/week13.png "Week 13 Progress Architecture")
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup">
-	<form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	    <div id="mc_embed_signup_scroll">
-			<h2>Subscribe to our mailing list</h2>
-			<p style="margin-bottom: -22px;">We publish blogs weekly and interview content once edited. We will only email once a week to let you know they are up!</p>
-			<br><br>
-			<div class="mc-field-group">
-				<label for="mce-EMAIL"> </label>
-				<input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-		    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-		    	<input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-		    </div>
-		    <div class="clear" id="submit-button">
-		    	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-		    </div>
-	    </div>
-	</form>
-</div>
-<!--End mc_embed_signup-->

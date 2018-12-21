@@ -42,7 +42,7 @@ Let's look at the problems we are trying to solve:
     ![Memory Fragmentation](../images/blogs/week-2/memory_fragmentation.png "Memory Fragmentation")
 
 
-These two problems can be solved effectively by managing memory by ourselves rather than leaving it to the operating system. We learned the concept of several different types of memory allocators by referring to Jason's book and a bunch of [other resources](../resources.md#memory). The most useful ones are: Stack Allocator and Pool Allocator. You can refer to the resources and our git repo for implementation details. We are going to focus on how they can be used in our engine here.
+These two problems can be solved effectively by managing memory by ourselves rather than leaving it to the operating system. We learned the concept of several different types of memory allocators by referring to Jason's book and a bunch of [other resources](../resources.md#memory). The most useful ones are: Stack Allocator and Pool Allocator. You can refer to the resources and our Git repo for implementation details. We are going to focus on how they can be used in our engine here.
 
 
 ### Stack Allocator
@@ -250,9 +250,9 @@ We liked the idea of having these methods attached to the classes themselves, wh
 
 ### Git Flow
 
-In week 1, we described our git flow as creating feature branches which were eventually merged into code-review. After code review, we created local hotfix branches and merged fixes into code-review branch. When everything was done, we merged code-review branch into the master branch and tagged it. However, we found that this can stop new development prior to pushing a weekly tag because they can't be pushed to the code-review branch. The code-review branch is the only branch where our individual work can converge. 
+In week 1, we described our Git flow as creating feature branches which were eventually merged into code-review. After code review, we created local hotfix branches and merged fixes into code-review branch. When everything was done, we merged code-review branch into the master branch and tagged it. However, we found that this can stop new development prior to pushing a weekly tag because they can't be pushed to the code-review branch. The code-review branch is the only branch where our individual work can converge. 
 
-Therefore, we've adopted the [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) system. We renamed code-review to "staging" and added a new develop branch. We will still have our individual feature branches, and can always merge our work into the develop branch. Right before we start the code review session, we merge all commits into the staging branch. After the code review session, we will push hotfixes to the staging  branch, and new development can be pushed to the develop branch. When everything is fixed, we will merge the staging branch into the master branch and tag it. 
+Therefore, we've adopted the [GitFlow](https://www.atlassian.com/Git/tutorials/comparing-workflows/gitflow-workflow) system. We renamed code-review to "staging" and added a new develop branch. We will still have our individual feature branches, and can always merge our work into the develop branch. Right before we start the code review session, we merge all commits into the staging branch. After the code review session, we will push hotfixes to the staging  branch, and new development can be pushed to the develop branch. When everything is fixed, we will merge the staging branch into the master branch and tag it. 
 
 
 ## Coming Soon
@@ -266,32 +266,3 @@ We would appreciate any feedback or questions you may have about our content or 
 The [resource page](../resources.md) has been updated to include links we found useful this week, too!
 
 _Originally published September 14, 2018._ 
-
-<br>
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup" style="margin-top: -20px">
-	<form action="https://isetta.us19.list-manage.com/subscribe/post?u=1d83cb806c55e205be26db856&amp;id=860c7d79cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	    <div id="mc_embed_signup_scroll">
-			<h3>Subscribe to our mailing list</h3>
-			<p style="margin-bottom: -22px;">Get notifications about the upcoming blogs and interviews!</p>
-			<br><br>
-			<div class="mc-field-group">
-				<label for="mce-EMAIL"> </label>
-				<input type="email" placeholder="Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>
-		    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-		    	<input type="text" name="b_1d83cb806c55e205be26db856_860c7d79cf" tabindex="-1" value="">
-		    </div>
-		    <div class="clear" id="submit-button">
-		    	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-		    </div>
-	    </div>
-	</form>
-</div>
-<!--End mc_embed_signup-->

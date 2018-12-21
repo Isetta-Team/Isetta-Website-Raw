@@ -121,7 +121,7 @@ Another API design we fixed along the way is the consistency across different fu
 
 The last change is that we changed the API of creating entities. We used to have both `Level::AddEntity` and an `ADD_ENTITY` macro that's both available for the user to create new entities. We first renamed `ADD_ENTITY` to `CREATE_ENTITY` because the word "add" means that the entity is being added to something that owns it but the user doesn't need to understand that. Then, we realized `CREATE_ENTITY` expands to `LeveManager::Instance().currentLevel->AddEntity`, which is essentially same as the function call, just available in different scopes. But it wasn't immediately clear when to use macro for a naive developer, and we might have a lot of them in our game jam! So, we killed `CREATE_ENTITY`, hid `Level::AddEntity` from the user by making it private, and added a static method to Entity as `Entity::CreateEntity`. It works perfectly conceptually, but as picky as us, we notice it has two "Entity"s in its name, so we renamed it to `Entity::Instantiate` (+1 score for team readability!). 
 
-A thing to notice when making API changes like this is that it will touch a huge amount of files in the codebase and would thus cause merge disasters as we are using git for source control. We had to be very careful about that as excessive merge conflicts will "disarm" a team member for at least one hour and thus slow everything down. Internally, we call this kind of changes "4am changes" as that's the time when no one is making changes to their repo and thus less possibility for merge conflicts.
+A thing to notice when making API changes like this is that it will touch a huge amount of files in the codebase and would thus cause merge disasters as we are using Git for source control. We had to be very careful about that as excessive merge conflicts will "disarm" a team member for at least one hour and thus slow everything down. Internally, we call this kind of changes "4am changes" as that's the time when no one is making changes to their repo and thus less possibility for merge conflicts.
 
 As we were making these API design changes (and updating our audio module), we ended up with some naive guidelines for good API design—they might be helpful to you too!
 
@@ -197,3 +197,5 @@ This last week we published our interview with [Jeff Preshing](../interviews/Jef
 ## [Resources](/resources.md)
 
 Since most of our systems are now more central to our personal implementation, our code may be a good place for you to check out and learn more about some of the features we are talking about this week. We are bound to have bugs and `TODO`s littered throughout the engine and welcome any help! We will try to make sure we publish all of our sources, including the small ones too, in the next few weeks!
+
+_Originally Published November 27, 2018._
