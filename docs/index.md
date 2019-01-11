@@ -9,7 +9,7 @@ We are a student project from Carnegie Mellon's Entertainment Technology Center.
 ### The Engine
 We made a game engine! It's called the Isetta Engine, and we did it to learn about game engine development. The Isetta Engine is [open-sourced here for anyone to see and criticize](https://github.com/Isetta-Team/Isetta-Engine)!
 ### The Compendium
-We documented our whole development process and compiled what we learned on this website. The best place to look for [something specific about engine development is our compendium](compendium/index/).
+We documented our whole development process and compiled what we learned on this website. The best place to look for [something specific about engine development is our compendium](compendium/).
 ### The Blogs
 If you want to read our week-by-week progress, you can [start at Week 0](blogs/week-0/) in our weekly blog.
 ### The Interviews
