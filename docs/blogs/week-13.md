@@ -138,7 +138,8 @@ Check out some progress videos of our hitscan work!
 Your browser does not support the video tag.
  </video>
 </div>
-<p/>
+
+<br>
 
 <div class="video-wrapper">
  <video playsinline autoplay muted loop>
@@ -146,7 +147,8 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
  </video>
 </div>
-<p/>
+
+<br>
 
 <div class="video-wrapper">
  <video playsinline autoplay muted loop>

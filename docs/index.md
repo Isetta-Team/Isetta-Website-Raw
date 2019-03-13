@@ -13,7 +13,7 @@ We documented our whole development process and compiled what we learned on this
 ### The Blogs
 If you want to read our week-by-week progress, you can [start at Week 0](blogs/week-0/) in our weekly blog.
 ### The Interviews
-We interviewed industry professionals as part of the project, and you can find [all of those interviews publically hosted on our website](interviews/index/)! We also have a [book published](http://www.lulu.com/shop/caleb-biasco-and-jared-ettinger-and-jacob-wilson-and-chaojie-zhu/behind-the-black-box-sessions-with-game-engine-professionals/paperback/product-23880229.html), if you're interested in getting a physical or PDF version of these interviews.
+We interviewed industry professionals as part of the project, and you can find [all of those interviews publically hosted on our website](interviews/)! We also have a [book published](http://www.lulu.com/shop/caleb-biasco-and-jared-ettinger-and-jacob-wilson-and-chaojie-zhu/behind-the-black-box-sessions-with-game-engine-professionals/paperback/product-23880229.html), if you're interested in getting a physical or PDF version of these interviews.
 ### The Developers
 If you're interested in using our engine (we appreciate your curiosity!), you can find our [starter documentation on our website](engine_docs/home/) as well.
 ### The Documentary
