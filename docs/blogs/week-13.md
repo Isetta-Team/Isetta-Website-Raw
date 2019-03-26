@@ -420,7 +420,7 @@ With `NetworkDiscovery`, we no longer rely on specifying server IP address in th
 
 One of the side effects of having our own memory manager is that we never realized how much memory can be leaking on the freelist because it's just always silent. Good news is that we can easily track every single allocation and free! By doing that we can not only dump all of the memory leaks and blame the developers, but also provide valuable information for them to find and fix them! 
 
-Even a small feature like this took us some iterations to get right. In the beginning, we were only tracking `Freelist::Alloc` and `Freelist::Free`. It does provide us with _some_ information, but I would say it helps much when all it presents is something like this:
+Even a small feature like this took us some iterations to get right. In the beginning, we were only tracking `Freelist::Alloc` and `Freelist::Free`. It does provide _some_ information, but I wouldn't say it helps much when all it presents is something like this:
 
 ![Memory Leaks Alloc](../images/blogs/week-13/memory_leak_1.png)
 
