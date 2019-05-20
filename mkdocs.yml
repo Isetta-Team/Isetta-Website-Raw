@@ -67,9 +67,9 @@ nav:
     - Elan Ruskin:
       - Interview: interviews/ElanRuskin-interview.md
       - Video Story: interviews/ElanRuskin-video.md
-    - Shanee Nishry:
-      - Interview: interviews/ShaneeNishry-interview.md
-      - Video Story: interviews/ShaneeNishry-video.md
+    - Shanee Nishry: interviews/ShaneeNishry-interview.md
+    #  - Interview: interviews/ShaneeNishry-interview.md
+    #  - Video Story: interviews/ShaneeNishry-video.md
     - Jeff Preshing:
       - Interview: interviews/JeffPreshing-interview.md
       - Video Story: interviews/JeffPreshing-video.md
