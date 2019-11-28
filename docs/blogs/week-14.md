@@ -65,11 +65,12 @@ In the end, we had nine successful games with only two games crashing on startup
 ![Game Jam](../images/blogs/week-14/gj-games.PNG)
 
 After the game jam ended, we showcased all the games and held an awards ceremony. The awards were as follows:
-* Jammer's Choice: The game the jammers like the most
-* Isetta's Choice: The game the team liked the most
-* Best Themed: The game that matched the theme of "a game you could play drunk" the best
-* Was That Made in Unreal?: The game that looked the prettiest
-* And 0st Penguin: The game that tried something crazy but didn't fully succeed (named after a similar award given in our Master's program). In the days following the game jam, we created a survey to get some results about how the jammers felt about the jam and to answer some of our questions. We'll share the responses with you!
+
+* **Jammer's Choice**: The game the jammers like the most
+* **Isetta's Choice**: The game the team liked the most
+* **Best Themed**: The game that matched the theme of "a game you could play drunk" the best
+* **Was That Made in Unreal?**: The game that looked the prettiest
+* **And 0st Penguin**: The game that tried something crazy but didn't fully succeed (named after a similar award given in our Master's program). In the days following the game jam, we created a survey to get some results about how the jammers felt about the jam and to answer some of our questions. We'll share the responses with you!
 
 ![Game Jam](../images/blogs/week-14/gj-instructions.png)
 
