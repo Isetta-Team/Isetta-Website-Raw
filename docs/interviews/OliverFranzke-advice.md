@@ -1,4 +1,4 @@
-_Oliver is a senior programmer at Double Fine Productions, where he has worked on many of their remastered classics like_ Grim Fandango Remastered _and_ Day of the Tentacle Remastered. _He lead the engineering helm of the new IP_ Broken Age _as the lead programmer, where he extended all across its engine's development._
+_Oliver is a senior programmer at Double Fine Productions, where he has worked on many of their remastered classics like_ Grim Fandango Remastered _and_ Day of the Tentacle Remastered. _He was at the engineering helm of the new IP_ Broken Age _as lead programmer, where he participated across all of its engine's development._
 
 We approached Oliver because of his presence as an engineer in the indie side of the industry, where he has spoken frequently about his experience and work as not only a programmer but also a leader. Seeing him in the documentary _Double Fine Adventure!_ gave us a good understanding of some of his work prior to having our conversation. We did a Skype video call with him.
 

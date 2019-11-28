@@ -1,4 +1,4 @@
-_Alice is currently working as a lead developer on Wattam at Funomena, where she helps her teammates stretch the capabilities of Unity. She has experienced large and small company environments, working at companies like Visceral Games, Sanzaru, and Google. Some of her past projects include Sly Cooper: Thieves in Time at Sanzaru Games and Godfather II at Visceral Games._
+_Alice is currently working as a lead developer on Wattam at Funomena, where she helps her teammates stretch the capabilities of the Unity game engine. She has experienced large and small company environments, working at companies like Visceral Games, Sanzaru, and Google. Some of her past projects include_ Sly Cooper: Thieves in Time _at Sanzaru Games and_ Godfather II _at Visceral Games._
 
 ## Fostering Usability
 <div class="video-wrapper">

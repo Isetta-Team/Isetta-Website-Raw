@@ -1,4 +1,4 @@
-_Walt is an independent game/entertainment programmer and designer currently working in the San Francisco Bay area. He was a programmer and designer on [WAY](https://waltdestler.com/way.html), the IGF 2012 Best Student Game Winner, and is now independently working on his new game_ [Cosmoteer](https://waltdestler.com/cosmoteer.html).
+_Walt is an independent game/entertainment programmer and designer currently working in the San Francisco Bay area. He was a programmer and designer on_ [WAY](https://waltdestler.com/way.html)_, the IGF 2012 Best Student Game Winner, and is now independently working on his new game_ [Cosmoteer](https://waltdestler.com/cosmoteer.html).
 
 We approached Walt because he also went to the ETC for graduate school. He was working on a side project to build a game engine for more than three years and is now making a game with his own engine. We did a Skype call with him.
 
