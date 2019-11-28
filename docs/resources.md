@@ -1,13 +1,19 @@
 # Resources
 
-*This page is always updating to include more resources*
+Useful articles/resources we found useful during the development of Isetta
 
-Useful articles/resources we used during the development of Isetta
+
+## Getting Started
+A special thanks to one of our readers Dylan for sending us this article!
+
+* [Programming Guide for Video-Gamers](http://ithare.com/programming-guide-for-video-gamers/)
+
 
 ## 3D Math
 * *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
 * *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
 * *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
+
 
 ## Builds
 * [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
@@ -17,6 +23,7 @@ Useful articles/resources we used during the development of Isetta
 * [Gallery of Processor Cache Effects](http://igoro.com/archive/gallery-of-processor-cache-effects/)
 * [Scott Meyers - CPU Caches and Why You care](https://vimeo.com/97337258)
 * [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
+
 
 ## Collision Detection
 * General Introduction
@@ -51,6 +58,7 @@ Useful articles/resources we used during the development of Isetta
     * [Casey Muratori - Implementing GJK](https://caseymuratori.com/blog_0003)
     * [GJK Sample Code on Github](https://github.com/kevinmoran/GJK)
 
+
 ## Config File (Engine Config)
 * [Create A Simple Configuration Parser](https://www.dreamincode.net/forums/topic/183191-create-a-simple-configuration-file-parser/)
 * [Implementing a CVAR System](https://stackoverflow.com/questions/5187449/implementing-a-cvar-system)
@@ -75,6 +83,7 @@ Useful articles/resources we used during the development of Isetta
 * Unreal
     * [Console Variables in C++](https://api.unrealengine.com/INT/Programming/Development/Tools/ConsoleManager/index.html)
 
+
 ## Data-Oriented vs Object-Oriented
 * [Entity Component Systems &
 Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Academy%20-%20ECS-DoD.pdf)
@@ -84,6 +93,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Stingray's Practical Examples in Data Oriented Design](http://bitsquid.blogspot.com/2010/05/practical-examples-in-data-oriented.html)
 * [Data-Oriented Demo: SOA, composition Jonathan Blow](https://www.youtube.com/watch?v=ZHqFrNyLlpA)
 
+
 ## Data Structures
 * [Ring Buffers](https://embeddedartistry.com/blog/2017/4/6/circular-buffers-in-cc)
 * [Everything about unordered_map](https://codeforces.com/blog/entry/21853)
@@ -92,18 +102,22 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * *Game Engine Architecture 2nd edition* - Chapter 5.3: Containers
 * [Why inheritance is viewed poorly](https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents/260354#260354)
 
+
 ## DLL
 * [Windows Walkthrough: Creating and Using a Dynamic Link Library](https://msdn.microsoft.com/en-us/library/ms235636.aspx)
 * [Inline Functions with dllimport/dllexport](https://stackoverflow.com/questions/8876279/c-inline-functions-with-dllimport-dllexport)
 * [Multiple Classes in DLL File](https://stackoverflow.com/questions/37291851/multiple-classes-in-dll-file)
 * [How to export a DLL from Visual Studio 2017 C++ Project](https://stackoverflow.com/questions/46071035/how-to-export-a-dll-from-visual-studio-2017-community-edition-c-project)
 
+
 ## ECS
 * [Nomad Game Engine: Part 2 — ECS](https://medium.com/@savas/nomad-game-engine-part-2-ecs-9132829188e5)
+
 
 ## Engine Loop
 * [Game Programming Pattern - Game Loop](http://gameprogrammingpatterns.com/game-loop.html)
 * [Gaffer On Games - Fix Your Timestep](https://gafferongames.com/post/fix_your_timestep/)
+
 
 ## Filesystem
 * [Windows with C++ - The Evolution of Threads and IO in Windows](https://msdn.microsoft.com/en-us/magazine/jj883951.aspx)
@@ -126,6 +140,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Multithreading Performance](https://msdn.microsoft.com/en-us/library/ms810437.aspx)
 * [Understanding Async IO Operations](https://softwareengineering.stackexchange.com/questions/322387/using-asynchronous-calls-for-heavy-io-operation-how-to-prevent-crushing-the-cpu)
 
+
 ## Graphics
 * Horde3D
     * [Some How-To Code](http://horde3d.org/wiki/index.php5?title=Horde3D_Wiki:HOWTO)
@@ -142,12 +157,14 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
         * [Transformations](https://learnopengl.com/Getting-started/Transformations)
     * [OpenGL Error Codes](https://www.khronos.org/opengl/wiki/OpenGL_Error)
 
+
 ## GUI
 * [Retained Mode Versus Immediate Mode](https://docs.microsoft.com/en-us/windows/desktop/learnwin32/retained-mode-versus-immediate-mode)
 * [Dear ImGui](https://github.com/ocornut/imgui)
 * [ImGui in 3D](https://github.com/ocornut/imgui/issues/1627)
 * [IMGUI for GameDev tools](https://gist.github.com/bkaradzic/853fd21a15542e0ec96f7268150f1b62)
 * [Why Qt and not IMGUI](https://deplinenoise.wordpress.com/2017/03/05/why-qt-and-not-imgui/)
+
 
 ## Memory
 * **Introduction**
@@ -167,7 +184,6 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 	* [When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 	* [ISO C++ FAQ on Memory Management](https://isocpp.org/wiki/faq/freestore-mgmt)
 	* [How does delete[] “know” the size of the operand array?](https://stackoverflow.com/questions/197675/how-does-delete-know-the-size-of-the-operand-array)
-
 
 
 ## Networking
@@ -206,6 +222,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Preprocessed strings for asset ids](http://www.randygaul.net/2015/12/11/preprocessed-strings-for-asset-ids/)
 * [Hash Tables - Introduction ](http://cecilsunkure.blogspot.com/2012/07/hash-tables.html)
 
+
 ## Scene Graph
 * Transform:
     * *Game Engine Architecture 2nd edition* - Chapter 4: 3D Math for Games
@@ -229,6 +246,7 @@ Data Oriented Design (Aras Pranckevicius)](http://aras-p.info/texts/files/2018Ac
 * [Fast C++ Logging Library](https://github.com/gabime/spdlog)
 * [Stanford CS101 - Bits and Bytes](https://web.stanford.edu/class/cs101/bits-bytes.html)
 * [Microsoft Docs - Walkthrough: Create and use your own Dynamic Link Library (C++)](https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=vs-2017)
+
 
 ## Misc. C++
 * [LearnC++ — Overloading the comparison operators](https://www.learncpp.com/cpp-tutorial/96-overloading-the-comparison-operators/)
