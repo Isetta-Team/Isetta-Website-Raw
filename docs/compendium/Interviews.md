@@ -2,7 +2,7 @@
 
 ![Interviewees](../../images/postmortems/Interviewees.png)
 
-Our decision to start interviewing professional engine developers was one that came about early in the planning process. Since we wanted to prove the worth of our project as a learning tool for other novice programmers, we needed to talk to the pros to understand what they thought was necessary. We were very fortunate to receive feedback from multiple veteran engine programmers including Jason Gregory, Amit Patel, Rob Schillingsburg, and Jonathan Franzke.
+Our decision to start interviewing professional engine developers was one that came about early in the planning process. Since we wanted to prove the worth of our project as a learning tool for other novice programmers, we needed to talk to the pros to understand what they thought was necessary. We were very fortunate to receive feedback from multiple veteran engine programmers including Jason Gregory, Amit Patel, Rob Schillingsburg, and Oliver Franzke.
 
 These talks helped us to win our case for pitching the project, though we thought there could be more to it than that. Talking to professionals regularly throughout the semester could be a great way to give our audience multiple perspectives on the engine development process. Over the summer, we compiled a list of over 100 game engine programmers, from big name CEOs to unknown indies. Once the semester started, we filtered that list based on what topic of engine development the professional specialized in. 
 

@@ -7,18 +7,19 @@ disqus:
 Networking in Isetta is completely messaging based, there are no `Cmd` or `Rpc` or `SyncVar`s like in Unity. Our [example networking level](https://github.com/Isetta-Team/Isetta-Engine/blob/develop/Isetta/IsettaTestbed/NetworkLevel/NetworkLevel.cpp) and [`NetworkTestComponent`](https://github.com/Isetta-Team/Isetta-Engine/blob/develop/Isetta/IsettaTestbed/NetworkLevel/NetworkTestComp.cpp) is the best place for you to get started.
 
 A few things to definitely note:
+
 - When implementing a network message class, you need to define both the `Serialize` and the `Copy` functions. `Serialize` *MUST* return `true` at the end of the function--otherwise your client will disconnect every time you try to send the message and you won't know why!
 - Each of the serialization functions we use come from yojimbo, and they're the following:
-    - serialize_int: Serializes an integer `value` and compresses that within the range of `min` and `max`
-    - serialize_bits: Serializes the number of `bits` of a 32-bit `value`
-    - serialize_bool: Serializes a boolean `value` using bits
-    - serialize_float: Serializes a float `value`
-    - serialize_uint32: Serializes a 32-bit unsigned integer `value`
-    - serialize_uint64: Serializes a 64-bit unsigned integer `value` by serializing the low and high 32 bits
-    - serialize_double: Serializes a double `value` by casting it to a 64-bit unsigned integer and serializing that
-    - serialize_bytes: Serializes an array of `bytes` from a given pointer to `data`
-    - serialize_string: Serializes a `string` of a given `buffer_size`
-    - serialize_object: Serializes an `object` using a `Serialize` member function of the object that takes in the `stream` parameter
+    - `serialize_int`: Serializes an integer `value` and compresses that within the range of `min` and `max`
+    - `serialize_bits`: Serializes the number of `bits` of a 32-bit `value`
+    - `serialize_bool`: Serializes a boolean `value` using bits
+    - `serialize_float`: Serializes a float `value`
+    - `serialize_uint32`: Serializes a 32-bit unsigned integer `value`
+    - `serialize_uint64`: Serializes a 64-bit unsigned integer `value` by serializing the low and high 32 bits
+    - `serialize_double`: Serializes a double `value` by casting it to a 64-bit unsigned integer and serializing that
+    - `serialize_bytes`: Serializes an array of `bytes` from a given pointer to `data`
+    - `serialize_string`: Serializes a `string` of a given `buffer_size`
+    - `serialize_object`: Serializes an `object` using a `Serialize` member function of the object that takes in the `stream` parameter
 
 If you do use networking a lot, the team members in the room are probably the best documentation.
 

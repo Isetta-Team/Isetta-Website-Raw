@@ -119,8 +119,8 @@ theme:
   name: material
   custom_dir: theme/
   include_sidebar: false
-  feature:
-    tabs: true
+  features:
+    - navigation.tabs
   palette:
     primary: 'light blue'
     accent: 'cyan'
@@ -167,11 +167,11 @@ extra_javascript:
 extra:
   disqus: 'isetta-engine'
   social:
-    - type: envelope
+    - icon: fontawesome/solid/envelope
       link: mailto:isetta.engine@gmail.com
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/IsettaEngine
-    - type: github
+    - icon: fontawesome/brands/github
       link: https://github.com/Isetta-Team
 
 google_analytics:
