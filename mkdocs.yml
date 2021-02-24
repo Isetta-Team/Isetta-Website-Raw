@@ -165,7 +165,6 @@ extra_javascript:
   - 'extra.js'
 
 extra:
-  disqus: 'isetta-engine'
   social:
     - icon: fontawesome/solid/envelope
       link: mailto:isetta.engine@gmail.com
