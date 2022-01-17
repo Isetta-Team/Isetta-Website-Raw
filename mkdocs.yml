@@ -63,7 +63,7 @@ nav:
     #- Week #: blogs/week-#.md
   - Interviews:
     - Introduction: interviews/index.md
-    # - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FloiranStrauss-interview.md
+    - Jeet Shroff & Florian Strauss: interviews/JeetShroff-FlorianStrauss-interview.md
     - Elan Ruskin:
       - Interview: interviews/ElanRuskin-interview.md
       - Video Story: interviews/ElanRuskin-video.md

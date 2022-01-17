@@ -23,6 +23,9 @@
 - [Our Third Non-Demo Game](../../blogs/week-13/#the-knight-game): Keeping with tradition, we developed a game that was not our target demo game in order to test out a conglomerate of our engine's features. This time, we pushed our collisions system to the maximum which, as you can probably guess, revealed lots of bugs with it!
 
 ## Relevant Interviews
+### Jeet Shroff and Florian Strauss
+- [AI Baked Into The Engine](../../interviews/JeetShroff-FlorianStrauss-interview/#ai-baked-into-the-engine)
+- [AI in Games and in Engines](../../interviews/JeetShroff-FlorianStrauss-interview/#ai-in-games-and-in-engines)
 ### Tommy Refenes
 - ["Garbage Physics"](../../interviews/TommyRefenes-interview/#garbage-physics)
 ### Adam Serdar

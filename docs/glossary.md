@@ -52,6 +52,8 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Build engineer**- the engineer in charge of the infrastructure that builds a software application, as well as testing and troubleshooting code for before the software's release.[↩](/interviews/CaseyMuratori-interview/#fnref:500)
 
+**Build farm**- a cluster/group of servers whose job is to compiler programs remotely, typically used in cross-platform development, testing, and speeding the compilation process. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:6)
+
 **Builder**- a tool used to process assets from their editable forms (files editable by external software) into a more compact, unreadable file to be used by the engine for a game. The file format is typically proprietary and specific to the engine, and engine metadata is stored within the file. [↩](/interviews/ElanRuskin-interview/#fnref:1)
 
 **Bullet Physics**- a real-time physics simulation library, a physics engine, which simulate collisions for soft and rigid body dynamics. [↩](/interviews/JeffPreshing-interview/#fnref:5)
@@ -84,6 +86,8 @@ Also, please add any terms we haven't touched on that you think of!
 
 **Data locality**- essentially accessing data in as nearby of code as possible to utilize caches most effectively. Robert Nystrom covers it really well in this chapter from [Game Programming Patterns](http://gameprogrammingpatterns.com/data-locality.html). [↩](/blogs/week-5/#fnref:32402) 
 
+**Decision tree**- a graph/tree data structure that maps decisions and their possible outcomes. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:1)
+
 **Defragmentation**- the process of reducing fragmentation, where **fragmentation** is where memory is used inefficiently with lots of gaps in between used memory chunks. In this context, defragmentation is used in the sense of keeping the rooms fully utilized, not wasting space on a fairly empty room. [↩](/interviews/MartinMiddleton-interview/#fnref:11) [↩](/blogs/week-2/#fnref:2)
 
 **Delimiter**- a sequence of one or more characters used to specify the boundary between separate regions in text or other data streams. An example would be the comma character for comma-separated values. [↩](/blogs/week-9/#fnref:230495)
@@ -107,6 +111,8 @@ Also, please add any terms we haven't touched on that you think of!
 **Disassembly**- the assembly language, translated from machine code, of a program; it is the compiler's version of the program. [↩](/interviews/JeffPreshing-interview/#fnref:8)
 
 **Disk I/O**- read or write operations involving a physical disk. In general, to load an asset from the disk, the system will need to read it from the hard disk, write it into the memory (and possibly cache), which takes a lot of time. [↩](/interviews/RaymondGraham-interview/#fnref:8383)
+
+**Distributed system**- a system where the tasks are split between multiple coordinated, communicating networked computers whose actions aim to complete a common goal. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:5)
 
 **Double buffer**- the use of two buffers to hold data. By switching the buffers, the reader can see the complete version of data instead of a partially written one. [↩](/interviews/RaymondGraham-interview/#fnref:9955)
 
@@ -153,6 +159,8 @@ Also, please add any terms we haven't touched on that you think of!
 **Gilbert-Johnson-Keerthi (GJK)**- a distance algorithm method of determing the minimum distance between convex sets. It is used heavily in collision detection systems. [Casey Muratori](https://twitter.com/cmuratori?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) has a great blog on [Implementing GJK](https://caseymuratori.com/blog_0003). [↩](/blogs/week-8/#fnref:1324)
 
 **glTF(GL Transmission Format)**- a royalty-free file format for 3D scenes and models using the JSON standard. [↩](/interviews/ArasPranckevicius-interview/#fnref:13)
+
+**GNU Compiler Collection (GCC)**- a compiler system that supports a number of programming languages, including C++. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:4)
 
 **Goal-oriented action planner (GOAP)**- an artificial intelligence system for agents that allows them to plan a sequence of actions to satisfy a particular goal. For a detailed explanation, visit [http://alumni.media.mit.edu/~jorkin/goap.html](http://alumni.media.mit.edu/~jorkin/goap.html)  [↩](/interviews/ShaneeNishry-interview/#fnref:85)
 
@@ -241,6 +249,8 @@ Also, please add any terms we haven't touched on that you think of!
 **Panda3D**- a game engine, a framework for 3D rendering and game development for Python and C++ programs. It was originally developed by Disney and expanded by past ETC projects. [↩](/interviews/AdamSerdar-interview/#fnref:8)
 
 **Parallel programming**- when code can be run on multiple threads rather than a linear process, therefore speeding up the execution. A **parallel algorithm** is an algorithm that can be executed as multiple pieces at a time, being split among multiple threads, then joined at the end to get the result. [↩](/blogs/week-9/#fnref:832)
+
+**Pathfinding**- an application which routes a computer actor between points/to a point, avoiding obstacles and using a heuristic to determine the path to take. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:3)
 
 **Path tracing**- a realistic lighting algorithm that simulates light bouncing around a scene. It uses the Monte Carlo method to give a faithful rendition of the global illumination of the scene. [↩](/interviews/ArasPranckevicius-interview/#fnref:23421) 
 
@@ -351,6 +361,8 @@ Also, please add any terms we haven't touched on that you think of!
 **Type trait**- defines a compile-time templated-base interface to query or modify the properties of types, for more see [type support](https://en.cppreference.com/w/cpp/types). [↩](/interviews/JeffPreshing-interview/#fnref:3)
 
 **Typecasting**- also known as type conversion, this is a method of changing one data type to another. It helps ensure that variables are processed correctly by functions, but can also be dangerous with the way they handle the conversion. [↩](/blogs/week-7/#fnref:352252)
+
+**Uncanny valley**- an effect where non-human audio/visual simulations attempt to closely mimic humans that isn’t perfectly realistic or convincing, causing an unsettling feeling. [↩](/interviews/JeetShroff-FlorianStrauss-interview/#fnref:2)
 
 **UNIX**- a family of multitasking, multiuser operating systems that derive from the original AT&T Unix, originally developed at Ken Thompson, Dennis Ritchie, and others at Bell Labs. It's main comparable is Microsoft's DOS, which is mono-task and monouser. [↩](/interviews/ArasPranckevicius-interview/#fnref:2)
 

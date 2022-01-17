@@ -22,6 +22,8 @@
 
 ## Relevant Interviews
 
+### Jeet Shroff and Florian Strauss
+- [Keep Compile Times Small, Link Times Smaller](../../interviews/JeetShroff-FlorianStrauss-interview/#keep-compile-times-small-link-times-smaller)
 ### Jeff Preshing
 - [System Integration](../../interviews/JeffPreshing-interview/#systems-integration)
 ### Aras Pranckevičius

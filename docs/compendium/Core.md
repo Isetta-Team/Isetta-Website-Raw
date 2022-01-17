@@ -45,6 +45,8 @@
 
 ## Relevant Interviews
 
+### Jeet Shroff and Florian Strauss
+- [Sharing vs Specializing Engines](../../interviews/JeetShroff-FlorianStrauss-interview/#sharing-vs-specializing-engines)
 ### Elan Ruskin
 - [Synchronization of Time](../../interviews/ElanRuskin-interview/#synchronization-of-time)
 - [Engines Can Change, Little by Little](../../interviews/ElanRuskin-interview/#engines-can-change-little-by-little)
