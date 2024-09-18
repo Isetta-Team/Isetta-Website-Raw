@@ -8,7 +8,7 @@ We spoke to some of our faculty near the end about how none of us had any more m
 Where we weren't excited to develop the game, we were still willing to put time into polishing and adding to the engine. So it's not like we were afraid of developing a game because of bugs or broken features; if we were, we probably wouldn't have held a game jam where other could see the ugly pieces of engine. We couldn't even predict what features of the engine they would be looking at. Developing engine features, even if small, was a new experience when compared to game development, and this excitement is what drove us.
 
 ![Burnout](../../images/postmortems/Burnout.png)
-*Much like the game **Burnout**, crunch eventually ends in some form of catastrophic wreck*
+_Much like the game **Burnout**, crunch eventually ends in some form of catastrophic wreck_
 
 As much as we say our project was about demystifying engine development, the project was as much about learning. Specifically, it was about learning how game engines work, the intricacies of them, and how to be an effective software developer on a team when making such a tool, but it was all learning nonetheless. Learning was what was driving the work and our motivation. We were excited to problem solve the unknowns of the project, so when the game came to be developed, it was a list of "knowns", problems that we knew how to solve and had solved before. We had developed games before, games much more complicated than the one we were trying to generate; there wasn't a list of unknowns. Having to develop something that isn't challenging, having just a list of tasks that are "knowns", is demotivating, even if we're getting to used our newly minted tool in the process.
 
