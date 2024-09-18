@@ -4,7 +4,7 @@ Useful articles/resources we found useful during the development of Isetta
 
 
 ## Getting Started
-A special thanks to one of our readers Dylan for sending us this article!
+A special thanks to one of our readers, Dylan, for sending us this article!
 
 * [Programming Guide for Video-Gamers](http://ithare.com/programming-guide-for-video-gamers/)
 
@@ -14,6 +14,12 @@ A special thanks to one of our readers Dylan for sending us this article!
 * *Essential Mathematics for Games & Interactive Applications* by James Van Verth & Lars Bishop
 * *Geometric Tools for Computer Graphics* by Philip Schneider & David Eberly
 
+
+## AI
+
+The only "artificial intelligence" that we cover with our engine is the A* algorithm, which you can find in our [Week 11 blog](/blogs/week-11/#ai-pathfinding). However, modern AI programming is an completely different challenge! Luckily, one of our readers, Emilia, found a collection of AI programming articles and tools that might serve as a good start to anyone interested!
+
+* [AI Coding and Programming Tools](https://www.aiprm.com/education/ai-coding-and-programming-tools/)
 
 ## Builds
 * [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
